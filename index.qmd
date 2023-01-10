@@ -1,0 +1,173 @@
+---
+title: "Schedule"
+description: |
+  Schedule for Math 150, Methods in Biostatistics, Spring 2023
+execute: 
+  message: false
+  warning: false
+---
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(kableExtra)
+library(knitr)
+```
+
+Here's your roadmap for the semester! Each week, follow the general process outlined below:
+
+-   Enjoy the notes / text <i class="fas fa-book-open"></i>
+
+-   Attend class, review the <i class="fas fa-pencil-alt"></i>warm-up and solutions if you have any questions after completing it during class.
+
+-   Complete the HW assignment (<i class="fa-solid fa-file-pdf"></i> pdf & <i class="fa-brands fa-r-project"></i> Rmd linked below), <i class="fa-solid fa-paper-plane"></i> submit the assignment via Gradescope accessed on the course Canvas site.
+
+-   Discuss the reflection questions <i class="fas fa-lightbulb" target="_blank"></i> and ethics considerations <i class="fas fa-balance-scale"></i> (see the <i class="fas fa-book-open"></i> class notes) with your classmates, mentor, and professor.
+
+-   The textbook is **Practicing Statistics**, by Kuiper and Sklar.
+
+
+```{r echo = FALSE}
+schedule <- tribble(
+  ~`date`, ~agenda, ~readings, ~homework, ~`handouts`, ~`warm-ups`,
+  "Week 1 <br> 1.17.23", 
+  '• t-tests + <br>• SLR',
+  'Kuiper & Sklar: 2 <br> <a href="http://st47s.com/Math150/Notes/intro.html#intro" target = "_blank"><i class="fas fa-book-open"></i> notes on introduction</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#ttest" target = "_blank"><i class="fas fa-book-open"></i> notes on t-test</a>', 
+  '',
+  '',
+  '<a href="https://m150-method-biostat.netlify.app/handout/wu1_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 1</a> <br> <a href="https://m150-method-biostat.netlify.app/hw/wu2_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 2</a>',
+  
+"Week 2 <br> 1.24.23", 
+  '• posteriors + <br> • Bayes estimators',
+  'P&S: 7.3-7.4 <br> <a href="http://st47s.com/Math152/Notes/bayes.html#conjugate-prior-distributions" target = "_blank"><i class="fas fa-book-open"></i> notes on Bayes</a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/MA150_HW1s23.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW1 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/MA150_HW1s23.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW1 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW1 turn-in</a>',
+  '',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu3_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 3</a>',
+
+"Week 3 <br> 1.31.23",   
+  '• MLE + <br> • consistency + <br> • bias + <br> • MOM',
+  'P&S: 7.5-7.6 <br> <a href="https://st47s.com/Math152/Notes/MLE.html" target = "_blank"><i class="fas fa-book-open"></i> notes on MLE</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/MA152_HW3f22.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW3 pdf</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/MA152_HW3f22.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW3 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW3 turn-in</a>',
+  '<a href="handout/baseball_bayes_2022.pdf" target = "_blank">Baseball and Bayes</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu4_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 4</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/wu5_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 5</a>',
+  
+"Week 4 <br> 2.7.23", 
+  '• sampling distributions <br>of estimators',
+  'P&S: 6.1-6.3, 8.1-8.4 <br> <a href="https://st47s.com/Math152/Notes/sampdist.html" target = "_blank"><i class="fas fa-book-open"></i> notes on sampling distributions</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/MA152_HW4f22.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW4 pdf</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/MA152_HW4f22.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW4 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW4 turn-in</a>',
+  '<a href="handout/tank_152_2022.pdf" target = "_blank">Tanks</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu6_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 6</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/wu7_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 7</a>',
+  
+  
+"Week 5 <br> 2.14.23",
+  '• bootstrap sampling <br>distributions',
+  'P&S: 12.6 <br> <a href="https://st47s.com/Math152/Notes/bootdist.html" target = "_blank"><i class="fas fa-book-open"></i> notes on bootstrap distribution</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/MA152_HW5f22.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW5 pdf</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/MA152_HW5f22.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW5 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW5 turn-in</a>',
+  '<a href="handout/bootstrap.pdf" target = "_blank">Bootstrapping</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu8_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 8</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/wu9_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 9</a>',
+  
+"Week 6 <br> 2.21.23", 
+  '• frequentist, Bayesian <br>intervals',
+  'P&S: 8.5-8.6 <br> <a href="https://st47s.com/Math152/Notes/intest.html" target = "_blank"><i class="fas fa-book-open"></i> notes on intervals</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/MA152_HW6f22.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW6 pdf</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/MA152_HW6f22.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW6 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW6 turn-in</a>',
+  '<a href="https://kruschke.shinyapps.io/KruschkeFreqAndBayesApp/" target = "_blank"><i class="fa-solid fa-gamepad"></i> App to compare Freq & Bayes Intervals</a> <br> <a href="handout/norm.bayes.pdf" target = "_blank">2 parameter normal Bayesian</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu10_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 10</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/wu11_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 11</a>', 
+
+
+'<font color = "#114B5F"><b>Week 7 <br> 2.28.23</b></font>', 
+'<font color = "#114B5F"><b>review & catch-up</b></font>',
+'<font color = "#114B5F"><b>exam 1 in class<br> 10.13.22</b></font>',
+ '<a href="https://m152-stat-theory.netlify.app/handout/MA152_HW7f22.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW7 pdf</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/MA152_HW7f22.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW7 Rmd</a> <br> <i class="fa-solid fa-paper-plane"></i> not due, ever',
+  '<a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> see Canvas</a> for sample exam 1 Q & sol',
+  '',
+
+'<font color = "#114B5F"><b>Tuesday <br>10.18.22</b></font>', '<font color = "#114B5F"><b>Fall Break</b></font>',"", 
+  '',
+  '',
+  '',      
+
+"Week 8 <br> 3.7.23", 
+  '• bootstrap confidence <br>intervals <br> <br> • earthquake!',
+  '<a href="https://st47s.com/Math152/Notes/intest.html" target = "_blank"><i class="fas fa-book-open"></i> notes on intervals</a>',
+  '',
+  '',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu12_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 12</a>', 
+  
+"Week 9 <br> 2.20.23", 
+  '• Fisher information + <br>• efficiency + <br>• UMVUE',
+  'P&S: 8.7-8.8 <br> <a href="https://st47s.com/Math152/Notes/fisher.html" target = "_blank"><i class="fas fa-book-open"></i> notes on Fisher information</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/MA152_HW8f22.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW8 pdf</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/MA152_HW8f22.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW8 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW8 turn-in</a>',
+  '',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu13_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 13</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/wu14_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 14</a>',
+
+"Week 10 <br> 11.1.22", 
+  '• hypotehsis testing + <br>• simple hypotheses',
+  'P&S: 9.1 <br> <a href="https://st47s.com/Math152/Notes/ht.html" target = "_blank"><i class="fas fa-book-open"></i> notes on hypothesis testing structure</a>',
+  'no HW',
+  '',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu15_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 15</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/wu16_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 16</a>',
+  
+"Week 11 <br> 11.8.22", 
+  '• Neyman-Pearson',
+  'P&S: 9.2 <br> <a href="https://st47s.com/Math152/Notes/ht.html" target = "_blank"><i class="fas fa-book-open"></i> notes on Neyman-Pearson</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/MA152_HW9f22.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW9 pdf</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/MA152_HW9f22.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW9 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW9 turn-in</a>',
+  '',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu17_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 17</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/wu18_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 18</a>',  
+
+'<font color = "#114B5F"><b>Week 12 <br> 11.15.22</b></font>', 
+'<font color = "#114B5F"><b>review & catch-up</b></font>',
+'<font color = "#114B5F"><b>exam 2 in class<br> 11.17.22</b></font>',
+ '<a href="https://m152-stat-theory.netlify.app/handout/MA152_HW10f22.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW10 pdf</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/MA152_HW10f22.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW10 Rmd</a> <br> <i class="fa-solid fa-paper-plane"></i> not due, ever',
+  '<a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> see Canvas</a> for sample exam 2 Q & sol',  
+  '',
+
+"Week 13 <br> 11.22.22", 
+  '• UMP',
+  'P&S: 9.3 <br> <a href="https://st47s.com/Math152/Notes/ht.html" target = "_blank"><i class="fas fa-book-open"></i> notes on UMP</a>',
+  '',
+  '',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu19_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 19</a>', 
+
+'<font color = "#114B5F"><b>Thursday <br>11.24.22</b></font>', '<font color = "#114B5F"><b>Thanksgiving</b></font>',"", 
+  '',
+  '',
+  '',      
+
+"Week 14 <br> 11.29.22", 
+  '• two-sided + <br>• t-tests + <br>•  LRT + <br> goodness of fit',
+  'P&S: 9.4-9.6 <br> <a href="https://st47s.com/Math152/Notes/ht.html" target = "_blank"><i class="fas fa-book-open"></i> notes on t-tests and LRT</a>',
+  '',
+  '',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu20_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 20</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/wu21_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 21</a>', 
+
+"Week 15 <br> 12.6.22", 
+  '• Bayes tests + <br>• foundational ideas',
+  'P&S: 9.8-9.9 <br> <a href="https://st47s.com/Math152/Notes/ht.html" target = "_blank"><i class="fas fa-book-open"></i> notes on Bayes tests and foundational ideas</a>',
+  '<a href="https://m152-stat-theory.netlify.app/handout/MA152_HW11f22.pdf" target = "_blank"><i class="fa-solid fa-file-pdf"></i> HW11 pdf</a> <br> <a href="https://m152-stat-theory.netlify.app/handout/MA152_HW11f22.Rmd" target = "_blank"><i class="fa-brands fa-r-project"></i> HW11 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW11 turn-in</a>',
+  '',
+  '<a href="https://m152-stat-theory.netlify.app/handout/wu22_ma152_f22.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 22</a>',  
+  
+'<font color = "#114B5F"><b>Thursday <br> 12.15.22 <br> 2-5pm</b></font>', '<font color = "#114B5F"><b>Final Exam </b></font>',"", 
+  '',
+  '<a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> see Canvas</a> for sample final Q & sol',
+  ''   
+  )
+```
+
+
+```{r}
+#| echo: false
+#| column: screen-inset
+# can use column: page for the entire page
+# can use column: body-outset to bleed outside the center column of text
+schedule %>% 
+  mutate_all(linebreak) %>% # required for linebreaks to work
+  kbl(escape = FALSE, align = c(rep('l',6))) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"),
+                full_width = TRUE) %>%
+  column_spec(1:6,extra_css = "vertical-align:top;")
+```
+
+
+
+
