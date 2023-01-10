@@ -18,7 +18,7 @@ Estella 2131
 
 
 ```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "p-value as lead singer of a band who doesn't recognize the value of the other band members (like the effect size, the grapics and the context).", preview = TRUE, echo = FALSE}
-knitr::include_graphics("images/p_value_mic_hog.png")
+knitr::include_graphics("images/p_value_mic_hog.jpg")
 ```
 
 ## The course 
