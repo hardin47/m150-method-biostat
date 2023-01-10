@@ -11,14 +11,14 @@ Wednesday 8:30-10:30 am
 Thursday 1:30-3:30 pm   
 Or by Appointment
 
-##### Mentor: Chris Meng
+##### Mentors: Chris Meng & Guy Thampakkul
 
-Wednesday 8-10 pm
-Estella 2113
+Tuesday 8-10 pm
+Estella 2131
 
 
-```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "Rey from Star Wars using the force to wrangle all things R.", preview = TRUE, echo = FALSE}
-knitr::include_graphics("images/rey.png")
+```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "p-value as lead singer of a band who doesn't recognize the value of the other band members (like the effect size, the grapics and the context).", preview = TRUE, echo = FALSE}
+knitr::include_graphics("images/p_value_mic_hog.png")
 ```
 
 ## The course 
