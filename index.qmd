@@ -139,7 +139,7 @@ schedule <- tribble(
 
 "Week 15 <br> 5.2.23", 
   '• Poisson regression',
-  '<a href="http://st47s.com/Math150/Notes/intro.html#regPois" target = "_blank"><i class="fas fa-book-open"></i> Poisson regression </a>',
+  'Kuiper & Sklar: 9 <br> <a href="http://st47s.com/Math150/Notes/intro.html#regPois" target = "_blank"><i class="fas fa-book-open"></i> Poisson regression </a>',
   '',
   '',
   '',  
