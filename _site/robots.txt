@@ -1,1 +1,1 @@
-Sitemap: https://m152-stat-theory.netlify.app/sitemap.xml
+Sitemap: https://m150-method-biostat.netlify.app/sitemap.xml
