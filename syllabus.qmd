@@ -3,15 +3,23 @@ title: "syllabus"
 format: html
 ---
 
-# Spring 2023 Math 150 
+# Methods in Biostatistics
+## Math 150, Spring 2023
 
-#### Office Hours
+Class: Tuesdays & Thursdays, 1:15-2:30pm
+
+Jo Hardin  
+2351 Estella  
+jo.hardin@pomona.edu 
+
+
+#### Office Hours (Estella 2351)
 
 Mondays 1:30-3pm
 Tuesdays 2:30-3:30pm
 Wednesday 9-11am  
 Thursday 3-4pm   
-Or by Appointment
+or by Appointment
 
 ##### Mentors: Chris Meng & Guy Thampakkul
 
@@ -27,12 +35,6 @@ knitr::include_graphics("images/p_value_mic_hog.jpg")
 
 **Statistical Theory**  is an introduction to statistics for students with a background in probability theory, calculus, and linear algebra.  There is no statistics prerequisite for this class. The course will be focused on the theoretical aspects of the material, though there will be some real world applications in class and in the homework assignments. The idea is to have a strong mathematical understanding of the concepts while also understanding how the concepts are applied in the real world.
 
-At the completion of this course, students will:
-
-* be able to derive the methods from introductory statistics using tools from mathematics (i.e., calculus and probability).
-* be able to justify the use of a particular method (technical conditions).
-* be able to weigh advantages and disadvantages of different estimation techniques (e.g., bias, variability, resistance to outliers).
-* know to and how to communicate results effectively.
 
 :::{.callout-tip icon=false}
 ## Anonymous Feedback
@@ -101,13 +103,13 @@ Final Project due – Tuesday, May 9th, 5pm
 #### Using R (through the RStudio IDE)
 
 R will be used for all homework assignments.
-You can use R on the Pomona server: https://rstudio.pomona.edu/ (All Pomona students will be able to log in immediately.
+You can use R on the Pomona server: <a href = "https://rstudio.pomona.edu/" target = "_blank">https://rstudio.pomona.edu/</a> (All Pomona students will be able to log in immediately.
 Non-Pomona students need to get Pomona login information.)
 
 Alternatively, feel free to download R onto your own computer.
-R is freely available at http://www.r-project.org/ and is already installed on college computers.
-Additionally, you are required to install RStudio and turn in all R assignments using RMarkdown. http://rstudio.org/.
-(You can use the LaTeX compiler at:  https://yihui.name/tinytex/)
+R is freely available at <a href = "http://www.r-project.org/" target = "_blank">http://www.r-project.org/</a> and is already installed on college computers.
+Additionally, you are required to install RStudio and turn in all R assignments using RMarkdown. <a href = "http://rstudio.org/" target = "_blank">http://rstudio.org/</a>.
+(You can use the LaTeX compiler at:  <a href = "https://yihui.name/tinytex/" target = "_blank">https://yihui.name/tinytex/</a>)
 
 
 #### Canvas
@@ -178,6 +180,6 @@ Please email and / or set up a time to talk if you have any questions about or d
 ## Grading
   * 25% Homework
   * 50% Midterms
-  * 20% Final Exam
+  * 20% Final Project
   * 5% Class Participation 
 :::
