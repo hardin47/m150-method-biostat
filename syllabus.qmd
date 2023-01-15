@@ -15,10 +15,10 @@ jo.hardin@pomona.edu
 
 #### Office Hours (Estella 2351)
 
-Mondays 1:30-3pm 
-Tuesdays 2:30-3:30pm 
-Wednesday 9-11am 
-Thursday 3-4pm 
+Mondays 1:30-3pm  
+Tuesdays 2:30-3:30pm  
+Wednesday 9-11am  
+Thursday 3-4pm  
 or by Appointment 
 
 ##### Mentors: Chris Meng & Guy Thampakkul
@@ -27,13 +27,13 @@ Tuesday 8-10pm
 Estella 2131
 
 
-```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "p-value as lead singer of a band who doesn't recognize the value of the other band members (like the effect size, the grapics and the context).", preview = TRUE, echo = FALSE}
+```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "p-value as lead singer of a band who doesn't recognize the value of the other band members (like the effect size, the graphics and the context).", preview = TRUE, echo = FALSE}
 knitr::include_graphics("images/p_value_mic_hog.jpg")
 ```
 
 ## The course 
 
-**Statistical Theory**  is an introduction to statistics for students with a background in probability theory, calculus, and linear algebra.  There is no statistics prerequisite for this class. The course will be focused on the theoretical aspects of the material, though there will be some real world applications in class and in the homework assignments. The idea is to have a strong mathematical understanding of the concepts while also understanding how the concepts are applied in the real world.
+**Methods in Biostatistics**  is a second course in biostatistics, designed to follow either an Introduction to Statistics or Introduction to Biostatistics course. No biology background is needed, but examples and methods will be focused on those found in the life sciences. In particular, the main statistical topics covered include a logistic regression, survival analysis, and methods to ameliorate multiple comparison issues.
 
 
 :::{.callout-tip icon=false}
@@ -93,7 +93,7 @@ Final Project due – Tuesday, May 9th, 5pm
 * A fantastic <a href="https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/" target="_blank">ggplot2 tutorial</a>
 * Great tutorials through the <a href="https://ourcodingclub.github.io/tutorials/" target="_blank">Coding Club</a>
 * <a href="http://www.rseek.org/" target="_blank">Google for R</a>
-* some <a href = "http://st47s.com/Math152/Notes/rfunc.html" target="_blank">R ideas</a> that I wrote up 
+* some <a href = "http://st47s.com/Math150/Notes/rfunc.html" target="_blank">R ideas</a> that I wrote up 
 * Incredibly helpful <a href="https://www.rstudio.com/resources/cheatsheets/" target="_blank">cheatsheets</a> from RStudio.
    * <a href="https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf" target="_blank">data wrangling</a>
    * <a href="https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf" target="_blank">ggplot2</a>
