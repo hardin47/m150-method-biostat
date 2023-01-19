@@ -23,9 +23,9 @@ or by appointment
 
 ##### Mentors: Chris Meng & Guy Thampakkul
 
-Monday 6-8pm
-Wednesday 8-10pm
-Estella 2131
+Monday 6-8pm  
+Wednesday 8-10pm  
+Estella 2131  
 
 
 ```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "p-value as lead singer of a band who doesn't recognize the value of the other band members (like the effect size, the graphics and the context).", preview = TRUE, echo = FALSE}

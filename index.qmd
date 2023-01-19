@@ -29,12 +29,12 @@ Here's your roadmap for the semester! Each week, follow the general process outl
 
 ```{r echo = FALSE}
 schedule <- tribble(
-  ~`date`, ~agenda, ~readings, ~homework, ~`handouts`, ~`warm-ups`,
+  ~`date`, ~agenda, ~readings, ~homework, ~`article (Tues)`, ~`warm-ups`,
   "Week 1 <br> 1.17.23", 
   '• t-tests + <br>• SLR',
   'Kuiper & Sklar: 2 <br> <a href="http://st47s.com/Math150/Notes/intro.html#intro" target = "_blank"><i class="fas fa-book-open"></i> introduction</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#ttest" target = "_blank"><i class="fas fa-book-open"></i> t-test</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#tslr" target = "_blank"><i class="fas fa-book-open"></i> t-test as SLR</a>', 
   '',
-  '',
+  '<i class="fas fa-newspaper"></i> none <br> <a href = "https://hardin47.github.io/CURV/scholars/benn.html" target = "_blank">Emma Benn</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/wu1_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 1</a> <br> <a href="https://m150-method-biostat.netlify.app/hw/wu2_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 2</a>',
   
 "Week 2 <br> 1.24.23", 
@@ -77,7 +77,7 @@ schedule <- tribble(
   '• modeling',
   '<a href="https://st47s.com/Math150/Notes/logistic-regression.html#cv" target = "_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="http://st47s.com/Math150/Notes/intro.html#tidymodels" target = "_blank"><i class="fas fa-book-open"></i> `tidymodels`</a>',
   '',
-  '',
+  '<a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
   '',
 
 
