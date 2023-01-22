@@ -36,8 +36,8 @@ You will know that you have successfully imported the data if you can knit this 
 games1 <- readr::read_csv("~/Dropbox/teaching/MA150/PracStatCD/Data Sets/Chapter 02/CSV Files/C2 Games1.csv")
 ```
 
-#### Q0. PodQ
-Describe one thing you learned from someone in your pod this week (it could be: content, logistical help, background material, R information, etc.)  1-3 sentences.
+#### Q0. Collaborative Learning
+Describe one thing you learned from someone (a fellow student or mentor) in our class this week (it could be: content, logistical help, background material, R information, etc.)  1-3 sentences.
 
 #### Q1. Chapter 2, A10.
 
