@@ -113,107 +113,112 @@ What is: $\sum_i x_iy_i$?[^7]
 
 ---
 
-9. With a strong correlation and very small p-value, what can we conclude about happiness and life expectancy?[^8]
-   (a) happiness causes longer lives
-   (b) longer lives cause happiness
-   (c) happiness and longer life are correlated
-   (d) happiness and longer life are perfectly predictive
-   (e) happiness and longer life are unrelated
-
-[^8]: c. happiness and longer life are correlated
-
----
-
-10. Why do we check technical conditions?[^9]
-    (a) so that the inference is valid
-    (b) so that the estimates are valid
-    (c) so that the p-value is more likely to be small
-    (d) so that the confidence level is right
-    (e) for fun
-
-[^9]: a. so that the inference is valid (and also for fun)
-
----
-
-11. When writing the regression equation, why is there a hat ( ^) on the response variable?[^10]
-    (a) because the prediction is an estimate
-    (b) because the prediction is an average
-    (c) because the prediction may be due to extrapolation
-    (d) a & b
-    (e) all of the above
-
-[^10]: d. due to estimation and average
-
----
-
-12. If there is no relationship in the population (true correlation = 0), then r = 0.[^11]
-    (a) TRUE
-    (b) FALSE
-
-[^11]: b. FALSE, there is no reason that the statistic will equal the parameter.
-
----
-
-13. If there is no relationship in the population (true slope $\beta_1 = 0$), then $b_1=0$.[^12]
-    (a) TRUE
-    (b) FALSE
-
-[^12]: b. FALSE, there is no reason that the statistic will equal the parameter.
-
----
-
-14. The regression technical conditions include:[^13]
+9. The regression technical conditions include:[^8]
     (a) The Y variable is normally distributed
     (b) The X variable is normally distributed
     (c) The residuals are normally distributed
     (d) The slope coefficient is normally distributed
     (e) The intercept coefficient is normally distributed
 
-[^13]: d. The residuals are normally distributed (which induces a., d., and e.).  There is nothing in the technical conditions about the distribution of X (remember, X can be binary!).
+[^8]: d. The residuals are normally distributed (which induces a., d., and e.).  There is nothing in the technical conditions about the distribution of X (remember, X can be binary!).
 
 ---
 
-15. Smaller variability around the regression line ($\sigma$):[^14]
+10. We need the technical conditions to hold in order to calculate $b_0$ and $b_1.$[^9]
+
+    (a) TRUE
+    (b) FALSE
+    (c) It depends
+    
+[^9]: FALSE.  We can always minimize the sums of squares, regardless of whether or not the model is any good.
+
+---
+
+11. Why do we check technical conditions?[^10]
+    (a) so that the inference is valid
+    (b) so that the estimates are valid
+    (c) so that the p-value is more likely to be small
+    (d) so that the confidence level is right
+    (e) for fun
+
+[^10]: a. so that the inference is valid (and also for fun)
+
+---
+
+12. When writing the regression equation, why is there a hat ( ^) on the response variable?[^11]
+    (a) because the prediction is an estimate
+    (b) because the prediction is an average
+    (c) because the prediction may be due to extrapolation
+    (d) a & b
+    (e) all of the above
+
+[^11]: d. due to estimation and average
+
+---
+
+13. With a strong correlation and very small p-value, what can we conclude about happiness and life expectancy?[^12]
+    (a) happiness causes longer lives
+    (b) longer lives cause happiness
+    (c) happiness and longer life are correlated
+    (d) happiness and longer life are perfectly predictive
+    (e) happiness and longer life are unrelated
+
+[^12]: c. happiness and longer life are correlated
+
+---
+
+14. If there is no relationship in the population (true correlation = 0), then r = 0.[^13]
+    (a) TRUE
+    (b) FALSE
+
+[^13]: b. FALSE, there is no reason that the statistic will equal the parameter.
+
+---
+
+15. If there is no relationship in the population (true slope $\beta_1 = 0$), then $b_1=0$.[^14]
+    (a) TRUE
+    (b) FALSE
+
+[^14]: b. FALSE, there is no reason that the statistic will equal the parameter.
+
+
+
+---
+
+16. Smaller variability around the regression line ($\sigma$):[^15]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn’t necessarily change the variability of $b_1$.
 
-[^14]: b. decreases the variability of $b_1$.
+[^15]: b. decreases the variability of $b_1$.
 
 ---
 
-16. Smaller variability in the explanatory variable (SD(X) = $s_X$):[^15]
+17. Smaller variability in the explanatory variable (SD(X) = $s_X$):[^16]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn’t necessarily change the variability of $b_1$.
 
-[^15]: a. increases the variability of $b_1$.
+[^16]: a. increases the variability of $b_1$.
 
 ---
 
-17. A smaller sample size ($n$):[^16]
+18. A smaller sample size ($n$):[^17]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn’t necessarily change the variability of $b_1$.
 
-[^16]: b. decreases the variability of $b_1$.
+[^17]: b. decreases the variability of $b_1$.
 
 ---
 
-18. We transform our variables...[^17]
+19. We transform our variables...[^18]
     (a) ... to find the highest $r^2$ value.
     (b) ... when the X variable is not normally distributed.
     (c) ... to make the model easier to interpret.
     (d) ... so that the technical conditions are met.
 
-[^17]: d. so that the technical conditions are met.
+[^18]: d. so that the technical conditions are met.
 
----
-
-19. What does "probability" (in calculating the p-value) mean here?[^18]
-    (a) random allocation
-    (b) random sample
-
-[^18]: not sure
 
 ---

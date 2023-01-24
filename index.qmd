@@ -42,7 +42,7 @@ schedule <- tribble(
   'Kuiper & Sklar: 2 & 6 <br> <a href="http://st47s.com/Math150/Notes/SLR.html#SLR" target = "_blank"><i class="fas fa-book-open"></i> SLR</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#fisher" target = "_blank"><i class="fas fa-book-open"></i> Fisher&#39;s Exact Test</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#catest" target = "_blank"><i class="fas fa-book-open"></i> categorical analysis</a>', 
   '<a href="https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW1 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW1 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW1 turn-in</a>',
   '<a href = "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962" target = "_blank">A/B testing at Netflix</a>',
-  '',
+  '<a href="https://m150-method-biostat.netlify.app/handout/wu3_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 3</a> <br> <a href="https://m150-method-biostat.netlify.app/hw/wu4_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 4</a>',
 
 "Week 3 <br> 1.31.23",   
   '• contingency analysis',
