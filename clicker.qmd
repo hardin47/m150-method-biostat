@@ -77,148 +77,261 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 ---
 
 
-6. What happens if a t-test is used but isn’t appropriate (technical conditions don’t hold)?[^5]
+6. What happens if a t-test is used but isn’t appropriate (technical conditions don’t hold)?[^6]
    (a) the p-value isn’t actually the probability of our data or more extreme if H0 is true.
    (b) the software won’t give a p-value as output
    (c) the rejection region needs to be calculated in the opposite direction
    (d) the world blows up
 
-[^5]: a. the p-value isn’t actually the probability of our data or more extreme if H0 is true.
+[^6]: a. the p-value isn’t actually the probability of our data or more extreme if H0 is true.
 
 ---
 
 7. We use linear regression to run a test of means 
 ($x_i = 0$ for controls, group 1; $x_i = 1$ for cases, group 2)
-What is: $\sum_i x_i$?[^6]
+What is: $\sum_i x_i$?[^7]
    (a) $n$
    (b) $n_1$
    (c) $n_2$
    (d) $n_1 \cdot \overline{y}_1$
    (e) $n_2 \cdot \overline{y}_2$
 
-[^6]: c. $n_2$
+[^7]: c. $n_2$
 
 ---
 
 8. We use linear regression to run a test of means 
 ($x_i = 0$ for controls, group 1; $x_i = 1$ for cases, group 2)
-What is: $\sum_i x_iy_i$?[^7]
+What is: $\sum_i x_iy_i$?[^8]
    (a) $n$
    (b) $n_1$
    (c) $n_2$
    (d) $n_1 \cdot \overline{y}_1$
    (e) $n_2 \cdot \overline{y}_2$
 
-[^7]: e. $n_2 \cdot \overline{y}_2$
+[^8]: e. $n_2 \cdot \overline{y}_2$
 
 ---
 
-9. The regression technical conditions include:[^8]
+9. The regression technical conditions include:[^9]
     (a) The Y variable is normally distributed
     (b) The X variable is normally distributed
     (c) The residuals are normally distributed
     (d) The slope coefficient is normally distributed
     (e) The intercept coefficient is normally distributed
 
-[^8]: d. The residuals are normally distributed (which induces a., d., and e.).  There is nothing in the technical conditions about the distribution of X (remember, X can be binary!).
+[^9]: d. The residuals are normally distributed (which induces a., d., and e.).  There is nothing in the technical conditions about the distribution of X (remember, X can be binary!).
 
 ---
 
-10. We need the technical conditions to hold in order to calculate $b_0$ and $b_1.$[^9]
+10. We need the technical conditions to hold in order to calculate $b_0$ and $b_1.$[^10]
 
     (a) TRUE
     (b) FALSE
     (c) It depends
     
-[^9]: FALSE.  We can always minimize the sums of squares, regardless of whether or not the model is any good.
+[^10]: FALSE.  We can always minimize the sums of squares, regardless of whether or not the model is any good.
 
 ---
 
-11. Why do we check technical conditions?[^10]
+11. Why do we check technical conditions?[^11]
     (a) so that the inference is valid
     (b) so that the estimates are valid
     (c) so that the p-value is more likely to be small
     (d) so that the confidence level is right
     (e) for fun
 
-[^10]: a. so that the inference is valid (and also for fun)
+[^11]: a. so that the inference is valid (and also for fun).  Note that d. so that the confidence level is right is also a correct answer because confidence intervals are all part of the "inference" paradigm.
 
 ---
 
-12. When writing the regression equation, why is there a hat ( ^) on the response variable?[^11]
+12. When writing the regression equation, why is there a hat ( ^) on the response variable?[^12]
     (a) because the prediction is an estimate
     (b) because the prediction is an average
     (c) because the prediction may be due to extrapolation
     (d) a & b
     (e) all of the above
 
-[^11]: d. due to estimation and average
+[^12]: d. due to estimation and average
 
 ---
 
-13. With a strong correlation and very small p-value, what can we conclude about happiness and life expectancy?[^12]
+13. With a strong correlation and very small p-value, what can we conclude about happiness and life expectancy?[^13]
     (a) happiness causes longer lives
     (b) longer lives cause happiness
     (c) happiness and longer life are correlated
     (d) happiness and longer life are perfectly predictive
     (e) happiness and longer life are unrelated
 
-[^12]: c. happiness and longer life are correlated
+[^13]: c. happiness and longer life are correlated
 
 ---
 
-14. If there is no relationship in the population (true correlation = 0), then r = 0.[^13]
-    (a) TRUE
-    (b) FALSE
-
-[^13]: b. FALSE, there is no reason that the statistic will equal the parameter.
-
----
-
-15. If there is no relationship in the population (true slope $\beta_1 = 0$), then $b_1=0$.[^14]
+14. If there is no relationship in the population (true correlation = 0), then r = 0.[^14]
     (a) TRUE
     (b) FALSE
 
 [^14]: b. FALSE, there is no reason that the statistic will equal the parameter.
 
+---
+
+15. If there is no relationship in the population (true slope $\beta_1 = 0$), then $b_1=0$.[^15]
+    (a) TRUE
+    (b) FALSE
+
+[^15]: b. FALSE, there is no reason that the statistic will equal the parameter.
+
 
 
 ---
 
-16. Smaller variability around the regression line ($\sigma$):[^15]
+16. Smaller variability around the regression line ($\sigma$):[^16]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn’t necessarily change the variability of $b_1$.
 
-[^15]: b. decreases the variability of $b_1$.
+[^16]: b. decreases the variability of $b_1$.
 
 ---
 
-17. Smaller variability in the explanatory variable (SD(X) = $s_X$):[^16]
+17. Smaller variability in the explanatory variable (SD(X) = $s_X$):[^17]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn’t necessarily change the variability of $b_1$.
 
-[^16]: a. increases the variability of $b_1$.
+[^17]: a. increases the variability of $b_1$.
 
 ---
 
-18. A smaller sample size ($n$):[^17]
+18. A smaller sample size ($n$):[^18]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn’t necessarily change the variability of $b_1$.
 
-[^17]: b. decreases the variability of $b_1$.
+[^18]: b. decreases the variability of $b_1$.
 
 ---
 
-19. We transform our variables...[^18]
+19. We transform our variables...[^19]
     (a) ... to find the highest $r^2$ value.
     (b) ... when the X variable is not normally distributed.
     (c) ... to make the model easier to interpret.
     (d) ... so that the technical conditions are met.
 
-[^18]: d. so that the technical conditions are met.
+[^19]: d. so that the technical conditions are met.
 
 
 ---
+
+20. In the Botox and Pain Relief example, the p-value is calculated.  What does "probability" refer to?[^20]
+    (a) random allocation
+    (b) random sample
+
+[^20]: a. random allocation
+
+---
+
+p-value = probability of the observed data or more extreme given the null hypothesis is true.
+
+---
+
+21. "Observed data or more extreme" is:[^21]
+    (a) fewer than 9
+    (b) 9 or fewer
+    (c) 9 or more
+    (d) more than 9
+
+[^21]: c. 9 or more
+
+---
+
+
+22. What is the mean value of the null sampling distribution for the number of Botox therapy who showed pain reduction?[^22]
+    (a) 0
+    (b) 9
+    (c) 5.3
+    (d) 11
+    (e) 15
+
+[^22]: c. 5.3 because (15/31)*11 = 5.3
+
+---
+
+23. What conclusion would you draw from the Back Pain and Botox study?[^23]
+    (a) Not enough evidence to conclude that Botox is more effective than the placebo.
+    (b) Strong evidence that Botox is equally as effective as the placebo.
+    (c) Strong evidence that Botox is more effective than the placebo.
+    
+[^23]: c. Strong evidence that Botox is more effective than the placebo.
+
+---
+
+24. If we consider those in the study with back pain to be representative of all people with back pain, what would you conclude about the percentage of people who will have reduced back pain if they use Botox?[^24]
+    (a) Substantially greater than 50%
+    (b) Substantially less than 50%
+    (c) Very close to 50%
+
+[^24]: c. Close to 50%  (the point estimate is 0.6)
+
+---
+
+25. Material check-in
+    (a) So far, so good
+    (b) Concepts are good, R is confusing
+    (c) R is good, concepts are confusing
+    (d) Everything is confusing
+    
+---
+
+26. People check-in
+    (a) So far, so good
+    (b) I can go to office hours / mentor sessions, but I didn't happen to this week.
+    (c) I can't make the scheduled office hours / mentor sessions
+    (d) I'm looking for someone to study with
+    
+---
+
+See Canvas front page for **anonymous** survey / feedback for the class.  Also, if you are looking for people to work with, you could contact me directly (non-anonymously!) so that I can connect you to people.
+
+---
+    
+27. Sample 1,000,000 people who are over 6’ tall and 1,000,000 people who are under 6’ tall.  Record if the person is in the NBA.  What is measurable?[^27]
+    (a) P(NBA if 6’ tall)
+    (b) P(6’ tall if in the NBA)
+    (c) both
+    (d) neither  
+
+[^27]: a. P(NBA if 6’ tall) (cohort: cannot measure the probability of the explanatory variable given the response)
+
+---
+
+28. Sample 100 people who are in the NBA and 100 people who are not in the NBA. Record if the person is over 6’ tall. What is measurable?[^28]
+    (a) P(NBA if 6’ tall)
+    (b) P(6’ tall if in the NBA)
+    (c) both
+    (d) neither  
+
+[^28]: b. P(6’ tall if in the NBA) (case-control:  cannot measure the probability of the response variable given a level of the explanatory variable)
+
+---
+
+29. Sample 10,000,000 people.  Record their height and whether or not they are in the NBA. What is measurable?[^29]
+    (a) P(NBA if 6’ tall)
+    (b) P(6’ tall if in the NBA)
+    (c) both
+    (d) neither  
+
+[^29]: c. both (cross-classification: can measure all the probabilities)
+
+
+
+
+
+
+
+
+
+
+
+
+
