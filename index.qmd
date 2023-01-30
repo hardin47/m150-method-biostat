@@ -69,8 +69,8 @@ schedule <- tribble(
 "Week 6 <br> 2.21.23", 
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logstep" target = "_blank"><i class="fas fa-book-open"></i> model building</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#roc" target = "_blank"><i class="fas fa-book-open"></i> ROC</a>',
-  '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank">missing data</a>',
   '',
+  '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank">missing data</a>',
   '',
 
 "Week 7 <br> 2.28.23", 
