@@ -323,6 +323,80 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 [^29]: c. both (cross-classification: can measure all the probabilities)
 
+---
+
+30. Calcium channel blockers have recently been reported to be associated with increased mortality. Cardiac patients who recently died of their heart disease were compared to control cardiac patients with similar disease who survive. Assume such a study had found that 40% of the recent cardiac deaths were taking calcium channel blockers at the time of death, as compared to 25% of the controls.[^30]
+    (a) Case-control
+    (b) Cohort
+    (c) Cross-classification
+
+[^30]: a. case-control
+
+---
+
+31. It is well known that the use of urinary catheters conveys a substantial risk of urinary tract infection (UTI). A group of physicians believe that, in an intensive care setting, use of one particular type of urinary catheter is more likely to encourage infection than use of other types. They therefore review medical records over a recent period for all uses of urinary catheters in an ICU. They find that 200 new UTIs occurred during 1000 ICU patient-days of catheterization with the suspect type of catheter, as compared to 100 new UTIs during 5000 ICU-patient days of catheterization with all other types. Noting the increased frequency of new UTIs when the suspect catheter type is used, they regard their hypothesis as confirmed. To reduce nosocomial UTIs, they recommend discontinuing use of that type of catheter in the ICU.[^31]
+    (a) Case-control
+    (b) Cohort
+    (c) Cross-classification
+
+[^31]: b. cohort
+
+---
+
+32. When we select individuals based on the explanatory variable, we cannot accurately measure[^32]
+    (a) the proportion of people in the population in each explanatory category
+    (b) the proportion of people in the population in each response group
+    (c) anything about the population
+    (d) confounding variables
+
+[^32]: a. the proportion of people in the population in each explanatory category (tbh, we can't measure b either, but we can measure the proportion of people in each response group, separated by the explanatory variable)
+
+---
+
+33. Relative Risk is[^33]
+    (a) the difference of two proportions
+    (b) the ratio of two proportions
+    (c) the log of the ratio of two proportions
+    (d) the log of the difference of two proportions
+
+[^33]: b. the ratio of two proportions
+
+---
+
+34. The odds ratio is "invariant to which variable is explanatory and which is response" means:[^34]
+    (a) we always put the bigger odds in the numerator
+    (b) we must collect data so that we can estimate the response in the population
+    (c) which variable is called the explanatory changes the value of the OR
+    (d) which variable is called the explanatory does not change the value of the OR
+
+[^34]: d. which variable is called the explanatory does not change the value of the OR
+
+---
+
+35. In finding a CI for RR = p1/p2, why is it okay to exponentiate the end points of the interval for ln(p1/p2)?[^35]
+    (a) Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
+    (b) Because taking the natural log of the RR makes the  distribution approximately normal.
+    (c) Because the natural log compresses values that are  bigger than 1 and spreads values that are smaller than 1.
+    (d) Because we can get exact p-values using Fisher’s Exact Test.
+
+[^35]: a. Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
+
+---
+
+36. In order to find a CI for the true OR, our steps are:[^36]
+ i. ln(OR)
+ ii. add ± z* sqrt( 1/A + 1/B + 1/C + 1/D)
+ iii. take exp of the endpoints 
+ 
+   (a) because the sampling distribution of $\widehat{\mbox{OR}}$ is normal
+   (b) because OR is typically greater than 1
+   (c) because the ln transformation makes the sampling distribution almost normal
+   (d) because OR is invariant to the choice of explanatory or response variable
+
+[^36]: c. because the ln transformation makes the sampling distribution almost normal
+
+---
+
 
 
 
