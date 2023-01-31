@@ -47,14 +47,14 @@ schedule <- tribble(
 "Week 3 <br> 1.31.23",   
   '• contingency analysis',
   'Kuiper & Sklar: 6 <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#studies" target = "_blank"><i class="fas fa-book-open"></i> types of studies</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#rr" target = "_blank"><i class="fas fa-book-open"></i> RR and CI</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#or" target = "_blank"><i class="fas fa-book-open"></i> OR and CI</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW2 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW2 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW1 turn-in</a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW2 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW2 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW2 turn-in</a>',
   '<a href = "https://www.nytimes.com/2020/12/13/learning/what-does-95-effective-mean-teaching-the-math-of-vaccine-efficacy.html" target = "_blank">what is efficacy?</a> <br> <a href = "https://www.nytimes.com/2020/11/18/health/pfizer-covid-vaccine.html" target = "_blank">efficacy</a> <br> <a href = "https://hardin47.github.io/CURV/scholars/small-rodriguez.html" target = "_blank">Desi Small-Rodriguez</a>',
-  '',
+  '<a href="https://m150-method-biostat.netlify.app/handout/wu5_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 5</a> <br> <a href="https://m150-method-biostat.netlify.app/hw/wu6_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 6</a>',
   
 "Week 4 <br> 2.7.23", 
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logmodel" target = "_blank"><i class="fas fa-book-open"></i> logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logMLE" target = "_blank"><i class="fas fa-book-open"></i> MLE</a>',
-  '',
+  '<a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW3 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW3 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW3 turn-in</a>',
   '<a href = "https://weallcount.com/2019/06/21/intersectionality-data-2/" target = "_blank">intersectional data</a>',
   '',
   

@@ -1,0 +1,78 @@
+---
+title: "Math 150 - Methods in Biostatistics - Homework 3"
+author: "your name here"
+date: "Due: Wednesday, February 8, 2023"
+output: pdf_document
+---
+
+```{r global_options, include=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE, fig.height=4, fig.width=6.5, 
+                      fig.align = "center")
+library(tidyverse)
+library(broom)
+library(praise)
+```
+
+
+### Assignment Summary (Goals)
+* Understanding null hypotheses with respect to odds and proportions
+* Testing via z-stat, Fisher, Chi-sq (note: if you did all for all scenarios, you'd almost always end up with the same conclusion each time!)
+* Making conclusions about different study types
+* (Decided against the Chi Square test, you are not responsible for it.)
+
+#### Q1. Collaborative Learning
+Describe one thing you learned from someone (a fellow student or mentor) in our class this week (it could be: content, logistical help, background material, R information, etc.)  1-3 sentences.
+
+
+#### Q2. Chp 6, A23   
+
+Show that the null hypothesis $H_0: p_1 = p_2$ is mathematically equivalent to the null hypothesis $H_0: \theta_1 / \theta_2 = 1$ where $p$ represents the proportion successful and $\theta$ represents the odds of success for any two groups (labeled 1 and 2).
+
+#### Q3. Chp 6, E7 Cancer Cells: Testing for Homogeneity of Odds
+
+Use the data from Table 6.1 and define a benign cell as a success.  Conduct a hypothesis test for the homogeneity of odds.  
+
+(a) Enter the data, tabulate it, and create a barplot (see the R code in the class notes).
+(b) State the null and alternative hypotheses. 
+(c) Calculate the odds ratio and the test statistic (the Z statistic!).
+See pgs 191-192 in your book.
+(d) Provide the p-value and state your conclusions within the context of the study.
+
+#### Q4.  Chp 6, E12  The Pill Scare: understanding relative risk reduction
+
+In October 1995, the United Kingdom Committee on Safety of Medicines (CSM) issued a warning to 190,000 general practitioners, pharmacists, and directors of public health about oral contraceptive pills containing gestodene or desogestrel. 
+The warning, based on three unpublished epidemiological research studies, stated
+> "It is well known that the pill may rarely produce thrombosis (blood clots) involving veins of the legs. New evidence has become available indicating that the chance of thrombosis occurring in a vein increases about two-fold for some types of pills compared to others."
+
+Table 6.15 provides data from one of the studies.
+
+Since the occurrence of venous thrombosis is very rare (1 in 7000 for people using the second generation pill), 259 subjects were selected who had thrombosis and 651 similar subjects (from hospitals and community) who did not have thrombosis.  Then these subjects were classified by the type of contraceptive they used.
+
+(a) Was either the explanatory (row) or the response (column) variable fixed before the study was conducted?
+(b) Is this an example of an experiment or an observational study?
+(c) Is this a cross-classification, cohort, or case-control study?
+(d) Create a segmented bar chart for the data.
+(e) Use a two-sided hypothesis and Fisher's exact test to determine if the type of contraceptive impacts the likelihood of thrombosis.
+Do you expect the researchers took care to collect a simple random sample of subjects?
+What conclusions can be drawn?  
+
+The warning contained no numerical information other than the fact that the chance of blood clots was likely to double when birth control pills contained gestodene or desogestrel.
+This warning was widely publicized throughout the press, and evidence suggests that, as a result of this warning, many women ceased contraception altogether.
+Evidence shows a strong association between the warning and an increase in the number of unintended pregnancies and abortions (especially in women younger than 20 years old).
+This resulted in an estimated increase in cost of $\textsterling$ 21 million for maternity care and $\textsterling$ 4 to $\textsterling$ 6 million for abortion provision.
+
+(f) Remember that the actual occurrence of venous thrombosis is only 1 in 7000.  
+If third generation pills double the chances of venous thrombosis, the likelihood of occurrence is still only 2 in 7000.
+Explain the difference between absolute risk reduction and relative risk reduction in this study.
+
+(g) Death from venous thrombosis related to third generation pills is estimated to be 1 in 11 million, much lower than the probability of death resulting from pregnancy. 
+In 2005, the lifetime risk of maternal death in developed countries was 1 in 7300.
+The CSM warning did suggest that patients see a doctor before altering their contraceptives; however, it appears that many women simply stopped taking any contraceptives.
+Write a brief statement (just 1-2 sentences!) to the press, general practitioners, pharmacists, and directors of public health about this study.
+
+
+
+```{r}
+praise()
+```
+
