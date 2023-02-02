@@ -330,7 +330,7 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
     (b) Cohort
     (c) Cross-classification
 
-[^30]: a. case-control
+[^30]: a. case-control (they selected based on people who had died or not)
 
 ---
 
@@ -339,7 +339,7 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
     (b) Cohort
     (c) Cross-classification
 
-[^31]: b. cohort
+[^31]: b. cross-classification (they selected all uses of catheters)
 
 ---
 
@@ -384,20 +384,27 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 ---
 
 36. In order to find a CI for the true OR, our steps are:[^36]
- i. ln(OR)
- ii. add ± z* sqrt( 1/A + 1/B + 1/C + 1/D)
+ i. find $\widehat{\ln(\mbox{OR})}$
+ ii. add $\pm \ z^* \sqrt{\frac{1}{n_1 \hat{p}_1 (1-\hat{p}_1)} + \frac{1}{n_2 \hat{p}_2 (1-\hat{p}_2)}}$
  iii. take exp of the endpoints 
  
    (a) because the sampling distribution of $\widehat{\mbox{OR}}$ is normal
    (b) because OR is typically greater than 1
-   (c) because the ln transformation makes the sampling distribution almost normal
+   (c) because the $\ln$ transformation makes the sampling distribution almost normal
    (d) because OR is invariant to the choice of explanatory or response variable
 
-[^36]: c. because the ln transformation makes the sampling distribution almost normal
+[^36]: c. because the $\ln$ transformation makes the sampling distribution almost normal
 
 ---
 
+37. I know where to find: the solutions to the warm-ups, the clicker questions (with solutions), and the HW solutions[^37]
+     (a) TRUE
+     (b) FALSE
+     
+[^37]: The warm-up solutions and clicker questions are on the main course website.  The HW solutions are on Canvas under Files.
 
+
+---
 
 
 
