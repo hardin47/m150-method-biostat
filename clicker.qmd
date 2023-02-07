@@ -407,7 +407,132 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 ---
 
 
+38. At the value $x = -\beta_0 / \beta_1$, the probability of success is:[^38]
+    (a) 0
+    (b) 0.5
+    (c) 1
+    (d) depends on $\beta_0$
+    (e) depends on $\beta_1$
 
+[^38]: b. 0.5
+
+---
+
+39. The logistic model gives probability of failure:[^39]
+    (a) $\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}$
+    (b) $\frac{1}{1+ e^{\beta_0+ \beta_1 x}}$
+    (c) $e^{\beta_0+ \beta_1 x}$
+    (d) $e^{-(\beta_0+ \beta_1 x)}$
+    (e) $\beta_0+ \beta_1 x$
+
+[^39]: b. $\frac{1}{1+ e^{\beta_0+ \beta_1 x}}$
+
+---
+
+40. The logistic model gives odds of success:[^40]
+    (a) $\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}$
+    (b) $\frac{1}{1+ e^{\beta_0+ \beta_1 x}}$
+    (c) $e^{\beta_0+ \beta_1 x}$
+    (d) $e^{-(\beta_0+ \beta_1 x)}$
+    (e) $\beta_0+ \beta_1 x$
+
+[^40]: c. $e^{\beta_0+ \beta_1 x}$
+
+---
+
+41. The logistic model gives odds of failure:[^41]
+    (a) $\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}$
+    (b) $\frac{1}{1+ e^{\beta_0+ \beta_1 x}}$
+    (c) $e^{\beta_0+ \beta_1 x}$
+    (d) $e^{-(\beta_0+ \beta_1 x)}$
+    (e) $\beta_0+ \beta_1 x$
+
+[^41]: d. $e^{-(\beta_0+ \beta_1 x)}$
+
+---
+
+42. With a logistic regression model, the relative risk of success (for a one unit increase in X) is:[^42]
+    (a) $- \beta_0/\beta_1$
+    (b) $\beta_0+ \beta_1 x$
+    (c) $e^{\beta_0+ \beta_1 x}$
+    (d) a non-linear function of X (which depends on X )
+
+[^42]: d. a non-linear function of X (which depends on X )
+
+---
+
+43. If we want the relative risk of survival (for a one unit increase in X) to be independent of X, we should use which link:[^43]
+    (a) linear
+    (b) logistic
+    (c) complementary log-log
+    (d) log-linear
+
+[^43]: d. log-linear
+
+---
+
+44.  You take a sample of size 4 from a binary population and get: FSFF. 
+(failure, success, failure, failure) What is your guess for p = P(success)?[^44]
+     (a) 0.05
+     (b) 0.15
+     (c) 0.25
+     (d) 0.5
+     (e) 0.75
+ 
+[^44]: c. 0.25
+
+---
+
+45.  In a logistic regression model, the variability is given by[^45]
+     (a) Normal Y given X
+     (b) Binomial Y given X
+     (c) Bernoulli Y given X
+     (d) Poisson Y given X
+
+[^45]: c. Bernoulli Y given X
+
+---
+
+46.  When trying to find estimates for $\beta_0$  and $\beta_1$, we maximize the likelihood.  $$\prod_{i=1}^n \bigg(\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}\bigg)^{y_i}\bigg(\frac{1}{1+ e^{\beta_0+ \beta_1 x}}\bigg)^{1 - y_i}$$
+Take the derivative with respect to which variable(s):[^46]
+     (a) X
+     (b) Y
+     (c) $\beta_0$
+     (d) $\beta_1$
+     (e) $\beta_0$ and $\beta_1$
+
+[^46]: e. $\beta_0$ and $\beta_1$
+
+---
+
+47. Maximum likelihood estimation seeks to:[^47]
+    (a) Find the data which are most likely under the model.
+    (b) Find the parameters which are most likely under the model.
+    (c) Find the parameters which make the data most likely under the model.
+    (d) Find the data which make the parameters most likely under the model.
+
+[^47]: c. Find the parameters which make the data most likely under the model.
+
+---
+
+48.  We use maximum likelihood estimation because:[^48]
+     (a) It gives an principled approach for estimating the parameters.
+     (b) The estimates are asymptotically normally distributed.
+     (c) The estimates are always easy to compute.
+     (d) All of the above.
+     (e) Some of the above.
+
+[^48]: e. Some of the above (a. It gives an principled approach for estimating the parameters. and b. The estimates are asymptotically normally distributed.)
+
+---
+
+49. We know that for a given data set (with MLEs of $b_0$,$b_1$):[^49]
+    (a) $L(b_0,b_1)< L(b_0,\beta_1=0)$ always
+    (b) $L(b_0,b_1)> L(b_0,\beta_1=0)$ always
+    (c) $L(b_0,b_1) \leq L(b_0,\beta_1=0)$ always
+    (d) $L(b_0,b_1) \geq L(b_0,\beta_1=0)$ always
+
+[^49]: d. $L(b_0,b_1) \geq L(b_0,\beta_1=0)$ always
 
 
 
