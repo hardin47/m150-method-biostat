@@ -55,7 +55,7 @@ schedule <- tribble(
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logmodel" target = "_blank"><i class="fas fa-book-open"></i> logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logMLE" target = "_blank"><i class="fas fa-book-open"></i> MLE</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW3 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW3 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW3 turn-in</a>',
-  '<a href = "https://weallcount.com/2019/06/21/intersectionality-data-2/" target = "_blank">intersectional data</a>',
+  '<a href = "https://weallcount.com/2019/06/21/intersectionality-data-2/" target = "_blank">intersectional data</a> <br> <a href = "https://www.nytimes.com/2020/11/18/health/pfizer-covid-vaccine.html" target = "_blank">efficacy</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/blackwell.html" target = "_blank">David Blackwell</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/wu7_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 7</a> <br> <a href="https://m150-method-biostat.netlify.app/hw/wu8_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 8</a>',
   
   
@@ -63,7 +63,7 @@ schedule <- tribble(
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="hhttps://st47s.com/Math150/Notes/logistic-regression.html#loginf" target = "_blank"><i class="fas fa-book-open"></i> inference, logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#multlog" target = "_blank"><i class="fas fa-book-open"></i> multiple logistic regression</a>',
   '',
-  '<a href = "https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target = "_blank">Obesity in Children Plummets</a> <br> <a href = "https://jamanetwork.com/journals/jama/fullarticle/1832542" target = "_blank"> JAMA article here (see Table 6)</a>',
+  '<a href = "https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target = "_blank">Obesity in Children Plummets</a> <br> <a href = "https://jamanetwork.com/journals/jama/fullarticle/1832542" target = "_blank"> JAMA article here (see Table 6)</a><br> <br> <a href = "https://hardin47.github.io/CURV/scholars/sellers.html" target = "_blank">Kim Sellers</a>',
   '',
   
 "Week 6 <br> 2.21.23", 
@@ -77,7 +77,7 @@ schedule <- tribble(
   '• modeling',
   '<a href="https://st47s.com/Math150/Notes/logistic-regression.html#cv" target = "_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="http://st47s.com/Math150/Notes/intro.html#tidymodels" target = "_blank"><i class="fas fa-book-open"></i> `tidymodels`</a>',
   '',
-  '<a href = "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target = "_blank">placebo effect (read abstract and Fig 3)</a> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
+  '<a href = "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target = "_blank">placebo effect (read abstract and Fig 3)</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
   '',
 
 
