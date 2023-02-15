@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://m150-method-biostat.netlify.app/index.html</loc>
-    <lastmod>2023-02-14T16:42:03.005Z</lastmod>
+    <lastmod>2023-02-15T13:33:02.211Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/syllabus.html</loc>
@@ -10,15 +10,15 @@
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/clicker.html</loc>
-    <lastmod>2023-02-07T16:24:25.991Z</lastmod>
+    <lastmod>2023-02-15T13:32:57.543Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/clicker_study.html</loc>
-    <lastmod>2023-02-07T16:25:40.194Z</lastmod>
+    <lastmod>2023-02-15T13:32:45.080Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/clicker_slides.html</loc>
-    <lastmod>2023-02-07T16:25:32.467Z</lastmod>
+    <lastmod>2023-02-15T13:32:50.782Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.html</loc>
@@ -31,5 +31,9 @@
   <url>
     <loc>https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.html</loc>
     <lastmod>2023-02-01T19:50:16.232Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW4_m150_s23.html</loc>
+    <lastmod>2023-02-15T13:33:00.969Z</lastmod>
   </url>
 </urlset>

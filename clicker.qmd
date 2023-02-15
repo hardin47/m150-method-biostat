@@ -493,7 +493,7 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 ---
 
-46.  When trying to find estimates for $\beta_0$  and $\beta_1$, we maximize the likelihood.  $$\prod_{i=1}^n \bigg(\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}\bigg)^{y_i}\bigg(\frac{1}{1+ e^{\beta_0+ \beta_1 x}}\bigg)^{1 - y_i}$$
+46.  When trying to find estimates for $\beta_0$  and $\beta_1$, we maximize the likelihood.  $$\prod_{i=1}^n \bigg(\frac{e^{\beta_0+ \beta_1 x_i}}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{y_i}\bigg(\frac{1}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{1 - y_i}$$
 Take the derivative with respect to which variable(s):[^46]
      (a) X
      (b) Y
