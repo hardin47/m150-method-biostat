@@ -535,6 +535,133 @@ Take the derivative with respect to which variable(s):[^46]
 [^49]: d. $L(b_0,b_1) \geq L(b_0,\beta_1=0)$ always
 
 
+---
+
+How many parameters do we estimate when considering Length as a categorical variable?  (the only variable)
+
+(a) 0
+(b) 1
+(c) 2
+(d) 33
+(e) 34
+
+
+ 
+
+55. How many df for the LRT addressing whether Length (as a categorical variable) belongs in the model?
+
+(a) 0
+(b) 1
+(c) 2
+(d) 33
+(e) 34
+
+
+
+ 
+
+56.  How many df for the LRT addressing whether Incubate and Color belong in the model (given Length is determined to be in the model)?
+
+(a) 0
+(b) 1
+(c) 2
+(d) 3
+(e) 4 
+
+ 
+
+57. An interaction term in a multiple regression model may be used when:
+(a) the model fit is poor.
+(b) there is a quadratic relationship between the response and explanatory variables.
+(c) neither one of two explanatory variables contribute significantly to the regression model.
+(d) the relationship between X1 and P(success) changes for differing values of X2.
+ 
+
+58. The interpretations of the main effects (on their own) make sense only when the interaction component is not significant.
+
+(a)  	 True
+(b)	 False 
+
+59. If the interaction is significant but the main effects aren’t:
+(a) report on the significance of the main effects
+(b) remove the main effects from the model
+(c) avoid talking about main effects
+(d) test whether the main effects are significant without interaction in the model
+
+ 
+
+60. With two variables of interest, what should you always test first?
+(a) The significance of variable 1.
+(b) The significance of variable 2.
+(c) The interaction between variables 1 and 2.
+(d) None of the above.
+
+ 
+61. Consider variable 1 is continuous and variable 2 has 4 levels.  How many degrees of freedom are associated with the drop in deviance test (LRT) of their overall interaction?
+(a) 1
+(b) 2
+(c) 3
+(d) 4
+(e) 5
+
+ 
+62.  When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:
+
+(a) positive
+(b) negative
+(c) zero
+(d) no intuition exists for being able to answer this question
+
+ 
+63.  When probability of being able to buy a candy bar is modeled as a function of the number of low coins, the coefficient on number of low coins is:
+
+(a) positive
+(b) negative
+(c) zero
+(d) no intuition exists for being able to answer this question 
+ 
+64.  When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of coins is:
+
+(a) positive
+(b) negative
+(c) zero
+(d) no intuition exists for being able to answer this question
+
+ 
+65.  When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of low coins is:
+
+(a) positive
+(b) negative
+(c) zero
+(d) no intuition exists for being able to answer this question
+
+ 
+66. Consider the exam helper situation (100 questions total)
+Sage	85	Sage & Bruno	95
+Bruno	80	Sage & Beta	93
+Luna	55	Sage & Luna	92
+Beta 	45	Bruno & Beta	90
+		Bruno & Luna	90
+		Beta & Luna	100
+With forward selection which two are chosen for the final model?
+(a) Sage & Bruno
+(b) Sage & Beta
+(c) Sage & Luna
+(d) Bruno & Luna
+(e) Beta & Luna
+67. Consider the exam helper situation (100 questions total)
+Sage	85	Sage & Bruno	95
+Bruno	80	Sage & Beta	93
+Luna	55	Sage & Luna	92
+Beta 	45	Bruno & Beta	90
+		Bruno & Luna	90
+		Beta & Luna	100
+With backward selection which two are chosen for the final model?
+(a) Sage & Bruno
+(b) Sage & Beta
+(c) Sage & Luna
+(d) Bruno & Luna
+(e) Beta & Luna
 
 
 
