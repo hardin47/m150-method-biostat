@@ -652,7 +652,127 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-61.  When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:[^61]
+61. When selecting variables, it is important that[^61]
+    (a) The model predicts training data well
+    (b) The model predicts test data well
+    (c) The coefficients on the variables are all significant
+    (d) The relationships between the variables make sense
+
+[^61]: b. The model predicts test data well
+
+---
+
+62. To get a sense of the true accuracy of the model, the test data should be assessed (for accuracy)[^62]
+     a. on the first model only.
+     b. on the last model only.
+     c. on every model in the process.
+
+[^62]: b. on the last model only.
+
+---
+
+63. If I am using all features of my dataset and I achieve 100% accuracy on my training set, but ~70% on testing set, what should I look out for?[^63]
+    (a) Underfitting
+    (b) Nothing, the model is perfect
+    (c) Overfitting
+
+[^63]: c. overfitting
+
+---
+
+64. If I am picking and choosing between features of my dataset and I achieve 30% accuracy on my training set, and ~30% on testing set, what should I look out for?[^64]
+    (a) Underfitting
+    (b) Nothing, the model is perfect
+    (c) Overfitting
+
+[^64]: a. underfitting
+
+---
+
+65. Cross validating will guarantee that the model does not overfit.[^65]
+    (a)	TRUE
+    (b)	FALSE
+
+[^65]: b. FALSE.  CV reduces the effect of overfitting, but at the end of the day, you are still building a model on the dataset at hand, and it is possible that you will overfit that dataet.
+
+---
+
+66. Suppose we want to compute 10-Fold Cross-Validation error on 100 training examples. We need to compute a model error rate N1 times, and the Cross-Validation error is the average of the errors. To compute each error, we need to train a model with data of size N2, and test the model on the data of size N3.
+What are the numbers for N1, N2, N3?[^66]
+    (a) N1 = 10, N2 = 90, N3 = 10
+    (b) N1 = 1, N2 = 90, N3 = 10
+    (c) N1 = 10, N2 = 100, N3 = 10
+    (d) N1 = 10, N2 = 100, N3 = 100
+
+[^66]: a. N1 = 10, N2 = 90, N3 = 10
+
+---
+
+67. You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting?[^67]
+     (a) My method achieves a training error lower than all previous  methods!
+     (b) My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min test error.)
+     (c) My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min CV error.)
+     (d) My method achieves a CV error lower than all previous methods! (Footnote: When variables are chosen so as to min CV error.)
+
+[^67]: c. My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min CV error.)
+
+---
+
+```{r echo = FALSE, eval = FALSE}
+68. From the burn data, consider:  
+$$P(\mbox{surv if } X = 0.4) = 0.3$$
+$$P(\mbox{surv if } X = 0.2) = 0.9$$
+The two points are concordant if[^68]
+    (a)	X = 0.4 survives and X = 0.2 dies
+    (b)	X = 0.4 dies and X= 0.2 survives
+    (c)	They both survive
+    (d)	They both die
+
+[^68]: b. X = 0.4 dies and X= 0.2 survives
+
+---
+
+69. Which model is better (according to ROC)?[^69]
+    (a) pink because it goes closer to (1,1)
+    (b) pink because it is closer to y=x
+    (c) blue because it is farther from y=x
+    (d) blue because it is steeper
+    (e) neither
+
+**need picture here**
+
+---
+
+70. In ROC curve, the x-axis measures[^70]
+    (a) True Pos Rate which we want high
+    (b) False Pos Rate which we want low
+    (c) True Neg Rate which we want high
+    (d) False Neg Rate which we want low
+
+[^70]: d. False Neg Rate which we want low
+
+---
+
+71. With model building:
+
+(a)	There are many ways to find a good model.
+(b)	There is always one right answer.
+(c)	There is no end to the fun.
+(d)	Can we take a pure math class yet?
+
+In a nested F test, the reduced model corresponds to the null hypothesis being true.
+(a) True
+(b) False
+
+ 
+
+
+66.  In a nested F test, the full model corresponds to the alternative hypothesis being true.
+(a) True
+(b) False
+
+
+ When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:[^61]
      (a) positive
      (b) negative
      (c) zero
@@ -693,40 +813,81 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-65. Consider the exam helper situation (100 questions total)[^65]
-Sage	85	Sage & Bruno	95
-Bruno	80	Sage & Beta	93
-Luna	55	Sage & Luna	92
-Beta 	45	Bruno & Beta	90
-		Bruno & Luna	90
-		Beta & Luna	100
-With forward selection which two are chosen for the final model?
-    (a) Sage & Bruno
-    (b) Sage & Beta
-    (c) Sage & Luna
-    (d) Bruno & Luna
-    (e) Beta & Luna
-
-[^65]: 
-
----
-
-66. Consider the exam helper situation (100 questions total)[^66]
-Sage	85	Sage & Bruno	95
-Bruno	80	Sage & Beta	93
-Luna	55	Sage & Luna	92
-Beta 	45	Bruno & Beta	90
-		Bruno & Luna	90
-		Beta & Luna	100
-With backward selection which two are chosen for the final model?
-    (a) Sage & Bruno
-    (b) Sage & Beta
-    (c) Sage & Luna
-    (d) Bruno & Luna
-    (e) Beta & Luna
-
-[^66]:
 
 
+Quiz on 11 topics (you know nothing).  Your friends know topics:
+A: {1, 2, 3, 4, 5, 6, 7}
+B: {8, 9, 10}
+C: {1, 2, 3, 4, 8, 10}
+D: {5, 6, 7, 9, 11}
+Who should you choose to help you answer the questions?
+(a) A
+(b) B
+(c) C
+(d) D
+(e) can’t tell
+ 
 
+79.  Who do you want to choose next?
+A: {1, 2, 3, 4, 5, 6, 7}
+B: {8, 9, 10}
+C: {1, 2, 3, 4, 8, 10}
+D: {5, 6, 7, 9, 11}
+(a) A
+(b) B
+(c) C
+(d) D
+(e) can’t tell
+
+ 
+
+80.  If you can pick two people, who do you pick?
+A: {1, 2, 3, 4, 5, 6, 7}
+B: {8, 9, 10}
+C: {1, 2, 3, 4, 8, 10}
+D: {5, 6, 7, 9, 11}
+
+(a) A, B
+(b) A, C
+(c) A, D
+(d) C, B
+(e) C, D
+
+ 
+
+
+81. The variables in the k-variable model identified by forward selection are a subset of the variables in the (k+1)-variable model identified by forward selection.
+
+(a)	TRUE (always TRUE)
+(b)	FALSE (not always TRUE)
+
+ 
+
+82. The variables in the k-variable model identified by backward selection are a subset of the variables in the (k+1)-variable model identified by backward selection. 
+
+(a)	TRUE (always TRUE)
+(b)	FALSE (not always TRUE)
+ 
+
+83. The variables in the k-variable model identified by backward selection are a subset of the variables in the (k+1)-variable model identified by forward selection.
+
+(a)	TRUE (always TRUE)
+(b)	FALSE (not always TRUE)
+
+ 
+
+
+84. The variables in the k-variable model identified by forward selection are a subset of the variables in the (k+1)-variable model identified by backward selection.
+
+(a)	TRUE (always TRUE)
+(b)	FALSE (not always TRUE)
+ 
+
+85. The variables in the k-variable model identified by best-subsets selection are a subset of the variables in the (k+1)-variable model identified by best-subsets selection.
+
+(a)	TRUE (always TRUE)
+(b)	FALSE (not always TRUE)
+
+
+```
 
