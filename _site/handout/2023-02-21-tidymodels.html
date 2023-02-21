@@ -603,7 +603,7 @@ $ count_area_size_sq_m_atleast &lt;dbl&gt; 1.01, 1.01, 1.01, 1.01, 1.01, 1.01, 3
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb10" data-code-line-numbers="|2|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>feeder_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
 <span id="cb10-2"><a href="#cb10-2"></a>  squirrels <span class="sc">~</span> .,    <span class="co"># formula</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="at">data =</span> feeder_train <span class="co"># data for cataloging names and types of variables</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="at">data =</span> feeder_train </span>
 <span id="cb10-4"><a href="#cb10-4"></a>  )</span>
 <span id="cb10-5"><a href="#cb10-5"></a></span>
 <span id="cb10-6"><a href="#cb10-6"></a>feeder_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -643,7 +643,8 @@ Inputs:
 </section>
 <section id="impute-missing-values-remove-zero-variance-predictors" class="slide level2 smaller">
 <h2>Impute missing values &amp; Remove zero variance predictors</h2>
-<p>Impute missing values (replace with mean). Remove all predictors that contain only a single value</p>
+<p>Impute missing values (replace with mean).<br>
+Remove all predictors that contain only a single value</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb12" data-code-line-numbers="|2|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>feeder_rec <span class="ot">&lt;-</span> feeder_rec <span class="sc">%&gt;%</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">step_impute_mean</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">%&gt;%</span></span>
@@ -822,40 +823,34 @@ Computational engine: glm </code></pre>
 <section id="model-fit-summary" class="slide level2">
 <h2>Model fit summary</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>feeder_fit <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>feeder_fit <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 59 × 5
    term               estimate std.error statistic   p.value
    &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
- 1 (Intercept)         -1.42     0.0505    -28.2   2.26e-174
- 2 yard_type_pavement  -0.854    0.149      -5.74  9.23e-  9
- 3 yard_type_garden    -0.175    0.0392     -4.47  7.89e-  6
- 4 yard_type_landsca    0.168    0.0219      7.69  1.45e- 14
- 5 yard_type_woods      0.309    0.0170     18.1   1.59e- 73
- 6 yard_type_desert    -0.297    0.0789     -3.76  1.68e-  4
- 7 hab_dcid_woods       0.336    0.0161     20.9   6.55e- 97
- 8 hab_evgr_woods      -0.0797   0.0192     -4.15  3.36e-  5
- 9 hab_mixed_woods      0.420    0.0158     26.5   3.17e-155
-10 hab_orchard         -0.307    0.0252    -12.2   4.00e- 34
-11 hab_park             0.0614   0.0192      3.20  1.36e-  3
-12 hab_water_fresh      0.0638   0.0157      4.07  4.79e-  5
-13 hab_water_salt      -0.320    0.0331     -9.67  4.03e- 22
-14 hab_residential      0.197    0.0208      9.51  1.88e- 21
-15 hab_industrial      -0.0365   0.0191     -1.91  5.61e-  2
-16 hab_agricultural    -0.578    0.0179    -32.3   2.87e-228
-17 hab_desert_scrub    -0.557    0.0240    -23.2   2.42e-119
-18 hab_young_woods      0.0874   0.0186      4.70  2.63e-  6
-19 hab_swamp            0.406    0.0223     18.2   5.54e- 74
-20 hab_marsh           -0.0149   0.0231     -0.644 5.20e-  1
-21 evgr_trees_atleast   0.0405   0.00220    18.4   1.44e- 75
-# … with 38 more rows</code></pre>
+ 1 (Intercept)         -1.42      0.0505    -28.2  2.26e-174
+ 2 yard_type_pavement  -0.854     0.149      -5.74 9.23e-  9
+ 3 yard_type_garden    -0.175     0.0392     -4.47 7.89e-  6
+ 4 yard_type_landsca    0.168     0.0219      7.69 1.45e- 14
+ 5 yard_type_woods      0.309     0.0170     18.1  1.59e- 73
+ 6 yard_type_desert    -0.297     0.0789     -3.76 1.68e-  4
+ 7 hab_dcid_woods       0.336     0.0161     20.9  6.55e- 97
+ 8 hab_evgr_woods      -0.0797    0.0192     -4.15 3.36e-  5
+ 9 hab_mixed_woods      0.420     0.0158     26.5  3.17e-155
+10 hab_orchard         -0.307     0.0252    -12.2  4.00e- 34
+# … with 49 more rows</code></pre>
 </div>
 </div>
 </section></section>
 <section>
 <section id="evaluate-model" class="title-slide slide level1 center">
 <h1>Evaluate model</h1>
-
+<blockquote>
+<p>sensitivty = number of squirrels that are accurately predicted to be squirrels (true positive rate)</p>
+</blockquote>
+<blockquote>
+<p>specificity = number of non-squirrels that are accurately predicted to be non-squirrels (true negative rate)</p>
+</blockquote>
 </section>
 <section id="make-predictions-for-training-data" class="slide level2">
 <h2>Make predictions for training data</h2>

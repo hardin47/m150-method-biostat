@@ -137,7 +137,7 @@
     "href": "handout/2023-02-21-tidymodels.html#initiate-a-recipe",
     "title": "Tidymodels",
     "section": "Initiate a recipe",
-    "text": "Initiate a recipe\n\nfeeder_rec <- recipe(\n  squirrels ~ .,    # formula\n  data = feeder_train # data for cataloging names and types of variables\n  )\n\nfeeder_rec\n\nRecipe\n\nInputs:\n\n      role #variables\n   outcome          1\n predictor         58"
+    "text": "Initiate a recipe\n\nfeeder_rec <- recipe(\n  squirrels ~ .,    # formula\n  data = feeder_train \n  )\n\nfeeder_rec\n\nRecipe\n\nInputs:\n\n      role #variables\n   outcome          1\n predictor         58"
   },
   {
     "objectID": "handout/2023-02-21-tidymodels.html#working-with-recipes",
@@ -151,7 +151,7 @@
     "href": "handout/2023-02-21-tidymodels.html#impute-missing-values-remove-zero-variance-predictors",
     "title": "Tidymodels",
     "section": "Impute missing values & Remove zero variance predictors",
-    "text": "Impute missing values & Remove zero variance predictors\nImpute missing values (replace with mean). Remove all predictors that contain only a single value\n\nfeeder_rec <- feeder_rec %>%\n  step_impute_mean(all_numeric_predictors()) %>%\n  step_nzv(all_numeric_predictors())\n\nfeeder_rec\n\nRecipe\n\nInputs:\n\n      role #variables\n   outcome          1\n predictor         58\n\nOperations:\n\nMean imputation for all_numeric_predictors()\nSparse, unbalanced variable filter on all_numeric_predictors()"
+    "text": "Impute missing values & Remove zero variance predictors\nImpute missing values (replace with mean).\nRemove all predictors that contain only a single value\n\nfeeder_rec <- feeder_rec %>%\n  step_impute_mean(all_numeric_predictors()) %>%\n  step_nzv(all_numeric_predictors())\n\nfeeder_rec\n\nRecipe\n\nInputs:\n\n      role #variables\n   outcome          1\n predictor         58\n\nOperations:\n\nMean imputation for all_numeric_predictors()\nSparse, unbalanced variable filter on all_numeric_predictors()"
   },
   {
     "objectID": "handout/2023-02-21-tidymodels.html#prep-and-bake",
@@ -193,7 +193,7 @@
     "href": "handout/2023-02-21-tidymodels.html#model-fit-summary",
     "title": "Tidymodels",
     "section": "Model fit summary",
-    "text": "Model fit summary\n\nfeeder_fit %>% tidy() %>% print(n = 21)\n\n# A tibble: 59 × 5\n   term               estimate std.error statistic   p.value\n   <chr>                 <dbl>     <dbl>     <dbl>     <dbl>\n 1 (Intercept)         -1.42     0.0505    -28.2   2.26e-174\n 2 yard_type_pavement  -0.854    0.149      -5.74  9.23e-  9\n 3 yard_type_garden    -0.175    0.0392     -4.47  7.89e-  6\n 4 yard_type_landsca    0.168    0.0219      7.69  1.45e- 14\n 5 yard_type_woods      0.309    0.0170     18.1   1.59e- 73\n 6 yard_type_desert    -0.297    0.0789     -3.76  1.68e-  4\n 7 hab_dcid_woods       0.336    0.0161     20.9   6.55e- 97\n 8 hab_evgr_woods      -0.0797   0.0192     -4.15  3.36e-  5\n 9 hab_mixed_woods      0.420    0.0158     26.5   3.17e-155\n10 hab_orchard         -0.307    0.0252    -12.2   4.00e- 34\n11 hab_park             0.0614   0.0192      3.20  1.36e-  3\n12 hab_water_fresh      0.0638   0.0157      4.07  4.79e-  5\n13 hab_water_salt      -0.320    0.0331     -9.67  4.03e- 22\n14 hab_residential      0.197    0.0208      9.51  1.88e- 21\n15 hab_industrial      -0.0365   0.0191     -1.91  5.61e-  2\n16 hab_agricultural    -0.578    0.0179    -32.3   2.87e-228\n17 hab_desert_scrub    -0.557    0.0240    -23.2   2.42e-119\n18 hab_young_woods      0.0874   0.0186      4.70  2.63e-  6\n19 hab_swamp            0.406    0.0223     18.2   5.54e- 74\n20 hab_marsh           -0.0149   0.0231     -0.644 5.20e-  1\n21 evgr_trees_atleast   0.0405   0.00220    18.4   1.44e- 75\n# … with 38 more rows"
+    "text": "Model fit summary\n\nfeeder_fit %>% tidy() \n\n# A tibble: 59 × 5\n   term               estimate std.error statistic   p.value\n   <chr>                 <dbl>     <dbl>     <dbl>     <dbl>\n 1 (Intercept)         -1.42      0.0505    -28.2  2.26e-174\n 2 yard_type_pavement  -0.854     0.149      -5.74 9.23e-  9\n 3 yard_type_garden    -0.175     0.0392     -4.47 7.89e-  6\n 4 yard_type_landsca    0.168     0.0219      7.69 1.45e- 14\n 5 yard_type_woods      0.309     0.0170     18.1  1.59e- 73\n 6 yard_type_desert    -0.297     0.0789     -3.76 1.68e-  4\n 7 hab_dcid_woods       0.336     0.0161     20.9  6.55e- 97\n 8 hab_evgr_woods      -0.0797    0.0192     -4.15 3.36e-  5\n 9 hab_mixed_woods      0.420     0.0158     26.5  3.17e-155\n10 hab_orchard         -0.307     0.0252    -12.2  4.00e- 34\n# … with 49 more rows"
   },
   {
     "objectID": "handout/2023-02-21-tidymodels.html#make-predictions-for-training-data",

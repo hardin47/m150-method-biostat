@@ -174,7 +174,7 @@ feeder_train
 
 feeder_rec <- recipe(
   squirrels ~ .,    # formula
-  data = feeder_train # data for cataloging names and types of variables
+  data = feeder_train 
   )
 
 feeder_rec
@@ -194,7 +194,8 @@ Using `prep()` and `bake()` are shown here for demonstrative purposes. They do n
 
 ## Impute missing values & Remove zero variance predictors {.smaller}
 
-Impute missing values (replace with mean). Remove all predictors that contain only a single value
+Impute missing values (replace with mean).  
+Remove all predictors that contain only a single value
 
 ```{r}
 #| echo: true
@@ -277,10 +278,14 @@ feeder_fit %>% tidy()
 ```{r}
 #| echo: true
 
-feeder_fit %>% tidy() %>% print(n = 21)
+feeder_fit %>% tidy() 
 ```
 
 # Evaluate model
+
+> sensitivty = number of squirrels that are accurately predicted to be squirrels (true positive rate)
+
+> specificity = number of non-squirrels that are accurately predicted to be non-squirrels (true negative rate)
 
 ## Make predictions for training data
 
