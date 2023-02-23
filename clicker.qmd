@@ -708,7 +708,7 @@ What are the numbers for N1, N2, N3?[^66]
 
 ---
 
-67. You are reviewing papers for the World’s Fanciest Machine Learning Conference, and you see submissions with the following claims. Which ones would you consider accepting?[^67]
+67. You are reviewing papers for Fancy Conference, and you see submissions with the following claims. Which ones would you consider accepting?[^67]
      (a) My method achieves a training error lower than all previous  methods!
      (b) My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min test error.)
      (c) My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min CV error.)
