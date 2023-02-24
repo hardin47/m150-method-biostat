@@ -1317,9 +1317,9 @@ Computational engine: glm </code></pre>
 <h2>Cross validation</h2>
 <p>More specifically, <strong>v-fold cross validation</strong>:</p>
 <ul>
-<li>Randomly split the <strong>training</strong> <strong>data</strong> into v partitions</li>
-<li>Use 1 partition for assessment, and the remaining v-1 partitions for analysis</li>
-<li>Repeat v times, updating which partition is used for assessment each time</li>
+<li>Randomly partition the <strong>training</strong> <strong>data</strong> into v group</li>
+<li>Use v-1 groups to build the model (calculate MLEs); use 1 group for prediction / assessment</li>
+<li>Repeat v times, updating which group is used for assessment each time</li>
 </ul>
 </section>
 <section id="cross-validation-step-1" class="slide level2">

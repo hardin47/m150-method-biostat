@@ -568,9 +568,9 @@ knitr::include_graphics("figs/CV.png")
 
 More specifically, **v-fold cross validation**:
 
--   Randomly split the **training** **data** into v partitions
--   Use 1 partition for assessment, and the remaining v-1 partitions for analysis
--   Repeat v times, updating which partition is used for assessment each time
+-   Randomly partition the **training** **data** into v group
+-   Use v-1 groups to build the model (calculate MLEs); use 1 group for prediction / assessment
+-   Repeat v times, updating which group is used for assessment each time
 
 ## Cross validation, step 1
 

@@ -319,7 +319,7 @@
     "href": "handout/2023-02-21-tidymodels.html#cross-validation-1",
     "title": "Tidymodels",
     "section": "Cross validation",
-    "text": "Cross validation\nMore specifically, v-fold cross validation:\n\nRandomly split the training data into v partitions\nUse 1 partition for assessment, and the remaining v-1 partitions for analysis\nRepeat v times, updating which partition is used for assessment each time"
+    "text": "Cross validation\nMore specifically, v-fold cross validation:\n\nRandomly partition the training data into v group\nUse v-1 groups to build the model (calculate MLEs); use 1 group for prediction / assessment\nRepeat v times, updating which group is used for assessment each time"
   },
   {
     "objectID": "handout/2023-02-21-tidymodels.html#cross-validation-step-1",
