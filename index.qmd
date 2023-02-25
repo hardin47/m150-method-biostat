@@ -69,16 +69,16 @@ schedule <- tribble(
 "Week 6 <br> 2.21.23", 
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="http://st47s.com/Math150/Notes/process.html" target = "_blank"><i class="fas fa-book-open"></i> model process</a> <br> <a href="http://st47s.com/Math150/Notes/process.html#cross-validation" target = "_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#roc" target = "_blank"><i class="fas fa-book-open"></i> ROC</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW5 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW5 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW5 turn-in</a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW5 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW5 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW6 turn-in</a>',
   '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank">missing data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/santos.html" target = "_blank">Robert Santos</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/wu10_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 10</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu11_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 11</a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2023-02-21-tidymodels.html" target = "_blank"><i class="fas fa-pencil-alt"></i> tidymodels</a>',
 
 "Week 7 <br> 2.28.23", 
   '• modeling',
   '<a href=  "https://st47s.com/Math150/Notes/logistic-regression.html#logstep" target = "_blank"><i class="fas fa-book-open"></i> model building</a> ',
-  '',
+  '<a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW6 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW6 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW5 turn-in</a>',
   '<a href = "https://journals.sagepub.com/doi/10.1177/2515245917747646" target = "_blank">many models</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
-  '',
+  '<a href="https://m150-method-biostat.netlify.app/handout/wu12_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 12</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu13_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 13</a>',
 
 
 
