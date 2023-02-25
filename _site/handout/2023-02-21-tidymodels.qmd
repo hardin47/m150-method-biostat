@@ -361,9 +361,12 @@ feeder_train_pred
 ```{r}
 #| echo: true
 
-rbind(accuracy(feeder_train_pred, truth = squirrels, estimate = .pred_class),
-      sensitivity(feeder_train_pred, truth = squirrels, estimate = .pred_class),
-      specificity(feeder_train_pred, truth = squirrels, estimate = .pred_class))
+rbind(accuracy(feeder_train_pred, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(feeder_train_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(feeder_train_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"))
 ```
 
 ## Visualizing accuracy
@@ -402,9 +405,12 @@ feeder_test_pred
 ```{r}
 #| echo: true
 
-rbind(accuracy(feeder_test_pred, truth = squirrels, estimate = .pred_class),
-      sensitivity(feeder_test_pred, truth = squirrels, estimate = .pred_class),
-      specificity(feeder_test_pred, truth = squirrels, estimate = .pred_class))
+rbind(accuracy(feeder_test_pred, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"))
 ```
 
 ## Evaluate testing data
@@ -422,13 +428,19 @@ feeder_test_pred %>%
 ## Training vs. testing
 
 ```{r}
-rbind(accuracy(feeder_train_pred, truth = squirrels, estimate = .pred_class),
-      sensitivity(feeder_train_pred, truth = squirrels, estimate = .pred_class),
-      specificity(feeder_train_pred, truth = squirrels, estimate = .pred_class))
+rbind(accuracy(feeder_train_pred, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(feeder_train_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(feeder_train_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"))
 
-rbind(accuracy(feeder_test_pred, truth = squirrels, estimate = .pred_class),
-      sensitivity(feeder_test_pred, truth = squirrels, estimate = .pred_class),
-      specificity(feeder_test_pred, truth = squirrels, estimate = .pred_class))
+rbind(accuracy(feeder_test_pred, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"))
 
 ```
 
@@ -645,7 +657,8 @@ metrics_interest <- metric_set(accuracy, roc_auc,
 feeder_fit_rs1 <- feeder_wflow1 %>%
   fit_resamples(resamples = folds,
                 metrics = metrics_interest,
-                control = control_resamples(save_pred = TRUE))
+                control = control_resamples(save_pred = TRUE,
+                                            event_level = "second"))
 ```
 ## predict
 
@@ -710,7 +723,8 @@ metrics_interest <- metric_set(accuracy, roc_auc,
 feeder_fit_rs2 <- feeder_wflow2 %>%
   fit_resamples(resamples = folds,
                 metrics = metrics_interest,
-                control = control_resamples(save_pred = TRUE))
+                control = control_resamples(save_pred = TRUE,
+                                            event_level = "second"))
 ```
 ## predict
 

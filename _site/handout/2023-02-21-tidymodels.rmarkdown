@@ -26,6 +26,7 @@ knitr::opts_chunk$set(
 )
 ```
 
+
 ## Agenda
 
 ::: nonincremental
@@ -33,6 +34,7 @@ knitr::opts_chunk$set(
 -   Breaking up data for independent assessment
 -   Assessment metrics
 :::
+
 
 ```{r}
 # load packages
@@ -45,11 +47,14 @@ library(knitr)
 ggplot2::theme_set(ggplot2::theme_minimal(base_size = 20))
 ```
 
+
 # Comparing Models
+
 
 ```{r fig.align='center', echo=FALSE}
 knitr::include_graphics("figs/blackbox.jpeg")
 ```
+
 
 
 1.  Data Modeling: The analysis in this culture starts with assuming a stochastic data model for the inside of the black box...The values of the parameters are estimated from the data and the model then used for information and/or prediction
@@ -64,6 +69,7 @@ Reference: Leo Breiman (2001)
 
 -   Can the characteristics of the bird feeder site like the surrounding yard and habitat predict whether a bird feeder site will be used by squirrels?
 
+
 ```{r}
 site_data <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-10/PFW_count_site_data_public_2021.csv') %>%
   mutate(squirrels = as.factor(ifelse(squirrels, "squirrels", "no squirrels")))
@@ -77,9 +83,11 @@ site_data <- site_data %>%
 glimpse(site_data)
 ```
 
+
 ## Feeders
 
 How are other characteristics related to the presence of squirrels?
+
 
 ```{r}
 site_data %>%
@@ -88,9 +96,11 @@ site_data %>%
   summarise(nearby_feeders = mean(nearby_feeders, na.rm = TRUE))
 ```
 
+
 ## Other variables
 
 What about some of the variables describing the habitat?
+
 
 ```{r}
 site_data %>%
@@ -105,11 +115,13 @@ site_data %>%
   labs(x = "% of locations", y = NULL, fill = NULL)
 ```
 
+
 # Modeling
 
 ## Train / test
 
 Create an initial split:
+
 
 ```{r}
 #| echo: true
@@ -119,7 +131,9 @@ feeder_split <- site_data %>%
   initial_split(strata = squirrels) # prop = 3/4 in each group, by default
 ```
 
+
 Save training data
+
 
 ```{r}
 #| echo: true
@@ -128,7 +142,9 @@ feeder_train <- training(feeder_split)
 dim(feeder_train)
 ```
 
+
 Save testing data
+
 
 ```{r}
 #| echo: true
@@ -137,13 +153,16 @@ feeder_test  <- testing(feeder_split)
 dim(feeder_test)
 ```
 
+
 ## Training data
+
 
 ```{r}
 #| echo: true
 
 feeder_train
 ```
+
 
 ## Feature engineering
 
@@ -167,6 +186,7 @@ feeder_train
 
 ## Initiate a recipe
 
+
 ```{r}
 #| echo: true
 #| code-line-numbers: "|2|3"
@@ -178,6 +198,7 @@ feeder_rec <- recipe(
 
 feeder_rec
 ```
+
 
 ## Working with recipes {.smaller}
 
@@ -196,6 +217,7 @@ Using `prep()` and `bake()` are shown here for demonstrative purposes. They do n
 Impute missing values (replace with mean).  
 Remove all predictors that contain only a single value
 
+
 ```{r}
 #| echo: true
 #| code-line-numbers: "|2|3"
@@ -207,7 +229,9 @@ feeder_rec <- feeder_rec %>%
 feeder_rec
 ```
 
+
 ## Prep and bake {.smaller}
+
 
 ```{r}
 #| echo: true
@@ -218,9 +242,11 @@ bake(feeder_rec_trained, feeder_train) %>%
   glimpse()
 ```
 
+
 # Building workflows
 
 ## Specify model
+
 
 ```{r}
 #| echo: true
@@ -231,9 +257,11 @@ feeder_log <- logistic_reg() %>%
 feeder_log
 ```
 
+
 ## Build workflow
 
 **Workflows** bring together models and recipes so that they can be easily applied to both the training and test data.
+
 
 ```{r}
 #| echo: true
@@ -243,11 +271,13 @@ feeder_wflow <- workflow() %>%
   add_model(feeder_log) 
 ```
 
+
 <br>
 
 *See next slide for workflow...*
 
 ## View workflow
+
 
 ```{r}
 #| echo: true
@@ -255,7 +285,9 @@ feeder_wflow <- workflow() %>%
 feeder_wflow
 ```
 
+
 ## Fit model to training data {.smaller}
+
 
 ```{r}
 #| echo: true
@@ -266,6 +298,7 @@ feeder_fit <- feeder_wflow %>%
 feeder_fit %>% tidy()
 ```
 
+
 <br>
 
 . . .
@@ -274,17 +307,20 @@ feeder_fit %>% tidy()
 
 ## Model fit summary
 
+
 ```{r}
 #| echo: true
 
 feeder_fit %>% tidy() 
 ```
 
+
 ## All together
 
 ::: {.panel-tabset}
 
 ## recipe
+
 
 ```{r echo = TRUE}
 feeder_rec <- recipe(
@@ -297,7 +333,9 @@ feeder_rec <- recipe(
 feeder_rec
 ```
 
+
 ## model
+
 
 ```{r echo = TRUE}
 feeder_log <- logistic_reg() %>%
@@ -305,7 +343,9 @@ feeder_log <- logistic_reg() %>%
 
 feeder_log
 ```
+
 ## workflow
+
 
 ```{r echo = TRUE}
 feeder_wflow <- workflow() %>%
@@ -314,7 +354,9 @@ feeder_wflow <- workflow() %>%
 feeder_wflow
 ```
 
+
 ## fit
+
 
 ```{r echo = TRUE}
 feeder_fit <- feeder_wflow %>%
@@ -322,7 +364,9 @@ feeder_fit <- feeder_wflow %>%
 
 feeder_fit %>% tidy()
 ```
+
 ## predict
+
 
 ```{r echo = TRUE}
 feeder_train_pred <- predict(feeder_fit, feeder_train, type = "prob") %>%
@@ -332,6 +376,7 @@ feeder_train_pred <- predict(feeder_fit, feeder_train, type = "prob") %>%
 
 feeder_train_pred
 ```
+
 
 
 :::
@@ -346,6 +391,7 @@ feeder_train_pred
 
 ## Make predictions for training data
 
+
 ```{r}
 #| echo: true
 feeder_train_pred <- predict(feeder_fit, feeder_train, type = "prob") %>%
@@ -356,7 +402,9 @@ feeder_train_pred <- predict(feeder_fit, feeder_train, type = "prob") %>%
 feeder_train_pred
 ```
 
+
 ## Accuracy
+
 
 ```{r}
 #| echo: true
@@ -369,7 +417,9 @@ rbind(accuracy(feeder_train_pred, truth = squirrels,
                   estimate = .pred_class, event_level = "second"))
 ```
 
+
 ## Visualizing accuracy
+
 
 ```{r}
 #| echo: true
@@ -381,6 +431,7 @@ feeder_train_pred %>%
   scale_fill_gradient(low="#D6EAF8", high="#2E86C1") 
 ```
 
+
 . . .
 
 ## But, really...
@@ -388,6 +439,7 @@ feeder_train_pred %>%
 *who cares about predictions on **training** data?*
 
 ## Make predictions for testing data
+
 
 ```{r}
 #| echo: true
@@ -400,7 +452,9 @@ feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") %>%
 feeder_test_pred
 ```
 
+
 ## Evaluate testing data
+
 
 ```{r}
 #| echo: true
@@ -413,7 +467,9 @@ rbind(accuracy(feeder_test_pred, truth = squirrels,
                   estimate = .pred_class, event_level = "second"))
 ```
 
+
 ## Evaluate testing data
+
 
 ```{r}
 #| echo: true
@@ -425,7 +481,9 @@ feeder_test_pred %>%
   scale_fill_gradient(low="#D6EAF8", high="#2E86C1") 
 ```
 
+
 ## Training vs. testing
+
 
 ```{r}
 rbind(accuracy(feeder_train_pred, truth = squirrels, 
@@ -443,6 +501,7 @@ rbind(accuracy(feeder_test_pred, truth = squirrels,
                   estimate = .pred_class, event_level = "second"))
 
 ```
+
 
 ## What's up with training data? {.smaller}
 
@@ -459,6 +518,7 @@ rbind(accuracy(feeder_test_pred, truth = squirrels,
 
 ## recipe
 
+
 ```{r echo = TRUE}
 feeder_rec <- recipe(
   squirrels ~ .,    # formula
@@ -470,7 +530,9 @@ feeder_rec <- recipe(
 feeder_rec
 ```
 
+
 ## model
+
 
 ```{r echo = TRUE}
 feeder_log <- logistic_reg() %>%
@@ -478,7 +540,9 @@ feeder_log <- logistic_reg() %>%
 
 feeder_log
 ```
+
 ## workflow
+
 
 ```{r echo = TRUE}
 feeder_wflow <- workflow() %>%
@@ -488,7 +552,9 @@ feeder_wflow <- workflow() %>%
 feeder_wflow
 ```
 
+
 ## fit
+
 
 ```{r echo = TRUE}
 feeder_fit <- feeder_wflow %>%
@@ -496,7 +562,9 @@ feeder_fit <- feeder_wflow %>%
 
 feeder_fit %>% tidy()
 ```
+
 ## predict
+
 
 ```{r echo = TRUE}
 feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") %>%
@@ -507,13 +575,16 @@ feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") %>%
 feeder_train_pred
 ```
 
+
 ## assess
+
 
 ```{r echo = TRUE}
 rbind(accuracy(feeder_test_pred, truth = squirrels, estimate = .pred_class),
       sensitivity(feeder_test_pred, truth = squirrels, estimate = .pred_class),
       specificity(feeder_test_pred, truth = squirrels, estimate = .pred_class))
 ```
+
 
 :::
 
@@ -540,6 +611,7 @@ rbind(accuracy(feeder_test_pred, truth = squirrels, estimate = .pred_class),
 ::: {.panel-tabset}
 
 ## recipe 1
+
 ```{r echo = TRUE}
 feeder_rec1 <- recipe(squirrels ~ ., data = feeder_train) %>%
   # delete the habitat variables
@@ -550,7 +622,9 @@ feeder_rec1 <- recipe(squirrels ~ ., data = feeder_train) %>%
   step_nzv(all_numeric_predictors())
 ```
 
+
 ## recipe 2
+
 ```{r echo = TRUE}
 feeder_rec2 <- recipe(squirrels ~ ., data = feeder_train) %>%
   # delete the variables on when the birds were fed
@@ -560,6 +634,7 @@ feeder_rec2 <- recipe(squirrels ~ ., data = feeder_train) %>%
   step_impute_mean(all_numeric_predictors()) %>%
   step_nzv(all_numeric_predictors())
 ```
+
 
 :::
 
@@ -572,9 +647,11 @@ feeder_rec2 <- recipe(squirrels ~ ., data = feeder_train) %>%
 
 ## How does cross validation work?
 
+
 ```{r fig.cap = "4-fold CV is depicted.  Notice that the holdout group is never used as part of the coefficient estimation process.", out.width = "90%", fig.align='center', echo=FALSE}
 knitr::include_graphics("figs/CV.png")
 ```
+
 
 ## Cross validation
 
@@ -588,21 +665,26 @@ More specifically, **v-fold cross validation**:
 
 Consider the example below where the **training** **data** are randomly split into 3 partitions:
 
+
 ```{r fig.cap = "Splitting the data into a partition of v=3 groups. Source: [@tidymodelingR]", fig.alt = "Thirty observations are seen where three colors are used to demonstrate that the observations can be partitioned into three groups.", out.width='100%', fig.align='center', echo=FALSE}
 knitr::include_graphics("figs/three-CV.svg")
 ```
+
 
 ## Cross validation, steps 2 and 3 
 
 -   Use 1 partition for assessment, and the remaining v-1 partitions for analysis
 -   Repeat v times, updating which partition is used for assessment each time
 
+
 ```{r fig.cap = "With the data split into three groups, we can see how 2/3 of the observations are used to fit the model and 1/3 of the observations are used to estimate the performance of the model. Source: [@tidymodelingR]", fig.alt = "Three iterations of model fitting are shown, each time using only 2/3 of the observations.  The remaining 1/3 of the observations are used to estimate the performance of the model.", out.width='100%', fig.align='center', echo=FALSE}
 knitr::include_graphics("figs/three-CV-iter.svg")
 ```
 
 
+
 ## Cross validation using tidymodels
+
 
 ```{r echo = TRUE}
 set.seed(4747)
@@ -611,12 +693,14 @@ folds
 ```
 
 
+
 ## Fit the model separately to each fold
 
 
 ::: {.panel-tabset}
 
 ## recipe
+
 
 ```{r echo = TRUE}
 feeder_rec1 <- recipe(squirrels ~ ., data = feeder_train) %>%
@@ -630,7 +714,9 @@ feeder_rec1 <- recipe(squirrels ~ ., data = feeder_train) %>%
 feeder_rec1
 ```
 
+
 ## model
+
 
 ```{r echo = TRUE}
 feeder_log <- logistic_reg() %>%
@@ -638,7 +724,9 @@ feeder_log <- logistic_reg() %>%
 
 feeder_log
 ```
+
 ## workflow
+
 
 ```{r echo = TRUE}
 feeder_wflow1 <- workflow() %>%
@@ -648,7 +736,9 @@ feeder_wflow1 <- workflow() %>%
 feeder_wflow1
 ```
 
+
 ## fit
+
 
 ```{r echo = TRUE}
 metrics_interest <- metric_set(accuracy, roc_auc, 
@@ -660,7 +750,9 @@ feeder_fit_rs1 <- feeder_wflow1 %>%
                 control = control_resamples(save_pred = TRUE,
                                             event_level = "second"))
 ```
+
 ## predict
+
 
 ```{r echo = TRUE}
 feeder_fit_rs1 %>% augment() %>%
@@ -670,11 +762,14 @@ feeder_fit_rs1 %>% augment() %>%
   scale_fill_gradient(low="#D6EAF8", high="#2E86C1") 
 ```
 
+
 ## assess
+
 
 ```{r echo = TRUE}
 collect_metrics(feeder_fit_rs1)
 ```
+
 :::
 
 ## Repeat the CV analysis for the second model
@@ -683,6 +778,7 @@ collect_metrics(feeder_fit_rs1)
 ::: {.panel-tabset}
 
 ## recipe
+
 
 ```{r echo = TRUE}
 feeder_rec2 <- recipe(squirrels ~ ., data = feeder_train) %>%
@@ -696,7 +792,9 @@ feeder_rec2 <- recipe(squirrels ~ ., data = feeder_train) %>%
 feeder_rec2
 ```
 
+
 ## model
+
 
 ```{r echo = TRUE}
 feeder_log <- logistic_reg() %>%
@@ -704,7 +802,9 @@ feeder_log <- logistic_reg() %>%
 
 feeder_log
 ```
+
 ## workflow
+
 
 ```{r echo = TRUE}
 feeder_wflow2 <- workflow() %>%
@@ -714,7 +814,9 @@ feeder_wflow2 <- workflow() %>%
 feeder_wflow2
 ```
 
+
 ## fit
+
 
 ```{r echo = TRUE}
 metrics_interest <- metric_set(accuracy, roc_auc, 
@@ -726,7 +828,9 @@ feeder_fit_rs2 <- feeder_wflow2 %>%
                 control = control_resamples(save_pred = TRUE,
                                             event_level = "second"))
 ```
+
 ## predict
+
 
 ```{r echo = TRUE}
 feeder_fit_rs2 %>% augment() %>%
@@ -736,35 +840,46 @@ feeder_fit_rs2 %>% augment() %>%
   scale_fill_gradient(low="#D6EAF8", high="#2E86C1") 
 ```
 
+
 ## assess
+
 
 ```{r echo = TRUE}
 collect_metrics(feeder_fit_rs2)
 ```
+
 :::
 
 ## Compare two models
 
 #### Model 1
 
+
 ```{r echo = TRUE}
 collect_metrics(feeder_fit_rs1)
 ```
 
+
 #### Model 2
+
 
 ```{r echo = TRUE}
 collect_metrics(feeder_fit_rs2)
 ```
 
+
 ## Cross validation then test data
+
 
 ```{r fig.cap = "Nested cross-validation: two cross-validation loops are run one inside the other.  [@CVpaper]", out.width='100%', fig.align='center', echo=FALSE}
 knitr::include_graphics("figs/CV.jpg")
 ```
 
+
 ## Bias-variance trade-off
+
 
 ```{r fig.cap = "Test and training error as a function of model complexity.  Note that the error goes down monotonically only for the training data.  Be careful not to overfit!!  [@ESL]", out.width='100%', fig.align='center', echo=FALSE}
 knitr::include_graphics("figs/varbias.png")
 ```
+

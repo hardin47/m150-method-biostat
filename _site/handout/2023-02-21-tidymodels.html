@@ -1002,16 +1002,19 @@ Computational engine: glm </code></pre>
 <section id="accuracy" class="slide level2">
 <h2>Accuracy</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">rbind</span>(<span class="fu">accuracy</span>(feeder_train_pred, <span class="at">truth =</span> squirrels, <span class="at">estimate =</span> .pred_class),</span>
-<span id="cb37-2"><a href="#cb37-2"></a>      <span class="fu">sensitivity</span>(feeder_train_pred, <span class="at">truth =</span> squirrels, <span class="at">estimate =</span> .pred_class),</span>
-<span id="cb37-3"><a href="#cb37-3"></a>      <span class="fu">specificity</span>(feeder_train_pred, <span class="at">truth =</span> squirrels, <span class="at">estimate =</span> .pred_class))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">rbind</span>(<span class="fu">accuracy</span>(feeder_train_pred, <span class="at">truth =</span> squirrels, </span>
+<span id="cb37-2"><a href="#cb37-2"></a>               <span class="at">estimate =</span> .pred_class),</span>
+<span id="cb37-3"><a href="#cb37-3"></a>      <span class="fu">sensitivity</span>(feeder_train_pred, <span class="at">truth =</span> squirrels, </span>
+<span id="cb37-4"><a href="#cb37-4"></a>                  <span class="at">estimate =</span> .pred_class, <span class="at">event_level =</span> <span class="st">"second"</span>),</span>
+<span id="cb37-5"><a href="#cb37-5"></a>      <span class="fu">specificity</span>(feeder_train_pred, <span class="at">truth =</span> squirrels, </span>
+<span id="cb37-6"><a href="#cb37-6"></a>                  <span class="at">estimate =</span> .pred_class, <span class="at">event_level =</span> <span class="st">"second"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
   .metric     .estimator .estimate
   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 1 accuracy    binary         0.815
-2 sensitivity binary         0.101
-3 specificity binary         0.985</code></pre>
+2 sensitivity binary         0.985
+3 specificity binary         0.101</code></pre>
 </div>
 </div>
 </section>
@@ -1060,16 +1063,19 @@ Computational engine: glm </code></pre>
 <section id="evaluate-testing-data" class="slide level2">
 <h2>Evaluate testing data</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">rbind</span>(<span class="fu">accuracy</span>(feeder_test_pred, <span class="at">truth =</span> squirrels, <span class="at">estimate =</span> .pred_class),</span>
-<span id="cb42-2"><a href="#cb42-2"></a>      <span class="fu">sensitivity</span>(feeder_test_pred, <span class="at">truth =</span> squirrels, <span class="at">estimate =</span> .pred_class),</span>
-<span id="cb42-3"><a href="#cb42-3"></a>      <span class="fu">specificity</span>(feeder_test_pred, <span class="at">truth =</span> squirrels, <span class="at">estimate =</span> .pred_class))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">rbind</span>(<span class="fu">accuracy</span>(feeder_test_pred, <span class="at">truth =</span> squirrels, </span>
+<span id="cb42-2"><a href="#cb42-2"></a>               <span class="at">estimate =</span> .pred_class),</span>
+<span id="cb42-3"><a href="#cb42-3"></a>      <span class="fu">sensitivity</span>(feeder_test_pred, <span class="at">truth =</span> squirrels, </span>
+<span id="cb42-4"><a href="#cb42-4"></a>                  <span class="at">estimate =</span> .pred_class, <span class="at">event_level =</span> <span class="st">"second"</span>),</span>
+<span id="cb42-5"><a href="#cb42-5"></a>      <span class="fu">specificity</span>(feeder_test_pred, <span class="at">truth =</span> squirrels, </span>
+<span id="cb42-6"><a href="#cb42-6"></a>                  <span class="at">estimate =</span> .pred_class, <span class="at">event_level =</span> <span class="st">"second"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
   .metric     .estimator .estimate
   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 1 accuracy    binary        0.814 
-2 sensitivity binary        0.0988
-3 specificity binary        0.985 </code></pre>
+2 sensitivity binary        0.985 
+3 specificity binary        0.0988</code></pre>
 </div>
 </div>
 </section>
@@ -1092,16 +1098,16 @@ Computational engine: glm </code></pre>
   .metric     .estimator .estimate
   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 1 accuracy    binary         0.815
-2 sensitivity binary         0.101
-3 specificity binary         0.985</code></pre>
+2 sensitivity binary         0.985
+3 specificity binary         0.101</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
   .metric     .estimator .estimate
   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 1 accuracy    binary        0.814 
-2 sensitivity binary        0.0988
-3 specificity binary        0.985 </code></pre>
+2 sensitivity binary        0.985 
+3 specificity binary        0.0988</code></pre>
 </div>
 </div>
 </section>
@@ -1434,7 +1440,8 @@ Computational engine: glm </code></pre>
 <span id="cb69-4"><a href="#cb69-4"></a>feeder_fit_rs1 <span class="ot">&lt;-</span> feeder_wflow1 <span class="sc">%&gt;%</span></span>
 <span id="cb69-5"><a href="#cb69-5"></a>  <span class="fu">fit_resamples</span>(<span class="at">resamples =</span> folds,</span>
 <span id="cb69-6"><a href="#cb69-6"></a>                <span class="at">metrics =</span> metrics_interest,</span>
-<span id="cb69-7"><a href="#cb69-7"></a>                <span class="at">control =</span> <span class="fu">control_resamples</span>(<span class="at">save_pred =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb69-7"><a href="#cb69-7"></a>                <span class="at">control =</span> <span class="fu">control_resamples</span>(<span class="at">save_pred =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb69-8"><a href="#cb69-8"></a>                                            <span class="at">event_level =</span> <span class="st">"second"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-4-5">
@@ -1462,8 +1469,8 @@ Computational engine: glm </code></pre>
   &lt;chr&gt;       &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;               
 1 accuracy    binary     0.809      3 0.000247 Preprocessor1_Model1
 2 roc_auc     binary     0.663      3 0.00180  Preprocessor1_Model1
-3 sensitivity binary     0.0265     3 0.000545 Preprocessor1_Model1
-4 specificity binary     0.996      3 0.000190 Preprocessor1_Model1</code></pre>
+3 sensitivity binary     0.996      3 0.000190 Preprocessor1_Model1
+4 specificity binary     0.0265     3 0.000545 Preprocessor1_Model1</code></pre>
 </div>
 </div>
 </div>
@@ -1552,7 +1559,8 @@ Computational engine: glm </code></pre>
 <span id="cb79-4"><a href="#cb79-4"></a>feeder_fit_rs2 <span class="ot">&lt;-</span> feeder_wflow2 <span class="sc">%&gt;%</span></span>
 <span id="cb79-5"><a href="#cb79-5"></a>  <span class="fu">fit_resamples</span>(<span class="at">resamples =</span> folds,</span>
 <span id="cb79-6"><a href="#cb79-6"></a>                <span class="at">metrics =</span> metrics_interest,</span>
-<span id="cb79-7"><a href="#cb79-7"></a>                <span class="at">control =</span> <span class="fu">control_resamples</span>(<span class="at">save_pred =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb79-7"><a href="#cb79-7"></a>                <span class="at">control =</span> <span class="fu">control_resamples</span>(<span class="at">save_pred =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb79-8"><a href="#cb79-8"></a>                                            <span class="at">event_level =</span> <span class="st">"second"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-5-5">
@@ -1580,8 +1588,8 @@ Computational engine: glm </code></pre>
   &lt;chr&gt;       &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;               
 1 accuracy    binary     0.813      3 0.000325 Preprocessor1_Model1
 2 roc_auc     binary     0.698      3 0.00228  Preprocessor1_Model1
-3 sensitivity binary     0.0693     3 0.000291 Preprocessor1_Model1
-4 specificity binary     0.990      3 0.000424 Preprocessor1_Model1</code></pre>
+3 sensitivity binary     0.990      3 0.000424 Preprocessor1_Model1
+4 specificity binary     0.0693     3 0.000291 Preprocessor1_Model1</code></pre>
 </div>
 </div>
 </div>
@@ -1599,8 +1607,8 @@ Computational engine: glm </code></pre>
   &lt;chr&gt;       &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;               
 1 accuracy    binary     0.809      3 0.000247 Preprocessor1_Model1
 2 roc_auc     binary     0.663      3 0.00180  Preprocessor1_Model1
-3 sensitivity binary     0.0265     3 0.000545 Preprocessor1_Model1
-4 specificity binary     0.996      3 0.000190 Preprocessor1_Model1</code></pre>
+3 sensitivity binary     0.996      3 0.000190 Preprocessor1_Model1
+4 specificity binary     0.0265     3 0.000545 Preprocessor1_Model1</code></pre>
 </div>
 </div>
 <h4 id="model-2-1">Model 2</h4>
@@ -1612,8 +1620,8 @@ Computational engine: glm </code></pre>
   &lt;chr&gt;       &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;               
 1 accuracy    binary     0.813      3 0.000325 Preprocessor1_Model1
 2 roc_auc     binary     0.698      3 0.00228  Preprocessor1_Model1
-3 sensitivity binary     0.0693     3 0.000291 Preprocessor1_Model1
-4 specificity binary     0.990      3 0.000424 Preprocessor1_Model1</code></pre>
+3 sensitivity binary     0.990      3 0.000424 Preprocessor1_Model1
+4 specificity binary     0.0693     3 0.000291 Preprocessor1_Model1</code></pre>
 </div>
 </div>
 </section>
