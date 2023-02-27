@@ -1,0 +1,447 @@
+---
+title: "Tidymodels"
+subtitle: "Math 150 - Spring 2023"
+author: "Jo Hardin"
+footer: "[https://m150-method-biostat.netlify.app/](https://m150-method-biostat.netlify.app/)"
+logo: "../images/st47s.png"
+format: 
+  revealjs:
+    theme: slides.scss
+    multiplex: true
+    transition: fade
+    slide-number: true
+    incremental: false 
+    chalkboard: true
+execute:
+  freeze: auto
+from: markdown+emoji
+---
+
+```{r}
+#| include: false
+
+# figure options
+knitr::opts_chunk$set(warning = FALSE, message = FALSE,
+  fig.width = 10, fig.asp = 0.618, out.width = "90%",
+  fig.retina = 3, dpi = 300, fig.align = "center"
+)
+```
+
+## Agenda
+
+::: nonincremental
+-   New metric: Receiver Operating Characteristic (ROC) Curves
+-   Model building one variables at a time
+:::
+
+```{r}
+# load packages
+library(tidyverse)
+library(tidymodels)
+library(gghighlight)
+library(knitr)
+
+# set default theme and larger font size for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 20))
+```
+
+
+# Data & goal
+
+-   Data: <a href = "https://feederwatch.org/explore/raw-dataset-requests/" target = "_blank">Project FeederWatch</a>#TidyTuesday dataset on Project FeederWatch, a citizen science project for bird science, by way of <a href = "https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-01-10" target = "_blank">TidyTuesday</a>.
+
+-   Which variables do the best job of modeling whether a bird feeder site will be used by squirrels?
+
+```{r}
+site_data <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-10/PFW_count_site_data_public_2021.csv') %>%
+  mutate(squirrels = as.factor(ifelse(squirrels, "squirrels", "no squirrels")))
+
+site_data <- site_data %>%
+  filter(!is.na(squirrels)) %>%
+  select(where(~!all(is.na(.x)))) %>%
+  select(-loc_id, -proj_period_id, -fed_yr_round) %>%
+  select(squirrels, everything()) 
+
+glimpse(site_data)
+```
+
+
+# Modeling
+
+For illustrative purposes, we go back to test/training model, although ROC can and should be used within a cross validation framework.
+
+```{r}
+#| echo: false
+
+set.seed(470)
+feeder_split <- site_data %>%
+  initial_split(strata = squirrels) # prop = 3/4 in each group, by default
+
+feeder_train <- training(feeder_split)
+feeder_test  <- testing(feeder_split)
+
+feeder_rec <- recipe(
+  squirrels ~ .,    # formula
+  data = feeder_train 
+  ) %>%
+  step_impute_mean(all_numeric_predictors()) %>%
+  step_nzv(all_numeric_predictors())
+
+
+feeder_log <- logistic_reg() %>%
+  set_engine("glm")
+
+
+feeder_wflow <- workflow() %>%
+  add_recipe(feeder_rec) %>%
+  add_model(feeder_log) 
+
+feeder_fit <- feeder_wflow %>%
+  fit(data = feeder_train)
+
+feeder_fit %>% tidy()
+```
+
+
+
+# Evaluate model
+
+> sensitivty = number of squirrels that are accurately predicted to be squirrels (true positive rate)
+
+> specificity = number of non-squirrels that are accurately predicted to be non-squirrels (true negative rate)
+
+## Make predictions for test data
+
+```{r}
+#| echo: true
+feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") %>%
+  mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.5,
+                                        "squirrels", "no squirrels"))) %>%
+  bind_cols(feeder_test %>% select(squirrels))
+
+feeder_test_pred
+```
+
+## Accuracy
+
+```{r}
+#| echo: true
+
+rbind(accuracy(feeder_test_pred, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"))
+```
+
+## ROC Curves
+
+Receiver Operating Characteristic Curves 
+
+* TPR = sensitivity = # of true predicted true / # true
+* FPR = 1 - specificity = # false predicted true / # false
+
+How can the plot use many TPRs and FPRs ???
+
+## ROC Curve
+
+```{r}
+library(plotROC)
+
+feeder_test_pred %>%
+  ggplot() + 
+  geom_roc(aes(d = squirrels, m = .pred_squirrels)) +
+  geom_abline(intercept = 0, slope = 1)
+```
+
+
+## Visualizing accuracy
+
+```{r}
+#| echo: false
+
+rbind(accuracy(feeder_test_pred, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      roc_auc(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_squirrels, event_level = "second"))
+```
+
+```{r}
+#| echo: false
+
+library(scales)
+library(ggthemes)
+
+feeder_test_pred %>%
+  mutate(correct_class = ifelse(.pred_class == squirrels, "correct classification", "misclassification")) %>%
+  ggplot() +
+  geom_jitter(aes(x = .pred_squirrels, y = squirrels, 
+                  color = correct_class, shape = correct_class),
+              width = 0, size = 0.75) +
+  geom_vline(xintercept = 0.5) + 
+  ylab("observed value") + 
+  xlab("predicted value (0.5 cutoff)") + 
+  theme(legend.position="top", 
+        legend.title = element_blank()) + 
+  guides(color = guide_legend(override.aes = list(size=4))) +
+  scale_color_manual(values = colorblind_pal()(3)[2:3])
+```
+
+
+## Different cut-off = 0.8?
+
+```{r}
+#| echo: true
+feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") %>%
+  mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.8,
+                                        "squirrels", "no squirrels"))) %>%
+  bind_cols(feeder_test %>% select(squirrels))
+```
+
+```{r}
+#| echo: false
+
+rbind(accuracy(feeder_test_pred, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      roc_auc(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_squirrels, event_level = "second"))
+```
+
+```{r}
+#| echo: false
+feeder_test_pred %>%
+  mutate(correct_class = ifelse(.pred_class == squirrels, "correct classification", "misclassification")) %>%
+  ggplot() +
+  geom_jitter(aes(x = .pred_squirrels, y = squirrels, 
+                  color = correct_class, shape = correct_class),
+              width = 0, size = 0.75) +
+  geom_vline(xintercept = 0.8) + 
+  ylab("observed value") + 
+  xlab("predicted value (0.8 cutoff)") + 
+  theme(legend.position="top", 
+        legend.title = element_blank()) + 
+  guides(color = guide_legend(override.aes = list(size=4))) +
+  scale_color_manual(values = colorblind_pal()(3)[2:3])
+```
+
+
+
+## Different cut-off = 0.15?
+
+```{r}
+#| echo: true
+feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") %>%
+  mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.15,
+                                        "squirrels", "no squirrels"))) %>%
+  bind_cols(feeder_test %>% select(squirrels))
+```
+
+```{r}
+#| echo: false
+
+rbind(accuracy(feeder_test_pred, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      roc_auc(feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_squirrels, event_level = "second"))
+```
+
+```{r}
+#| echo: false
+feeder_test_pred %>%
+  mutate(correct_class = ifelse(.pred_class == squirrels, "correct classification", "misclassification")) %>%
+  ggplot() +
+  geom_jitter(aes(x = .pred_squirrels, y = squirrels, 
+                  color = correct_class, shape = correct_class),
+              width = 0, size = 0.75) +
+  geom_vline(xintercept = 0.15) + 
+  ylab("observed value") + 
+  xlab("predicted value (0.15 cutoff)") + 
+  theme(legend.position="top", 
+        legend.title = element_blank()) + 
+  guides(color = guide_legend(override.aes = list(size=4))) +
+  scale_color_manual(values = colorblind_pal()(3)[2:3])
+```
+
+## ROC Curve
+
+```{r}
+feeder_test_pred %>%
+  ggplot() + 
+  geom_roc(aes(d = squirrels, m = .pred_squirrels)) +
+  geom_abline(intercept = 0, slope = 1)
+```
+
+
+## Area Over the Curve
+
+```{r fig.align='center', echo=FALSE}
+#| fig.cap: Alexandria Ocasio-Cortez as Area Over the Curve.  I didn't make the image, and I don't know who did!
+#| fig.alt: A play on words, the image show Alexandria Ocasio-Cortez, who is also known as AOC, as the area over the ROC curve.  The area under the curve is commonly known as AUC, so the area over it would be AOC.
+
+knitr::include_graphics("figs/aoc.jpg")
+```
+
+## More metrics
+
+* AIC: Akaike's Information Criteria = $-2\ln L + 2p$
+
+* BIC: Bayesian Information Criteria = $-2 \ln L + p \ln(n)$
+
+> choose a model with the smallest AIC or BIC
+
+# Variable Selection
+
+> Forward: start with the "best" variable and add variables one at a time
+
+> Backward: start with the full model and remove variables one at a time
+
+> Best: find the "best" combo of variables (check them all!) for a specified number of variables
+
+## Tools :confounded:
+
+* **tidymodels** does not make it easy to add or drop 1 variable at a time.
+
+* `add1()` and `drop1()` functions do not make it easy to work with dozens of predictors and missing data.
+
+Therefore, we'll go back to the bird data from HW 5.
+
+```{r}
+#| echo: false
+
+nests <- readr::read_csv("./data/C7 Birdnest.csv", na="*") %>%
+  drop_na() %>%
+  mutate(Location = case_when(
+    Location == "bridge" ~ "wall",
+    Location == "building" ~ "wall",
+    Location == "cliff" ~ "wall",
+    TRUE ~ Location
+  )) 
+```
+
+```{r}
+nests %>% select(Location) %>% table()
+```
+
+
+## Forward +1
+
+```{r}
+glm(`Closed?` ~ 1, data = nests, family="binomial") %>%
+  add1(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, test = "Chisq")
+```
+
+## Forward +2
+
+```{r}
+glm(`Closed?` ~ Location, data = nests, family="binomial") %>%
+  add1(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, test = "Chisq")
+```
+
+
+## Forward +3
+
+```{r}
+#| warning: true
+
+glm(`Closed?` ~ No.eggs + Location, data = nests, family="binomial") %>%
+  add1(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, test = "Chisq")
+```
+
+
+## Backward -1 
+
+```{r}
+#| warning: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, data = nests, family="binomial") %>%
+  drop1(test = "Chisq")
+```
+
+## Backward -2 
+
+```{r}
+#| warning: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Color +
+         Incubate  + Totcare, data = nests, family="binomial") %>%
+  drop1(test = "Chisq")
+```
+
+## Backward -2 
+
+```{r}
+#| warning: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Incubate  + Totcare, 
+    data = nests, family="binomial") %>%
+  drop1(test = "Chisq")
+```
+
+
+## Backward -3 
+
+```{r}
+#| warning: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Totcare, 
+    data = nests, family="binomial") %>%
+  drop1(test = "Chisq")
+```
+
+
+
+## Automatic: Forward w AIC
+
+```{r}
+glm(`Closed?` ~ 1, data = nests, family="binomial") %>%
+  stats::step(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, 
+         direction = "forward", k = 2)
+
+```
+
+## Final Forward AIC
+
+```{r}
+glm(`Closed?` ~ Length + Location + No.eggs + Nestling,
+    data = nests, family="binomial") %>% tidy()
+```
+
+
+## Automatic: Backward w BIC
+
+```{r}
+glm(`Closed?` ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare,
+    data = nests, family="binomial") %>%
+  stats::step(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, 
+         direction = "backward", k = log(86))
+
+```
+
+
+## Final Backward BIC
+
+```{r}
+glm(`Closed?` ~ Length + No.eggs + Nestling,
+    data = nests, family="binomial") %>% tidy()
+```
+

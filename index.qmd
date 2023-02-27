@@ -78,7 +78,7 @@ schedule <- tribble(
   '<a href=  "https://st47s.com/Math150/Notes/logistic-regression.html#logstep" target = "_blank"><i class="fas fa-book-open"></i> model building</a> ',
   '<a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW6 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW6 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW6 turn-in</a>',
   '<a href = "https://journals.sagepub.com/doi/10.1177/2515245917747646" target = "_blank">many models</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu12_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 12</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu13_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 13</a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/wu12_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 12</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu13_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 13</a>  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2023-02-28-ROC-onestep.html" target = "_blank"><i class="fas fa-pencil-alt"></i> ROC + one variable building</a>',
 
 
 

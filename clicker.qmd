@@ -14,6 +14,18 @@ to go with **Practicing Statistics** by Kuiper & Sklar.  Math 150 - Methods in B
 </style>
 ```
 
+```{r}
+#| echo: false
+
+# figure options
+knitr::opts_chunk$set(warning = FALSE, message = FALSE,
+  fig.width = 10, fig.asp = 0.618, out.width = "90%",
+  fig.retina = 3, dpi = 300, fig.align = "center"
+)
+
+library(ggplot2)
+library(plotROC)
+```
 
 ---
 
@@ -614,8 +626,8 @@ Take the derivative with respect to which variable(s):[^46]
 ---
 
 57. The interpretations of the main effects (on their own) make sense only when the interaction component is not significant.[^57]
-    (a)  True
-    (b)	 False
+    (a)  TRUE
+    (b)	 FALSE
 
 [^57]: a. TRUE
 
@@ -716,9 +728,11 @@ What are the numbers for N1, N2, N3?[^66]
 
 [^67]: c. My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min CV error.)
 
+```{r}
+#| echo: false
+#| eval: false
 ---
 
-```{r echo = FALSE, eval = FALSE}
 68. From the burn data, consider:  
 $$P(\mbox{surv if } X = 0.4) = 0.3$$
 $$P(\mbox{surv if } X = 0.2) = 0.9$$
@@ -729,7 +743,7 @@ The two points are concordant if[^68]
     (d)	They both die
 
 [^68]: b. X = 0.4 dies and X= 0.2 survives
-
+```
 ---
 
 69. Which model is better (according to ROC)?[^69]
@@ -739,7 +753,24 @@ The two points are concordant if[^68]
     (d) blue because it is steeper
     (e) neither
 
-**need picture here**
+```{r}
+#| echo: false
+
+set.seed(47)
+D.ex <- rbinom(50, 1, .5)
+rocdata <- data.frame(D = c(D.ex, D.ex), 
+                   M = c(rnorm(50, mean = D.ex/4, sd = .1), rnorm(50, mean = (D.ex+1)/4, sd = .2)), 
+                   Z = c(rep("A", 50), rep("B", 50)))
+
+ggplot(rocdata, aes(m = M, d = D, color = Z)) + geom_roc() +
+  theme(legend.title = element_blank()) +
+  scale_color_manual(values = c("blue", "pink")) + 
+  geom_abline(slope = 1, intercept = 0)
+
+```
+
+
+[^69]: c. blue because it is farther from y=x
 
 ---
 
@@ -749,28 +780,121 @@ The two points are concordant if[^68]
     (c) True Neg Rate which we want high
     (d) False Neg Rate which we want low
 
-[^70]: d. False Neg Rate which we want low
+[^70]: b. False Pos Rate which we want low
 
 ---
 
-71. With model building:
+71. Quiz on 11 topics (you know nothing).  Your friends know topics:  
+A: {1, 2, 3, 4, 5, 6, 7}  
+B: {8, 9, 10}  
+C: {1, 2, 3, 4, 8, 10}  
+D: {5, 6, 7, 9, 11}  
+Who should you choose to help you answer the questions?[^71]
+    (a) A
+    (b) B
+    (c) C
+    (d) D
+    (e) can’t tell
 
-(a)	There are many ways to find a good model.
-(b)	There is always one right answer.
-(c)	There is no end to the fun.
-(d)	Can we take a pure math class yet?
+[^71]: a. A
 
-In a nested F test, the reduced model corresponds to the null hypothesis being true.
-(a) True
-(b) False
+---
 
- 
+72.  Who do you want to choose next?[^72]  
+A: {1, 2, 3, 4, 5, 6, 7}  
+B: {8, 9, 10}  
+C: {1, 2, 3, 4, 8, 10}  
+D: {5, 6, 7, 9, 11}  
+     (a) A
+     (b) B
+     (c) C
+     (d) D
+     (e) can’t tell
 
+[^72]: b. B
 
-66.  In a nested F test, the full model corresponds to the alternative hypothesis being true.
-(a) True
-(b) False
+---
 
+73.  If you can pick two people, who do you pick?[^73]  
+A: {1, 2, 3, 4, 5, 6, 7}   
+B: {8, 9, 10}   
+C: {1, 2, 3, 4, 8, 10}  
+D: {5, 6, 7, 9, 11}   
+     (a) A, B
+     (b) A, C
+     (c) A, D
+     (d) C, B
+     (e) C, D
+
+[^73]:  e. C and D
+
+---
+
+74. The variables in the k-variable model identified by **forward** selection are a subset of the variables in the (k+1)-variable model identified by **forward** selection.[^74]
+    (a)	TRUE (always TRUE)
+    (b)	FALSE (not always TRUE)
+
+[^74]: a. TRUE
+
+---
+
+75. The variables in the k-variable model identified by **backward** selection are a subset of the variables in the (k+1)-variable model identified by **backward** selection.[^75]
+    (a)	TRUE (always TRUE)
+    (b)	FALSE (not always TRUE)
+
+[^75]: a. TRUE
+
+---
+
+76. The variables in the k-variable model identified by **backward** selection are a subset of the variables in the (k+1)-variable model identified by **forward** selection.[^76]
+    (a)	TRUE (always TRUE)
+    (b)	FALSE (not always TRUE)
+
+[^76]: b. FALSE
+
+---
+
+77. The variables in the k-variable model identified by **forward** selection are a subset of the variables in the (k+1)-variable model identified by **backward** selection.[^77]
+    (a)	TRUE (always TRUE)
+    (b)	FALSE (not always TRUE)
+
+[^77]: b. FALSE
+
+---
+
+78. The variables in the k-variable model identified by **best-subsets** selection are a subset of the variables in the (k+1)-variable model identified by **best-subsets** selection.[^78]
+    (a)	TRUE (always TRUE)
+    (b)	FALSE (not always TRUE)
+
+[^78]: b. FALSE
+
+---
+
+79. In a nested F test, the reduced model corresponds to the null hypothesis being true.[^79]
+    (a) TRUE
+    (b) FALSE
+
+[^79]: a. TRUE (the coefficient values are forced to be zero)
+
+---
+
+80.  In a nested F test, the full model corresponds to the alternative hypothesis being true.[^80]
+     (a) TRUE
+     (b) FALSE
+
+[^80]: b. FALSE (the null model can exist within the full model because there is flexibility in the values of the coefficients)
+
+---
+
+81. With model building:[^81]
+    (a)	There are many ways to find a good model.
+    (b)	There is always one right answer.
+    (c)	There is no end to the fun.
+    (d)	Can we take a pure math class yet?
+
+[^81]: a. There are many ways to find a good model.  Also, c. there is no end to the fun.
+
+```{r echo = FALSE, eval = FALSE}
 
  When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:[^61]
      (a) positive
@@ -814,79 +938,6 @@ In a nested F test, the reduced model corresponds to the null hypothesis being t
 ---
 
 
-
-Quiz on 11 topics (you know nothing).  Your friends know topics:
-A: {1, 2, 3, 4, 5, 6, 7}
-B: {8, 9, 10}
-C: {1, 2, 3, 4, 8, 10}
-D: {5, 6, 7, 9, 11}
-Who should you choose to help you answer the questions?
-(a) A
-(b) B
-(c) C
-(d) D
-(e) can’t tell
- 
-
-79.  Who do you want to choose next?
-A: {1, 2, 3, 4, 5, 6, 7}
-B: {8, 9, 10}
-C: {1, 2, 3, 4, 8, 10}
-D: {5, 6, 7, 9, 11}
-(a) A
-(b) B
-(c) C
-(d) D
-(e) can’t tell
-
- 
-
-80.  If you can pick two people, who do you pick?
-A: {1, 2, 3, 4, 5, 6, 7}
-B: {8, 9, 10}
-C: {1, 2, 3, 4, 8, 10}
-D: {5, 6, 7, 9, 11}
-
-(a) A, B
-(b) A, C
-(c) A, D
-(d) C, B
-(e) C, D
-
- 
-
-
-81. The variables in the k-variable model identified by forward selection are a subset of the variables in the (k+1)-variable model identified by forward selection.
-
-(a)	TRUE (always TRUE)
-(b)	FALSE (not always TRUE)
-
- 
-
-82. The variables in the k-variable model identified by backward selection are a subset of the variables in the (k+1)-variable model identified by backward selection. 
-
-(a)	TRUE (always TRUE)
-(b)	FALSE (not always TRUE)
- 
-
-83. The variables in the k-variable model identified by backward selection are a subset of the variables in the (k+1)-variable model identified by forward selection.
-
-(a)	TRUE (always TRUE)
-(b)	FALSE (not always TRUE)
-
- 
-
-
-84. The variables in the k-variable model identified by forward selection are a subset of the variables in the (k+1)-variable model identified by backward selection.
-
-(a)	TRUE (always TRUE)
-(b)	FALSE (not always TRUE)
- 
-
-85. The variables in the k-variable model identified by best-subsets selection are a subset of the variables in the (k+1)-variable model identified by best-subsets selection.
-
-(a)	TRUE (always TRUE)
-(b)	FALSE (not always TRUE)
 
 
 ```
