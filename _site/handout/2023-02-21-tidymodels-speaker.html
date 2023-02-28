@@ -93,6 +93,25 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -1332,7 +1351,7 @@ Computational engine: glm </code></pre>
 <h2>Cross validation, step 1</h2>
 <p>Consider the example below where the <strong>training</strong> <strong>data</strong> are randomly split into 3 partitions:</p>
 
-<img data-src="figs/three-CV.svg" style="width:100.0%" alt="Thirty observations are seen where three colors are used to demonstrate that the observations can be partitioned into three groups." class="r-stretch quarto-figure-center"><p class="caption">Splitting the data into a partition of v=3 groups. Source: <span class="citation" data-cites="tidymodelingR">[@tidymodelingR]</span></p></section>
+<img data-src="figs/three-CV.svg" style="width:100.0%" alt="Thirty observations are seen where three colors are used to demonstrate that the observations can be partitioned into three groups." class="r-stretch quarto-figure-center"><p class="caption">Splitting the data into a partition of v=3 groups. Source: <span class="citation" data-cites="tidymodelingR">(<a href="#/references" role="doc-biblioref" onclick="">Kuhn and Silge 2022</a>)</span></p></section>
 <section id="cross-validation-steps-2-and-3" class="slide level2">
 <h2>Cross validation, steps 2 and 3</h2>
 <ul>
@@ -1340,7 +1359,7 @@ Computational engine: glm </code></pre>
 <li>Repeat v times, updating which partition is used for assessment each time</li>
 </ul>
 
-<img data-src="figs/three-CV-iter.svg" style="width:100.0%" alt="Three iterations of model fitting are shown, each time using only 2/3 of the observations.  The remaining 1/3 of the observations are used to estimate the performance of the model." class="r-stretch quarto-figure-center"><p class="caption">With the data split into three groups, we can see how 2/3 of the observations are used to fit the model and 1/3 of the observations are used to estimate the performance of the model. Source: <span class="citation" data-cites="tidymodelingR">[@tidymodelingR]</span></p></section>
+<img data-src="figs/three-CV-iter.svg" style="width:100.0%" alt="Three iterations of model fitting are shown, each time using only 2/3 of the observations.  The remaining 1/3 of the observations are used to estimate the performance of the model." class="r-stretch quarto-figure-center"><p class="caption">With the data split into three groups, we can see how 2/3 of the observations are used to fit the model and 1/3 of the observations are used to estimate the performance of the model. Source: <span class="citation" data-cites="tidymodelingR">(<a href="#/references" role="doc-biblioref" onclick="">Kuhn and Silge 2022</a>)</span></p></section>
 <section id="cross-validation-using-tidymodels" class="slide level2">
 <h2>Cross validation using tidymodels</h2>
 <div class="cell" data-layout-align="center">
@@ -1628,23 +1647,28 @@ Computational engine: glm </code></pre>
 <section id="cross-validation-then-test-data" class="slide level2">
 <h2>Cross validation then test data</h2>
 
-<img data-src="figs/CV.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Nested cross-validation: two cross-validation loops are run one inside the other. <span class="citation" data-cites="CVpaper">[@CVpaper]</span></p></section>
+<img data-src="figs/CV.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Nested cross-validation: two cross-validation loops are run one inside the other. <span class="citation" data-cites="CVpaper">(<a href="#/references" role="doc-biblioref" onclick="">Varoquaux et al. 2017</a>)</span></p></section>
 <section id="bias-variance-trade-off" class="slide level2">
 <h2>Bias-variance trade-off</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="figs/varbias.png" style="width:100.0%"></p>
-<p></p><figcaption>Test and training error as a function of model complexity. Note that the error goes down monotonically only for the training data. Be careful not to overfit!! <span class="citation" data-cites="ESL">[@ESL]</span></figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
 
-<p><img src="../images/st47s.png" class="slide-logo"></p>
-<div class="footer footer-default">
+<img data-src="figs/varbias.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Test and training error as a function of model complexity. Note that the error goes down monotonically only for the training data. Be careful not to overfit!! <span class="citation" data-cites="ESL">(<a href="#/references" role="doc-biblioref" onclick="">Hastie, Tibshirani, and Friedman 2001</a>)</span></p></section>
+<section class="slide level2 smaller scrollable" id="references">
+
+
+
+<img src="../images/st47s.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://m150-method-biostat.netlify.app/">https://m150-method-biostat.netlify.app/</a></p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-ESL" class="csl-entry" role="doc-biblioentry">
+Hastie, T., R. Tibshirani, and J. Friedman. 2001. <em>The Elements of Statistical Learning</em>. Springer.
+</div>
+<div id="ref-tidymodelingR" class="csl-entry" role="doc-biblioentry">
+Kuhn, Max, and Julia Silge. 2022. <em>Tidy Modeling with r</em>. <a href="https://www.tmwr.org/">https://www.tmwr.org/</a>.
+</div>
+<div id="ref-CVpaper" class="csl-entry" role="doc-biblioentry">
+Varoquaux, G., P. Reddy Raamana, D. Engemann, A. Hoyos-Idrobo, Y. Schwartz, and B. Thirion. 2017. <span>“Assessing and Tuning Brain Decoders: Cross-Validation, Caveats, and Guidelines.”</span> <em>Neuro<span>I</span>mage</em> 145: 166–79.
+</div>
 </div>
 </section></section>
     </div>
