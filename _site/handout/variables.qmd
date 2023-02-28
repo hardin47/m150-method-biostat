@@ -1,0 +1,184 @@
+---
+title: "Variables: one at a time"
+subtitle: "Math 150 - Spring 2023"
+format: pdf
+---
+
+```{r}
+#| include: false
+
+# figure options
+knitr::opts_chunk$set(warning = FALSE, message = FALSE,
+  fig.width = 10, fig.asp = 0.618, out.width = "90%",
+  fig.retina = 3, dpi = 300, fig.align = "center"
+)
+
+library(tidyverse)
+library(tidymodels)
+library(broom)
+```
+
+#### More metrics
+
+* AIC: Akaike's Information Criteria = $-2\ln L + 2p$
+
+* BIC: Bayesian Information Criteria = $-2 \ln L + p \ln(n)$
+
+> choose a model with the smallest AIC or BIC (i.e., the biggest likelihood)
+
+#### Variable Selection
+
+> Forward: start with the "best" variable and add variables one at a time
+
+> Backward: start with the full model and remove variables one at a time
+
+> Best: find the "best" combo of variables (check them all!) for a specified number of variables
+
+#### Tools
+
+* **tidymodels** does not make it easy to add or drop 1 variable at a time.
+
+* `add1()` and `drop1()` functions do not make it easy to work with dozens of predictors and missing data.
+
+Therefore, we'll go back to the bird data from HW 5.
+
+```{r}
+#| echo: false
+
+nests <- readr::read_csv("./data/C7 Birdnest.csv", na="*") %>%
+  drop_na() %>%
+  mutate(Location = case_when(
+    Location == "bridge" ~ "wall",
+    Location == "building" ~ "wall",
+    Location == "cliff" ~ "wall",
+    TRUE ~ Location
+  )) 
+```
+
+```{r}
+nests %>% select(Location) %>% table()
+```
+
+
+#### Forward +1
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ 1, data = nests, family="binomial") %>%
+  add1(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, test = "Chisq")
+```
+
+#### Forward +2
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Location, data = nests, family="binomial") %>%
+  add1(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, test = "Chisq")
+```
+
+
+#### Forward +3
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ No.eggs + Location, data = nests, family="binomial") %>%
+  add1(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, test = "Chisq")
+```
+
+
+#### Backward -1 
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, data = nests, family="binomial") %>%
+  drop1(test = "Chisq")
+```
+
+#### Backward -2 
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Color +
+         Incubate  + Totcare, data = nests, family="binomial") %>%
+  drop1(test = "Chisq")
+```
+
+#### Backward -2 
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Incubate  + Totcare, 
+    data = nests, family="binomial") %>%
+  drop1(test = "Chisq")
+```
+
+
+#### Backward -3 
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Totcare, 
+    data = nests, family="binomial") %>%
+  drop1(test = "Chisq")
+```
+
+
+
+#### Automatic: Forward w AIC
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ 1, data = nests, family="binomial") %>%
+  stats::step(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, 
+         direction = "forward", k = 2)
+
+```
+
+#### Final Forward AIC
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Nestling,
+    data = nests, family="binomial") %>% tidy()
+```
+
+
+#### Automatic: Backward w BIC
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare,
+    data = nests, family="binomial") %>%
+  stats::step(scope = ~ Length + Location + No.eggs + Color +
+         Incubate + Nestling + Totcare, 
+         direction = "backward", k = log(86))
+
+```
+
+
+#### Final Backward BIC
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Length + No.eggs + Nestling,
+    data = nests, family="binomial") %>% tidy()
+```
+
+
