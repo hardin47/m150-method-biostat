@@ -894,51 +894,48 @@ D: {5, 6, 7, 9, 11}
 
 [^81]: a. There are many ways to find a good model.  Also, c. there is no end to the fun.
 
-```{r echo = FALSE, eval = FALSE}
+---
 
- When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:[^61]
+82. When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:[^82]
      (a) positive
      (b) negative
      (c) zero
      (d) no intuition exists for being able to answer this question
 
-[^61]: a. positive
+[^82]: a. positive
 
 ---
 
-62.  When probability of being able to buy a candy bar is modeled as a function of the number of low coins, the coefficient on number of low coins is:[^62]
+83.  When probability of being able to buy a candy bar is modeled as a function of the number of low coins, the coefficient on number of low coins is:[^83]
      (a) positive
      (b) negative
      (c) zero
      (d) no intuition exists for being able to answer this question 
 
-[^62]: a. positive
+[^83]: a. positive
 
 ---
 
-63.  When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of coins is:[^63]
+84.  When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of coins is:[^84]
      (a) positive
      (b) negative
      (c) zero
      (d) no intuition exists for being able to answer this question
 
-[^63]: a. positive
+[^8]: a. positive
 
 ---
 
-64.  When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of low coins is:[^64]
+85.  When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of low coins is:[^85]
      (a) positive
      (b) negative
      (c) zero
      (d) no intuition exists for being able to answer this question
 
-[^64]: b. negative
+[^85]: b. negative
 
 
 ---
 
 
-
-
-```
 
