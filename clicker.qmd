@@ -220,7 +220,7 @@ What is: $\sum_i x_iy_i$?[^8]
     (b) decreases the variability of $b_1$.
     (c) doesn’t necessarily change the variability of $b_1$.
 
-[^18]: b. decreases the variability of $b_1$.
+[^18]: a. increases the variability of $b_1$.
 
 ---
 
@@ -870,7 +870,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-79. In a nested F test, the reduced model corresponds to the null hypothesis being true.[^79]
+79. In a drop-in-deviance test (LRT), the reduced model corresponds to the null hypothesis being true.[^79]
     (a) TRUE
     (b) FALSE
 
@@ -878,7 +878,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-80.  In a nested F test, the full model corresponds to the alternative hypothesis being true.[^80]
+80.  In a drop-in-deviance test (LRT), the full model corresponds to the alternative hypothesis being true.[^80]
      (a) TRUE
      (b) FALSE
 
@@ -922,7 +922,7 @@ D: {5, 6, 7, 9, 11}
      (c) zero
      (d) no intuition exists for being able to answer this question
 
-[^8]: a. positive
+[^84]: a. positive
 
 ---
 
