@@ -1144,12 +1144,13 @@
 <section class="slide level2">
 
 <ol start="66" type="1">
-<li>Suppose we want to compute 10-Fold Cross-Validation error on 100 training examples. We need to compute a model error rate N1 times, and the Cross-Validation error is the average of the errors. To compute each error, we need to train a model with data of size N2, and test the model on the data of size N3. What are the numbers for N1, N2, N3?<a href="#/footnotes" class="footnote-ref" id="fnref64" role="doc-noteref" data-footnote-href="#/fn64" onclick=""><sup>64</sup></a>
+<li>Suppose we want to compute 10-Fold Cross-Validation error on 200 training examples. We need to compute a model error rate N1 times, and the Cross-Validation error is the average of the errors. To compute each error, we need to train a model with data of size N2, and test the model on the data of size N3. What are the numbers for N1, N2, N3?<a href="#/footnotes" class="footnote-ref" id="fnref64" role="doc-noteref" data-footnote-href="#/fn64" onclick=""><sup>64</sup></a>
 <ol type="a">
-<li>N1 = 10, N2 = 90, N3 = 10</li>
-<li>N1 = 1, N2 = 90, N3 = 10</li>
-<li>N1 = 10, N2 = 100, N3 = 10</li>
-<li>N1 = 10, N2 = 100, N3 = 100</li>
+<li>N1 = 1, N2 = 180, N3 = 20</li>
+<li>N1 = 10, N2 = 180, N3 = 20</li>
+<li>N1 = 10, N2 = 200, N3 = 20</li>
+<li>N1 = 10, N2 = 200, N3 = 200</li>
+<li>N1 = 20, N2 = 180, N3 = 20</li>
 </ol></li>
 </ol>
 <aside></aside></section>
@@ -1634,8 +1635,8 @@ D: {5, 6, 7, 9, 11}
 <li>FALSE. CV reduces the effect of overfitting, but at the end of the day, you are still building a model on the dataset at hand, and it is possible that you will overfit that dataet.</li>
 </ol>
 </li>
-<li id="fn64"><ol type="a">
-<li>N1 = 10, N2 = 90, N3 = 10</li>
+<li id="fn64"><ol start="2" type="a">
+<li>N1 = 10, N2 = 180, N3 = 20</li>
 </ol>
 </li>
 <li id="fn65"><ol start="3" type="a">
