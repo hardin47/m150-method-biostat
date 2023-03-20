@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <hr>
-<p>In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you should know at least a little bit (hopefully a lotta bit) about the following topics.</p>
+<p>In terms of the prerequisite for Math 150, Methods in Biostatistics, you should know at least a little bit (hopefully a lotta bit) about the following topics.</p>
 <ol type="1">
 <li><p>Hypothesis test, confidence interval, sample mean, central limit theorem, standard deviation, standard error of a statistics, p-value, t-test, chi-square test.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <ol type="a">
@@ -991,6 +991,118 @@ D: {5, 6, 7, 9, 11}
 </ol></li>
 </ol>
 <hr>
+<ol start="86" type="1">
+<li>If we consider the censored times to be event times, the empirical survival curve will (on average)<a href="#fn83" class="footnote-ref" id="fnref83" role="doc-noteref"><sup>83</sup></a>
+<ol type="a">
+<li>underestimate the parameter</li>
+<li>overestimate the parameter</li>
+<li>sometimes under and sometimes overestimate the parameter</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="87" type="1">
+<li><span class="math inline">\(n_i - d_i = n_{i+1}\)</span> when:<a href="#fn84" class="footnote-ref" id="fnref84" role="doc-noteref"><sup>84</sup></a>
+<ol type="a">
+<li>there are no deaths at time <span class="math inline">\(t_i\)</span></li>
+<li>there is no censoring at time <span class="math inline">\(t_i\)</span></li>
+<li>there are no deaths at time <span class="math inline">\(t_{i+1}\)</span></li>
+<li>there is no censoring at time <span class="math inline">\(t_{i+1}\)</span></li>
+<li>there is no censoring at time <span class="math inline">\(t_{i-1}\)</span></li>
+</ol></li>
+</ol>
+<hr>
+<ol start="88" type="1">
+<li><span class="math inline">\(\frac{(n_i - d_i)}{n_i} = 1\)</span> when:<a href="#fn85" class="footnote-ref" id="fnref85" role="doc-noteref"><sup>85</sup></a>
+<ol type="a">
+<li>there are no deaths at time <span class="math inline">\(t_i\)</span></li>
+<li>there is no censoring at time <span class="math inline">\(t_i\)</span></li>
+<li>there are no deaths at time <span class="math inline">\(t_{i+1}\)</span></li>
+<li>there is no censoring at time <span class="math inline">\(t_{i+1}\)</span></li>
+<li>there is no censoring at time <span class="math inline">\(t_{i-1}\)</span></li>
+</ol></li>
+</ol>
+<hr>
+<ol start="89" type="1">
+<li>The proportion who survive past 20 days for <code>treated</code> (turquoise line)<a href="#fn86" class="footnote-ref" id="fnref86" role="doc-noteref"><sup>86</sup></a>
+<ol type="a">
+<li>~0.65</li>
+<li>~0.35</li>
+<li>~0.45</li>
+<li>we only know it’s bigger than red</li>
+<li>we only know it’s smaller than red</li>
+</ol></li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="clicker_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+<ol start="90" type="1">
+<li>Comparing the following Kaplan Meier curves (with Log-Rank p-value),<a href="#fn87" class="footnote-ref" id="fnref87" role="doc-noteref"><sup>87</sup></a>
+<ol type="a">
+<li>blue is clearly better</li>
+<li>red is clearly better</li>
+<li>can’t tell because they cross</li>
+<li>can’t tell because the p-value is big</li>
+<li>can’t tell because the p-value is small</li>
+</ol></li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="clicker_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+<ol start="91" type="1">
+<li>The hazard at time <span class="math inline">\(t\)</span> represents:<a href="#fn88" class="footnote-ref" id="fnref88" role="doc-noteref"><sup>88</sup></a>
+<ol type="a">
+<li>the probability of the event</li>
+<li>the instantaneous rate of the event</li>
+<li>the relative risk of the event</li>
+<li>the odds ratio of the event</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="92" type="1">
+<li>The last entry in the table for the h(t) column is <code>NA</code> because:<a href="#fn89" class="footnote-ref" id="fnref89" role="doc-noteref"><sup>89</sup></a>
+<ol type="a">
+<li>the last observation was a death</li>
+<li>the last observation was censored</li>
+<li>the time interval is too big</li>
+<li>the time interval is too small</li>
+</ol></li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="handout/figs/hazard_NA.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Table 9.6 <span class="citation" data-cites="KuiperSklar">[@KuiperSklar]</span></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+<ol start="93" type="1">
+<li>Censored observations are<span class="math inline">\(\ldots\)</span>?<a href="#fn90" class="footnote-ref" id="fnref90" role="doc-noteref"><sup>90</sup></a>
+<ol type="a">
+<li>More important than non-censored ones in survival analysis</li>
+<li>Are assumed to be normally distributed over time</li>
+<li>Are assumed to have the same survival chances as uncensored observations</li>
+<li>Are essential to allow calculation of the Kaplan Meier plot</li>
+<li>Are allocated to the baseline survival curve</li>
+</ol></li>
+</ol>
+<hr>
 
 
 </section>
@@ -1248,7 +1360,7 @@ D: {5, 6, 7, 9, 11}
 </ol>
 <a href="#fnref65" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn66"><ol start="3" type="a">
-<li>blue because it is farther from y=x</li>
+<li>blue because it is farther from the line y=x</li>
 </ol>
 <a href="#fnref66" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn67"><ol start="2" type="a">
@@ -1315,6 +1427,38 @@ D: {5, 6, 7, 9, 11}
 <li>negative</li>
 </ol>
 <a href="#fnref82" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn83"><ol type="a">
+<li>underestimate the parameter</li>
+</ol>
+<a href="#fnref83" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn84"><ol start="2" type="a">
+<li>there is no censoring at time <span class="math inline">\(t_i\)</span></li>
+</ol>
+<a href="#fnref84" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn85"><ol type="a">
+<li>there are no deaths at time <span class="math inline">\(t_i\)</span></li>
+</ol>
+<a href="#fnref85" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn86"><ol type="a">
+<li>~0.65</li>
+</ol>
+<a href="#fnref86" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn87"><ol start="3" type="a">
+<li>can’t tell because they cross (and also because d.&nbsp;the p-value is big)</li>
+</ol>
+<a href="#fnref87" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn88"><ol start="2" type="a">
+<li>the instantaneous rate of the event</li>
+</ol>
+<a href="#fnref88" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn89"><ol start="2" type="a">
+<li>the last observation was censored</li>
+</ol>
+<a href="#fnref89" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn90"><ol start="3" type="a">
+<li>Are assumed to have the same survival chances as uncensored observations</li>
+</ol>
+<a href="#fnref90" class="footnote-back" role="doc-backlink">↩︎</a></li>
 </ol>
 </section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

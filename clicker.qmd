@@ -16,6 +16,8 @@ to go with **Practicing Statistics** by Kuiper & Sklar.  Math 150 - Methods in B
 
 ```{r}
 #| echo: false
+#| message: false
+#| warning: false
 
 # figure options
 knitr::opts_chunk$set(warning = FALSE, message = FALSE,
@@ -23,18 +25,19 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE,
   fig.retina = 3, dpi = 300, fig.align = "center"
 )
 
-library(ggplot2)
+library(tidyverse)
 library(plotROC)
+library(survival)
 ```
 
 ---
 
-In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you should know at least a little bit (hopefully a lotta bit) about the following topics.
+In terms of the prerequisite for Math 150, Methods in Biostatistics, you should know at least a little bit (hopefully a lotta bit) about the following topics.
 
 1. Hypothesis test, confidence interval, sample mean, central limit theorem, standard deviation, standard error of a statistics, p-value, t-test, chi-square test.[^1]
 
    (a) Never heard of it
-   (b) Heard of it, but don’t know anything about it
+   (b) Heard of it, but don't know anything about it
    (c) Know a little about it (or did once)
    (d) Know something about it
    (e) Confident about it
@@ -48,7 +51,7 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 2. Interaction, simple linear regression, multiple linear regression, logistic regression, survival analysis, R.[^2]
 
    (a) Never heard of it
-   (b) Heard of it, but don’t know anything about it
+   (b) Heard of it, but don't know anything about it
    (c) Know a little about it (or did once)
    (d) Know something about it
    (e) Confident about it
@@ -78,24 +81,24 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 ---
 
 5. Why do we use a t distribution (instead of a z / normal distribution) in the t-test?[^5]
-   a. the technical conditions don’t hold
+   a. the technical conditions don't hold
    b. the means are quite variable
    c. we like the letter t
    d. we have two samples
-   e. we don’t know the true standard deviation parameter
+   e. we don't know the true standard deviation parameter
 
-[^5]:  e. we don’t know the true standard deviation parameter
+[^5]:  e. we don't know the true standard deviation parameter
 
 ---
 
 
-6. What happens if a t-test is used but isn’t appropriate (technical conditions don’t hold)?[^6]
-   (a) the p-value isn’t actually the probability of our data or more extreme if H0 is true.
-   (b) the software won’t give a p-value as output
+6. What happens if a t-test is used but isn't appropriate (technical conditions don't hold)?[^6]
+   (a) the p-value isn't actually the probability of our data or more extreme if H0 is true.
+   (b) the software won't give a p-value as output
    (c) the rejection region needs to be calculated in the opposite direction
    (d) the world blows up
 
-[^6]: a. the p-value isn’t actually the probability of our data or more extreme if H0 is true.
+[^6]: a. the p-value isn't actually the probability of our data or more extreme if H0 is true.
 
 ---
 
@@ -200,7 +203,7 @@ What is: $\sum_i x_iy_i$?[^8]
 16. Smaller variability around the regression line ($\sigma$):[^16]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
-    (c) doesn’t necessarily change the variability of $b_1$.
+    (c) doesn't necessarily change the variability of $b_1$.
 
 [^16]: b. decreases the variability of $b_1$.
 
@@ -209,7 +212,7 @@ What is: $\sum_i x_iy_i$?[^8]
 17. Smaller variability in the explanatory variable (SD(X) = $s_X$):[^17]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
-    (c) doesn’t necessarily change the variability of $b_1$.
+    (c) doesn't necessarily change the variability of $b_1$.
 
 [^17]: a. increases the variability of $b_1$.
 
@@ -218,7 +221,7 @@ What is: $\sum_i x_iy_i$?[^8]
 18. A smaller sample size ($n$):[^18]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
-    (c) doesn’t necessarily change the variability of $b_1$.
+    (c) doesn't necessarily change the variability of $b_1$.
 
 [^18]: a. increases the variability of $b_1$.
 
@@ -307,29 +310,29 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 ---
     
-27. Sample 1,000,000 people who are over 6’ tall and 1,000,000 people who are under 6’ tall.  Record if the person is in the NBA.  What is measurable?[^27]
-    (a) P(NBA if 6’ tall)
-    (b) P(6’ tall if in the NBA)
+27. Sample 1,000,000 people who are over 6' tall and 1,000,000 people who are under 6' tall.  Record if the person is in the NBA.  What is measurable?[^27]
+    (a) P(NBA if 6' tall)
+    (b) P(6' tall if in the NBA)
     (c) both
     (d) neither  
 
-[^27]: a. P(NBA if 6’ tall) (cohort: cannot measure the probability of the explanatory variable given the response)
+[^27]: a. P(NBA if 6' tall) (cohort: cannot measure the probability of the explanatory variable given the response)
 
 ---
 
-28. Sample 100 people who are in the NBA and 100 people who are not in the NBA. Record if the person is over 6’ tall. What is measurable?[^28]
-    (a) P(NBA if 6’ tall)
-    (b) P(6’ tall if in the NBA)
+28. Sample 100 people who are in the NBA and 100 people who are not in the NBA. Record if the person is over 6' tall. What is measurable?[^28]
+    (a) P(NBA if 6' tall)
+    (b) P(6' tall if in the NBA)
     (c) both
     (d) neither  
 
-[^28]: b. P(6’ tall if in the NBA) (case-control:  cannot measure the probability of the response variable given a level of the explanatory variable)
+[^28]: b. P(6' tall if in the NBA) (case-control:  cannot measure the probability of the response variable given a level of the explanatory variable)
 
 ---
 
 29. Sample 10,000,000 people.  Record their height and whether or not they are in the NBA. What is measurable?[^29]
-    (a) P(NBA if 6’ tall)
-    (b) P(6’ tall if in the NBA)
+    (a) P(NBA if 6' tall)
+    (b) P(6' tall if in the NBA)
     (c) both
     (d) neither  
 
@@ -389,7 +392,7 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
     (a) Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
     (b) Because taking the natural log of the RR makes the  distribution approximately normal.
     (c) Because the natural log compresses values that are  bigger than 1 and spreads values that are smaller than 1.
-    (d) Because we can get exact p-values using Fisher’s Exact Test.
+    (d) Because we can get exact p-values using Fisher's Exact Test.
 
 [^35]: a. Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
 
@@ -633,7 +636,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-58. If the interaction is significant but the main effects aren’t:[^58]
+58. If the interaction is significant but the main effects aren't:[^58]
     (a) report on the significance of the main effects
     (b) remove the main effects from the model
     (c) avoid talking about main effects on their own
@@ -732,7 +735,6 @@ What are the numbers for N1, N2, N3?[^66]
 ```{r}
 #| echo: false
 #| eval: false
----
 
 68. From the burn data, consider:  
 $$P(\mbox{surv if } X = 0.4) = 0.3$$
@@ -745,6 +747,7 @@ The two points are concordant if[^68]
 
 [^68]: b. X = 0.4 dies and X= 0.2 survives
 ```
+
 ---
 
 69. Which model is better (according to ROC)?[^69]
@@ -770,8 +773,7 @@ ggplot(rocdata, aes(m = M, d = D, color = Z)) + geom_roc() +
 
 ```
 
-
-[^69]: c. blue because it is farther from y=x
+[^69]: c. blue because it is farther from the line y=x
 
 ---
 
@@ -795,7 +797,7 @@ Who should you choose to help you answer the questions?[^71]
     (b) B
     (c) C
     (d) D
-    (e) can’t tell
+    (e) can't tell
 
 [^71]: a. A
 
@@ -810,7 +812,7 @@ D: {5, 6, 7, 9, 11}
      (b) B
      (c) C
      (d) D
-     (e) can’t tell
+     (e) can't tell
 
 [^72]: b. B
 
@@ -927,7 +929,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-85.  When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of low coins is:[^85]
+85. When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of low coins is:[^85]
      (a) positive
      (b) negative
      (c) zero
@@ -935,8 +937,120 @@ D: {5, 6, 7, 9, 11}
 
 [^85]: b. negative
 
+---
+
+86. If we consider the censored times to be event times, the empirical survival curve will (on average)[^86]
+    (a) underestimate the parameter
+    (b) overestimate the parameter
+    (c) sometimes under and sometimes overestimate the parameter
+
+[^86]: a. underestimate the parameter
+
+---
+
+87. $n_i - d_i = n_{i+1}$ when:[^87]
+    (a) there are no deaths at time $t_i$
+    (b) there is no censoring at time $t_i$
+    (c) there are no deaths at time $t_{i+1}$
+    (d) there is no censoring at time $t_{i+1}$
+    (e) there is no censoring at time $t_{i-1}$
+
+[^87]: b. there is no censoring at time $t_i$
+
+---
+
+88. $\frac{(n_i - d_i)}{n_i} = 1$ when:[^88]
+    (a) there are no deaths at time $t_i$
+    (b) there is no censoring at time $t_i$
+    (c) there are no deaths at time $t_{i+1}$
+    (d) there is no censoring at time $t_{i+1}$
+    (e) there is no censoring at time $t_{i-1}$
+
+[^88]: a. there are no deaths at time $t_i$
 
 ---
 
 
+89. The proportion who survive past 20 days for `treated` (turquoise line)[^89]
+    (a) ~0.65
+    (b) ~0.35
+    (c) ~0.45
+    (d) we only know it's bigger than red
+    (e) we only know it's smaller than red
+    
+```{r}
+#| echo: false
+
+surv_data <- data.frame(time = c(45, 35, 48, 24, 42, 52, 55, 47, 42, 74, 62, 32, 41, 69, 17),
+censor = c(0,1,0,1,1,1,0,1,1,1,0,0,0,1,0), group = c("control", "control", "control", "control", "control", "control","treated", "treated", "treated", "treated","treated", "treated", "treated", "treated", "treated"))
+
+survfit(Surv(time, censor) ~ group, data = surv_data) %>%
+survminer::ggsurvplot(conf.int = FALSE)
+```
+
+[^89]: a. ~0.65
+
+
+---
+
+90. Comparing the following Kaplan Meier curves (with Log-Rank p-value),[^90]
+    (a) blue is clearly better
+    (b) red is clearly better
+    (c) can't tell because they cross
+    (d) can't tell because the p-value is big
+    (e) can't tell because the p-value is small
+    
+```{r}
+#| echo: false
+
+surv_data <- data.frame(time = c(45, 35, 48, 64, 42, 52, 55, 37, 42, 74, 32, 32, 41, 49, 17),
+censor = c(0,1,0,1,1,1,0,1,1,1,0,0,0,1,0), group = c("control", "control", "control", "control", "control", "control","treated", "treated", "treated", "treated","treated", "treated", "treated", "treated", "treated"))
+
+survfit(Surv(time, censor) ~ group, data = surv_data) %>%
+survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
+```
+
+[^90]: c. can't tell because they cross (and also because d. the p-value is big)
+
+---
+
+91. The hazard at time $t$ represents:[^91]
+    (a) the probability of the event
+    (b) the instantaneous rate of the event
+    (c) the relative risk of the event
+    (d) the odds ratio of the event
+    
+[^91]: b. the instantaneous rate of the event
+
+---
+
+92. The last entry in the table for the h(t) column is `NA` because:[^92]
+    (a) the last observation was a death
+    (b) the last observation was censored
+    (c) the time interval is too big
+    (d) the time interval is too small
+    
+```{r fig.cap = "Table 9.6  [@KuiperSklar]", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("handout/figs/hazard_NA.jpg")
+```
+
+[^92]: b. the last observation was censored
+
+---
+
+
+93. Censored observations are$\ldots$?[^93]
+    (a) More important than non-censored ones in survival analysis
+    (b) Are assumed to be normally distributed over time
+    (c) Are assumed to have the same survival chances as uncensored observations
+    (d) Are essential to allow calculation of the Kaplan Meier plot
+    (e) Are allocated to the baseline survival curve
+
+[^93]: c. Are assumed to have the same survival chances as uncensored observations
+
+
+
+
+
+---
 
