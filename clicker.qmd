@@ -993,6 +993,18 @@ survminer::ggsurvplot(conf.int = FALSE)
 
 ---
 
+```{r}
+#| echo: false
+
+surv_data <- data.frame(time = c(45, 35, 48, 24, 42, 52, 55, 47, 42, 74, 62, 32, 41, 69, 17),
+censor = c(0,1,0,1,1,1,0,1,1,1,0,0,0,1,0), group = c("control", "control", "control", "control", "control", "control","treated", "treated", "treated", "treated","treated", "treated", "treated", "treated", "treated"))
+
+survfit(Surv(time, censor) ~ group, data = surv_data) %>%
+survminer::ggsurvplot(conf.int = FALSE)
+```
+
+---
+
 90. Comparing the following Kaplan Meier curves (with Log-Rank p-value),[^90]
     (a) blue is clearly better
     (b) red is clearly better
@@ -1012,6 +1024,17 @@ survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
 
 [^90]: c. can't tell because they cross (and also because d. the p-value is big)
 
+---
+
+```{r}
+#| echo: false
+
+surv_data <- data.frame(time = c(45, 35, 48, 64, 42, 52, 55, 37, 42, 74, 32, 32, 41, 49, 17),
+censor = c(0,1,0,1,1,1,0,1,1,1,0,0,0,1,0), group = c("control", "control", "control", "control", "control", "control","treated", "treated", "treated", "treated","treated", "treated", "treated", "treated", "treated"))
+
+survfit(Surv(time, censor) ~ group, data = surv_data) %>%
+survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
+```
 ---
 
 91. The hazard at time $t$ represents:[^91]
