@@ -971,7 +971,7 @@ D: {5, 6, 7, 9, 11}
 ---
 
 
-89. The proportion who survive past 20 days for `treated` (turquoise line)[^89]
+89. Prop survive > 50 days, `treated` (turquoise line)[^89]
     (a) ~0.65
     (b) ~0.35
     (c) ~0.45
@@ -1005,14 +1005,14 @@ survminer::ggsurvplot(conf.int = FALSE)
 
 ---
 
-90. Comparing the following Kaplan Meier curves (with Log-Rank p-value),[^90]
+90. Kaplan Meier curves (Log-Rank p-value),[^90]
     (a) blue is clearly better
     (b) red is clearly better
     (c) can't tell because they cross
     (d) can't tell because the p-value is big
     (e) can't tell because the p-value is small
     
-```{r}
+```{r fig.height = 4}
 #| echo: false
 
 surv_data <- data.frame(time = c(45, 35, 48, 64, 42, 52, 55, 37, 42, 74, 32, 32, 41, 49, 17),
