@@ -265,7 +265,7 @@ ggsurvplot(___, conf.type = "___") +
 <p>The R code will be very similar to part (a), but model the survival response variable as a function of the explanatory variable <code>Partners</code>.</p>
 <pre><code>fly_surv_part &lt;- survfit(Surv(___, ____ ) ~ Partners, data=___ )</code></pre>
 <ol start="3" type="a">
-<li>Perform the log-rank and Wilcoxon tests. Report the test statistics and p-values for both tests. State the conclusions for both tests. If the tests yield different conclusions, briefly explain why. [We will cover these tests on Monday in class.]</li>
+<li>Perform the log-rank and Wilcoxon tests. Report the test statistics and p-values for both tests. State the conclusions for both tests. If the tests yield different conclusions, briefly explain why. [We will cover these tests on Tuesday in class.]</li>
 </ol>
 <p>The R function which runs the two tests is called <code>survdiff()</code>. It acts on the <code>Surv()</code> response variable broken down by the explanatory variable, <code>Partners</code>.</p>
 <p>The argument “rho = ___” controls which test you’d like to run. “rho = 0” gives the log-rank test. “rho = 1” gives the Wilcoxon test. Try typing <code>?survdiff</code> to see the help file.</p>
@@ -274,7 +274,7 @@ survdiff(Surv(___,___) ~ ___, data=___, rho=___)</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "You are phenomenal!"</code></pre>
+<pre><code>[1] "You are pioneering!"</code></pre>
 </div>
 </div>
 

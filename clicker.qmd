@@ -1048,26 +1048,26 @@ survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
 ---
 
 92. What does it mean for the log rank test to be more powerful than the Wilcoxon test?[^92]
-a. log rank is more likely to reject $H_0$ when $H_0$ is true.
-b. log rank is more likely to reject $H_0$ when $H_0$ is false.
-c. log rank is less likely to reject $H_0$ when $H_0$ is true.
-d. log rank is less likely to reject $H_0$ when $H_0$ is false.
+    a. log rank is more likely to reject $H_0$ when $H_0$ is true.
+    b. log rank is more likely to reject $H_0$ when $H_0$ is false.
+    c. log rank is less likely to reject $H_0$ when $H_0$ is true.
+    d. log rank is less likely to reject $H_0$ when $H_0$ is false.
 
 [^92]: b. log rank is more likely to reject $H_0$ when $H_0$ is false.
 
 ---
 
-91. The hazard at time $t$ represents:[^91]
+93. The hazard at time $t$ represents:[^93]
     (a) the probability of the event
     (b) the instantaneous rate of the event
     (c) the relative risk of the event
     (d) the odds ratio of the event
     
-[^91]: b. the instantaneous rate of the event
+[^93]: b. the instantaneous rate of the event
 
 ---
 
-92. The last entry in the table for the h(t) column is `NA` because:[^92]
+94. The last entry in the table for the h(t) column is `NA` because:[^94]
     (a) the last observation was a death
     (b) the last observation was censored
     (c) the time interval is too big
@@ -1077,19 +1077,19 @@ d. log rank is less likely to reject $H_0$ when $H_0$ is false.
 knitr::include_graphics("handout/figs/hazard_NA.jpg")
 ```
 
-[^92]: b. the last observation was censored
+[^94]: b. the last observation was censored
 
 ---
 
 
-93. Censored observations are$\ldots$?[^93]
+95. Censored observations are$\ldots$?[^95]
     (a) More important than non-censored ones in survival analysis
     (b) Are assumed to be normally distributed over time
     (c) Are assumed to have the same survival chances as uncensored observations
     (d) Are essential to allow calculation of the Kaplan Meier plot
     (e) Are allocated to the baseline survival curve
 
-[^93]: c. Are assumed to have the same survival chances as uncensored observations
+[^95]: c. Are assumed to have the same survival chances as uncensored observations
 
 
 
