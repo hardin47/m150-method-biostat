@@ -91,7 +91,7 @@ The R code will be very similar to part (a), but model the survival response var
 fly_surv_part <- survfit(Surv(___, ____ ) ~ Partners, data=___ )
 ```
 
-(c) Perform the log-rank and Wilcoxon tests.  Report the test statistics and p-values for both tests.  State the conclusions for both tests.  If the tests yield different conclusions, briefly explain why.  [We will cover these tests on Monday in class.]
+(c) Perform the log-rank and Wilcoxon tests.  Report the test statistics and p-values for both tests.  State the conclusions for both tests.  If the tests yield different conclusions, briefly explain why.  [We will cover these tests on Tuesday in class.]
 
 The R function which runs the two tests is called `survdiff()`.  It acts on the `Surv()` response variable broken down by the explanatory variable, `Partners`.  
 

@@ -1037,6 +1037,26 @@ survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
 ```
 ---
 
+91. In the log-rank test, why is it okay to consider only one cell of the 2x2 table at time $t_j$?[^91]
+     a. Because the row totals are fixed.
+     b. Because the column totals are fixed.
+     c. Because the row and column totals are fixed.
+     d. Because the total number of observations is fixed.
+
+[^91]: c. Because the row and column totals are fixed.
+
+---
+
+92. What does it mean for the log rank test to be more powerful than the Wilcoxon test?[^92]
+a. log rank is more likely to reject $H_0$ when $H_0$ is true.
+b. log rank is more likely to reject $H_0$ when $H_0$ is false.
+c. log rank is less likely to reject $H_0$ when $H_0$ is true.
+d. log rank is less likely to reject $H_0$ when $H_0$ is false.
+
+[^92]: b. log rank is more likely to reject $H_0$ when $H_0$ is false.
+
+---
+
 91. The hazard at time $t$ represents:[^91]
     (a) the probability of the event
     (b) the instantaneous rate of the event
