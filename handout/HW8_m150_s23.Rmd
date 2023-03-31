@@ -1,7 +1,7 @@
 ---
-title: "Math 150 - Methods in Biostatistics - Homework 7"
+title: "Math 150 - Methods in Biostatistics - Homework 8"
 author: "your name here"
-date: "Due: Friday, April 2, 2021"
+date: "Due: Wednesday, March 29, 2023"
 output: pdf_document
 ---
 
