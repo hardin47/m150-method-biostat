@@ -27,6 +27,8 @@ website:
         href: notes.qmd
       - text: "Clicker Q"
         href: clicker_study.qmd
+      - text: "Final Project"
+        href: project.qmd
     logo: images/st47s.png
     logo-href: https://m150-method-biostat.netlify.app/
   page-footer:

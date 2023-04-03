@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://m150-method-biostat.netlify.app/index.html</loc>
-    <lastmod>2023-03-31T16:24:03.418Z</lastmod>
+    <lastmod>2023-04-03T21:09:34.994Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/syllabus.html</loc>
@@ -58,6 +58,14 @@
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/handout/HW8_m150_s23.html</loc>
-    <lastmod>2023-03-28T19:49:48.166Z</lastmod>
+    <lastmod>2023-04-03T20:58:01.061Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/project.html</loc>
+    <lastmod>2023-04-03T21:09:28.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.html</loc>
+    <lastmod>2023-04-03T20:58:08.400Z</lastmod>
   </url>
 </urlset>
