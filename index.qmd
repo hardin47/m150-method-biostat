@@ -113,7 +113,7 @@ schedule <- tribble(
   'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#coxph" target = "_blank"><i class="fas fa-book-open"></i> Cox PH model </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#multcoxph" target = "_blank"><i class="fas fa-book-open"></i> multiple Cox PH</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW9 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW9 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW9 turn-in</a>',
   '<a href = "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(2032076-6/fulltext" target = "_blank">race-conscious medicine</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/dairyko.html" target = "_blank">Mike Dairyko</a>',
-  '', 
+  '<a href="https://m150-method-biostat.netlify.app/handout/wu18_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 18</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu19_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 19</a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/CHD_HR.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i>CHD & HR</a>', 
   
 "Week 12 <br> 4.11.23", 
   '• survival analysis',
