@@ -87,7 +87,7 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 
 
 #### Assessment:
-* Your primary assessment will be based on the above items (graphic, modeling, understanding of new topic, additional analysis, interpretation).
+* Your primary assessment will be based on the above items (modeling, understanding of new topic, additional analysis, interpretation).
 * Additionally there will be two competitions.  Winning either will add 5 points (out of 100) to your score.
    * Graphic:  the class will vote on who has the best graphic.
    * Model:  using a holdout sample (I only gave you part of the data), I will assess your final model.  The group whose model best describes the holdout sample (as measured by the <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4886856/" target = "_blank">c-index</a>) will win the model prize.
