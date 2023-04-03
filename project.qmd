@@ -39,7 +39,7 @@ Please use the above dataset in your analysis.  However, feel free to look at th
 * **Tuesday, May 9**.  Complete assignment is due (turn in **both** the Rmd and knitted pdf to Canvas). (If you are a graduating senior, the final assignment is due by **Thursday, May 4**.)
 
 ## Assignment
-The analysis should be done in a complete R Markdown file and posted to your Canvas dropbox.   The final report should address the following tasks below but should not enumerate the tasks.  See below for grading rubric which speaks to how the report should be communicated.
+The analysis should be done in a complete R Markdown file and posted to your Canvas dropbox.   The final report should address the following tasks below but should not enumerate the tasks.
 
 
 1. Exploratory data analysis.  Graphical and numerical summaries of the data (both explanatory and response variables).  Do *not* attach every single graph you try.  Instead, choose only a few images that give the reader a sense of the variables and their relationships.
