@@ -1092,8 +1092,108 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 [^95]: c. Are assumed to have the same survival chances as uncensored observations
 
 
+---
 
+96. Survival Analysis: for a one unit change of an explanatory variable, the corresponding coefficient $e^\beta$ represents:[^96]
+    (a) baseline survival
+    (b) survival ratio
+    (c) baseline hazard
+    (d) hazard ratio
 
+[^96]: d. hazard ratio
 
 ---
+
+97. In survival analysis, the closest interpretation of the value $e^\beta$ is:[^97]
+    (a) odds
+    (b) probability
+    (c) time to event
+    (d) relative risk
+    (e) odds ratio
+
+[^97]: d. relative risk
+
+---
+
+98. Let the event be death.  If larger values of the explanatory variable are associated with higher likelihood of survival, the coefficient $(\beta)$ should be [^98]
+    (a) bigger than 1
+    (b) smaller than 1
+    (c) positive
+    (d) negative
+    (e) zero
+
+[^98]: d. negative
+
+---
+
+99. Let the event be death.  If larger values of the variable are NOT associated with higher (or lower) likelihood of survival, the coefficient $(\beta)$ should be[^99]
+    (a) bigger than 1
+    (b) smaller than 1
+    (c) positive
+    (d) negative
+    (e) zero
+
+[^99]: e. zero
+
+---
+
+100. BP can violate the "linear HR" condition if:[^100]
+     (a) the ln ratio of the hazard curves is not linear with respect to BP
+     (b) the ln ratio of the survival curves is not linear with respect to BP
+     (c) the effect of BP is to increase the hazard
+     (d) the effect of BP is to decrease the hazard
+     (e) there is no effect due to BP
+
+[^100]: a. the ln ratio of the hazard curves is not linear with respect to BP
+
+---
+
+101. A Cox regression analysis:[^101]
+      (a) Is used to analyze survival data when individuals in the study are followed for varying lengths of time.
+      (b) Can only be used when there are censored data
+      (c) Assumes that the relative hazard for a particular variable is always constant 
+      (d) Uses the logrank statistic to compare two survival curves
+      (e) Relies on the condition that the explanatory variables (covariates) in the model are normally distributed.
+
+[^101]: a. Is used to analyze survival data when individuals in the study are followed for varying lengths of time. **and** c. Assumes that the relative hazard for a particular variable is always constant 
+
+---
+
+102. The effect of weight could violate PH if:[^102]
+     (a) people of different weights are in control vs treatment group
+     (b) people tend to weigh less over time
+     (c) the hazard function for weight is not monotonic
+     (d) the hazard function changes as a function of weight which is also changing over time
+
+[^102]: d. the hazard function changes as a function of weight which is also changing over time
+
+---
+
+103. The effect of treatment could violate PH if:[^103]
+     (a) the treatment has no effect
+     (b) the treatment produces short term benefits only
+     (c) the treatment effect interacts with a different variable, like gender
+     (d) there is more than one treatment group
+
+[^103]: b. the treatment produces short term benefits only
+
+---
+
+104. AIC, BIC, model validation, and stepwise regression are methods for[^104]
+      a. parameter estimation 
+      b. variable selection
+
+[^104]: b. variable selection
+
+---
+
+
+
+
+
+
+
+
+
+
 
