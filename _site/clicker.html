@@ -95,6 +95,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./clicker_study.html">
  <span class="menu-text">Clicker Q</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./project.html">
+ <span class="menu-text">Final Project</span></a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -1143,6 +1147,99 @@ D: {5, 6, 7, 9, 11}
 </ol></li>
 </ol>
 <hr>
+<ol start="96" type="1">
+<li>Survival Analysis: for a one unit change of an explanatory variable, the corresponding coefficient <span class="math inline">\(e^\beta\)</span> represents:<a href="#fn93" class="footnote-ref" id="fnref93" role="doc-noteref"><sup>93</sup></a>
+<ol type="a">
+<li>baseline survival</li>
+<li>survival ratio</li>
+<li>baseline hazard</li>
+<li>hazard ratio</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="97" type="1">
+<li>In survival analysis, the closest interpretation of the value <span class="math inline">\(e^\beta\)</span> is:<a href="#fn94" class="footnote-ref" id="fnref94" role="doc-noteref"><sup>94</sup></a>
+<ol type="a">
+<li>odds</li>
+<li>probability</li>
+<li>time to event</li>
+<li>relative risk</li>
+<li>odds ratio</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="98" type="1">
+<li>Let the event be death. If larger values of the explanatory variable are associated with higher likelihood of survival, the coefficient <span class="math inline">\((\beta)\)</span> should be <a href="#fn95" class="footnote-ref" id="fnref95" role="doc-noteref"><sup>95</sup></a>
+<ol type="a">
+<li>bigger than 1</li>
+<li>smaller than 1</li>
+<li>positive</li>
+<li>negative</li>
+<li>zero</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="99" type="1">
+<li>Let the event be death. If larger values of the variable are NOT associated with higher (or lower) likelihood of survival, the coefficient <span class="math inline">\((\beta)\)</span> should be<a href="#fn96" class="footnote-ref" id="fnref96" role="doc-noteref"><sup>96</sup></a>
+<ol type="a">
+<li>bigger than 1</li>
+<li>smaller than 1</li>
+<li>positive</li>
+<li>negative</li>
+<li>zero</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="100" type="1">
+<li>BP can violate the “linear HR” condition if:<a href="#fn97" class="footnote-ref" id="fnref97" role="doc-noteref"><sup>97</sup></a>
+<ol type="a">
+<li>the ln ratio of the hazard curves is not linear with respect to BP</li>
+<li>the ln ratio of the survival curves is not linear with respect to BP</li>
+<li>the effect of BP is to increase the hazard</li>
+<li>the effect of BP is to decrease the hazard</li>
+<li>there is no effect due to BP</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="101" type="1">
+<li>A Cox regression analysis:<a href="#fn98" class="footnote-ref" id="fnref98" role="doc-noteref"><sup>98</sup></a>
+<ol type="a">
+<li>Is used to analyze survival data when individuals in the study are followed for varying lengths of time.</li>
+<li>Can only be used when there are censored data</li>
+<li>Assumes that the relative hazard for a particular variable is always constant</li>
+<li>Uses the logrank statistic to compare two survival curves</li>
+<li>Relies on the condition that the explanatory variables (covariates) in the model are normally distributed.</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="102" type="1">
+<li>The effect of weight could violate PH if:<a href="#fn99" class="footnote-ref" id="fnref99" role="doc-noteref"><sup>99</sup></a>
+<ol type="a">
+<li>people of different weights are in control vs treatment group</li>
+<li>people tend to weigh less over time</li>
+<li>the hazard function for weight is not monotonic</li>
+<li>the hazard function changes as a function of weight which is also changing over time</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="103" type="1">
+<li>The effect of treatment could violate PH if:<a href="#fn100" class="footnote-ref" id="fnref100" role="doc-noteref"><sup>100</sup></a>
+<ol type="a">
+<li>the treatment has no effect</li>
+<li>the treatment produces short term benefits only</li>
+<li>the treatment effect interacts with a different variable, like gender</li>
+<li>there is more than one treatment group</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="104" type="1">
+<li>AIC, BIC, model validation, and stepwise regression are methods for<a href="#fn101" class="footnote-ref" id="fnref101" role="doc-noteref"><sup>101</sup></a>
+<ol type="a">
+<li>parameter estimation</li>
+<li>variable selection</li>
+</ol></li>
+</ol>
+<hr>
 
 
 </section>
@@ -1507,6 +1604,42 @@ D: {5, 6, 7, 9, 11}
 <li>Are assumed to have the same survival chances as uncensored observations</li>
 </ol>
 <a href="#fnref92" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn93"><ol start="4" type="a">
+<li>hazard ratio</li>
+</ol>
+<a href="#fnref93" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn94"><ol start="4" type="a">
+<li>relative risk</li>
+</ol>
+<a href="#fnref94" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn95"><ol start="4" type="a">
+<li>negative</li>
+</ol>
+<a href="#fnref95" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn96"><ol start="5" type="a">
+<li>zero</li>
+</ol>
+<a href="#fnref96" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn97"><ol type="a">
+<li>the ln ratio of the hazard curves is not linear with respect to BP</li>
+</ol>
+<a href="#fnref97" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn98"><ol type="a">
+<li>Is used to analyze survival data when individuals in the study are followed for varying lengths of time. <strong>and</strong> c.&nbsp;Assumes that the relative hazard for a particular variable is always constant</li>
+</ol>
+<a href="#fnref98" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn99"><ol start="4" type="a">
+<li>the hazard function changes as a function of weight which is also changing over time</li>
+</ol>
+<a href="#fnref99" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn100"><ol start="2" type="a">
+<li>the treatment produces short term benefits only</li>
+</ol>
+<a href="#fnref100" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn101"><ol start="2" type="a">
+<li>variable selection</li>
+</ol>
+<a href="#fnref101" class="footnote-back" role="doc-backlink">↩︎</a></li>
 </ol>
 </section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
