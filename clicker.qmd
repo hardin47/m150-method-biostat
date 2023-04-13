@@ -340,6 +340,15 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 ---
 
+From the NYT, March 21, 2023, https://www.nytimes.com/2023/03/21/sports/basketball/tall-basketball-march-madness.html
+
+> The average W.N.B.A. player, at a shade taller than 6 feet, towers over the average American woman (5 feet 3.5 inches). American men who are between 6 feet and 6-2 — significantly taller than the 5-9 average — have about a five in a million chance of making the N.B.A., according to "The Sports Gene," a 2013 book by David Epstein about the science of athletic performance. But if you hit the genetic lottery and happen to be 7 feet tall, your chances of landing in the N.B.A. are roughly one in six. (There are 38 players on active rosters who are 7 feet or taller, according to N.B.A. Advanced Stats; the average height of an N.B.A. player is 6 feet 6.5 inches.)
+
+
+https://davidepstein.com/david-epstein-the-sports-gene/
+
+---
+
 30. Calcium channel blockers have recently been reported to be associated with increased mortality. Cardiac patients who recently died of their heart disease were compared to control cardiac patients with similar disease who survive. Assume such a study had found that 40% of the recent cardiac deaths were taking calcium channel blockers at the time of death, as compared to 25% of the controls.[^30]
     (a) Case-control
     (b) Cohort
@@ -1077,7 +1086,7 @@ survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
 knitr::include_graphics("handout/figs/hazard_NA.jpg")
 ```
 
-[^94]: b. the last observation was censored
+[^94]: b. the last observation was censored.  The reason the hazard is zero is because the width of the time interval is unknown, that is we don't know when the last event time is.
 
 ---
 
@@ -1187,7 +1196,127 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
+105. If $\alpha = 0.05$, I would expect 5% of all hypotheses to be rejected.[^105]
+     (a) TRUE
+     (b) FALSE
 
+[^105]: b. FALSE, we'd expect 5% of all null hypotheses to be rejected
+
+---
+
+106. Power is:[^106]
+      (a) P(type I error)
+      (b) P(type II error)
+      (c) 1 – P(type I error)
+      (d) 1 – P(type II error)
+      
+type I = $H_0$ true, but we reject  
+type II = $H_0$ false, but we fail to reject  
+power = P(rejecting when $H_0$ false)  
+
+[^106]: d. 1 – P(type II error)
+
+---
+
+107. The p-value is[^107]
+     (a) P(H0 is true | data)
+     (b) P(Ha is true | data)
+     (c) P(data | H0 is true)
+     (d) P(data | Ha is true)
+     (e) 1 – P(data | H0 is true)
+
+[^107]: c. P(data | H0 is true)
+
+---
+
+RA Fisher (1929)
+
+"... An observation is judged significant, if it would rarely have been produced, in the absence of a real cause of the kind we are seeking. **It is a common practice to judge a result significant, if it is of such a magnitude that it would have been produced by chance not more frequently than once in twenty trials. This is an arbitrary, but convenient, level of significance for the practical investigator, but it does not mean that he allows himself to be deceived once in every twenty experiments.** The test of significance only tells him what to ignore, namely all experiments in which significant results are not obtained. He should only claim that a phenomenon is experimentally demonstrable when he knows how to design an experiment so that it will rarely fail to give a significant result. Consequently, isolated significant results which he does not know how to reproduce are left in suspense pending further investigation."
+
+---
+
+108. For hypothesis testing, the problem of multiple comparisons (also known as the multiple testing problem) results from the increase in ________ that occurs when statistical tests are used repeatedly.[^108]
+     (a) Type I errors 
+     (b) Type II errors 
+     (c) Null hypothesis
+     (d) Statistical hypothesis testing
+
+[^108]: a. Type I errors
+
+---
+
+109. If H0 is true, the p-values should be distributed:[^109]
+     (a) Uniformly (equal prob) on 0  to 1 
+     (b) Uniformly on -1 to 1
+     (c) Unimodal on 0 to 1
+     (d) Skewed left on 0 to 1
+     (e) Skewed right on 0 to 1
+
+[^109]: a. Uniformly (equal prob) on 0  to 1
+
+---
+
+110. Given many many tests (presumably some are null and some are "true"), a good estimate of the number of null tests is:[^110]
+     (a) (# p-values > 0.5) / 2
+     (b) (# p-values > 0.5) * 2
+     (c) (# p-values < 0.5) / 2
+     (d) (# p-values < 0.5) * 2
+
+[^110]: b. (# p-values > 0.5) * 2
+
+---
+
+111. What do I do if the adjusted p-value is bigger than 1?[^111]
+     (a) Leave it unadjusted
+     (b) Assign the value of the previous (“smaller”) p-value
+     (c) Round it to 1
+     (d) Divide by 2
+
+[^111]: c. Round it to 1
+
+---
+
+112. With Holm’s method, what do I do if the (m+1)^th adjusted p-value is smaller than the m^th adjusted p-value?[^112]
+     (a) Leave it unadjusted
+     (b) Assign the value of the m^th adjusted p-value to the (m+1)^th adjusted p-value
+     (c) Round it to 1
+     (d) Divide by 2
+
+[^112]: b. Assign the value of the m^th adjusted p-value to the (m+1)^th adjusted p-value
+
+---
+
+113. The false discovery rate represents[^113]
+     (a) the proportion of true discoveries out of the total tests
+     (b) the proportion of true discoveries out of the total discoveries
+     (c) the ratio of the number of true discoveries divided by the number of null discoveries
+     (d) the number of null discoveries out of the total tests
+     (e) the number of null discoveries out of the total discoveries
+
+[^113]: e. the number of null discoveries out of the total discoveries
+
+---
+
+114. FDR and FWER differ in that[^114]
+     (a) FDR is a rate and FWER is a probability
+     (b) FDR controls the rate of false positives
+     (c) FWER controls the probability of getting a false positive
+     (d) some of the above
+     (e) all of the above
+
+[^114]: e. all of the above
+
+---
+
+115. Which multiple comparisons adjustment gives the highest power?[^115]
+     (a) Bonferonni
+     (b) Holm
+     (c) Benjamini-Hochberg
+     (d) Storey (q-values)
+
+[^115]: d. Storey (q-values)
+
+---
 
 
 
