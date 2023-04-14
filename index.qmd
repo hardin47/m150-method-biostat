@@ -126,26 +126,27 @@ schedule <- tribble(
 "Week 13 <br> 4.18.23", 
   '• multiple comparisons',
   '<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#multcomp" target = "_blank"><i class="fas fa-book-open"></i> multiple comparisons </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#qvals" target = "_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#interim" target = "_blank"><i class="fas fa-book-open"></i> interim analyses</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW11 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW11 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW11 turn-in</a>',
+  '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank">PROJECT: EDA</a></b></font>',
   '<a href = "https://www.nytimes.com/2020/10/14/health/covid-clinical-trials.html" target = "_blank">pausing trials</a> <br> <br>  <a href = "https://hardin47.github.io/CURV/scholars/hare.html" target = "_blank">Liz Hare</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/wu22_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 22</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu23_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 23</a>',  
 
 '<font color = "#114B5F"><b>Week 14 <br> 4.25.23</b></font>', 
 '<font color = "#114B5F"><b>review & catch-up</b></font>',
 '<font color = "#114B5F"><b>exam 2 in class + <br> 4.27.23</b></font>',
- '',
+ '<a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW11 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW11 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW11 turn-in</a>',
   '<a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> see Canvas</a> for sample exam 2 Q & sol',
   '',
 
 "Week 15 <br> 5.2.23", 
   '<font color = "#114B5F"><b>Graphics presentations</b></font>',
   '',
-  '',
+'<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank">PROJECT: Graphic</a></b></font>',
   '',
   '',  
   
 '<font color = "#114B5F"><b>Tuesday <br> 5.9.23 <br> 2-5pm</b></font>', '<font color = "#114B5F"><b>Final Project </b></font>',"", 
-  '',
+  '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank">PROJECT: final</a></b></font>',
+
   '',
   ''   
   )
