@@ -210,17 +210,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>HELPdata <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://pomona.box.com/shared/static/nty3oxpb8db1y763l6uusxtq4gukbcev"</span>,</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">na=</span><span class="fu">c</span>(<span class="st">"NA"</span>, <span class="st">""</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 347 Columns: 787
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr   (3): a14g_t, a17i_t, c3f_t
-dbl (635): time, num_intervals, int_time1, int_time2, dead, a1, a9, a10, a11...
-lgl (149): days_since_bl, days_since_prev, prev_time, c3k_m, e18a, e18b, e18...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
 </div>
 <p>Please use the above dataset in your analysis. However, feel free to look at the many variables that are described in the related dataset <code>HELPfull</code> (available in the <strong>mosaic</strong> package). Some things to notice:</p>
 <ul>

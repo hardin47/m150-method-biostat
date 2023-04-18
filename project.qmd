@@ -22,6 +22,9 @@ is comma delimited at <a href = "https://pomona.box.com/s/nty3oxpb8db1y763l6uusx
 The data can be loaded in directly from Box using:
 
 ```{r}
+#| warning: false
+#| message: false
+
 HELPdata <- readr::read_csv("https://pomona.box.com/shared/static/nty3oxpb8db1y763l6uusxtq4gukbcev",
                      na=c("NA", ""))
 ```
