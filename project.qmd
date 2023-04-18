@@ -19,6 +19,14 @@ Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R. <a href = "https
 ### Data
 is comma delimited at <a href = "https://pomona.box.com/s/nty3oxpb8db1y763l6uusxtq4gukbcev" target = "_blank">https://pomona.box.com/s/nty3oxpb8db1y763l6uusxtq4gukbcev</a>
 
+The data can be loaded in directly from Box using:
+
+```{r}
+HELPdata <- readr::read_csv("https://pomona.box.com/shared/static/nty3oxpb8db1y763l6uusxtq4gukbcev",
+                     na=c("NA", ""))
+```
+
+
 Please use the above dataset in your analysis.  However, feel free to look at the many variables that are described in the related dataset `HELPfull` (available in the **mosaic** package).  Some things to notice:
 
 * The treatment variable (intervention) is called `group`.
@@ -51,6 +59,8 @@ The Cox PH analysis should include: an interpretation of your final survival mod
 
 4. A visualization to enter into the competition.  The visualization could be of the EDA variety, or it could be based on the model / results.  The different visualizations will be presented to the class on the last day of the semester (May 2).  The team whose visualization is best (secret ballot by the class) will earn an additional 5 points on the project.
 
+5. The final report which ties it all together should have an introduction, methods, results, discussion.  The <a href = "https://m150-method-biostat.netlify.app/handout/project_rubric.docx" target = "_blank">grading rubric</a> should help you put together the final written project.
+
 
 ## Something New:
 Each individual should have some analysis that goes beyond a Cox PH model.   For your analysis, you should give details of what is going on, how it is relevant, what are the technical conditions, what are the conclusions, etc.  Your analysis should indicate a sense that you understand and that you can communicate the results to a possible client.  Some possible topics to investigate include:
@@ -64,7 +74,7 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 * Bootstrapping the survival model (what are the assumptions?  what do you conclude?)
 * An analysis of possible time dependent covariates (what should you see? what do you see? do transformations help?)
 * An analysis / understanding / simulation of the multiple comparisons issues for assessing many different models (or other exploratory hypotheses).
-* Andersen-Gill extension of the Cox PH model for time-varying covariates (available in **rms** R package).
+* Andersen-Gill extension of the Cox PH model for time-varying covariates (available in **rms** R package).  [Note: A-G isn't meant to test PH, per se, but rather it allows for variables that are time varying.]
 * Another topic related to survival analysis that you find interesting.
 
 ```{r}
