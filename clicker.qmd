@@ -1146,7 +1146,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-100. BP can violate the "linear HR" condition if:[^100]
+100. BP violates the "linear HR" condition if:[^100]
      (a) the ln ratio of the hazard curves is not linear with respect to BP
      (b) the ln ratio of the survival curves is not linear with respect to BP
      (c) the effect of BP is to increase the hazard
