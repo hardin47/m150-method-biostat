@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.256">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -57,7 +57,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -81,29 +82,31 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Methods in Biostatistics</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html">
+    <a class="nav-link" href="./syllabus.html" rel="" target="">
  <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notes.html">
+    <a class="nav-link" href="./notes.html" rel="" target="">
  <span class="menu-text">Class Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./clicker_study.html">
+    <a class="nav-link" href="./clicker_study.html" rel="" target="">
  <span class="menu-text">Clicker Q</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./project.html">
+    <a class="nav-link" href="./project.html" rel="" target="">
  <span class="menu-text">Final Project</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -138,9 +141,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="cell">
-
-</div>
 <p>Here’s your roadmap for the semester! Each week, follow the general process outlined below:</p>
 <ul>
 <li><p>Enjoy the notes / text <i class="fas fa-book-open"></i></p></li>
@@ -149,169 +149,297 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Discuss the reflection questions <i class="fas fa-lightbulb" target="_blank"></i> and ethics considerations <i class="fas fa-balance-scale"></i> (see the <i class="fas fa-book-open"></i> class notes) with your classmates, mentor, and professor.</p></li>
 <li><p>The textbook is <strong>Practicing Statistics</strong>, by Kuiper and Sklar.</p></li>
 </ul>
-<div class="cell">
-
-</div>
 <div class="cell page-columns page-full">
 <div class="cell-output-display column-screen-inset">
-
-<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:left;"> date </th>
-   <th style="text-align:left;"> agenda </th>
-   <th style="text-align:left;"> readings </th>
-   <th style="text-align:left;"> homework </th>
-   <th style="text-align:left;"> article (Tues) </th>
-   <th style="text-align:left;"> warm-ups </th>
-  </tr>
- </thead>
+<table class="table table-striped table-hover table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">date</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">agenda</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">readings</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">homework</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">article (Tues)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">warm-ups</th>
+</tr>
+</thead>
 <tbody>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 1 <br> 1.17.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • t-tests + <br>• SLR </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 2 <br> <a href="http://st47s.com/Math150/Notes/intro.html#intro" target="_blank"><i class="fas fa-book-open"></i> introduction</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#ttest" target="_blank"><i class="fas fa-book-open"></i> t-test</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#tslr" target="_blank"><i class="fas fa-book-open"></i> t-test as SLR</a> </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-   <td style="text-align:left;vertical-align:top;"> <i class="fas fa-newspaper"></i> none <br> <br> <a href="https://hardin47.github.io/CURV/scholars/benn.html" target="_blank">Emma Benn</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu1_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 1</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu2_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 2</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 2 <br> 1.24.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • SLR <br> • contingency analysis </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 2 &amp; 6 <br> <a href="http://st47s.com/Math150/Notes/SLR.html#SLR" target="_blank"><i class="fas fa-book-open"></i> SLR</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#fisher" target="_blank"><i class="fas fa-book-open"></i> Fisher's Exact Test</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#catest" target="_blank"><i class="fas fa-book-open"></i> categorical analysis</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW1 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW1 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW1 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962" target="_blank">A/B testing at Netflix</a> <br> <br> <a href="https://hardin47.github.io/CURV/scholars/irrizarry.html" target="_blank">Rafael Irizarry</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu3_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 3</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu4_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 4</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 3 <br> 1.31.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • contingency analysis </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 6 <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#studies" target="_blank"><i class="fas fa-book-open"></i> types of studies</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#rr" target="_blank"><i class="fas fa-book-open"></i> RR and CI</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#or" target="_blank"><i class="fas fa-book-open"></i> OR and CI</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW2 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW2 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW2 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://www.nytimes.com/2020/12/13/learning/what-does-95-effective-mean-teaching-the-math-of-vaccine-efficacy.html" target="_blank">what is efficacy?</a> <br> <a href="https://www.nytimes.com/2020/11/18/health/pfizer-covid-vaccine.html" target="_blank">efficacy</a> <br> <br> <a href="https://hardin47.github.io/CURV/scholars/small-rodriguez.html" target="_blank">Desi Small-Rodriguez</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu5_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 5</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu6_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 6</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 4 <br> 2.7.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • logistic regression </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logmodel" target="_blank"><i class="fas fa-book-open"></i> logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logMLE" target="_blank"><i class="fas fa-book-open"></i> MLE</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW3 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW3 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW3 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target="_blank">Obesity in Children Plummets</a> <br> <a href="https://jamanetwork.com/journals/jama/fullarticle/1832542" target="_blank"> JAMA article here (see Table 6)</a> <br> <a href="https://www.nytimes.com/2020/04/17/parenting/growth-chart-accuracy.html" target="_blank"> growth curves</a> <br><br> <a href="https://hardin47.github.io/CURV/scholars/blackwell.html" target="_blank">David Blackwell</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu7_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 7</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu8_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 8</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 5 <br> 2.14.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • logistic regression </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#loginf" target="_blank"><i class="fas fa-book-open"></i> inference, logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#multlog" target="_blank"><i class="fas fa-book-open"></i> multiple logistic regression</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW4_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW4 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW4_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW4 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW4 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://weallcount.com/2019/06/21/intersectionality-data-2/" target="_blank">intersectional data</a> <br> <br> <a href="https://hardin47.github.io/CURV/scholars/sellers.html" target="_blank">Kim Sellers</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu9_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 9</a> <br>  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/simppar_log.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> Simpson's Paradox</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 6 <br> 2.21.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • logistic regression </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 7 <br> <a href="http://st47s.com/Math150/Notes/process.html" target="_blank"><i class="fas fa-book-open"></i> model process</a> <br> <a href="http://st47s.com/Math150/Notes/process.html#cross-validation" target="_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#roc" target="_blank"><i class="fas fa-book-open"></i> ROC</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW5 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW5 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW5 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target="_blank">missing data</a> <br> <br> <a href="https://hardin47.github.io/CURV/scholars/santos.html" target="_blank">Robert Santos</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu10_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 10</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu11_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 11</a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2023-02-21-tidymodels.html" target="_blank"><i class="fas fa-pencil-alt"></i> tidymodels</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 7 <br> 2.28.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • modeling </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logstep" target="_blank"><i class="fas fa-book-open"></i> model building</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW6 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW6 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW6 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://journals.sagepub.com/doi/10.1177/2515245917747646" target="_blank">many models</a> <br> <br> <a href="https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target="_blank">Jacqueline Hughes-Oliver</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu12_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 12</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu13_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 13</a>  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2023-02-28-ROC-onestep.html" target="_blank"><i class="fas fa-pencil-alt"></i> ROC + one variable building</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/variables.pdf" target="_blank"><i class="fas fa-pencil-alt"></i>variable handout</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>Week 8 <br> 3.7.23</b></font> </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>review &amp; catch-up</b></font> </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>exam 1 in class + <br> 3.9.23</b></font> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW7_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW7 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW7_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW7 Rmd</a> <br> not due ever </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> see Canvas</a> for sample exam 1 Q &amp; sol </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F">3.14.23</font> </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>Spring Break</b></font> </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 9 <br> 3.21.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • survival analysis </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#timedata" target="_blank"><i class="fas fa-book-open"></i> time to event </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KM" target="_blank"><i class="fas fa-book-open"></i> KM curves</a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KMCI" target="_blank"><i class="fas fa-book-open"></i> KM CI</a> </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target="_blank">placebo effect (read abstract and Fig 3)</a> <br> <br> <a href="https://hardin47.github.io/CURV/scholars/castillo.html" target="_blank">Alejandra Castillo</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu14_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 14</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu15_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 15</a><br> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 10 <br> 3.28.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • survival analysis </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#logrank" target="_blank"><i class="fas fa-book-open"></i> log rank tests </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#hazfunc" target="_blank"><i class="fas fa-book-open"></i> hazard functions</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW8_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW8 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW8_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW8 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW8 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://www.nature.com/articles/d41586-023-00030-3" target="_blank">Alzheimer's</a> <br> <br> <a href="https://hardin47.github.io/CURV/scholars/mackey.html" target="_blank">Lester Mackey</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu16_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 16</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu17_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 17</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 11 <br> 4.4.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • survival analysis </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#coxph" target="_blank"><i class="fas fa-book-open"></i> Cox PH model </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#multcoxph" target="_blank"><i class="fas fa-book-open"></i> multiple Cox PH</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW9 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW9 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW9 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(2032076-6/fulltext" target="_blank">race-conscious medicine</a> <br> <br> <a href="https://hardin47.github.io/CURV/scholars/dairyko.html" target="_blank">Mike Dairyko</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu18_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 18</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu19_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 19</a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/CHD_HR.pdf" target="_blank"><i class="fas fa-pencil-alt"></i>CHD &amp; HR</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 12 <br> 4.11.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • survival analysis </td>
-   <td style="text-align:left;vertical-align:top;"> Kuiper &amp; Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#testingph" target="_blank"><i class="fas fa-book-open"></i> assessing PH </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#Ioannidis" target="_blank"><i class="fas fa-book-open"></i> most published research</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW10_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW10 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW10_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW10 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW10 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124" target="_blank">most published research</a> <br> <a href="https://replicationindex.com/2020/12/24/ioannidis-is-wrong/" target="_blank">science problems</a> <br> <br> <a href="https://twitter.com/GidMK/status/1376304539897237508?s=20" target="_blank">abuse of power</a> <br> <br> <br> <a href="https://www.linkedin.com/in/chris-volinsky/" target="_blank">Chris Volinsky</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu20_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 20</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu21_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 21</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 13 <br> 4.18.23 </td>
-   <td style="text-align:left;vertical-align:top;"> • multiple comparisons </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#multcomp" target="_blank"><i class="fas fa-book-open"></i> multiple comparisons </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#qvals" target="_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#interim" target="_blank"><i class="fas fa-book-open"></i> interim analyses</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b><a href="https://m150-method-biostat.netlify.app/project.html" target="_blank">PROJECT: EDA</a></b></font> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://www.nytimes.com/2020/10/14/health/covid-clinical-trials.html" target="_blank">pausing trials</a> <br> <br>  <a href="https://hardin47.github.io/CURV/scholars/hare.html" target="_blank">Liz Hare</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/wu22_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 22</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu23_ma150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> WU 23</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>Week 14 <br> 4.25.23</b></font> </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>review &amp; catch-up</b></font> </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>exam 2 in class + <br> 4.27.23</b></font> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> HW11 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.Rmd" target="_blank"><i class="fas fa-pencil-alt"></i> HW11 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> HW11 turn-in</a> </td>
-   <td style="text-align:left;vertical-align:top;"> <a href="https://canvas.pomona.edu/" target="_blank"><i class="fa-solid fa-paper-plane"></i> see Canvas</a> for sample exam 2 Q &amp; sol </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> Week 15 <br> 5.2.23 </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>Graphics presentations</b></font> </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b><a href="https://m150-method-biostat.netlify.app/project.html" target="_blank">PROJECT: Graphic</a></b></font> </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>Tuesday <br> 5.9.23 <br> 2-5pm</b></font> </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b>Final Project </b></font> </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-   <td style="text-align:left;vertical-align:top;"> <font color="#114B5F"><b><a href="https://m150-method-biostat.netlify.app/project.html" target="_blank">PROJECT: final</a></b></font> </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-   <td style="text-align:left;vertical-align:top;">  </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left; vertical-align: top;">Week 1<br>
+1.17.23</td>
+<td style="text-align: left; vertical-align: top;">• t-tests +<br>
+• SLR</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 2<br>
+<a href="http://st47s.com/Math150/Notes/intro.html#intro" target="_blank"><em></em> introduction</a><br>
+<a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#ttest" target="_blank"><em></em> t-test</a><br>
+<a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#tslr" target="_blank"><em></em> t-test as SLR</a></td>
+<td style="text-align: left; vertical-align: top;"></td>
+<td style="text-align: left; vertical-align: top;"><em></em> none<br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/benn.html" target="_blank">Emma Benn</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu1_ma150_s23.pdf" target="_blank"><em></em> WU 1</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu2_ma150_s23.pdf" target="_blank"><em></em> WU 2</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; vertical-align: top;">Week 2<br>
+1.24.23</td>
+<td style="text-align: left; vertical-align: top;">• SLR<br>
+• contingency analysis</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 2 &amp; 6<br>
+<a href="http://st47s.com/Math150/Notes/SLR.html#SLR" target="_blank"><em></em> SLR</a><br>
+<a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#fisher" target="_blank"><em></em> Fisher's Exact Test</a><br>
+<a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#catest" target="_blank"><em></em> categorical analysis</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.pdf" target="_blank"><em></em> HW1 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.Rmd" target="_blank"><em></em> HW1 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW1 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962" target="_blank">A/B testing at Netflix</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/irrizarry.html" target="_blank">Rafael Irizarry</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu3_ma150_s23.pdf" target="_blank"><em></em> WU 3</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu4_ma150_s23.pdf" target="_blank"><em></em> WU 4</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; vertical-align: top;">Week 3<br>
+1.31.23</td>
+<td style="text-align: left; vertical-align: top;">• contingency analysis</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 6<br>
+<a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#studies" target="_blank"><em></em> types of studies</a><br>
+<a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#rr" target="_blank"><em></em> RR and CI</a><br>
+<a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#or" target="_blank"><em></em> OR and CI</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.pdf" target="_blank"><em></em> HW2 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.Rmd" target="_blank"><em></em> HW2 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW2 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://www.nytimes.com/2020/12/13/learning/what-does-95-effective-mean-teaching-the-math-of-vaccine-efficacy.html" target="_blank">what is efficacy?</a><br>
+<a href="https://www.nytimes.com/2020/11/18/health/pfizer-covid-vaccine.html" target="_blank">efficacy</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/small-rodriguez.html" target="_blank">Desi Small-Rodriguez</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu5_ma150_s23.pdf" target="_blank"><em></em> WU 5</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu6_ma150_s23.pdf" target="_blank"><em></em> WU 6</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; vertical-align: top;">Week 4<br>
+2.7.23</td>
+<td style="text-align: left; vertical-align: top;">• logistic regression</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 7<br>
+<a href="https://st47s.com/Math150/Notes/logistic-regression.html#logmodel" target="_blank"><em></em> logistic regression</a><br>
+<a href="https://st47s.com/Math150/Notes/logistic-regression.html#logMLE" target="_blank"><em></em> MLE</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.pdf" target="_blank"><em></em> HW3 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.Rmd" target="_blank"><em></em> HW3 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW3 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target="_blank">Obesity in Children Plummets</a><br>
+<a href="https://jamanetwork.com/journals/jama/fullarticle/1832542" target="_blank">JAMA article here (see Table 6)</a><br>
+<a href="https://www.nytimes.com/2020/04/17/parenting/growth-chart-accuracy.html" target="_blank">growth curves</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/blackwell.html" target="_blank">David Blackwell</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu7_ma150_s23.pdf" target="_blank"><em></em> WU 7</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu8_ma150_s23.pdf" target="_blank"><em></em> WU 8</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; vertical-align: top;">Week 5<br>
+2.14.23</td>
+<td style="text-align: left; vertical-align: top;">• logistic regression</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 7<br>
+<a href="https://st47s.com/Math150/Notes/logistic-regression.html#loginf" target="_blank"><em></em> inference, logistic regression</a><br>
+<a href="https://st47s.com/Math150/Notes/logistic-regression.html#multlog" target="_blank"><em></em> multiple logistic regression</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW4_m150_s23.pdf" target="_blank"><em></em> HW4 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW4_m150_s23.Rmd" target="_blank"><em></em> HW4 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW4 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://weallcount.com/2019/06/21/intersectionality-data-2/" target="_blank">intersectional data</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/sellers.html" target="_blank">Kim Sellers</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu9_ma150_s23.pdf" target="_blank"><em></em> WU 9</a><br>
+<br>
+<br>
+<a href="https://m150-method-biostat.netlify.app/handout/simppar_log.pdf" target="_blank"><em></em> Simpson's Paradox</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; vertical-align: top;">Week 6<br>
+2.21.23</td>
+<td style="text-align: left; vertical-align: top;">• logistic regression</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 7<br>
+<a href="http://st47s.com/Math150/Notes/process.html" target="_blank"><em></em> model process</a><br>
+<a href="http://st47s.com/Math150/Notes/process.html#cross-validation" target="_blank"><em></em> cross validation</a><br>
+<a href="https://st47s.com/Math150/Notes/logistic-regression.html#roc" target="_blank"><em></em> ROC</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.pdf" target="_blank"><em></em> HW5 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.Rmd" target="_blank"><em></em> HW5 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW5 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target="_blank">missing data</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/santos.html" target="_blank">Robert Santos</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu10_ma150_s23.pdf" target="_blank"><em></em> WU 10</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu11_ma150_s23.pdf" target="_blank"><em></em> WU 11</a><br>
+<br>
+<a href="https://m150-method-biostat.netlify.app/handout/2023-02-21-tidymodels.html" target="_blank"><em></em> tidymodels</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; vertical-align: top;">Week 7<br>
+2.28.23</td>
+<td style="text-align: left; vertical-align: top;">• modeling</td>
+<td style="text-align: left; vertical-align: top;"><a href="https://st47s.com/Math150/Notes/logistic-regression.html#logstep" target="_blank"><em></em> model building</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.pdf" target="_blank"><em></em> HW6 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.Rmd" target="_blank"><em></em> HW6 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW6 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://journals.sagepub.com/doi/10.1177/2515245917747646" target="_blank">many models</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target="_blank">Jacqueline Hughes-Oliver</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu12_ma150_s23.pdf" target="_blank"><em></em> WU 12</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu13_ma150_s23.pdf" target="_blank"><em></em> WU 13</a><br>
+<br>
+<a href="https://m150-method-biostat.netlify.app/handout/2023-02-28-ROC-onestep.html" target="_blank"><em></em> ROC + one variable building</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/variables.pdf" target="_blank"><em></em>variable handout</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; vertical-align: top;"><strong>Week 8<br>
+3.7.23</strong></td>
+<td style="text-align: left; vertical-align: top;"><strong>review &amp; catch-up</strong></td>
+<td style="text-align: left; vertical-align: top;"><strong>exam 1 in class +<br>
+3.9.23</strong></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW7_m150_s23.pdf" target="_blank"><em></em> HW7 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW7_m150_s23.Rmd" target="_blank"><em></em> HW7 Rmd</a><br>
+not due ever</td>
+<td style="text-align: left; vertical-align: top;"><a href="https://canvas.pomona.edu/" target="_blank"><em></em> see Canvas</a> for sample exam 1 Q &amp; sol</td>
+<td style="text-align: left; vertical-align: top;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; vertical-align: top;">3.14.23</td>
+<td style="text-align: left; vertical-align: top;"><strong>Spring Break</strong></td>
+<td style="text-align: left; vertical-align: top;"></td>
+<td style="text-align: left; vertical-align: top;"></td>
+<td style="text-align: left; vertical-align: top;"></td>
+<td style="text-align: left; vertical-align: top;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; vertical-align: top;">Week 9<br>
+3.21.23</td>
+<td style="text-align: left; vertical-align: top;">• survival analysis</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 9<br>
+<a href="https://st47s.com/Math150/Notes/survival-analysis.html#timedata" target="_blank"><em></em> time to event</a><br>
+<a href="https://st47s.com/Math150/Notes/survival-analysis.html#KM" target="_blank"><em></em> KM curves</a><br>
+<a href="https://st47s.com/Math150/Notes/survival-analysis.html#KMCI" target="_blank"><em></em> KM CI</a></td>
+<td style="text-align: left; vertical-align: top;"></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target="_blank">placebo effect (read abstract and Fig 3)</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/castillo.html" target="_blank">Alejandra Castillo</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu14_ma150_s23.pdf" target="_blank"><em></em> WU 14</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu15_ma150_s23.pdf" target="_blank"><em></em> WU 15</a><br>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; vertical-align: top;">Week 10<br>
+3.28.23</td>
+<td style="text-align: left; vertical-align: top;">• survival analysis</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 9<br>
+<a href="https://st47s.com/Math150/Notes/survival-analysis.html#logrank" target="_blank"><em></em> log rank tests</a><br>
+<a href="https://st47s.com/Math150/Notes/survival-analysis.html#hazfunc" target="_blank"><em></em> hazard functions</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW8_m150_s23.pdf" target="_blank"><em></em> HW8 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW8_m150_s23.Rmd" target="_blank"><em></em> HW8 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW8 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://www.nature.com/articles/d41586-023-00030-3" target="_blank">Alzheimer's</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/mackey.html" target="_blank">Lester Mackey</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu16_ma150_s23.pdf" target="_blank"><em></em> WU 16</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu17_ma150_s23.pdf" target="_blank"><em></em> WU 17</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; vertical-align: top;">Week 11<br>
+4.4.23</td>
+<td style="text-align: left; vertical-align: top;">• survival analysis</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 9<br>
+<a href="https://st47s.com/Math150/Notes/survival-analysis.html#coxph" target="_blank"><em></em> Cox PH model</a><br>
+<a href="https://st47s.com/Math150/Notes/survival-analysis.html#multcoxph" target="_blank"><em></em> multiple Cox PH</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.pdf" target="_blank"><em></em> HW9 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.Rmd" target="_blank"><em></em> HW9 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW9 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(2032076-6/fulltext" target="_blank">race-conscious medicine</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/dairyko.html" target="_blank">Mike Dairyko</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu18_ma150_s23.pdf" target="_blank"><em></em> WU 18</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu19_ma150_s23.pdf" target="_blank"><em></em> WU 19</a><br>
+<br>
+<a href="https://m150-method-biostat.netlify.app/handout/CHD_HR.pdf" target="_blank"><em></em>CHD &amp; HR</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; vertical-align: top;">Week 12<br>
+4.11.23</td>
+<td style="text-align: left; vertical-align: top;">• survival analysis</td>
+<td style="text-align: left; vertical-align: top;">Kuiper &amp; Sklar: 9<br>
+<a href="https://st47s.com/Math150/Notes/survival-analysis.html#testingph" target="_blank"><em></em> assessing PH</a><br>
+<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#Ioannidis" target="_blank"><em></em> most published research</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW10_m150_s23.pdf" target="_blank"><em></em> HW10 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW10_m150_s23.Rmd" target="_blank"><em></em> HW10 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW10 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124" target="_blank">most published research</a><br>
+<a href="https://replicationindex.com/2020/12/24/ioannidis-is-wrong/" target="_blank">science problems</a><br>
+<br>
+<a href="https://twitter.com/GidMK/status/1376304539897237508?s=20" target="_blank">abuse of power</a><br>
+<br>
+<br>
+<a href="https://www.linkedin.com/in/chris-volinsky/" target="_blank">Chris Volinsky</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu20_ma150_s23.pdf" target="_blank"><em></em> WU 20</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu21_ma150_s23.pdf" target="_blank"><em></em> WU 21</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; vertical-align: top;">Week 13<br>
+4.18.23</td>
+<td style="text-align: left; vertical-align: top;">• multiple comparisons</td>
+<td style="text-align: left; vertical-align: top;"><a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#multcomp" target="_blank"><em></em> multiple comparisons</a><br>
+<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#qvals" target="_blank"><em></em> false discovery rate</a><br>
+<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#interim" target="_blank"><em></em> interim analyses</a></td>
+<td style="text-align: left; vertical-align: top;"><strong><a href="https://m150-method-biostat.netlify.app/project.html" target="_blank">PROJECT: EDA</a></strong></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://www.nytimes.com/2020/10/14/health/covid-clinical-trials.html" target="_blank">pausing trials</a><br>
+<br>
+<a href="https://hardin47.github.io/CURV/scholars/hare.html" target="_blank">Liz Hare</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/wu22_ma150_s23.pdf" target="_blank"><em></em> WU 22</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/wu23_ma150_s23.pdf" target="_blank"><em></em> WU 23</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; vertical-align: top;"><strong>Week 14<br>
+4.25.23</strong></td>
+<td style="text-align: left; vertical-align: top;"><strong>review &amp; catch-up</strong></td>
+<td style="text-align: left; vertical-align: top;"><strong>exam 2 in class +<br>
+4.27.23</strong></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.pdf" target="_blank"><em></em> HW11 pdf</a><br>
+<a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.Rmd" target="_blank"><em></em> HW11 Rmd</a><br>
+<a href="https://canvas.pomona.edu/" target="_blank"><em></em> HW11 turn-in</a></td>
+<td style="text-align: left; vertical-align: top;"><a href="https://canvas.pomona.edu/" target="_blank"><em></em> see Canvas</a> for sample exam 2 Q &amp; sol</td>
+<td style="text-align: left; vertical-align: top;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; vertical-align: top;">Week 15<br>
+5.2.23</td>
+<td style="text-align: left; vertical-align: top;"><strong>Graphics presentations</strong></td>
+<td style="text-align: left; vertical-align: top;"></td>
+<td style="text-align: left; vertical-align: top;"><strong><a href="https://m150-method-biostat.netlify.app/project.html" target="_blank">PROJECT: Graphic</a></strong></td>
+<td style="text-align: left; vertical-align: top;"></td>
+<td style="text-align: left; vertical-align: top;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; vertical-align: top;"><strong>Tuesday<br>
+5.9.23<br>
+2-5pm</strong></td>
+<td style="text-align: left; vertical-align: top;"><strong>Final Project</strong></td>
+<td style="text-align: left; vertical-align: top;"></td>
+<td style="text-align: left; vertical-align: top;"><strong><a href="https://m150-method-biostat.netlify.app/project.html" target="_blank">PROJECT: final</a></strong></td>
+<td style="text-align: left; vertical-align: top;"></td>
+<td style="text-align: left; vertical-align: top;"></td>
+</tr>
 </tbody>
 </table>
 
+
 </div>
 </div>
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section></div></main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -339,9 +467,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -406,6 +548,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -449,15 +677,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left"><a href="https://hardin47.netlify.app/research/"></a> <a href="https://hardin47.netlify.app/resume.pdf" target="_blank"><i class="fa-solid fa-bookmark"></i></a> <a href="mailto:jo.hardin@pomona.edu" target="_blank"><i class="fa-solid fa-at"></i></a> <a href="https://scholar.google.com/citations?user=c5Y77poAAAAJ&amp;hl=en" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <a href="https://www.researchgate.net/scientific-contributions/Johanna-Hardin-9764530" target="_blank"><i class="fa-brands fa-researchgate"></i></a><br>
-<a href="https://mobile.twitter.com/jo_hardin47" target="_blank"><i class="fa-brands fa-twitter"></i></a> <a href="https://github.com/hardin47" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+<a href="https://github.com/hardin47" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
     <li class="nav-item">
  <br> © Jo Hardin, 2023 -- <a href="mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
 Math 150 -- Methods in Biostatistics -- Pomona College, Claremont, CA <br>
   </li>  
 </ul>
-      </div>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
 

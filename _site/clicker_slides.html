@@ -1,330 +1,125 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<link href="./images/favicon.ico" rel="icon">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Methods in Biostatistics – clicker_slides</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.256">
-
-  <title>Methods in Biostatistics – clicker_slides</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
+}</script>
 
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-captioned.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-captioned) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-captioned .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-captioned .callout-caption  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-captioned.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-captioned.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-caption {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-caption {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-caption {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-captioned .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
-  }
-
-  .callout.callout-captioned .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-captioned) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-caption {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-caption {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-caption {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-caption {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-caption {
-    background-color: #ffe5d0
-  }
-
-  </style>
-  <style type="text/css">
-    .reveal div.sourceCode {
-      margin: 0;
-      overflow: auto;
-    }
-    .reveal div.hanging-indent {
-      margin-left: 1em;
-      text-indent: -1em;
-    }
-    .reveal .slide:not(.center) {
-      height: 100%;
-    }
-    .reveal .slide.scrollable {
-      overflow-y: auto;
-    }
-    .reveal .footnotes {
-      height: 100%;
-      overflow-y: auto;
-    }
-    .reveal .slide .absolute {
-      position: absolute;
-      display: block;
-    }
-    .reveal .footnotes ol {
-      counter-reset: ol;
-      list-style-type: none; 
-      margin-left: 0;
-    }
-    .reveal .footnotes ol li:before {
-      counter-increment: ol;
-      content: counter(ol) ". "; 
-    }
-    .reveal .footnotes ol li > p:first-child {
-      display: inline-block;
-    }
-    .reveal .slide ul,
-    .reveal .slide ol {
-      margin-bottom: 0.5em;
-    }
-    .reveal .slide ul li,
-    .reveal .slide ol li {
-      margin-top: 0.4em;
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide ul[role="tablist"] li {
-      margin-bottom: 0;
-    }
-    .reveal .slide ul li > *:first-child,
-    .reveal .slide ol li > *:first-child {
-      margin-block-start: 0;
-    }
-    .reveal .slide ul li > *:last-child,
-    .reveal .slide ol li > *:last-child {
-      margin-block-end: 0;
-    }
-    .reveal .slide .columns:nth-child(3) {
-      margin-block-start: 0.8em;
-    }
-    .reveal blockquote {
-      box-shadow: none;
-    }
-    .reveal .tippy-content>* {
-      margin-top: 0.2em;
-      margin-bottom: 0.7em;
-    }
-    .reveal .tippy-content>*:last-child {
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide > img.stretch.quarto-figure-center,
-    .reveal .slide > img.r-stretch.quarto-figure-center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-left,
-    .reveal .slide > img.r-stretch.quarto-figure-left  {
-      display: block;
-      margin-left: 0;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-right,
-    .reveal .slide > img.r-stretch.quarto-figure-right  {
-      display: block;
-      margin-left: auto;
-      margin-right: 0; 
-    }
-  </style>
 </head>
-<body class="quarto-light">
-  <div class="reveal">
-    <div class="slides">
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="https://m150-method-biostat.netlify.app/" class="navbar-brand navbar-brand-logo">
+    <img src="./images/st47s.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="https://m150-method-biostat.netlify.app/">
+    <span class="navbar-title">Methods in Biostatistics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./notes.html" rel="" target="">
+ <span class="menu-text">Class Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./clicker_study.html" rel="" target="">
+ <span class="menu-text">Clicker Q</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./project.html" rel="" target="">
+ <span class="menu-text">Final Project</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="clicker_slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
 
-<section class="slide level2">
 
 <style>
 .reveal ol ol {
@@ -332,9 +127,7 @@
 }
 </style>
 <!-- the two formats are html and revealjs -->
-</section>
-<section>
-<section id="clicker-q" class="title-slide slide level1 center">
+<section id="clicker-q" class="level1">
 <h1>Clicker Q</h1>
 <p>to go with <strong>Practicing Statistics</strong> by Kuiper &amp; Sklar. Math 150 - Methods in Biostatistics.</p>
 <style>
@@ -342,15 +135,10 @@
    list-style-type: lower-alpha;
 }
 </style>
-<div class="cell">
-
-</div>
-</section>
-<section class="slide level2">
-
+<hr>
 <p>In terms of the prerequisite for Math 150, Methods in Biostatistics, you should know at least a little bit (hopefully a lotta bit) about the following topics.</p>
 <ol type="1">
-<li><p>Hypothesis test, confidence interval, sample mean, central limit theorem, standard deviation, standard error of a statistics, p-value, t-test, chi-square test.<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></p>
+<li><p>Hypothesis test, confidence interval, sample mean, central limit theorem, standard deviation, standard error of a statistics, p-value, t-test, chi-square test.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <ol type="a">
 <li>Never heard of it</li>
 <li>Heard of it, but don’t know anything about it</li>
@@ -359,12 +147,10 @@
 <li>Confident about it</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <p>In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not need to know the following topics</p>
 <ol start="2" type="1">
-<li><p>Interaction, simple linear regression, multiple linear regression, logistic regression, survival analysis, R.<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p>
+<li><p>Interaction, simple linear regression, multiple linear regression, logistic regression, survival analysis, R.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <ol type="a">
 <li>Never heard of it</li>
 <li>Heard of it, but don’t know anything about it</li>
@@ -373,11 +159,9 @@
 <li>Confident about it</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="3" type="1">
-<li>The Central Limit Theorem (CLT) says:<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a>
+<li>The Central Limit Theorem (CLT) says:<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
 <ol type="a">
 <li>The sample average (statistic) converges to the true average (parameter)</li>
 <li>The sample average (statistic) converges to some point</li>
@@ -386,21 +170,17 @@
 <li>I have no idea what the CLT says</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="4" type="1">
-<li>The p-value is the probability:<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a>
+<li>The p-value is the probability:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
 <ol type="a">
 <li>that the null hypothesis is true given the observed data.</li>
 <li>of data as or more extreme than the observed data given that the null hypothesis is true.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="5" type="1">
-<li>Why do we use a t distribution (instead of a z / normal distribution) in the t-test?<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a>
+<li>Why do we use a t distribution (instead of a z / normal distribution) in the t-test?<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>
 <ol type="a">
 <li>the technical conditions don’t hold</li>
 <li>the means are quite variable</li>
@@ -409,11 +189,9 @@
 <li>we don’t know the true standard deviation parameter</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="6" type="1">
-<li>What happens if a t-test is used but isn’t appropriate (technical conditions don’t hold)?<a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a>
+<li>What happens if a t-test is used but isn’t appropriate (technical conditions don’t hold)?<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>
 <ol type="a">
 <li>the p-value isn’t actually the probability of our data or more extreme if H0 is true.</li>
 <li>the software won’t give a p-value as output</li>
@@ -421,11 +199,9 @@
 <li>the world blows up</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="7" type="1">
-<li>We use linear regression to run a test of means (<span class="math inline">\(x_i = 0\)</span> for controls, group 1; <span class="math inline">\(x_i = 1\)</span> for cases, group 2) What is: <span class="math inline">\(\sum_i x_i\)</span>?<a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a>
+<li>We use linear regression to run a test of means (<span class="math inline">\(x_i = 0\)</span> for controls, group 1; <span class="math inline">\(x_i = 1\)</span> for cases, group 2) What is: <span class="math inline">\(\sum_i x_i\)</span>?<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>
 <ol type="a">
 <li><span class="math inline">\(n\)</span></li>
 <li><span class="math inline">\(n_1\)</span></li>
@@ -434,11 +210,9 @@
 <li><span class="math inline">\(n_2 \cdot \overline{y}_2\)</span></li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="8" type="1">
-<li>We use linear regression to run a test of means (<span class="math inline">\(x_i = 0\)</span> for controls, group 1; <span class="math inline">\(x_i = 1\)</span> for cases, group 2) What is: <span class="math inline">\(\sum_i x_iy_i\)</span>?<a href="#/footnotes" class="footnote-ref" id="fnref8" role="doc-noteref" data-footnote-href="#/fn8" onclick=""><sup>8</sup></a>
+<li>We use linear regression to run a test of means (<span class="math inline">\(x_i = 0\)</span> for controls, group 1; <span class="math inline">\(x_i = 1\)</span> for cases, group 2) What is: <span class="math inline">\(\sum_i x_iy_i\)</span>?<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>
 <ol type="a">
 <li><span class="math inline">\(n\)</span></li>
 <li><span class="math inline">\(n_1\)</span></li>
@@ -447,11 +221,9 @@
 <li><span class="math inline">\(n_2 \cdot \overline{y}_2\)</span></li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="9" type="1">
-<li>The regression technical conditions include:<a href="#/footnotes" class="footnote-ref" id="fnref9" role="doc-noteref" data-footnote-href="#/fn9" onclick=""><sup>9</sup></a>
+<li>The regression technical conditions include:<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>
 <ol type="a">
 <li>The Y variable is normally distributed</li>
 <li>The X variable is normally distributed</li>
@@ -460,22 +232,18 @@
 <li>The intercept coefficient is normally distributed</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="10" type="1">
-<li><p>We need the technical conditions to hold in order to calculate <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1.\)</span><a href="#/footnotes" class="footnote-ref" id="fnref10" role="doc-noteref" data-footnote-href="#/fn10" onclick=""><sup>10</sup></a></p>
+<li><p>We need the technical conditions to hold in order to calculate <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1.\)</span><a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
 <ol type="a">
 <li>TRUE</li>
 <li>FALSE</li>
 <li>It depends</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="11" type="1">
-<li>Why do we check technical conditions?<a href="#/footnotes" class="footnote-ref" id="fnref11" role="doc-noteref" data-footnote-href="#/fn11" onclick=""><sup>11</sup></a>
+<li>Why do we check technical conditions?<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>
 <ol type="a">
 <li>so that the inference is valid</li>
 <li>so that the estimates are valid</li>
@@ -484,11 +252,9 @@
 <li>for fun</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="12" type="1">
-<li>When writing the regression equation, why is there a hat ( ^) on the response variable?<a href="#/footnotes" class="footnote-ref" id="fnref12" role="doc-noteref" data-footnote-href="#/fn12" onclick=""><sup>12</sup></a>
+<li>When writing the regression equation, why is there a hat ( ^) on the response variable?<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>
 <ol type="a">
 <li>because the prediction is an estimate</li>
 <li>because the prediction is an average</li>
@@ -497,11 +263,9 @@
 <li>all of the above</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="13" type="1">
-<li>With a strong correlation and very small p-value, what can we conclude about happiness and life expectancy?<a href="#/footnotes" class="footnote-ref" id="fnref13" role="doc-noteref" data-footnote-href="#/fn13" onclick=""><sup>13</sup></a>
+<li>With a strong correlation and very small p-value, what can we conclude about happiness and life expectancy?<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>
 <ol type="a">
 <li>happiness causes longer lives</li>
 <li>longer lives cause happiness</li>
@@ -510,64 +274,52 @@
 <li>happiness and longer life are unrelated</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="14" type="1">
-<li>If there is no relationship in the population (true correlation = 0), then r = 0.<a href="#/footnotes" class="footnote-ref" id="fnref14" role="doc-noteref" data-footnote-href="#/fn14" onclick=""><sup>14</sup></a>
+<li>If there is no relationship in the population (true correlation = 0), then r = 0.<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>
 <ol type="a">
 <li>TRUE</li>
 <li>FALSE</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="15" type="1">
-<li>If there is no relationship in the population (true slope <span class="math inline">\(\beta_1 = 0\)</span>), then <span class="math inline">\(b_1=0\)</span>.<a href="#/footnotes" class="footnote-ref" id="fnref15" role="doc-noteref" data-footnote-href="#/fn15" onclick=""><sup>15</sup></a>
+<li>If there is no relationship in the population (true slope <span class="math inline">\(\beta_1 = 0\)</span>), then <span class="math inline">\(b_1=0\)</span>.<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>
 <ol type="a">
 <li>TRUE</li>
 <li>FALSE</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="16" type="1">
-<li>Smaller variability around the regression line (<span class="math inline">\(\sigma\)</span>):<a href="#/footnotes" class="footnote-ref" id="fnref16" role="doc-noteref" data-footnote-href="#/fn16" onclick=""><sup>16</sup></a>
+<li>Smaller variability around the regression line (<span class="math inline">\(\sigma\)</span>):<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>
 <ol type="a">
 <li>increases the variability of <span class="math inline">\(b_1\)</span>.</li>
 <li>decreases the variability of <span class="math inline">\(b_1\)</span>.</li>
 <li>doesn’t necessarily change the variability of <span class="math inline">\(b_1\)</span>.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="17" type="1">
-<li>Smaller variability in the explanatory variable (SD(X) = <span class="math inline">\(s_X\)</span>):<a href="#/footnotes" class="footnote-ref" id="fnref17" role="doc-noteref" data-footnote-href="#/fn17" onclick=""><sup>17</sup></a>
+<li>Smaller variability in the explanatory variable (SD(X) = <span class="math inline">\(s_X\)</span>):<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>
 <ol type="a">
 <li>increases the variability of <span class="math inline">\(b_1\)</span>.</li>
 <li>decreases the variability of <span class="math inline">\(b_1\)</span>.</li>
 <li>doesn’t necessarily change the variability of <span class="math inline">\(b_1\)</span>.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="18" type="1">
-<li>A smaller sample size (<span class="math inline">\(n\)</span>):<a href="#/footnotes" class="footnote-ref" id="fnref18" role="doc-noteref" data-footnote-href="#/fn18" onclick=""><sup>18</sup></a>
+<li>A smaller sample size (<span class="math inline">\(n\)</span>):<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>
 <ol type="a">
 <li>increases the variability of <span class="math inline">\(b_1\)</span>.</li>
 <li>decreases the variability of <span class="math inline">\(b_1\)</span>.</li>
 <li>doesn’t necessarily change the variability of <span class="math inline">\(b_1\)</span>.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="19" type="1">
-<li>We transform our variables…<a href="#/footnotes" class="footnote-ref" id="fnref19" role="doc-noteref" data-footnote-href="#/fn19" onclick=""><sup>19</sup></a>
+<li>We transform our variables…<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>
 <ol type="a">
 <li>… to find the highest <span class="math inline">\(r^2\)</span> value.</li>
 <li>… when the X variable is not normally distributed.</li>
@@ -575,25 +327,19 @@
 <li>… so that the technical conditions are met.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="20" type="1">
-<li>In the Botox and Pain Relief example, the p-value is calculated. What does “probability” refer to?<a href="#/footnotes" class="footnote-ref" id="fnref20" role="doc-noteref" data-footnote-href="#/fn20" onclick=""><sup>20</sup></a>
+<li>In the Botox and Pain Relief example, the p-value is calculated. What does “probability” refer to?<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>
 <ol type="a">
 <li>random allocation</li>
 <li>random sample</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <p>p-value = probability of the observed data or more extreme given the null hypothesis is true.</p>
-</section>
-<section class="slide level2">
-
+<hr>
 <ol start="21" type="1">
-<li>“Observed data or more extreme” is:<a href="#/footnotes" class="footnote-ref" id="fnref21" role="doc-noteref" data-footnote-href="#/fn21" onclick=""><sup>21</sup></a>
+<li>“Observed data or more extreme” is:<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>
 <ol type="a">
 <li>fewer than 9</li>
 <li>9 or fewer</li>
@@ -601,11 +347,9 @@
 <li>more than 9</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="22" type="1">
-<li>What is the mean value of the null sampling distribution for the number of Botox therapy who showed pain reduction?<a href="#/footnotes" class="footnote-ref" id="fnref22" role="doc-noteref" data-footnote-href="#/fn22" onclick=""><sup>22</sup></a>
+<li>What is the mean value of the null sampling distribution for the number of Botox therapy who showed pain reduction?<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>
 <ol type="a">
 <li>0</li>
 <li>9</li>
@@ -614,31 +358,25 @@
 <li>15</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="23" type="1">
-<li>What conclusion would you draw from the Back Pain and Botox study?<a href="#/footnotes" class="footnote-ref" id="fnref23" role="doc-noteref" data-footnote-href="#/fn23" onclick=""><sup>23</sup></a>
+<li>What conclusion would you draw from the Back Pain and Botox study?<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>
 <ol type="a">
 <li>Not enough evidence to conclude that Botox is more effective than the placebo.</li>
 <li>Strong evidence that Botox is equally as effective as the placebo.</li>
 <li>Strong evidence that Botox is more effective than the placebo.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="24" type="1">
-<li>If we consider those in the study with back pain to be representative of all people with back pain, what would you conclude about the percentage of people who will have reduced back pain if they use Botox?<a href="#/footnotes" class="footnote-ref" id="fnref24" role="doc-noteref" data-footnote-href="#/fn24" onclick=""><sup>24</sup></a>
+<li>If we consider those in the study with back pain to be representative of all people with back pain, what would you conclude about the percentage of people who will have reduced back pain if they use Botox?<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>
 <ol type="a">
 <li>Substantially greater than 50%</li>
 <li>Substantially less than 50%</li>
 <li>Close to 50%</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="25" type="1">
 <li>Material check-in
 <ol type="a">
@@ -648,9 +386,7 @@
 <li>Everything is confusing</li>
 </ol></li>
 </ol>
-</section>
-<section class="slide level2">
-
+<hr>
 <ol start="26" type="1">
 <li>People check-in
 <ol type="a">
@@ -660,15 +396,11 @@
 <li>I’m looking for someone to study with</li>
 </ol></li>
 </ol>
-</section>
-<section class="slide level2">
-
+<hr>
 <p>See Canvas front page for <strong>anonymous</strong> survey / feedback for the class. Also, if you are looking for people to work with, you could contact me directly (non-anonymously!) so that I can connect you to people.</p>
-</section>
-<section class="slide level2">
-
+<hr>
 <ol start="27" type="1">
-<li>Sample 1,000,000 people who are over 6’ tall and 1,000,000 people who are under 6’ tall. Record if the person is in the NBA. What is measurable?<a href="#/footnotes" class="footnote-ref" id="fnref25" role="doc-noteref" data-footnote-href="#/fn25" onclick=""><sup>25</sup></a>
+<li>Sample 1,000,000 people who are over 6’ tall and 1,000,000 people who are under 6’ tall. Record if the person is in the NBA. What is measurable?<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>
 <ol type="a">
 <li>P(NBA if 6’ tall)</li>
 <li>P(6’ tall if in the NBA)</li>
@@ -676,11 +408,9 @@
 <li>neither</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="28" type="1">
-<li>Sample 100 people who are in the NBA and 100 people who are not in the NBA. Record if the person is over 6’ tall. What is measurable?<a href="#/footnotes" class="footnote-ref" id="fnref26" role="doc-noteref" data-footnote-href="#/fn26" onclick=""><sup>26</sup></a>
+<li>Sample 100 people who are in the NBA and 100 people who are not in the NBA. Record if the person is over 6’ tall. What is measurable?<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>
 <ol type="a">
 <li>P(NBA if 6’ tall)</li>
 <li>P(6’ tall if in the NBA)</li>
@@ -688,11 +418,9 @@
 <li>neither</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="29" type="1">
-<li>Sample 10,000,000 people. Record their height and whether or not they are in the NBA. What is measurable?<a href="#/footnotes" class="footnote-ref" id="fnref27" role="doc-noteref" data-footnote-href="#/fn27" onclick=""><sup>27</sup></a>
+<li>Sample 10,000,000 people. Record their height and whether or not they are in the NBA. What is measurable?<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>
 <ol type="a">
 <li>P(NBA if 6’ tall)</li>
 <li>P(6’ tall if in the NBA)</li>
@@ -700,41 +428,33 @@
 <li>neither</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <p>From the NYT, March 21, 2023, https://www.nytimes.com/2023/03/21/sports/basketball/tall-basketball-march-madness.html</p>
-<blockquote>
+<blockquote class="blockquote">
 <p>The average W.N.B.A. player, at a shade taller than 6 feet, towers over the average American woman (5 feet 3.5 inches). American men who are between 6 feet and 6-2 — significantly taller than the 5-9 average — have about a five in a million chance of making the N.B.A., according to “The Sports Gene,” a 2013 book by David Epstein about the science of athletic performance. But if you hit the genetic lottery and happen to be 7 feet tall, your chances of landing in the N.B.A. are roughly one in six. (There are 38 players on active rosters who are 7 feet or taller, according to N.B.A. Advanced Stats; the average height of an N.B.A. player is 6 feet 6.5 inches.)</p>
 </blockquote>
 <p>https://davidepstein.com/david-epstein-the-sports-gene/</p>
-</section>
-<section class="slide level2">
-
+<hr>
 <ol start="30" type="1">
-<li>Calcium channel blockers have recently been reported to be associated with increased mortality. Cardiac patients who recently died of their heart disease were compared to control cardiac patients with similar disease who survive. Assume such a study had found that 40% of the recent cardiac deaths were taking calcium channel blockers at the time of death, as compared to 25% of the controls.<a href="#/footnotes" class="footnote-ref" id="fnref28" role="doc-noteref" data-footnote-href="#/fn28" onclick=""><sup>28</sup></a>
+<li>Calcium channel blockers have recently been reported to be associated with increased mortality. Cardiac patients who recently died of their heart disease were compared to control cardiac patients with similar disease who survive. Assume such a study had found that 40% of the recent cardiac deaths were taking calcium channel blockers at the time of death, as compared to 25% of the controls.<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>
 <ol type="a">
 <li>Case-control</li>
 <li>Cohort</li>
 <li>Cross-classification</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="31" type="1">
-<li>It is well known that the use of urinary catheters conveys a substantial risk of urinary tract infection (UTI). A group of physicians believe that, in an intensive care setting, use of one particular type of urinary catheter is more likely to encourage infection than use of other types. They therefore review medical records over a recent period for all uses of urinary catheters in an ICU. They find that 200 new UTIs occurred during 1000 ICU patient-days of catheterization with the suspect type of catheter, as compared to 100 new UTIs during 5000 ICU-patient days of catheterization with all other types. Noting the increased frequency of new UTIs when the suspect catheter type is used, they regard their hypothesis as confirmed. To reduce nosocomial UTIs, they recommend discontinuing use of that type of catheter in the ICU.<a href="#/footnotes" class="footnote-ref" id="fnref29" role="doc-noteref" data-footnote-href="#/fn29" onclick=""><sup>29</sup></a>
+<li>It is well known that the use of urinary catheters conveys a substantial risk of urinary tract infection (UTI). A group of physicians believe that, in an intensive care setting, use of one particular type of urinary catheter is more likely to encourage infection than use of other types. They therefore review medical records over a recent period for all uses of urinary catheters in an ICU. They find that 200 new UTIs occurred during 1000 ICU patient-days of catheterization with the suspect type of catheter, as compared to 100 new UTIs during 5000 ICU-patient days of catheterization with all other types. Noting the increased frequency of new UTIs when the suspect catheter type is used, they regard their hypothesis as confirmed. To reduce nosocomial UTIs, they recommend discontinuing use of that type of catheter in the ICU.<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>
 <ol type="a">
 <li>Case-control</li>
 <li>Cohort</li>
 <li>Cross-classification</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="32" type="1">
-<li>When we select individuals based on the explanatory variable, we cannot accurately measure<a href="#/footnotes" class="footnote-ref" id="fnref30" role="doc-noteref" data-footnote-href="#/fn30" onclick=""><sup>30</sup></a>
+<li>When we select individuals based on the explanatory variable, we cannot accurately measure<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>
 <ol type="a">
 <li>the proportion of people in the population in each explanatory category</li>
 <li>the proportion of people in the population in each response group</li>
@@ -742,11 +462,9 @@
 <li>confounding variables</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="33" type="1">
-<li>Relative Risk is<a href="#/footnotes" class="footnote-ref" id="fnref31" role="doc-noteref" data-footnote-href="#/fn31" onclick=""><sup>31</sup></a>
+<li>Relative Risk is<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>
 <ol type="a">
 <li>the difference of two proportions</li>
 <li>the ratio of two proportions</li>
@@ -754,11 +472,9 @@
 <li>the log of the difference of two proportions</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="34" type="1">
-<li>The odds ratio is “invariant to which variable is explanatory and which is response” means:<a href="#/footnotes" class="footnote-ref" id="fnref32" role="doc-noteref" data-footnote-href="#/fn32" onclick=""><sup>32</sup></a>
+<li>The odds ratio is “invariant to which variable is explanatory and which is response” means:<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>
 <ol type="a">
 <li>we always put the bigger odds in the numerator</li>
 <li>we must collect data so that we can estimate the response in the population</li>
@@ -766,11 +482,9 @@
 <li>which variable is called the explanatory does not change the value of the OR</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="35" type="1">
-<li>In finding a CI for RR = p1/p2, why is it okay to exponentiate the end points of the interval for ln(p1/p2)?<a href="#/footnotes" class="footnote-ref" id="fnref33" role="doc-noteref" data-footnote-href="#/fn33" onclick=""><sup>33</sup></a>
+<li>In finding a CI for RR = p1/p2, why is it okay to exponentiate the end points of the interval for ln(p1/p2)?<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>
 <ol type="a">
 <li>Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.</li>
 <li>Because taking the natural log of the RR makes the distribution approximately normal.</li>
@@ -778,11 +492,9 @@
 <li>Because we can get exact p-values using Fisher’s Exact Test.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="36" type="1">
-<li>In order to find a CI for the true OR, our steps are:<a href="#/footnotes" class="footnote-ref" id="fnref34" role="doc-noteref" data-footnote-href="#/fn34" onclick=""><sup>34</sup></a></li>
+<li>In order to find a CI for the true OR, our steps are:<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a></li>
 </ol>
 <ol type="i">
 <li>find <span class="math inline">\(\widehat{\ln(\mbox{OR})}\)</span></li>
@@ -795,21 +507,17 @@
 <li>because the <span class="math inline">\(\ln\)</span> transformation makes the sampling distribution almost normal</li>
 <li>because OR is invariant to the choice of explanatory or response variable</li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="37" type="1">
-<li>I know where to find: the solutions to the warm-ups, the clicker questions (with solutions), and the HW solutions<a href="#/footnotes" class="footnote-ref" id="fnref35" role="doc-noteref" data-footnote-href="#/fn35" onclick=""><sup>35</sup></a>
+<li>I know where to find: the solutions to the warm-ups, the clicker questions (with solutions), and the HW solutions<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>
 <ol type="a">
 <li>TRUE</li>
 <li>FALSE</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="38" type="1">
-<li>At the value <span class="math inline">\(x = -\beta_0 / \beta_1\)</span>, the probability of success is:<a href="#/footnotes" class="footnote-ref" id="fnref36" role="doc-noteref" data-footnote-href="#/fn36" onclick=""><sup>36</sup></a>
+<li>At the value <span class="math inline">\(x = -\beta_0 / \beta_1\)</span>, the probability of success is:<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>
 <ol type="a">
 <li>0</li>
 <li>0.5</li>
@@ -818,11 +526,9 @@
 <li>depends on <span class="math inline">\(\beta_1\)</span></li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="39" type="1">
-<li>The logistic model gives probability of failure:<a href="#/footnotes" class="footnote-ref" id="fnref37" role="doc-noteref" data-footnote-href="#/fn37" onclick=""><sup>37</sup></a>
+<li>The logistic model gives probability of failure:<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>
 <ol type="a">
 <li><span class="math inline">\(\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}\)</span></li>
 <li><span class="math inline">\(\frac{1}{1+ e^{\beta_0+ \beta_1 x}}\)</span></li>
@@ -831,11 +537,9 @@
 <li><span class="math inline">\(\beta_0+ \beta_1 x\)</span></li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="40" type="1">
-<li>The logistic model gives odds of success:<a href="#/footnotes" class="footnote-ref" id="fnref38" role="doc-noteref" data-footnote-href="#/fn38" onclick=""><sup>38</sup></a>
+<li>The logistic model gives odds of success:<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a>
 <ol type="a">
 <li><span class="math inline">\(\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}\)</span></li>
 <li><span class="math inline">\(\frac{1}{1+ e^{\beta_0+ \beta_1 x}}\)</span></li>
@@ -844,11 +548,9 @@
 <li><span class="math inline">\(\beta_0+ \beta_1 x\)</span></li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="41" type="1">
-<li>The logistic model gives odds of failure:<a href="#/footnotes" class="footnote-ref" id="fnref39" role="doc-noteref" data-footnote-href="#/fn39" onclick=""><sup>39</sup></a>
+<li>The logistic model gives odds of failure:<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>
 <ol type="a">
 <li><span class="math inline">\(\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}\)</span></li>
 <li><span class="math inline">\(\frac{1}{1+ e^{\beta_0+ \beta_1 x}}\)</span></li>
@@ -857,11 +559,9 @@
 <li><span class="math inline">\(\beta_0+ \beta_1 x\)</span></li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="42" type="1">
-<li>With a logistic regression model, the relative risk of success (for a one unit increase in X) is:<a href="#/footnotes" class="footnote-ref" id="fnref40" role="doc-noteref" data-footnote-href="#/fn40" onclick=""><sup>40</sup></a>
+<li>With a logistic regression model, the relative risk of success (for a one unit increase in X) is:<a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a>
 <ol type="a">
 <li><span class="math inline">\(- \beta_0/\beta_1\)</span></li>
 <li><span class="math inline">\(\beta_0+ \beta_1 x\)</span></li>
@@ -869,11 +569,9 @@
 <li>a non-linear function of X (which depends on X )</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="43" type="1">
-<li>If we want the relative risk of survival (for a one unit increase in X) to be independent of X, we should use which link:<a href="#/footnotes" class="footnote-ref" id="fnref41" role="doc-noteref" data-footnote-href="#/fn41" onclick=""><sup>41</sup></a>
+<li>If we want the relative risk of survival (for a one unit increase in X) to be independent of X, we should use which link:<a href="#fn41" class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a>
 <ol type="a">
 <li>linear</li>
 <li>logistic</li>
@@ -881,11 +579,9 @@
 <li>log-linear</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="44" type="1">
-<li>You take a sample of size 4 from a binary population and get: FSFF. (failure, success, failure, failure) What is your guess for p = P(success)?<a href="#/footnotes" class="footnote-ref" id="fnref42" role="doc-noteref" data-footnote-href="#/fn42" onclick=""><sup>42</sup></a>
+<li>You take a sample of size 4 from a binary population and get: FSFF. (failure, success, failure, failure) What is your guess for p = P(success)?<a href="#fn42" class="footnote-ref" id="fnref42" role="doc-noteref"><sup>42</sup></a>
 <ol type="a">
 <li>0.05</li>
 <li>0.15</li>
@@ -894,11 +590,9 @@
 <li>0.75</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="45" type="1">
-<li>In a logistic regression model, the variability is given by<a href="#/footnotes" class="footnote-ref" id="fnref43" role="doc-noteref" data-footnote-href="#/fn43" onclick=""><sup>43</sup></a>
+<li>In a logistic regression model, the variability is given by<a href="#fn43" class="footnote-ref" id="fnref43" role="doc-noteref"><sup>43</sup></a>
 <ol type="a">
 <li>Normal Y given X</li>
 <li>Binomial Y given X</li>
@@ -906,11 +600,9 @@
 <li>Poisson Y given X</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="46" type="1">
-<li>When trying to find estimates for <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>, we maximize the likelihood. <span class="math display">\[\prod_{i=1}^n \bigg(\frac{e^{\beta_0+ \beta_1 x_i}}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{y_i}\bigg(\frac{1}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{1 - y_i}\]</span> Take the derivative with respect to which variable(s):<a href="#/footnotes" class="footnote-ref" id="fnref44" role="doc-noteref" data-footnote-href="#/fn44" onclick=""><sup>44</sup></a>
+<li>When trying to find estimates for <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>, we maximize the likelihood. <span class="math display">\[\prod_{i=1}^n \bigg(\frac{e^{\beta_0+ \beta_1 x_i}}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{y_i}\bigg(\frac{1}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{1 - y_i}\]</span> Take the derivative with respect to which variable(s):<a href="#fn44" class="footnote-ref" id="fnref44" role="doc-noteref"><sup>44</sup></a>
 <ol type="a">
 <li>X</li>
 <li>Y</li>
@@ -919,11 +611,9 @@
 <li><span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span></li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="47" type="1">
-<li>Maximum likelihood estimation seeks to:<a href="#/footnotes" class="footnote-ref" id="fnref45" role="doc-noteref" data-footnote-href="#/fn45" onclick=""><sup>45</sup></a>
+<li>Maximum likelihood estimation seeks to:<a href="#fn45" class="footnote-ref" id="fnref45" role="doc-noteref"><sup>45</sup></a>
 <ol type="a">
 <li>Find the data which are most likely under the model.</li>
 <li>Find the parameters which are most likely under the model.</li>
@@ -931,11 +621,9 @@
 <li>Find the data which make the parameters most likely under the model.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="48" type="1">
-<li>We use maximum likelihood estimation because:<a href="#/footnotes" class="footnote-ref" id="fnref46" role="doc-noteref" data-footnote-href="#/fn46" onclick=""><sup>46</sup></a>
+<li>We use maximum likelihood estimation because:<a href="#fn46" class="footnote-ref" id="fnref46" role="doc-noteref"><sup>46</sup></a>
 <ol type="a">
 <li>It gives an principled approach for estimating the parameters.</li>
 <li>The estimates are asymptotically normally distributed.</li>
@@ -944,11 +632,9 @@
 <li>Some of the above.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="49" type="1">
-<li>We know that for a given data set (with MLEs of <span class="math inline">\(b_0\)</span>,<span class="math inline">\(b_1\)</span>):<a href="#/footnotes" class="footnote-ref" id="fnref47" role="doc-noteref" data-footnote-href="#/fn47" onclick=""><sup>47</sup></a>
+<li>We know that for a given data set (with MLEs of <span class="math inline">\(b_0\)</span>,<span class="math inline">\(b_1\)</span>):<a href="#fn47" class="footnote-ref" id="fnref47" role="doc-noteref"><sup>47</sup></a>
 <ol type="a">
 <li><span class="math inline">\(L(b_0,b_1)&lt; L(b_0,\beta_1=0)\)</span> always</li>
 <li><span class="math inline">\(L(b_0,b_1)&gt; L(b_0,\beta_1=0)\)</span> always</li>
@@ -956,11 +642,9 @@
 <li><span class="math inline">\(L(b_0,b_1) \geq L(b_0,\beta_1=0)\)</span> always</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="50" type="1">
-<li>How many parameters did we estimate in the HERS warm-up with the additive model?<a href="#/footnotes" class="footnote-ref" id="fnref48" role="doc-noteref" data-footnote-href="#/fn48" onclick=""><sup>48</sup></a>
+<li>How many parameters did we estimate in the HERS warm-up with the additive model?<a href="#fn48" class="footnote-ref" id="fnref48" role="doc-noteref"><sup>48</sup></a>
 <ol type="a">
 <li>1</li>
 <li>3</li>
@@ -969,11 +653,9 @@
 <li>2761</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="51" type="1">
-<li>How many parameters did we estimate in the HERS warm-up with the interaction model?<a href="#/footnotes" class="footnote-ref" id="fnref49" role="doc-noteref" data-footnote-href="#/fn49" onclick=""><sup>49</sup></a>
+<li>How many parameters did we estimate in the HERS warm-up with the interaction model?<a href="#fn49" class="footnote-ref" id="fnref49" role="doc-noteref"><sup>49</sup></a>
 <ol type="a">
 <li>3</li>
 <li>4</li>
@@ -982,11 +664,9 @@
 <li>12</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="52" type="1">
-<li>What are the df for the LRT addressing whether interaction is needed in the HERS warm-up?<a href="#/footnotes" class="footnote-ref" id="fnref50" role="doc-noteref" data-footnote-href="#/fn50" onclick=""><sup>50</sup></a>
+<li>What are the df for the LRT addressing whether interaction is needed in the HERS warm-up?<a href="#fn50" class="footnote-ref" id="fnref50" role="doc-noteref"><sup>50</sup></a>
 <ol type="a">
 <li>2</li>
 <li>3</li>
@@ -995,11 +675,9 @@
 <li>2757</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="53" type="1">
-<li>(Bird nest example) How many parameters do we estimate when considering Length as a categorical variable? (the only variable)<a href="#/footnotes" class="footnote-ref" id="fnref51" role="doc-noteref" data-footnote-href="#/fn51" onclick=""><sup>51</sup></a>
+<li>(Bird nest example) How many parameters do we estimate when considering Length as a categorical variable? (the only variable)<a href="#fn51" class="footnote-ref" id="fnref51" role="doc-noteref"><sup>51</sup></a>
 <ol type="a">
 <li>0</li>
 <li>1</li>
@@ -1008,11 +686,9 @@
 <li>34</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="54" type="1">
-<li>(Bird nest example) How many df for the LRT addressing whether Length (as a categorical variable) belongs in the model?<a href="#/footnotes" class="footnote-ref" id="fnref52" role="doc-noteref" data-footnote-href="#/fn52" onclick=""><sup>52</sup></a>
+<li>(Bird nest example) How many df for the LRT addressing whether Length (as a categorical variable) belongs in the model?<a href="#fn52" class="footnote-ref" id="fnref52" role="doc-noteref"><sup>52</sup></a>
 <ol type="a">
 <li>0</li>
 <li>1</li>
@@ -1021,11 +697,9 @@
 <li>34</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="55" type="1">
-<li>(Bird nest example) How many df for the LRT addressing whether Incubate and Color belong in the model (given Length is determined to be in the model)?<a href="#/footnotes" class="footnote-ref" id="fnref53" role="doc-noteref" data-footnote-href="#/fn53" onclick=""><sup>53</sup></a>
+<li>(Bird nest example) How many df for the LRT addressing whether Incubate and Color belong in the model (given Length is determined to be in the model)?<a href="#fn53" class="footnote-ref" id="fnref53" role="doc-noteref"><sup>53</sup></a>
 <ol type="a">
 <li>0</li>
 <li>1</li>
@@ -1034,11 +708,9 @@
 <li>4</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="56" type="1">
-<li>An interaction term in a multiple logistic regression model may be used when:<a href="#/footnotes" class="footnote-ref" id="fnref54" role="doc-noteref" data-footnote-href="#/fn54" onclick=""><sup>54</sup></a>
+<li>An interaction term in a multiple logistic regression model may be used when:<a href="#fn54" class="footnote-ref" id="fnref54" role="doc-noteref"><sup>54</sup></a>
 <ol type="a">
 <li>the model fit is poor.</li>
 <li>there is a quadratic relationship between the response and explanatory variables.</li>
@@ -1046,21 +718,17 @@
 <li>the relationship between X1 and P(success) changes for differing values of X2.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="57" type="1">
-<li>The interpretations of the main effects (on their own) make sense only when the interaction component is not significant.<a href="#/footnotes" class="footnote-ref" id="fnref55" role="doc-noteref" data-footnote-href="#/fn55" onclick=""><sup>55</sup></a>
+<li>The interpretations of the main effects (on their own) make sense only when the interaction component is not significant.<a href="#fn55" class="footnote-ref" id="fnref55" role="doc-noteref"><sup>55</sup></a>
 <ol type="a">
 <li>TRUE</li>
 <li>FALSE</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="58" type="1">
-<li>If the interaction is significant but the main effects aren’t:<a href="#/footnotes" class="footnote-ref" id="fnref56" role="doc-noteref" data-footnote-href="#/fn56" onclick=""><sup>56</sup></a>
+<li>If the interaction is significant but the main effects aren’t:<a href="#fn56" class="footnote-ref" id="fnref56" role="doc-noteref"><sup>56</sup></a>
 <ol type="a">
 <li>report on the significance of the main effects</li>
 <li>remove the main effects from the model</li>
@@ -1068,11 +736,9 @@
 <li>test whether the main effects are significant without interaction in the model</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="59" type="1">
-<li>With two variables of interest, what should you test first?<a href="#/footnotes" class="footnote-ref" id="fnref57" role="doc-noteref" data-footnote-href="#/fn57" onclick=""><sup>57</sup></a>
+<li>With two variables of interest, what should you test first?<a href="#fn57" class="footnote-ref" id="fnref57" role="doc-noteref"><sup>57</sup></a>
 <ol type="a">
 <li>Variable 1.</li>
 <li>Variable 2.</li>
@@ -1080,11 +746,9 @@
 <li>None of the above.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="60" type="1">
-<li>Consider variable 1 is continuous and variable 2 has 4 levels. How many degrees of freedom are associated with the drop in deviance test (LRT) of their overall interaction?<a href="#/footnotes" class="footnote-ref" id="fnref58" role="doc-noteref" data-footnote-href="#/fn58" onclick=""><sup>58</sup></a>
+<li>Consider variable 1 is continuous and variable 2 has 4 levels. How many degrees of freedom are associated with the drop in deviance test (LRT) of their overall interaction?<a href="#fn58" class="footnote-ref" id="fnref58" role="doc-noteref"><sup>58</sup></a>
 <ol type="a">
 <li>1</li>
 <li>2</li>
@@ -1093,11 +757,9 @@
 <li>5</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="61" type="1">
-<li>When selecting variables, it is important that<a href="#/footnotes" class="footnote-ref" id="fnref59" role="doc-noteref" data-footnote-href="#/fn59" onclick=""><sup>59</sup></a>
+<li>When selecting variables, it is important that<a href="#fn59" class="footnote-ref" id="fnref59" role="doc-noteref"><sup>59</sup></a>
 <ol type="a">
 <li>The model predicts training data well</li>
 <li>The model predicts test data well</li>
@@ -1105,54 +767,44 @@
 <li>The relationships between the variables make sense</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="62" type="1">
-<li>To get a sense of the true accuracy of the model, the test data should be assessed (for accuracy)<a href="#/footnotes" class="footnote-ref" id="fnref60" role="doc-noteref" data-footnote-href="#/fn60" onclick=""><sup>60</sup></a>
+<li>To get a sense of the true accuracy of the model, the test data should be assessed (for accuracy)<a href="#fn60" class="footnote-ref" id="fnref60" role="doc-noteref"><sup>60</sup></a>
 <ol type="a">
 <li>on the first model only.</li>
 <li>on the last model only.</li>
 <li>on every model in the process.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="63" type="1">
-<li>If I am using all features of my dataset and I achieve 100% accuracy on my training set, but ~70% on testing set, what should I look out for?<a href="#/footnotes" class="footnote-ref" id="fnref61" role="doc-noteref" data-footnote-href="#/fn61" onclick=""><sup>61</sup></a>
+<li>If I am using all features of my dataset and I achieve 100% accuracy on my training set, but ~70% on testing set, what should I look out for?<a href="#fn61" class="footnote-ref" id="fnref61" role="doc-noteref"><sup>61</sup></a>
 <ol type="a">
 <li>Underfitting</li>
 <li>Nothing, the model is perfect</li>
 <li>Overfitting</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="64" type="1">
-<li>If I am picking and choosing between features of my dataset and I achieve 30% accuracy on my training set, and ~30% on testing set, what should I look out for?<a href="#/footnotes" class="footnote-ref" id="fnref62" role="doc-noteref" data-footnote-href="#/fn62" onclick=""><sup>62</sup></a>
+<li>If I am picking and choosing between features of my dataset and I achieve 30% accuracy on my training set, and ~30% on testing set, what should I look out for?<a href="#fn62" class="footnote-ref" id="fnref62" role="doc-noteref"><sup>62</sup></a>
 <ol type="a">
 <li>Underfitting</li>
 <li>Nothing, the model is perfect</li>
 <li>Overfitting</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="65" type="1">
-<li>Cross validating will guarantee that the model does not overfit.<a href="#/footnotes" class="footnote-ref" id="fnref63" role="doc-noteref" data-footnote-href="#/fn63" onclick=""><sup>63</sup></a>
+<li>Cross validating will guarantee that the model does not overfit.<a href="#fn63" class="footnote-ref" id="fnref63" role="doc-noteref"><sup>63</sup></a>
 <ol type="a">
 <li>TRUE</li>
 <li>FALSE</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="66" type="1">
-<li>Suppose we want to compute 10-Fold Cross-Validation error on 200 training examples. We need to compute a model error rate N1 times, and the Cross-Validation error is the average of the errors. To compute each error, we need to train a model with data of size N2, and test the model on the data of size N3. What are the numbers for N1, N2, N3?<a href="#/footnotes" class="footnote-ref" id="fnref64" role="doc-noteref" data-footnote-href="#/fn64" onclick=""><sup>64</sup></a>
+<li>Suppose we want to compute 10-Fold Cross-Validation error on 200 training examples. We need to compute a model error rate N1 times, and the Cross-Validation error is the average of the errors. To compute each error, we need to train a model with data of size N2, and test the model on the data of size N3. What are the numbers for N1, N2, N3?<a href="#fn64" class="footnote-ref" id="fnref64" role="doc-noteref"><sup>64</sup></a>
 <ol type="a">
 <li>N1 = 1, N2 = 180, N3 = 20</li>
 <li>N1 = 10, N2 = 180, N3 = 20</li>
@@ -1161,11 +813,9 @@
 <li>N1 = 20, N2 = 180, N3 = 20</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="67" type="1">
-<li>You are reviewing papers for Fancy Conference, and you see submissions with the following claims. Which ones would you consider accepting?<a href="#/footnotes" class="footnote-ref" id="fnref65" role="doc-noteref" data-footnote-href="#/fn65" onclick=""><sup>65</sup></a>
+<li>You are reviewing papers for Fancy Conference, and you see submissions with the following claims. Which ones would you consider accepting?<a href="#fn65" class="footnote-ref" id="fnref65" role="doc-noteref"><sup>65</sup></a>
 <ol type="a">
 <li>My method achieves a training error lower than all previous methods!</li>
 <li>My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min test error.)</li>
@@ -1173,14 +823,9 @@
 <li>My method achieves a CV error lower than all previous methods! (Footnote: When variables are chosen so as to min CV error.)</li>
 </ol></li>
 </ol>
-<div class="cell" data-layout-align="center">
-
-</div>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="69" type="1">
-<li>Which model is better (according to ROC)?<a href="#/footnotes" class="footnote-ref" id="fnref66" role="doc-noteref" data-footnote-href="#/fn66" onclick=""><sup>66</sup></a>
+<li>Which model is better (according to ROC)?<a href="#fn66" class="footnote-ref" id="fnref66" role="doc-noteref"><sup>66</sup></a>
 <ol type="a">
 <li>pink because it goes closer to (1,1)</li>
 <li>pink because it is closer to y=x</li>
@@ -1192,17 +837,15 @@
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="clicker_slides_files/figure-revealjs/unnamed-chunk-3-1.png" style="width:90.0%"></p>
+<figure class="figure">
+<p><img src="clicker_slides_files/figure-revealjs/unnamed-chunk-3-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="70" type="1">
-<li>In ROC curve, the x-axis measures<a href="#/footnotes" class="footnote-ref" id="fnref67" role="doc-noteref" data-footnote-href="#/fn67" onclick=""><sup>67</sup></a>
+<li>In ROC curve, the x-axis measures<a href="#fn67" class="footnote-ref" id="fnref67" role="doc-noteref"><sup>67</sup></a>
 <ol type="a">
 <li>True Pos Rate which we want high</li>
 <li>False Pos Rate which we want low</li>
@@ -1210,16 +853,14 @@
 <li>False Neg Rate which we want low</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="71" type="1">
 <li>Quiz on 11 topics (you know nothing). Your friends know topics:<br>
 A: {1, 2, 3, 4, 5, 6, 7}<br>
 B: {8, 9, 10}<br>
 C: {1, 2, 3, 4, 8, 10}<br>
 D: {5, 6, 7, 9, 11}<br>
-Who should you choose to help you answer the questions?<a href="#/footnotes" class="footnote-ref" id="fnref68" role="doc-noteref" data-footnote-href="#/fn68" onclick=""><sup>68</sup></a>
+Who should you choose to help you answer the questions?<a href="#fn68" class="footnote-ref" id="fnref68" role="doc-noteref"><sup>68</sup></a>
 <ol type="a">
 <li>A</li>
 <li>B</li>
@@ -1228,11 +869,9 @@ Who should you choose to help you answer the questions?<a href="#/footnotes" cla
 <li>can’t tell</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="72" type="1">
-<li>Who do you want to choose next?<a href="#/footnotes" class="footnote-ref" id="fnref69" role="doc-noteref" data-footnote-href="#/fn69" onclick=""><sup>69</sup></a><br>
+<li>Who do you want to choose next?<a href="#fn69" class="footnote-ref" id="fnref69" role="doc-noteref"><sup>69</sup></a><br>
 A: {1, 2, 3, 4, 5, 6, 7}<br>
 B: {8, 9, 10}<br>
 C: {1, 2, 3, 4, 8, 10}<br>
@@ -1245,11 +884,9 @@ D: {5, 6, 7, 9, 11}
 <li>can’t tell</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="73" type="1">
-<li>If you can pick two people, who do you pick?<a href="#/footnotes" class="footnote-ref" id="fnref70" role="doc-noteref" data-footnote-href="#/fn70" onclick=""><sup>70</sup></a><br>
+<li>If you can pick two people, who do you pick?<a href="#fn70" class="footnote-ref" id="fnref70" role="doc-noteref"><sup>70</sup></a><br>
 A: {1, 2, 3, 4, 5, 6, 7}<br>
 B: {8, 9, 10}<br>
 C: {1, 2, 3, 4, 8, 10}<br>
@@ -1262,81 +899,65 @@ D: {5, 6, 7, 9, 11}
 <li>C, D</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="74" type="1">
-<li>The variables in the k-variable model identified by <strong>forward</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>forward</strong> selection.<a href="#/footnotes" class="footnote-ref" id="fnref71" role="doc-noteref" data-footnote-href="#/fn71" onclick=""><sup>71</sup></a>
+<li>The variables in the k-variable model identified by <strong>forward</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>forward</strong> selection.<a href="#fn71" class="footnote-ref" id="fnref71" role="doc-noteref"><sup>71</sup></a>
 <ol type="a">
 <li>TRUE (always TRUE)</li>
 <li>FALSE (not always TRUE)</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="75" type="1">
-<li>The variables in the k-variable model identified by <strong>backward</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>backward</strong> selection.<a href="#/footnotes" class="footnote-ref" id="fnref72" role="doc-noteref" data-footnote-href="#/fn72" onclick=""><sup>72</sup></a>
+<li>The variables in the k-variable model identified by <strong>backward</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>backward</strong> selection.<a href="#fn72" class="footnote-ref" id="fnref72" role="doc-noteref"><sup>72</sup></a>
 <ol type="a">
 <li>TRUE (always TRUE)</li>
 <li>FALSE (not always TRUE)</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="76" type="1">
-<li>The variables in the k-variable model identified by <strong>backward</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>forward</strong> selection.<a href="#/footnotes" class="footnote-ref" id="fnref73" role="doc-noteref" data-footnote-href="#/fn73" onclick=""><sup>73</sup></a>
+<li>The variables in the k-variable model identified by <strong>backward</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>forward</strong> selection.<a href="#fn73" class="footnote-ref" id="fnref73" role="doc-noteref"><sup>73</sup></a>
 <ol type="a">
 <li>TRUE (always TRUE)</li>
 <li>FALSE (not always TRUE)</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="77" type="1">
-<li>The variables in the k-variable model identified by <strong>forward</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>backward</strong> selection.<a href="#/footnotes" class="footnote-ref" id="fnref74" role="doc-noteref" data-footnote-href="#/fn74" onclick=""><sup>74</sup></a>
+<li>The variables in the k-variable model identified by <strong>forward</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>backward</strong> selection.<a href="#fn74" class="footnote-ref" id="fnref74" role="doc-noteref"><sup>74</sup></a>
 <ol type="a">
 <li>TRUE (always TRUE)</li>
 <li>FALSE (not always TRUE)</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="78" type="1">
-<li>The variables in the k-variable model identified by <strong>best-subsets</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>best-subsets</strong> selection.<a href="#/footnotes" class="footnote-ref" id="fnref75" role="doc-noteref" data-footnote-href="#/fn75" onclick=""><sup>75</sup></a>
+<li>The variables in the k-variable model identified by <strong>best-subsets</strong> selection are a subset of the variables in the (k+1)-variable model identified by <strong>best-subsets</strong> selection.<a href="#fn75" class="footnote-ref" id="fnref75" role="doc-noteref"><sup>75</sup></a>
 <ol type="a">
 <li>TRUE (always TRUE)</li>
 <li>FALSE (not always TRUE)</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="79" type="1">
-<li>In a drop-in-deviance test (LRT), the reduced model corresponds to the null hypothesis being true.<a href="#/footnotes" class="footnote-ref" id="fnref76" role="doc-noteref" data-footnote-href="#/fn76" onclick=""><sup>76</sup></a>
+<li>In a drop-in-deviance test (LRT), the reduced model corresponds to the null hypothesis being true.<a href="#fn76" class="footnote-ref" id="fnref76" role="doc-noteref"><sup>76</sup></a>
 <ol type="a">
 <li>TRUE</li>
 <li>FALSE</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="80" type="1">
-<li>In a drop-in-deviance test (LRT), the full model corresponds to the alternative hypothesis being true.<a href="#/footnotes" class="footnote-ref" id="fnref77" role="doc-noteref" data-footnote-href="#/fn77" onclick=""><sup>77</sup></a>
+<li>In a drop-in-deviance test (LRT), the full model corresponds to the alternative hypothesis being true.<a href="#fn77" class="footnote-ref" id="fnref77" role="doc-noteref"><sup>77</sup></a>
 <ol type="a">
 <li>TRUE</li>
 <li>FALSE</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="81" type="1">
-<li>With model building:<a href="#/footnotes" class="footnote-ref" id="fnref78" role="doc-noteref" data-footnote-href="#/fn78" onclick=""><sup>78</sup></a>
+<li>With model building:<a href="#fn78" class="footnote-ref" id="fnref78" role="doc-noteref"><sup>78</sup></a>
 <ol type="a">
 <li>There are many ways to find a good model.</li>
 <li>There is always one right answer.</li>
@@ -1344,11 +965,9 @@ D: {5, 6, 7, 9, 11}
 <li>Can we take a pure math class yet?</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="82" type="1">
-<li>When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:<a href="#/footnotes" class="footnote-ref" id="fnref79" role="doc-noteref" data-footnote-href="#/fn79" onclick=""><sup>79</sup></a>
+<li>When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:<a href="#fn79" class="footnote-ref" id="fnref79" role="doc-noteref"><sup>79</sup></a>
 <ol type="a">
 <li>positive</li>
 <li>negative</li>
@@ -1356,11 +975,9 @@ D: {5, 6, 7, 9, 11}
 <li>no intuition exists for being able to answer this question</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="83" type="1">
-<li>When probability of being able to buy a candy bar is modeled as a function of the number of low coins, the coefficient on number of low coins is:<a href="#/footnotes" class="footnote-ref" id="fnref80" role="doc-noteref" data-footnote-href="#/fn80" onclick=""><sup>80</sup></a>
+<li>When probability of being able to buy a candy bar is modeled as a function of the number of low coins, the coefficient on number of low coins is:<a href="#fn80" class="footnote-ref" id="fnref80" role="doc-noteref"><sup>80</sup></a>
 <ol type="a">
 <li>positive</li>
 <li>negative</li>
@@ -1368,11 +985,9 @@ D: {5, 6, 7, 9, 11}
 <li>no intuition exists for being able to answer this question</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="84" type="1">
-<li>When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of coins is:<a href="#/footnotes" class="footnote-ref" id="fnref81" role="doc-noteref" data-footnote-href="#/fn81" onclick=""><sup>81</sup></a>
+<li>When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of coins is:<a href="#fn81" class="footnote-ref" id="fnref81" role="doc-noteref"><sup>81</sup></a>
 <ol type="a">
 <li>positive</li>
 <li>negative</li>
@@ -1380,11 +995,9 @@ D: {5, 6, 7, 9, 11}
 <li>no intuition exists for being able to answer this question</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="85" type="1">
-<li>When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of low coins is:<a href="#/footnotes" class="footnote-ref" id="fnref82" role="doc-noteref" data-footnote-href="#/fn82" onclick=""><sup>82</sup></a>
+<li>When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of low coins is:<a href="#fn82" class="footnote-ref" id="fnref82" role="doc-noteref"><sup>82</sup></a>
 <ol type="a">
 <li>positive</li>
 <li>negative</li>
@@ -1392,22 +1005,18 @@ D: {5, 6, 7, 9, 11}
 <li>no intuition exists for being able to answer this question</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="86" type="1">
-<li>If we consider the censored times to be event times, the empirical survival curve will (on average)<a href="#/footnotes" class="footnote-ref" id="fnref83" role="doc-noteref" data-footnote-href="#/fn83" onclick=""><sup>83</sup></a>
+<li>If we consider the censored times to be event times, the empirical survival curve will (on average)<a href="#fn83" class="footnote-ref" id="fnref83" role="doc-noteref"><sup>83</sup></a>
 <ol type="a">
 <li>underestimate the parameter</li>
 <li>overestimate the parameter</li>
 <li>sometimes under and sometimes overestimate the parameter</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="87" type="1">
-<li><span class="math inline">\(n_i - d_i = n_{i+1}\)</span> when:<a href="#/footnotes" class="footnote-ref" id="fnref84" role="doc-noteref" data-footnote-href="#/fn84" onclick=""><sup>84</sup></a>
+<li><span class="math inline">\(n_i - d_i = n_{i+1}\)</span> when:<a href="#fn84" class="footnote-ref" id="fnref84" role="doc-noteref"><sup>84</sup></a>
 <ol type="a">
 <li>there are no deaths at time <span class="math inline">\(t_i\)</span></li>
 <li>there is no censoring at time <span class="math inline">\(t_i\)</span></li>
@@ -1416,11 +1025,9 @@ D: {5, 6, 7, 9, 11}
 <li>there is no censoring at time <span class="math inline">\(t_{i-1}\)</span></li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="88" type="1">
-<li><span class="math inline">\(\frac{(n_i - d_i)}{n_i} = 1\)</span> when:<a href="#/footnotes" class="footnote-ref" id="fnref85" role="doc-noteref" data-footnote-href="#/fn85" onclick=""><sup>85</sup></a>
+<li><span class="math inline">\(\frac{(n_i - d_i)}{n_i} = 1\)</span> when:<a href="#fn85" class="footnote-ref" id="fnref85" role="doc-noteref"><sup>85</sup></a>
 <ol type="a">
 <li>there are no deaths at time <span class="math inline">\(t_i\)</span></li>
 <li>there is no censoring at time <span class="math inline">\(t_i\)</span></li>
@@ -1429,11 +1036,9 @@ D: {5, 6, 7, 9, 11}
 <li>there is no censoring at time <span class="math inline">\(t_{i-1}\)</span></li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="89" type="1">
-<li>Prop survive &gt; 50 days, <code>treated</code> (turquoise line)<a href="#/footnotes" class="footnote-ref" id="fnref86" role="doc-noteref" data-footnote-href="#/fn86" onclick=""><sup>86</sup></a>
+<li>Prop survive &gt; 50 days, <code>treated</code> (turquoise line)<a href="#fn86" class="footnote-ref" id="fnref86" role="doc-noteref"><sup>86</sup></a>
 <ol type="a">
 <li>~0.65</li>
 <li>~0.35</li>
@@ -1445,21 +1050,25 @@ D: {5, 6, 7, 9, 11}
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="clicker_slides_files/figure-revealjs/unnamed-chunk-4-1.png" style="width:90.0%"></p>
+<figure class="figure">
+<p><img src="clicker_slides_files/figure-revealjs/unnamed-chunk-4-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<aside></aside></section>
-<section class="slide level2">
-
-
-<img data-src="clicker_slides_files/figure-revealjs/unnamed-chunk-5-1.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section>
-<section class="slide level2">
-
+<hr>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="clicker_slides_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
 <ol start="90" type="1">
-<li>Kaplan Meier curves (Log-Rank p-value),<a href="#/footnotes" class="footnote-ref" id="fnref87" role="doc-noteref" data-footnote-href="#/fn87" onclick=""><sup>87</sup></a>
+<li>Kaplan Meier curves (Log-Rank p-value),<a href="#fn87" class="footnote-ref" id="fnref87" role="doc-noteref"><sup>87</sup></a>
 <ol type="a">
 <li>blue is clearly better</li>
 <li>red is clearly better</li>
@@ -1471,21 +1080,25 @@ D: {5, 6, 7, 9, 11}
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="clicker_slides_files/figure-revealjs/unnamed-chunk-6-1.png" style="width:90.0%"></p>
+<figure class="figure">
+<p><img src="clicker_slides_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<aside></aside></section>
-<section class="slide level2">
-
-
-<img data-src="clicker_slides_files/figure-revealjs/unnamed-chunk-7-1.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section>
-<section class="slide level2">
-
+<hr>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="clicker_slides_files/figure-revealjs/unnamed-chunk-7-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
 <ol start="91" type="1">
-<li>In the log-rank test, why is it okay to consider only one cell of the 2x2 table at time <span class="math inline">\(t_j\)</span>?<a href="#/footnotes" class="footnote-ref" id="fnref88" role="doc-noteref" data-footnote-href="#/fn88" onclick=""><sup>88</sup></a>
+<li>In the log-rank test, why is it okay to consider only one cell of the 2x2 table at time <span class="math inline">\(t_j\)</span>?<a href="#fn88" class="footnote-ref" id="fnref88" role="doc-noteref"><sup>88</sup></a>
 <ol type="a">
 <li>Because the row totals are fixed.</li>
 <li>Because the column totals are fixed.</li>
@@ -1493,11 +1106,9 @@ D: {5, 6, 7, 9, 11}
 <li>Because the total number of observations is fixed.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="92" type="1">
-<li>What does it mean for the log rank test to be more powerful than the Wilcoxon test?<a href="#/footnotes" class="footnote-ref" id="fnref89" role="doc-noteref" data-footnote-href="#/fn89" onclick=""><sup>89</sup></a>
+<li>What does it mean for the log rank test to be more powerful than the Wilcoxon test?<a href="#fn89" class="footnote-ref" id="fnref89" role="doc-noteref"><sup>89</sup></a>
 <ol type="a">
 <li>log rank is more likely to reject <span class="math inline">\(H_0\)</span> when <span class="math inline">\(H_0\)</span> is true.</li>
 <li>log rank is more likely to reject <span class="math inline">\(H_0\)</span> when <span class="math inline">\(H_0\)</span> is false.</li>
@@ -1505,11 +1116,9 @@ D: {5, 6, 7, 9, 11}
 <li>log rank is less likely to reject <span class="math inline">\(H_0\)</span> when <span class="math inline">\(H_0\)</span> is false.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="93" type="1">
-<li>The hazard at time <span class="math inline">\(t\)</span> represents:<a href="#/footnotes" class="footnote-ref" id="fnref90" role="doc-noteref" data-footnote-href="#/fn90" onclick=""><sup>90</sup></a>
+<li>The hazard at time <span class="math inline">\(t\)</span> represents:<a href="#fn90" class="footnote-ref" id="fnref90" role="doc-noteref"><sup>90</sup></a>
 <ol type="a">
 <li>the probability of the event</li>
 <li>the instantaneous rate of the event</li>
@@ -1517,11 +1126,9 @@ D: {5, 6, 7, 9, 11}
 <li>the odds ratio of the event</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="94" type="1">
-<li>The last entry in the table for the h(t) column is <code>NA</code> because:<a href="#/footnotes" class="footnote-ref" id="fnref91" role="doc-noteref" data-footnote-href="#/fn91" onclick=""><sup>91</sup></a>
+<li>The last entry in the table for the h(t) column is <code>NA</code> because:<a href="#fn91" class="footnote-ref" id="fnref91" role="doc-noteref"><sup>91</sup></a>
 <ol type="a">
 <li>the last observation was a death</li>
 <li>the last observation was censored</li>
@@ -1532,18 +1139,16 @@ D: {5, 6, 7, 9, 11}
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="handout/figs/hazard_NA.jpg" style="width:100.0%"></p>
-<p></p><figcaption>Table 9.6 <span class="citation" data-cites="KuiperSklar">[@KuiperSklar]</span></figcaption><p></p>
+<figure class="figure">
+<p><img src="handout/figs/hazard_NA.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Table 9.6 <span class="citation" data-cites="KuiperSklar">[@KuiperSklar]</span></figcaption>
 </figure>
 </div>
 </div>
 </div>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="95" type="1">
-<li>Censored observations are<span class="math inline">\(\ldots\)</span>?<a href="#/footnotes" class="footnote-ref" id="fnref92" role="doc-noteref" data-footnote-href="#/fn92" onclick=""><sup>92</sup></a>
+<li>Censored observations are<span class="math inline">\(\ldots\)</span>?<a href="#fn92" class="footnote-ref" id="fnref92" role="doc-noteref"><sup>92</sup></a>
 <ol type="a">
 <li>More important than non-censored ones in survival analysis</li>
 <li>Are assumed to be normally distributed over time</li>
@@ -1552,11 +1157,9 @@ D: {5, 6, 7, 9, 11}
 <li>Are allocated to the baseline survival curve</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="96" type="1">
-<li>Survival Analysis: for a one unit change of an explanatory variable, the corresponding coefficient <span class="math inline">\(e^\beta\)</span> represents:<a href="#/footnotes" class="footnote-ref" id="fnref93" role="doc-noteref" data-footnote-href="#/fn93" onclick=""><sup>93</sup></a>
+<li>Survival Analysis: for a one unit change of an explanatory variable, the corresponding coefficient <span class="math inline">\(e^\beta\)</span> represents:<a href="#fn93" class="footnote-ref" id="fnref93" role="doc-noteref"><sup>93</sup></a>
 <ol type="a">
 <li>baseline survival</li>
 <li>survival ratio</li>
@@ -1564,11 +1167,9 @@ D: {5, 6, 7, 9, 11}
 <li>hazard ratio</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="97" type="1">
-<li>In survival analysis, the closest interpretation of the value <span class="math inline">\(e^\beta\)</span> is:<a href="#/footnotes" class="footnote-ref" id="fnref94" role="doc-noteref" data-footnote-href="#/fn94" onclick=""><sup>94</sup></a>
+<li>In survival analysis, the closest interpretation of the value <span class="math inline">\(e^\beta\)</span> is:<a href="#fn94" class="footnote-ref" id="fnref94" role="doc-noteref"><sup>94</sup></a>
 <ol type="a">
 <li>odds</li>
 <li>probability</li>
@@ -1577,11 +1178,9 @@ D: {5, 6, 7, 9, 11}
 <li>odds ratio</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="98" type="1">
-<li>Let the event be death. If larger values of the explanatory variable are associated with higher likelihood of survival, the coefficient <span class="math inline">\((\beta)\)</span> should be <a href="#/footnotes" class="footnote-ref" id="fnref95" role="doc-noteref" data-footnote-href="#/fn95" onclick=""><sup>95</sup></a>
+<li>Let the event be death. If larger values of the explanatory variable are associated with higher likelihood of survival, the coefficient <span class="math inline">\((\beta)\)</span> should be <a href="#fn95" class="footnote-ref" id="fnref95" role="doc-noteref"><sup>95</sup></a>
 <ol type="a">
 <li>bigger than 1</li>
 <li>smaller than 1</li>
@@ -1590,11 +1189,9 @@ D: {5, 6, 7, 9, 11}
 <li>zero</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="99" type="1">
-<li>Let the event be death. If larger values of the variable are NOT associated with higher (or lower) likelihood of survival, the coefficient <span class="math inline">\((\beta)\)</span> should be<a href="#/footnotes" class="footnote-ref" id="fnref96" role="doc-noteref" data-footnote-href="#/fn96" onclick=""><sup>96</sup></a>
+<li>Let the event be death. If larger values of the variable are NOT associated with higher (or lower) likelihood of survival, the coefficient <span class="math inline">\((\beta)\)</span> should be<a href="#fn96" class="footnote-ref" id="fnref96" role="doc-noteref"><sup>96</sup></a>
 <ol type="a">
 <li>bigger than 1</li>
 <li>smaller than 1</li>
@@ -1603,11 +1200,9 @@ D: {5, 6, 7, 9, 11}
 <li>zero</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="100" type="1">
-<li>BP violates the “linear HR” condition if:<a href="#/footnotes" class="footnote-ref" id="fnref97" role="doc-noteref" data-footnote-href="#/fn97" onclick=""><sup>97</sup></a>
+<li>BP violates the “linear HR” condition if:<a href="#fn97" class="footnote-ref" id="fnref97" role="doc-noteref"><sup>97</sup></a>
 <ol type="a">
 <li>the ln ratio of the hazard curves is not linear with respect to BP</li>
 <li>the ln ratio of the survival curves is not linear with respect to BP</li>
@@ -1616,11 +1211,9 @@ D: {5, 6, 7, 9, 11}
 <li>there is no effect due to BP</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="101" type="1">
-<li>A Cox regression analysis:<a href="#/footnotes" class="footnote-ref" id="fnref98" role="doc-noteref" data-footnote-href="#/fn98" onclick=""><sup>98</sup></a>
+<li>A Cox regression analysis:<a href="#fn98" class="footnote-ref" id="fnref98" role="doc-noteref"><sup>98</sup></a>
 <ol type="a">
 <li>Is used to analyze survival data when individuals in the study are followed for varying lengths of time.</li>
 <li>Can only be used when there are censored data</li>
@@ -1629,11 +1222,9 @@ D: {5, 6, 7, 9, 11}
 <li>Relies on the condition that the explanatory variables (covariates) in the model are normally distributed.</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="102" type="1">
-<li>The effect of weight could violate PH if:<a href="#/footnotes" class="footnote-ref" id="fnref99" role="doc-noteref" data-footnote-href="#/fn99" onclick=""><sup>99</sup></a>
+<li>The effect of weight could violate PH if:<a href="#fn99" class="footnote-ref" id="fnref99" role="doc-noteref"><sup>99</sup></a>
 <ol type="a">
 <li>people of different weights are in control vs treatment group</li>
 <li>people tend to weigh less over time</li>
@@ -1641,11 +1232,9 @@ D: {5, 6, 7, 9, 11}
 <li>the hazard function changes as a function of weight which is also changing over time</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="103" type="1">
-<li>The effect of treatment could violate PH if:<a href="#/footnotes" class="footnote-ref" id="fnref100" role="doc-noteref" data-footnote-href="#/fn100" onclick=""><sup>100</sup></a>
+<li>The effect of treatment could violate PH if:<a href="#fn100" class="footnote-ref" id="fnref100" role="doc-noteref"><sup>100</sup></a>
 <ol type="a">
 <li>the treatment has no effect</li>
 <li>the treatment produces short term benefits only</li>
@@ -1653,31 +1242,25 @@ D: {5, 6, 7, 9, 11}
 <li>there is more than one treatment group</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="104" type="1">
-<li>AIC, BIC, model validation, and stepwise regression are methods for<a href="#/footnotes" class="footnote-ref" id="fnref101" role="doc-noteref" data-footnote-href="#/fn101" onclick=""><sup>101</sup></a>
+<li>AIC, BIC, model validation, and stepwise regression are methods for<a href="#fn101" class="footnote-ref" id="fnref101" role="doc-noteref"><sup>101</sup></a>
 <ol type="a">
 <li>parameter estimation</li>
 <li>variable selection</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="105" type="1">
-<li>If <span class="math inline">\(\alpha = 0.05\)</span>, I would expect 5% of all hypotheses to be rejected.<a href="#/footnotes" class="footnote-ref" id="fnref102" role="doc-noteref" data-footnote-href="#/fn102" onclick=""><sup>102</sup></a>
+<li>If <span class="math inline">\(\alpha = 0.05\)</span>, I would expect 5% of all hypotheses to be rejected.<a href="#fn102" class="footnote-ref" id="fnref102" role="doc-noteref"><sup>102</sup></a>
 <ol type="a">
 <li>TRUE</li>
 <li>FALSE</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="106" type="1">
-<li>Power is:<a href="#/footnotes" class="footnote-ref" id="fnref103" role="doc-noteref" data-footnote-href="#/fn103" onclick=""><sup>103</sup></a>
+<li>Power is:<a href="#fn103" class="footnote-ref" id="fnref103" role="doc-noteref"><sup>103</sup></a>
 <ol type="a">
 <li>P(type I error)</li>
 <li>P(type II error)</li>
@@ -1688,11 +1271,9 @@ D: {5, 6, 7, 9, 11}
 <p>type I = <span class="math inline">\(H_0\)</span> true, but we reject<br>
 type II = <span class="math inline">\(H_0\)</span> false, but we fail to reject<br>
 power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="107" type="1">
-<li>The p-value is<a href="#/footnotes" class="footnote-ref" id="fnref104" role="doc-noteref" data-footnote-href="#/fn104" onclick=""><sup>104</sup></a>
+<li>The p-value is<a href="#fn104" class="footnote-ref" id="fnref104" role="doc-noteref"><sup>104</sup></a>
 <ol type="a">
 <li>P(<span class="math inline">\(H_0\)</span> is true | data)</li>
 <li>P(<span class="math inline">\(H_a\)</span> is true | data)</li>
@@ -1701,15 +1282,11 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 <li>1 – P(data | <span class="math inline">\(H_0\)</span> is true)</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <p>RA Fisher (1929) &gt;“… An observation is judged significant, if it would rarely have been produced, in the absence of a real cause of the kind we are seeking. <strong>It is a common practice to judge a result significant, if it is of such a magnitude that it would have been produced by chance not more frequently than once in twenty trials. This is an arbitrary, but convenient, level of significance for the practical investigator, but it does not mean that he allows himself to be deceived once in every twenty experiments.</strong> The test of significance only tells him what to ignore, namely all experiments in which significant results are not obtained. He should only claim that a phenomenon is experimentally demonstrable when he knows how to design an experiment so that it will rarely fail to give a significant result. Consequently, isolated significant results which he does not know how to reproduce are left in suspense pending further investigation.”</p>
-</section>
-<section class="slide level2">
-
+<hr>
 <ol start="108" type="1">
-<li>For hypothesis testing, the problem of multiple comparisons (also known as the multiple testing problem) results from the increase in ________ that occurs when statistical tests are used repeatedly.<a href="#/footnotes" class="footnote-ref" id="fnref105" role="doc-noteref" data-footnote-href="#/fn105" onclick=""><sup>105</sup></a>
+<li>For hypothesis testing, the problem of multiple comparisons (also known as the multiple testing problem) results from the increase in ________ that occurs when statistical tests are used repeatedly.<a href="#fn105" class="footnote-ref" id="fnref105" role="doc-noteref"><sup>105</sup></a>
 <ol type="a">
 <li>Type I errors</li>
 <li>Type II errors</li>
@@ -1717,11 +1294,9 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 <li>Statistical hypothesis testing</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="109" type="1">
-<li>If <span class="math inline">\(H_0\)</span> is true, the p-values should be distributed:<a href="#/footnotes" class="footnote-ref" id="fnref106" role="doc-noteref" data-footnote-href="#/fn106" onclick=""><sup>106</sup></a>
+<li>If <span class="math inline">\(H_0\)</span> is true, the p-values should be distributed:<a href="#fn106" class="footnote-ref" id="fnref106" role="doc-noteref"><sup>106</sup></a>
 <ol type="a">
 <li>Uniformly (equal prob) on 0 to 1</li>
 <li>Uniformly on -1 to 1</li>
@@ -1730,11 +1305,9 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 <li>Skewed right on 0 to 1</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="110" type="1">
-<li>Given many many tests (presumably some are null and some are “true”), a good estimate of the number of null tests is:<a href="#/footnotes" class="footnote-ref" id="fnref107" role="doc-noteref" data-footnote-href="#/fn107" onclick=""><sup>107</sup></a>
+<li>Given many many tests (presumably some are null and some are “true”), a good estimate of the number of null tests is:<a href="#fn107" class="footnote-ref" id="fnref107" role="doc-noteref"><sup>107</sup></a>
 <ol type="a">
 <li>(# p-values &gt; 0.5) / 2</li>
 <li>(# p-values &gt; 0.5) * 2</li>
@@ -1742,11 +1315,9 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 <li>(# p-values &lt; 0.5) * 2</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="111" type="1">
-<li>What do I do if the adjusted p-value is bigger than 1?<a href="#/footnotes" class="footnote-ref" id="fnref108" role="doc-noteref" data-footnote-href="#/fn108" onclick=""><sup>108</sup></a>
+<li>What do I do if the adjusted p-value is bigger than 1?<a href="#fn108" class="footnote-ref" id="fnref108" role="doc-noteref"><sup>108</sup></a>
 <ol type="a">
 <li>Leave it unadjusted</li>
 <li>Assign the value of the previous (“smaller”) p-value</li>
@@ -1754,11 +1325,9 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 <li>Divide by 2</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="112" type="1">
-<li>With Holm’s method, what do I do if the (m+1)^th adjusted p-value is smaller than the m^th adjusted p-value?<a href="#/footnotes" class="footnote-ref" id="fnref109" role="doc-noteref" data-footnote-href="#/fn109" onclick=""><sup>109</sup></a>
+<li>With Holm’s method, what do I do if the (m+1)^th adjusted p-value is smaller than the m^th adjusted p-value?<a href="#fn109" class="footnote-ref" id="fnref109" role="doc-noteref"><sup>109</sup></a>
 <ol type="a">
 <li>Leave it unadjusted</li>
 <li>Assign the value of the m^th adjusted p-value to the (m+1)^th adjusted p-value</li>
@@ -1766,11 +1335,9 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 <li>Divide by 2</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="113" type="1">
-<li>The false discovery rate represents<a href="#/footnotes" class="footnote-ref" id="fnref110" role="doc-noteref" data-footnote-href="#/fn110" onclick=""><sup>110</sup></a>
+<li>The false discovery rate represents<a href="#fn110" class="footnote-ref" id="fnref110" role="doc-noteref"><sup>110</sup></a>
 <ol type="a">
 <li>the proportion of true discoveries out of the total tests</li>
 <li>the proportion of true discoveries out of the total discoveries</li>
@@ -1779,11 +1346,9 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 <li>the number of null discoveries out of the total discoveries</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="114" type="1">
-<li>FDR and FWER differ in that<a href="#/footnotes" class="footnote-ref" id="fnref111" role="doc-noteref" data-footnote-href="#/fn111" onclick=""><sup>111</sup></a>
+<li>FDR and FWER differ in that<a href="#fn111" class="footnote-ref" id="fnref111" role="doc-noteref"><sup>111</sup></a>
 <ol type="a">
 <li>FDR is a rate and FWER is a probability</li>
 <li>FDR controls the rate of false positives</li>
@@ -1792,11 +1357,9 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 <li>all of the above</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
-
+<hr>
 <ol start="115" type="1">
-<li>Which multiple comparisons adjustment gives the highest power?<a href="#/footnotes" class="footnote-ref" id="fnref112" role="doc-noteref" data-footnote-href="#/fn112" onclick=""><sup>112</sup></a>
+<li>Which multiple comparisons adjustment gives the highest power?<a href="#fn112" class="footnote-ref" id="fnref112" role="doc-noteref"><sup>112</sup></a>
 <ol type="a">
 <li>Bonferonni</li>
 <li>Holm</li>
@@ -1804,836 +1367,743 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 <li>Storey (q-values)</li>
 </ol></li>
 </ol>
-<aside></aside></section>
-<section class="slide level2">
+<hr>
 
 
-<div class="footer footer-default">
+</section>
 
-</div>
-</section></section>
-<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>preferably d or e. maybe c on some of them.</p></li>
-<li id="fn2"><p>these are the topics we will be covering. Would be nice if you have heard of them.</p></li>
+<li id="fn1"><p>preferably d or e. maybe c on some of them.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>these are the topics we will be covering. Would be nice if you have heard of them.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><ol start="3" type="a">
 <li>The distribution of the sample average (statistic) converges to a normal distribution</li>
 </ol>
-</li>
+<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn4"><ol start="2" type="a">
 <li>of data as or more extreme than the observed data given that the null hypothesis is true.</li>
 </ol>
-</li>
+<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn5"><ol start="5" type="a">
 <li>we don’t know the true standard deviation parameter</li>
 </ol>
-</li>
+<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn6"><ol type="a">
 <li>the p-value isn’t actually the probability of our data or more extreme if H0 is true.</li>
 </ol>
-</li>
+<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn7"><ol start="3" type="a">
 <li><span class="math inline">\(n_2\)</span></li>
 </ol>
-</li>
+<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn8"><ol start="5" type="a">
 <li><span class="math inline">\(n_2 \cdot \overline{y}_2\)</span></li>
 </ol>
-</li>
+<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn9"><ol start="4" type="a">
 <li>The residuals are normally distributed (which induces a., d., and e.). There is nothing in the technical conditions about the distribution of X (remember, X can be binary!).</li>
 </ol>
-</li>
-<li id="fn10"><p>FALSE. We can always minimize the sums of squares, regardless of whether or not the model is any good.</p></li>
+<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn10"><p>FALSE. We can always minimize the sums of squares, regardless of whether or not the model is any good.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn11"><ol type="a">
 <li>so that the inference is valid (and also for fun). Note that d.&nbsp;so that the confidence level is right is also a correct answer because confidence intervals are all part of the “inference” paradigm.</li>
 </ol>
-</li>
+<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn12"><ol start="4" type="a">
 <li>due to estimation and average</li>
 </ol>
-</li>
+<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn13"><ol start="3" type="a">
 <li>happiness and longer life are correlated</li>
 </ol>
-</li>
+<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn14"><ol start="2" type="a">
 <li>FALSE, there is no reason that the statistic will equal the parameter.</li>
 </ol>
-</li>
+<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn15"><ol start="2" type="a">
 <li>FALSE, there is no reason that the statistic will equal the parameter.</li>
 </ol>
-</li>
+<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn16"><ol start="2" type="a">
 <li>decreases the variability of <span class="math inline">\(b_1\)</span>.</li>
 </ol>
-</li>
+<a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn17"><ol type="a">
 <li>increases the variability of <span class="math inline">\(b_1\)</span>.</li>
 </ol>
-</li>
+<a href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn18"><ol type="a">
 <li>increases the variability of <span class="math inline">\(b_1\)</span>.</li>
 </ol>
-</li>
+<a href="#fnref18" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn19"><ol start="4" type="a">
 <li>so that the technical conditions are met.</li>
 </ol>
-</li>
+<a href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn20"><ol type="a">
 <li>random allocation</li>
 </ol>
-</li>
+<a href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn21"><ol start="3" type="a">
 <li>9 or more</li>
 </ol>
-</li>
+<a href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn22"><ol start="3" type="a">
 <li>5.3 because (15/31)*11 = 5.3</li>
 </ol>
-</li>
+<a href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn23"><ol start="3" type="a">
 <li>Strong evidence that Botox is more effective than the placebo.</li>
 </ol>
-</li>
+<a href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn24"><ol start="3" type="a">
 <li>Close to 50% (the point estimate is 0.6)</li>
 </ol>
-</li>
+<a href="#fnref24" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn25"><ol type="a">
 <li>P(NBA if 6’ tall) (cohort: cannot measure the probability of the explanatory variable given the response)</li>
 </ol>
-</li>
+<a href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn26"><ol start="2" type="a">
 <li>P(6’ tall if in the NBA) (case-control: cannot measure the probability of the response variable given a level of the explanatory variable)</li>
 </ol>
-</li>
+<a href="#fnref26" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn27"><ol start="3" type="a">
 <li>both (cross-classification: can measure all the probabilities)</li>
 </ol>
-</li>
+<a href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn28"><ol type="a">
 <li>case-control (they selected based on people who had died or not)</li>
 </ol>
-</li>
+<a href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn29"><ol start="2" type="a">
 <li>cross-classification (they selected all uses of catheters)</li>
 </ol>
-</li>
+<a href="#fnref29" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn30"><ol type="a">
 <li>the proportion of people in the population in each explanatory category (tbh, we can’t measure b either, but we can measure the proportion of people in each response group, separated by the explanatory variable)</li>
 </ol>
-</li>
+<a href="#fnref30" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn31"><ol start="2" type="a">
 <li>the ratio of two proportions</li>
 </ol>
-</li>
+<a href="#fnref31" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn32"><ol start="4" type="a">
 <li>which variable is called the explanatory does not change the value of the OR</li>
 </ol>
-</li>
+<a href="#fnref32" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn33"><ol type="a">
 <li>Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.</li>
 </ol>
-</li>
+<a href="#fnref33" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn34"><ol start="3" type="a">
 <li>because the <span class="math inline">\(\ln\)</span> transformation makes the sampling distribution almost normal</li>
 </ol>
-</li>
-<li id="fn35"><p>The warm-up solutions and clicker questions are on the main course website. The HW solutions are on Canvas under Files.</p></li>
+<a href="#fnref34" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn35"><p>The warm-up solutions and clicker questions are on the main course website. The HW solutions are on Canvas under Files.<a href="#fnref35" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn36"><ol start="2" type="a">
 <li>0.5</li>
 </ol>
-</li>
+<a href="#fnref36" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn37"><ol start="2" type="a">
 <li><span class="math inline">\(\frac{1}{1+ e^{\beta_0+ \beta_1 x}}\)</span></li>
 </ol>
-</li>
+<a href="#fnref37" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn38"><ol start="3" type="a">
 <li><span class="math inline">\(e^{\beta_0+ \beta_1 x}\)</span></li>
 </ol>
-</li>
+<a href="#fnref38" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn39"><ol start="4" type="a">
 <li><span class="math inline">\(e^{-(\beta_0+ \beta_1 x)}\)</span></li>
 </ol>
-</li>
+<a href="#fnref39" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn40"><ol start="4" type="a">
 <li>a non-linear function of X (which depends on X )</li>
 </ol>
-</li>
+<a href="#fnref40" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn41"><ol start="4" type="a">
 <li>log-linear</li>
 </ol>
-</li>
+<a href="#fnref41" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn42"><ol start="3" type="a">
 <li>0.25</li>
 </ol>
-</li>
+<a href="#fnref42" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn43"><ol start="3" type="a">
 <li>Bernoulli Y given X</li>
 </ol>
-</li>
+<a href="#fnref43" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn44"><ol start="5" type="a">
 <li><span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span></li>
 </ol>
-</li>
+<a href="#fnref44" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn45"><ol start="3" type="a">
 <li>Find the parameters which make the data most likely under the model.</li>
 </ol>
-</li>
+<a href="#fnref45" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn46"><ol start="5" type="a">
 <li>Some of the above (a. It gives an principled approach for estimating the parameters. and b. The estimates are asymptotically normally distributed.)</li>
 </ol>
-</li>
+<a href="#fnref46" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn47"><ol start="4" type="a">
 <li><span class="math inline">\(L(b_0,b_1) \geq L(b_0,\beta_1=0)\)</span> always</li>
 </ol>
-</li>
+<a href="#fnref47" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn48"><ol start="3" type="a">
 <li>4 parameter estimates: <span class="math inline">\(b_0, b_1, b_2, b_3\)</span></li>
 </ol>
-</li>
+<a href="#fnref48" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn49"><ol start="4" type="a">
 <li>7 parameter estimates: <span class="math inline">\(b_0, b_1, b_2, b_3, b_4, b_5, b_6\)</span></li>
 </ol>
-</li>
+<a href="#fnref49" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn50"><ol start="2" type="a">
 <li>3 (7 - 4 = 3)</li>
 </ol>
-</li>
+<a href="#fnref50" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn51"><ol start="5" type="a">
 <li>34</li>
 </ol>
-</li>
+<a href="#fnref51" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn52"><ol start="4" type="a">
 <li>33 (34 - 1 = 33)</li>
 </ol>
-</li>
+<a href="#fnref52" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn53"><ol start="3" type="a">
 <li>2 (4 - 2 = 2)</li>
 </ol>
-</li>
+<a href="#fnref53" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn54"><ol start="4" type="a">
 <li>the relationship between X1 and P(success) changes for differing values of X2.</li>
 </ol>
-</li>
+<a href="#fnref54" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn55"><ol type="a">
 <li>TRUE</li>
 </ol>
-</li>
+<a href="#fnref55" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn56"><ol start="3" type="a">
 <li>avoid talking about main effects on their own</li>
 </ol>
-</li>
+<a href="#fnref56" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn57"><ol start="3" type="a">
 <li>The interaction between variables 1 and 2. (probably… although there are many schools of thought on how to build models)</li>
 </ol>
-</li>
+<a href="#fnref57" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn58"><ol start="3" type="a">
 <li>3 (1 * (4-1) = 3)</li>
 </ol>
-</li>
+<a href="#fnref58" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn59"><ol start="2" type="a">
 <li>The model predicts test data well</li>
 </ol>
-</li>
+<a href="#fnref59" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn60"><ol start="2" type="a">
 <li>on the last model only.</li>
 </ol>
-</li>
+<a href="#fnref60" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn61"><ol start="3" type="a">
 <li>overfitting</li>
 </ol>
-</li>
+<a href="#fnref61" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn62"><ol type="a">
 <li>underfitting</li>
 </ol>
-</li>
+<a href="#fnref62" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn63"><ol start="2" type="a">
 <li>FALSE. CV reduces the effect of overfitting, but at the end of the day, you are still building a model on the dataset at hand, and it is possible that you will overfit that dataet.</li>
 </ol>
-</li>
+<a href="#fnref63" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn64"><ol start="2" type="a">
 <li>N1 = 10, N2 = 180, N3 = 20</li>
 </ol>
-</li>
+<a href="#fnref64" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn65"><ol start="3" type="a">
 <li>My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min CV error.)</li>
 </ol>
-</li>
+<a href="#fnref65" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn66"><ol start="3" type="a">
 <li>blue because it is farther from the line y=x</li>
 </ol>
-</li>
+<a href="#fnref66" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn67"><ol start="2" type="a">
 <li>False Pos Rate which we want low</li>
 </ol>
-</li>
+<a href="#fnref67" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn68"><ol type="a">
 <li>A</li>
 </ol>
-</li>
+<a href="#fnref68" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn69"><ol start="2" type="a">
 <li>B</li>
 </ol>
-</li>
+<a href="#fnref69" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn70"><ol start="5" type="a">
 <li>C and D</li>
 </ol>
-</li>
+<a href="#fnref70" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn71"><ol type="a">
 <li>TRUE</li>
 </ol>
-</li>
+<a href="#fnref71" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn72"><ol type="a">
 <li>TRUE</li>
 </ol>
-</li>
+<a href="#fnref72" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn73"><ol start="2" type="a">
 <li>FALSE</li>
 </ol>
-</li>
+<a href="#fnref73" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn74"><ol start="2" type="a">
 <li>FALSE</li>
 </ol>
-</li>
+<a href="#fnref74" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn75"><ol start="2" type="a">
 <li>FALSE</li>
 </ol>
-</li>
+<a href="#fnref75" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn76"><ol type="a">
 <li>TRUE (the coefficient values are forced to be zero)</li>
 </ol>
-</li>
+<a href="#fnref76" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn77"><ol start="2" type="a">
 <li>FALSE (the null model can exist within the full model because there is flexibility in the values of the coefficients)</li>
 </ol>
-</li>
+<a href="#fnref77" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn78"><ol type="a">
 <li>There are many ways to find a good model. Also, c.&nbsp;there is no end to the fun.</li>
 </ol>
-</li>
+<a href="#fnref78" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn79"><ol type="a">
 <li>positive</li>
 </ol>
-</li>
+<a href="#fnref79" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn80"><ol type="a">
 <li>positive</li>
 </ol>
-</li>
+<a href="#fnref80" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn81"><ol type="a">
 <li>positive</li>
 </ol>
-</li>
+<a href="#fnref81" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn82"><ol start="2" type="a">
 <li>negative</li>
 </ol>
-</li>
+<a href="#fnref82" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn83"><ol type="a">
 <li>underestimate the parameter</li>
 </ol>
-</li>
+<a href="#fnref83" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn84"><ol start="2" type="a">
 <li>there is no censoring at time <span class="math inline">\(t_i\)</span></li>
 </ol>
-</li>
+<a href="#fnref84" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn85"><ol type="a">
 <li>there are no deaths at time <span class="math inline">\(t_i\)</span></li>
 </ol>
-</li>
+<a href="#fnref85" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn86"><ol type="a">
 <li>~0.65</li>
 </ol>
-</li>
+<a href="#fnref86" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn87"><ol start="3" type="a">
 <li>can’t tell because they cross (and also because d.&nbsp;the p-value is big)</li>
 </ol>
-</li>
+<a href="#fnref87" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn88"><ol start="3" type="a">
 <li>Because the row and column totals are fixed.</li>
 </ol>
-</li>
+<a href="#fnref88" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn89"><ol start="2" type="a">
 <li>log rank is more likely to reject <span class="math inline">\(H_0\)</span> when <span class="math inline">\(H_0\)</span> is false.</li>
 </ol>
-</li>
+<a href="#fnref89" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn90"><ol start="2" type="a">
 <li>the instantaneous rate of the event</li>
 </ol>
-</li>
+<a href="#fnref90" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn91"><ol start="2" type="a">
 <li>the last observation was censored. The reason the hazard is zero is because the width of the time interval is unknown, that is we don’t know when the last event time is.</li>
 </ol>
-</li>
+<a href="#fnref91" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn92"><ol start="3" type="a">
 <li>Are assumed to have the same survival chances as uncensored observations</li>
 </ol>
-</li>
+<a href="#fnref92" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn93"><ol start="4" type="a">
 <li>hazard ratio</li>
 </ol>
-</li>
+<a href="#fnref93" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn94"><ol start="4" type="a">
 <li>relative risk</li>
 </ol>
-</li>
+<a href="#fnref94" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn95"><ol start="4" type="a">
 <li>negative</li>
 </ol>
-</li>
+<a href="#fnref95" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn96"><ol start="5" type="a">
 <li>zero</li>
 </ol>
-</li>
+<a href="#fnref96" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn97"><ol type="a">
 <li>the ln ratio of the hazard curves is not linear with respect to BP</li>
 </ol>
-</li>
+<a href="#fnref97" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn98"><ol type="a">
 <li>Is used to analyze survival data when individuals in the study are followed for varying lengths of time. <strong>and</strong> c.&nbsp;Assumes that the relative hazard for a particular variable is always constant</li>
 </ol>
-</li>
+<a href="#fnref98" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn99"><ol start="4" type="a">
 <li>the hazard function changes as a function of weight which is also changing over time</li>
 </ol>
-</li>
+<a href="#fnref99" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn100"><ol start="2" type="a">
 <li>the treatment produces short term benefits only</li>
 </ol>
-</li>
+<a href="#fnref100" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn101"><ol start="2" type="a">
 <li>variable selection</li>
 </ol>
-</li>
+<a href="#fnref101" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn102"><ol start="2" type="a">
 <li>FALSE, we’d expect 5% of all null hypotheses to be rejected</li>
 </ol>
-</li>
+<a href="#fnref102" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn103"><ol start="4" type="a">
 <li>1 – P(type II error)</li>
 </ol>
-</li>
+<a href="#fnref103" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn104"><ol start="3" type="a">
 <li>P(data | <span class="math inline">\(H_0\)</span> is true)</li>
 </ol>
-</li>
+<a href="#fnref104" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn105"><ol type="a">
 <li>Type I errors</li>
 </ol>
-</li>
+<a href="#fnref105" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn106"><ol type="a">
 <li>Uniformly (equal prob) on 0 to 1</li>
 </ol>
-</li>
+<a href="#fnref106" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn107"><ol start="2" type="a">
 <li>(# p-values &gt; 0.5) * 2</li>
 </ol>
-</li>
+<a href="#fnref107" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn108"><ol start="3" type="a">
 <li>Round it to 1</li>
 </ol>
-</li>
+<a href="#fnref108" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn109"><ol start="2" type="a">
 <li>Assign the value of the m^th adjusted p-value to the (m+1)^th adjusted p-value</li>
 </ol>
-</li>
+<a href="#fnref109" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn110"><ol start="5" type="a">
 <li>the number of null discoveries out of the total discoveries</li>
 </ol>
-</li>
+<a href="#fnref110" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn111"><ol start="5" type="a">
 <li>all of the above</li>
 </ol>
-</li>
+<a href="#fnref111" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn112"><ol start="4" type="a">
 <li>Storey (q-values)</li>
 </ol>
-</li>
+<a href="#fnref112" class="footnote-back" role="doc-backlink">↩︎</a></li>
 </ol>
-</section>
-    </div>
-  </div>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section></div></main> <!-- /main -->
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="site_libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
 
-  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="site_libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
 
-  <script>
-
-      // Full list of configuration options available at:
-      // https://revealjs.com/config/
-      Reveal.initialize({
-'controlsAuto': true,
-'previewLinksAuto': false,
-'smaller': false,
-'pdfSeparateFragments': false,
-'autoAnimateEasing': "ease",
-'autoAnimateDuration': 1,
-'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
- 
-        // Display controls in the bottom right corner
-        controls: false,
-
-        // Help the user learn the controls by providing hints, for example by
-        // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: false,
-
-        // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
-
-        // Visibility rule for backwards navigation arrows; "faded", "hidden"
-        // or "visible"
-        controlsBackArrows: 'faded',
-
-        // Display a presentation progress bar
-        progress: true,
-
-        // Display the page number of the current slide
-        slideNumber: false,
-
-        // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
-
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
-
-        // Start with 1 for the hash rather than 0
-        hashOneBasedIndex: false,
-
-        // Flags if we should monitor the hash and change slides accordingly
-        respondToHashChanges: true,
-
-        // Push each slide change to the browser history
-        history: true,
-
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-
-        // Enable the slide overview mode
-        overview: true,
-
-        // Disables the default reveal.js slide layout (scaling and centering)
-        // so that you can use custom CSS layout
-        disableLayout: false,
-
-        // Vertical centering of slides
-        center: false,
-
-        // Enables touch navigation on devices with touch input
-        touch: true,
-
-        // Loop the presentation
-        loop: false,
-
-        // Change the presentation direction to be RTL
-        rtl: false,
-
-        // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
-
-        // Randomizes the order of slides each time the presentation loads
-        shuffle: false,
-
-        // Turns fragments on and off globally
-        fragments: true,
-
-        // Flags whether to include the current fragment in the URL,
-        // so that reloading brings you to the same fragment position
-        fragmentInURL: false,
-
-        // Flags if the presentation is running in an embedded mode,
-        // i.e. contained within a limited portion of the screen
-        embedded: false,
-
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-
-        // Flags if it should be possible to pause the presentation (blackout)
-        pause: true,
-
-        // Flags if speaker notes should be visible to all viewers
-        showNotes: false,
-
-        // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: null,
-
-        // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
-
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
-
-        // Use this method for navigation when auto-sliding
-        autoSlideMethod: null,
-
-        // Specify the average time in seconds that you think you will spend
-        // presenting each slide. This is used to show a pacing timer in the
-        // speaker view
-        defaultTiming: null,
-
-        // Enable slide navigation via mouse wheel
-        mouseWheel: false,
-
-        // The display mode that will be used to show slides
-        display: 'block',
-
-        // Hide cursor if inactive
-        hideInactiveCursor: true,
-
-        // Time before the cursor is hidden (in ms)
-        hideCursorTime: 5000,
-
-        // Opens links in an iframe preview overlay
-        previewLinks: false,
-
-        // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
-
-        // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
-
-        // Transition style for full page slide backgrounds
-        // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
-
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
-
-        // Number of slides away from the current that are visible on mobile
-        // devices. It is advisable to set this to a lower number than
-        // viewDistance in order to save resources.
-        mobileViewDistance: 2,
-
-        // The "normal" size of the presentation, aspect ratio will be preserved
-        // when the presentation is scaled to fit different resolutions. Can be
-        // specified using percentage units.
-        width: 1050,
-
-        height: 700,
-
-        // Factor of the display size that should remain empty around the content
-        margin: 0.1,
-
-        math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
-        // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
-
-          RevealMath,
-          RevealNotes,
-          RevealSearch,
-          RevealZoom
-        ]
-      });
-    </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
         }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
 
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
 
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
+  })();
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
           }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
-    <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        target: function(trigger) {
-          return trigger.previousElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      });
-      function tippyHover(el, contentFn) {
-        const config = {
-          allowHTML: true,
-          content: contentFn,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'quarto-reveal',
-          placement: 'bottom-start'
-        };
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          return note.innerHTML;
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
+          selectedAnnoteEl = annoteEl;
         }
       };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
-          });
-        }
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
       }
-    });
-    </script>
-    
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><a href="https://hardin47.netlify.app/research/"></a> <a href="https://hardin47.netlify.app/resume.pdf" target="_blank"><i class="fa-solid fa-bookmark"></i></a> <a href="mailto:jo.hardin@pomona.edu" target="_blank"><i class="fa-solid fa-at"></i></a> <a href="https://scholar.google.com/citations?user=c5Y77poAAAAJ&amp;hl=en" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <a href="https://www.researchgate.net/scientific-contributions/Johanna-Hardin-9764530" target="_blank"><i class="fa-brands fa-researchgate"></i></a><br>
+<a href="https://github.com/hardin47" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <br> © Jo Hardin, 2023 -- <a href="mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
+Math 150 -- Methods in Biostatistics -- Pomona College, Claremont, CA <br>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
 
 </body></html>

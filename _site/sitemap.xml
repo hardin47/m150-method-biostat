@@ -2,82 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://m150-method-biostat.netlify.app/index.html</loc>
-    <lastmod>2023-04-20T12:45:55.353Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/syllabus.html</loc>
-    <lastmod>2023-04-18T03:08:57.369Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/clicker.html</loc>
-    <lastmod>2023-04-14T19:48:39.472Z</lastmod>
+    <lastmod>2023-11-13T20:11:36.392Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/clicker_study.html</loc>
-    <lastmod>2023-04-21T16:03:25.153Z</lastmod>
+    <lastmod>2023-11-13T20:11:33.478Z</lastmod>
   </url>
   <url>
-    <loc>https://m150-method-biostat.netlify.app/clicker_slides.html</loc>
-    <lastmod>2023-04-21T16:04:21.787Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.html</loc>
-    <lastmod>2023-01-22T22:28:49.704Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.html</loc>
-    <lastmod>2023-01-30T03:21:34.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.html</loc>
-    <lastmod>2023-02-01T19:50:16.232Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/HW4_m150_s23.html</loc>
-    <lastmod>2023-02-15T13:33:00.969Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/2023-02-21-tidymodels.html</loc>
-    <lastmod>2023-02-28T03:52:11.485Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.html</loc>
-    <lastmod>2023-02-25T15:42:57.814Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/2023-02-27-ROC-onestep.html</loc>
-    <lastmod>2023-02-28T03:38:38.673Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/2023-02-28-ROC-onestep.html</loc>
-    <lastmod>2023-02-28T03:53:43.185Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/HW7_m150_s23.html</loc>
-    <lastmod>2023-03-07T00:44:25.589Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/HW8_m150_s23.html</loc>
-    <lastmod>2023-04-03T20:58:01.061Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/project.html</loc>
-    <lastmod>2023-04-18T03:23:08.221Z</lastmod>
-  </url>
-  <url>
-    <loc>https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.html</loc>
-    <lastmod>2023-04-03T20:58:08.400Z</lastmod>
+    <loc>https://m150-method-biostat.netlify.app/syllabus.html</loc>
+    <lastmod>2023-11-13T20:11:29.486Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/handout/HW10_m150_s23.html</loc>
-    <lastmod>2023-04-13T16:01:57.413Z</lastmod>
+    <lastmod>2023-11-13T20:11:28.340Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.html</loc>
-    <lastmod>2023-04-14T19:48:42.376Z</lastmod>
+    <lastmod>2023-11-13T20:11:25.883Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.html</loc>
+    <lastmod>2023-11-13T20:11:24.001Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW7_m150_s23.html</loc>
+    <lastmod>2023-11-13T20:11:21.872Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.html</loc>
+    <lastmod>2023-11-13T20:11:20.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.html</loc>
+    <lastmod>2023-11-13T20:11:18.542Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/variables.html</loc>
+    <lastmod>2023-11-13T20:11:17.069Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/clicker_slides.html</loc>
+    <lastmod>2023-11-13T20:11:10.244Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/clicker.html</loc>
+    <lastmod>2023-11-13T20:11:05.616Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/notes.html</loc>
-    <lastmod>2023-04-18T03:09:19.902Z</lastmod>
+    <lastmod>2023-11-13T20:11:06.007Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW8_m150_s23.html</loc>
+    <lastmod>2023-11-13T20:11:11.052Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.html</loc>
+    <lastmod>2023-11-13T20:11:17.797Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW4_m150_s23.html</loc>
+    <lastmod>2023-11-13T20:11:19.422Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.html</loc>
+    <lastmod>2023-11-13T20:11:21.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.html</loc>
+    <lastmod>2023-11-13T20:11:22.644Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/2023-02-28-ROC-onestep.html</loc>
+    <lastmod>2023-11-13T20:11:25.118Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/2023-02-21-tidymodels.html</loc>
+    <lastmod>2023-11-13T20:11:27.559Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/about.html</loc>
+    <lastmod>2023-11-13T20:11:28.720Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/project.html</loc>
+    <lastmod>2023-11-13T20:11:30.368Z</lastmod>
   </url>
 </urlset>
