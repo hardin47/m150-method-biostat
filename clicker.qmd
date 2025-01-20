@@ -1,5 +1,4 @@
----
----
+
 <!-- the two formats are html and revealjs -->
 
 # Clicker Q
@@ -306,7 +305,7 @@ p-value = probability of the observed data or more extreme given the null hypoth
     
 ---
 
-See Canvas front page for **anonymous** survey / feedback for the class.  Also, if you are looking for people to work with, you could contact me directly (non-anonymously!) so that I can connect you to people.
+See Canvas front page for **anonymous** survey / feedback for the class.  Also, if you are looking for people to work with, please contact me directly (non-anonymously!) so that I can connect you to people.
 
 ---
     
@@ -342,7 +341,7 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 From the NYT, March 21, 2023, https://www.nytimes.com/2023/03/21/sports/basketball/tall-basketball-march-madness.html
 
-> The average W.N.B.A. player, at a shade taller than 6 feet, towers over the average American woman (5 feet 3.5 inches). American men who are between 6 feet and 6-2 — significantly taller than the 5-9 average — have about a five in a million chance of making the N.B.A., according to "The Sports Gene," a 2013 book by David Epstein about the science of athletic performance. But if you hit the genetic lottery and happen to be 7 feet tall, your chances of landing in the N.B.A. are roughly one in six. (There are 38 players on active rosters who are 7 feet or taller, according to N.B.A. Advanced Stats; the average height of an N.B.A. player is 6 feet 6.5 inches.)
+> American men who are between 6 feet and 6-2 — significantly taller than the 5-9 average — have about a five in a million chance of making the N.B.A., according to "The Sports Gene," a 2013 book by David Epstein about the science of athletic performance. But if you hit the genetic lottery and happen to be 7 feet tall, your chances of landing in the N.B.A. are roughly one in six. (There are 38 players on active rosters who are 7 feet or taller, according to N.B.A. Advanced Stats; the average height of an N.B.A. player is 6 feet 6.5 inches.)
 
 
 https://davidepstein.com/david-epstein-the-sports-gene/

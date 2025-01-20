@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://m150-method-biostat.netlify.app/index.html</loc>
-    <lastmod>2023-11-13T20:11:36.392Z</lastmod>
+    <lastmod>2025-01-20T03:04:29.336Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/clicker_study.html</loc>
-    <lastmod>2023-11-13T20:11:33.478Z</lastmod>
+    <lastmod>2025-01-14T22:52:08.103Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/syllabus.html</loc>
-    <lastmod>2023-11-13T20:11:29.486Z</lastmod>
+    <lastmod>2025-01-20T03:07:52.397Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/handout/HW10_m150_s23.html</loc>
@@ -38,15 +38,15 @@
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/handout/variables.html</loc>
-    <lastmod>2023-11-13T20:11:17.069Z</lastmod>
+    <lastmod>2025-01-20T01:24:51.091Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/clicker_slides.html</loc>
-    <lastmod>2023-11-13T20:11:10.244Z</lastmod>
+    <lastmod>2025-01-14T22:52:40.698Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/clicker.html</loc>
-    <lastmod>2023-11-13T20:11:05.616Z</lastmod>
+    <lastmod>2025-01-14T22:48:38.137Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/notes.html</loc>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/handout/2023-02-21-tidymodels.html</loc>
-    <lastmod>2023-11-13T20:11:27.559Z</lastmod>
+    <lastmod>2025-01-19T22:22:31.667Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/about.html</loc>
@@ -86,6 +86,14 @@
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/project.html</loc>
-    <lastmod>2023-11-13T20:11:30.368Z</lastmod>
+    <lastmod>2025-01-20T03:02:53.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/LICENSE.html</loc>
+    <lastmod>2024-08-03T17:56:27.215Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/github.html</loc>
+    <lastmod>2025-01-18T00:06:04.734Z</lastmod>
   </url>
 </urlset>

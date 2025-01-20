@@ -38,19 +38,19 @@ Please use the above dataset in your analysis.  However, feel free to look at th
 * The goal of the semester project is to create a Cox Proportional Hazard model which uses explanatory variables to model hazard of "event".
 
 ### Due Dates
-* **Tuesday, April 18**. Post to Canvas both the R Markdown file and the corresponding pdf document:  
+* **Wednesday, April 23**. Post to Canvas both the Quarto file and the corresponding pdf document:  
    * Include the names of the individuals in the group.
    * Some sort of EDA (exploratory data analysis).  Do not print the data, but do something that indicates you've uploaded the data and know what some of the variables are.  You might have some summary statistics or a graph.  The idea here is to explore the variables, not to run survival curves.  What can you learn about the many many variables?  How do they relate to one another?  What about all the missingness? This is *not* an extensive assignment.  [Again, the question here is not about the response variable, it's about all the predictor variables.  Learn about the dataset!]
    * Outline the "something new" part of the assignment.  You should indicate who is doing what, what resources each of you will use to learn about your new topic, and a few sentences on what the topic is or how it relates to survival analysis / the analysis at hand.  Additionally, for each "new" thing, provide 1-2 sentences describing what will be **challenging** about learning something new.
 
-* (Optional) **Monday, May 1**. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 1st. (If you are a graduating senior who would like feedback, please provide me a draft by **Friday, April 28th**.)
+* (Optional) **Monday, May 5**. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 1st. (If you are a graduating senior who would like feedback, please provide me a draft by **Friday, May 2nd**.)
 
-* **Tuesday, May 2**. Last day of class, each person / group will present their visualization, and there will be secret ballot voting for the best visualization of the data / model.
+* **Wednesday, May 7**. Last day of class, each person / group will present their visualization, and there will be secret ballot voting for the best visualization of the data / model.
 
-* **Tuesday, May 9**.  Complete assignment is due (turn in **both** the Rmd and knitted pdf to Canvas). (If you are a graduating senior, the final assignment is due by **Thursday, May 4**.)
+* **Friday, May 16**.  Complete assignment is due (turn in **both** the qmd and knitted pdf to Canvas). (If you are a graduating senior, the final assignment is due by **noon on Thursday, May 8**.)
 
 ## Assignment
-The analysis should be done in a complete R Markdown file and posted to your Canvas dropbox.   The final report should address the following tasks below but should not enumerate the tasks.
+The analysis should be done in a complete Quarto file and posted to your Canvas dropbox.   The final report should address the following tasks below but should not enumerate the tasks.
 
 
 1. Exploratory data analysis.  Graphical and numerical summaries of the data (both explanatory and response variables).  Do *not* attach every single graph you try.  Instead, choose only a few images that give the reader a sense of the variables and their relationships.
@@ -91,8 +91,8 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 ```
 
 ## R thoughts
-* Use R Markdown to create a reproducible analysis.  Anyone should be able to run your analysis using only the .Rmd file.
-* Turn in both .Rmd and .pdf files for your final analysis.
+* Use Quarto to create a reproducible analysis.  Anyone should be able to run your analysis using only the .qmd file.
+* Turn in both .qmd and .pdf files for your final analysis.
 * If you are working in pairs, the project is extended in two ways.  1.  You must *both* be able to work on the files.  Ideally, you will share your work via GitHub or other software which tracks changes and coordinates work.  2. You must do *two* new items (one each).
 * Note that the event of interest is "visit to primary care physician."
 * Be as creative as possible trying to think about how you might like to graphically display the data.  If you come up with a cool idea for a graph but don't know how to implement it, **please let me know, and I will write the code for you!!**

@@ -1,12 +1,14 @@
 ---
 title: "syllabus"
-format: html
+format: 
+  html:
+    embed-resources: true
 ---
 
 # Methods in Biostatistics
-## Math 150, Spring 2023
+## Math 150, Spring 2025
 
-Class: Tuesdays & Thursdays, 1:15-2:30pm
+Class: Mondays & Wednesday, 1:15-2:30pm
 
 Jo Hardin  
 2351 Estella  
@@ -15,17 +17,14 @@ jo.hardin@pomona.edu
 
 #### Office Hours (Estella 2351)
 
-Mondays 1:30-3pm  
-Tuesdays 2:30-3:30pm  
-Wednesday 9-11am  
-Thursday 3-4pm  
-or by appointment 
+Monday: 2:30-4:30pm  
+Tuesday: 9-11am   
+Thursday: 1-3pm 
 
-##### Mentors: Chris Meng & Guy Thampakkul
+##### Mentor: Hubery Hu
 
-Monday 6-8pm  
-Wednesday 8-10pm  
-Estella 2131  
+Tuesday 6-8pm   
+Estella 2113  
 
 
 ```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "p-value as lead singer of a band who doesn't recognize the value of the other band members (like the effect size, the graphics and the context).", preview = TRUE, echo = FALSE}
@@ -73,15 +72,18 @@ I (like many people) am still in the process of learning about diverse perspecti
 ## Technical Details
 
 ##### Text: 
-  **Practicing Statistics**, by Kuiper & Sklar
+  **Practicing Statistics**, by Kuiper & Sklar -- see Canvas for information on how to access the textbook and the relevant datasets (for HW assignments).
 
 
 :::{.callout-tip icon=false}
-## Exam dates
+## Dates
 
-Exam 1 – Thursday, March 9th  
-Exam 2 – Thursday, April 27th  
-Final Project due – Tuesday, May 9th, 5pm 
+Quizzes on: Feb 5, Feb 19, Mar 5, April 2, April 16, April 30
+
+Project:  
+EDA due April 23  
+Presentations on May 7  
+Final project due May 16
 :::
 
 #### R links:
@@ -98,7 +100,6 @@ Final Project due – Tuesday, May 9th, 5pm
 * Incredibly helpful <a href="https://www.rstudio.com/resources/cheatsheets/" target="_blank">cheatsheets</a> from RStudio.
    * <a href="https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf" target="_blank">data wrangling</a>
    * <a href="https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf" target="_blank">ggplot2</a>
-   * <a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf" target="_blank">R Markdown</a>
    * <a href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf" target="_blank">RStudio IDE</a>
 
 #### Using R (through the RStudio IDE)
@@ -109,7 +110,7 @@ Non-Pomona students need to get Pomona login information.)
 
 Alternatively, feel free to download R onto your own computer.
 R is freely available at <a href = "http://www.r-project.org/" target = "_blank">http://www.r-project.org/</a> and is already installed on college computers.
-Additionally, you are required to install RStudio and turn in all R assignments using RMarkdown. <a href = "http://rstudio.org/" target = "_blank">http://rstudio.org/</a>.
+Additionally, you are required to install RStudio and turn in all R assignments using Quarto. <a href = "http://rstudio.org/" target = "_blank">http://rstudio.org/</a>.
 (You can use the LaTeX compiler at:  <a href = "https://yihui.name/tinytex/" target = "_blank">https://yihui.name/tinytex/</a>)
 
 

@@ -29,6 +29,8 @@ website:
         href: clicker_study.qmd
       - text: "Final Project"
         href: project.qmd
+      - text: "GitHub"
+        href: github.qmd
     logo: images/st47s.png
     logo-href: https://m150-method-biostat.netlify.app/
   page-footer:
@@ -42,7 +44,7 @@ website:
       <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target = "_blank"><i class="fa-brands fa-linkedin-in"></i></a>
     center:
       - text: |
-          <br> © Jo Hardin, 2023 -- <a href = "mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
+          <br> © Jo Hardin, 2025 -- <a href = "mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
           Math 150 -- Methods in Biostatistics -- Pomona College, Claremont, CA <br>
 license: "CC BY"
 format:

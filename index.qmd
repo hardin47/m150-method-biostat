@@ -1,7 +1,7 @@
 ---
 title: "Schedule"
 description: |
-  Schedule for Math 150, Methods in Biostatistics, Spring 2023
+  Schedule for Math 150, Methods in Biostatistics, Spring 2025
 execute: 
   message: false
   warning: false
@@ -16,139 +16,143 @@ library(knitr)
 
 Here's your roadmap for the semester! Each week, follow the general process outlined below:
 
--   Enjoy the notes / text <i class="fas fa-book-open"></i>
+-   Enjoy the <i class="fas fa-book-open"></i> notes / text 
 
--   Attend class, review the <i class="fas fa-pencil-alt"></i>warm-up and solutions if you have any questions after completing it during class.
+-   Attend class, review the <i class="fas fa-pencil-alt"></i> warm-up and solutions if you have any questions after completing it during class.
+Read the weekly <i class="fas fa-newspaper"></i> article before class every Monday.
 
--   Complete the HW assignment (<i class="fa-solid fa-file-pdf"></i> pdf & <i class="fa-brands fa-r-project"></i> Rmd linked below), <i class="fa-solid fa-paper-plane"></i> submit the assignment via Gradescope accessed on the course Canvas site.  <b>HW is due weekly on Wednesday at 11:59pm.</b>
+-   Complete the HW assignment (<i class="fa-solid fa-file-pdf"></i> pdf & qmd linked below), <i class="fa-solid fa-paper-plane"></i> submit the assignment via <i class="fa-brands fa-gradescope"></i> Gradescope from <i class="fa-brands fa-github"></i> GitHub accessed on the course Canvas site.  <b>HW is due weekly on Tuesday at 11:59pm.</b>
 
--   Discuss the reflection questions <i class="fas fa-lightbulb" target="_blank"></i> and ethics considerations <i class="fas fa-balance-scale"></i> (see the <i class="fas fa-book-open"></i> class notes) with your classmates, mentor, and professor.
+-   Homework assignments are found at the <a href = "https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank"> <i class="fa-brands fa-github"></i> GitHub course organization</a>.  Due dates are provided on each assignment (roughly every other week).  See the <a href = "https://m150-method-biostat.netlify.app/github">course GitHub page</a> for more information on how to find, complete, and submit assignments.
+
+- There will be six in class quizzes.
+
+-   Discuss the <i class="fas fa-lightbulb" target="_blank"></i> reflection questions and <i class="fas fa-balance-scale"></i> ethics considerations (see the <i class="fas fa-book-open"></i> class notes) with your classmates, mentor, and professor.
 
 -   The textbook is **Practicing Statistics**, by Kuiper and Sklar.
 
 
-```{r echo = FALSE}
+```{r}
+#| echo: false
+
 schedule <- tribble(
-  ~`date`, ~agenda, ~readings, ~homework, ~`article (Tues)`, ~`warm-ups`,
-  "Week 1 <br> 1.17.23", 
+  ~`date`, ~agenda, ~readings, ~homework, ~`article (Mon)`, ~`worksheets`,
+  "Week 1 <br> 1.22.25", 
   '• t-tests + <br>• SLR',
   'Kuiper & Sklar: 2 <br> <a href="http://st47s.com/Math150/Notes/intro.html#intro" target = "_blank"><i class="fas fa-book-open"></i> introduction</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#ttest" target = "_blank"><i class="fas fa-book-open"></i> t-test</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#tslr" target = "_blank"><i class="fas fa-book-open"></i> t-test as SLR</a>', 
-  '',
-  '<i class="fas fa-newspaper"></i> none <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/benn.html" target = "_blank">Emma Benn</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu1_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 1</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu2_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 2</a>',
-  
-"Week 2 <br> 1.24.23", 
+  ' ',
+  '<a href = "https://hardin47.github.io/CURV/scholars/benn.html" target = "_blank">Emma Benn</a>',
+  '<a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_s25_DSproj.pdf" target = "_blank">{{< fa pencil >}} WS 1 - DS project</a> <br> <a href="https://ds002r-fds.netlify.app/handout/ws2_ds2_s25_R.pdf" target = "_blank">{{< fa pencil >}} WS 2 - R syntax</a>',
+
+"Week 2 <br> 1.27.25", 
   '• SLR <br> • contingency analysis',
   'Kuiper & Sklar: 2 & 6 <br> <a href="http://st47s.com/Math150/Notes/SLR.html#SLR" target = "_blank"><i class="fas fa-book-open"></i> SLR</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#fisher" target = "_blank"><i class="fas fa-book-open"></i> Fisher&#39;s Exact Test</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#catest" target = "_blank"><i class="fas fa-book-open"></i> categorical analysis</a>', 
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW1 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW1_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW1 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW1 turn-in</a>',
-  '<a href = "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962" target = "_blank">A/B testing at Netflix</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/irrizarry.html" target = "_blank">Rafael Irizarry</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu3_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 3</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu4_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 4</a>',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 1</a> - due 1.28.25',
+  '<a href = "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962" target = "_blank"><i class="fas fa-newspaper"></i> A/B testing at Netflix</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/irrizarry.html" target = "_blank">Rafael Irizarry</a>',
+  ' ',
 
-"Week 3 <br> 1.31.23",   
+"Week 3 <br> 2.3.25",   
   '• contingency analysis',
   'Kuiper & Sklar: 6 <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#studies" target = "_blank"><i class="fas fa-book-open"></i> types of studies</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#rr" target = "_blank"><i class="fas fa-book-open"></i> RR and CI</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#or" target = "_blank"><i class="fas fa-book-open"></i> OR and CI</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW2 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW2_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW2 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW2 turn-in</a>',
-  '<a href = "https://www.nytimes.com/2020/12/13/learning/what-does-95-effective-mean-teaching-the-math-of-vaccine-efficacy.html" target = "_blank">what is efficacy?</a> <br> <a href = "https://www.nytimes.com/2020/11/18/health/pfizer-covid-vaccine.html" target = "_blank">efficacy</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/small-rodriguez.html" target = "_blank">Desi Small-Rodriguez</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu5_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 5</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu6_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 6</a>',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 2</a> - due 2.4.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 1 on 2.5.25',
+  '<a href = "https://www.nytimes.com/2020/12/13/learning/what-does-95-effective-mean-teaching-the-math-of-vaccine-efficacy.html" target = "_blank"><i class="fas fa-newspaper"></i> what is efficacy?</a> <br> <a href = "https://www.nytimes.com/2020/11/18/health/pfizer-covid-vaccine.html" target = "_blank"><i class="fas fa-newspaper"></i> efficacy</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/small-rodriguez.html" target = "_blank">Desi Small-Rodriguez</a>',
+  ' ',
   
-"Week 4 <br> 2.7.23", 
+"Week 4 <br> 2.10.25", 
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logmodel" target = "_blank"><i class="fas fa-book-open"></i> logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logMLE" target = "_blank"><i class="fas fa-book-open"></i> MLE</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW3 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW3_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW3 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW3 turn-in</a>',
-  '<a href = "https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target = "_blank">Obesity in Children Plummets</a> <br> <a href = "https://jamanetwork.com/journals/jama/fullarticle/1832542" target = "_blank"> JAMA article here (see Table 6)</a> <br> <a href = "https://www.nytimes.com/2020/04/17/parenting/growth-chart-accuracy.html" target = "_blank"> growth curves</a> <br><br> <a href = "https://hardin47.github.io/CURV/scholars/blackwell.html" target = "_blank">David Blackwell</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu7_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 7</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu8_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 8</a>',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 3</a> - due 2.11.25 ',
+  '<a href = "https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target = "_blank"><i class="fas fa-newspaper"></i> Obesity in Children Plummets</a> <br> <a href = "https://jamanetwork.com/journals/jama/fullarticle/1832542" target = "_blank"><i class="fas fa-newspaper"></i> JAMA article here (see Table 6)</a> <br> <a href = "https://www.nytimes.com/2020/04/17/parenting/growth-chart-accuracy.html" target = "_blank"><i class="fas fa-newspaper"></i> growth curves</a> <br><br> <a href = "https://hardin47.github.io/CURV/scholars/blackwell.html" target = "_blank">David Blackwell</a>',
+  ' ',
   
   
-"Week 5 <br> 2.14.23",
+"Week 5 <br> 2.17.25",
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#loginf" target = "_blank"><i class="fas fa-book-open"></i> inference, logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#multlog" target = "_blank"><i class="fas fa-book-open"></i> multiple logistic regression</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW4_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW4 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW4_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW4 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW4 turn-in</a>',
-  '<a href = "https://weallcount.com/2019/06/21/intersectionality-data-2/" target = "_blank">intersectional data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/sellers.html" target = "_blank">Kim Sellers</a>',
-    '<a href="https://m150-method-biostat.netlify.app/handout/wu9_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 9</a> <br>  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/simppar_log.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> Simpson&#39;s Paradox</a>',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 4</a> - due 2.18.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 2 on 2.19.25',
+  '<a href = "https://weallcount.com/2019/06/21/intersectionality-data-2/" target = "_blank"><i class="fas fa-newspaper"></i> intersectional data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/sellers.html" target = "_blank">Kim Sellers</a>',
+    '<br>  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/simppar_log.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> Simpson&#39;s Paradox</a>',
   
-"Week 6 <br> 2.21.23", 
+"Week 6 <br> 2.24.25", 
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="http://st47s.com/Math150/Notes/process.html" target = "_blank"><i class="fas fa-book-open"></i> model process</a> <br> <a href="http://st47s.com/Math150/Notes/process.html#cross-validation" target = "_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#roc" target = "_blank"><i class="fas fa-book-open"></i> ROC</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW5 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW5_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW5 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW5 turn-in</a>',
-  '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank">missing data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/santos.html" target = "_blank">Robert Santos</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu10_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 10</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu11_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 11</a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2023-02-21-tidymodels.html" target = "_blank"><i class="fas fa-pencil-alt"></i> tidymodels</a>',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 5</a> - due 2.25.25 ',
+  '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank"><i class="fas fa-newspaper"></i> missing data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/santos.html" target = "_blank">Robert Santos</a>',
+  '  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-21-tidymodels.html" target = "_blank"><i class="fas fa-pencil-alt"></i> tidymodels</a>',
 
-"Week 7 <br> 2.28.23", 
+"Week 7 <br> 3.3.25", 
   '• modeling',
   '<a href=  "https://st47s.com/Math150/Notes/logistic-regression.html#logstep" target = "_blank"><i class="fas fa-book-open"></i> model building</a> ',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW6 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW6_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW6 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW6 turn-in</a>',
-  '<a href = "https://journals.sagepub.com/doi/10.1177/2515245917747646" target = "_blank">many models</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu12_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 12</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu13_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 13</a>  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2023-02-28-ROC-onestep.html" target = "_blank"><i class="fas fa-pencil-alt"></i> ROC + one variable building</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/variables.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i>variable handout</a>',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 6</a> - due 3.4.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 3 on 3.5.25',
+  '<a href = "https://journals.sagepub.com/doi/10.1177/2515245917747646" target = "_blank"><i class="fas fa-newspaper"></i> many models</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
+  '   <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-28-ROC-onestep.html" target = "_blank"><i class="fas fa-pencil-alt"></i> ROC + one variable building</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/variables.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i>variable handout</a>',
 
 
-
-'<font color = "#114B5F"><b>Week 8 <br> 3.7.23</b></font>', 
-'<font color = "#114B5F"><b>review & catch-up</b></font>',
-'<font color = "#114B5F"><b>exam 1 in class + <br> 3.9.23</b></font>',
-'<a href="https://m150-method-biostat.netlify.app/handout/HW7_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW7 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW7_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW7 Rmd</a> <br> not due ever',
-  '<a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> see Canvas</a> for sample exam 1 Q & sol',
-  '',
-
-'<font color = "#114B5F">3.14.23</b></font>', '<font color = "#114B5F"><b>Spring Break</b></font>',"", 
-  '',
-  '',
-  '',      
-
-"Week 9 <br> 3.21.23", 
+"Week 8 <br> 3.10.25", 
   '• survival analysis',
-  'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#timedata" target = "_blank"><i class="fas fa-book-open"></i> time to event </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KM" target = "_blank"><i class="fas fa-book-open"></i> KM curves</a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KMCI" target = "_blank"><i class="fas fa-book-open"></i> KM CI</a>',
-  '',
-  '<a href = "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target = "_blank">placebo effect (read abstract and Fig 3)</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/castillo.html" target = "_blank">Alejandra Castillo</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu14_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 14</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/wu15_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 15</a><br>', 
+  'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#timedata" target = "_blank"><i class="fas fa-book-open"></i> time to event </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KM" target = "_blank"><i class="fas fa-book-open"></i> KM curves</a> ',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 7</a> - due 3.11.25 ',
+  '<a href = "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target = "_blank"><i class="fas fa-newspaper"></i> placebo effect (read abstract and Fig 3)</a> <br> <br>  ',
+  ' ', 
   
-"Week 10 <br> 3.28.23", 
+
+"Week 9 <br> 3.24.25", 
+  '• survival analysis',
+  'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KM" target = "_blank"><i class="fas fa-book-open"></i> KM curves</a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KMCI" target = "_blank"><i class="fas fa-book-open"></i> KM CI</a>',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 8</a> - due 3.25.25 ',
+  '<a href = "https://www.nature.com/articles/d41586-023-00030-3" target = "_blank"><i class="fas fa-newspaper"></i> Alzheimer&#39;s</a> <br> <br>  ',
+  ' ', 
+
+
+"Week 10 <br> 3.31.25", 
   '• survival analysis',
   'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#logrank" target = "_blank"><i class="fas fa-book-open"></i> log rank tests </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#hazfunc" target = "_blank"><i class="fas fa-book-open"></i> hazard functions</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW8_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW8 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW8_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW8 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW8 turn-in</a>',
-  '<a href = "https://www.nature.com/articles/d41586-023-00030-3" target = "_blank">Alzheimer&#39;s</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/mackey.html" target = "_blank">Lester Mackey</a>',
-  ' <a href="https://m150-method-biostat.netlify.app/handout/wu16_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 16</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu17_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 17</a>', 
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 9</a> - due 4.1.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 4 on 4.2.25',
+  '<a href = "https://www.sciencedirect.com/science/article/pii/S000291652366280X?via%3Dihub" target = "_blank"><i class="fas fa-newspaper"></i> the million veteran program</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/mackey.html" target = "_blank">Lester Mackey</a>',
+  '  ', 
 
-"Week 11 <br> 4.4.23", 
+"Week 11 <br> 4.7.25", 
   '• survival analysis',
   'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#coxph" target = "_blank"><i class="fas fa-book-open"></i> Cox PH model </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#multcoxph" target = "_blank"><i class="fas fa-book-open"></i> multiple Cox PH</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW9 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW9_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW9 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW9 turn-in</a>',
-  '<a href = "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(2032076-6/fulltext" target = "_blank">race-conscious medicine</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/dairyko.html" target = "_blank">Mike Dairyko</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu18_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 18</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu19_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 19</a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/CHD_HR.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i>CHD & HR</a>', 
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 10</a> - due 4.8.25',
+  '<a href = "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(2032076-6/fulltext" target = "_blank"><i class="fas fa-newspaper"></i> race-conscious medicine</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/dairyko.html" target = "_blank">Mike Dairyko</a>',
+  '  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/CHD_HR.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i>CHD & HR</a>',
   
-"Week 12 <br> 4.11.23", 
+"Week 12 <br> 4.14.25", 
   '• survival analysis',
   'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#testingph" target = "_blank"><i class="fas fa-book-open"></i> assessing PH </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#Ioannidis" target = "_blank"><i class="fas fa-book-open"></i> most published research</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/HW10_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW10 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW10_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW10 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW10 turn-in</a>',
-  '<a href = "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124" target = "_blank">most published research</a> <br> <a href = "https://replicationindex.com/2020/12/24/ioannidis-is-wrong/" target = "_blank">science problems</a> <br> <br> <a href = "https://twitter.com/GidMK/status/1376304539897237508?s=20" target = "_blank">abuse of power</a> <br> <br> <br> <a href = "https://www.linkedin.com/in/chris-volinsky/" target = "_blank">Chris Volinsky</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu20_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 20</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu21_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 21</a>',  
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 11</a> - due 4.15.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 5 on 4.16.25',
+  '<a href = "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124" target = "_blank"><i class="fas fa-newspaper"></i> most published research</a> <br> <a href = "https://replicationindex.com/2020/12/24/ioannidis-is-wrong/" target = "_blank"><i class="fas fa-newspaper"></i> science problems</a> <br> <br> <a href = "https://twitter.com/GidMK/status/1376304539897237508?s=20" target = "_blank">abuse of power</a> <br> <br> <br> ',
+  ' ',  
 
 
-"Week 13 <br> 4.18.23", 
+"Week 13 <br> 4.21.25", 
   '• multiple comparisons',
   '<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#multcomp" target = "_blank"><i class="fas fa-book-open"></i> multiple comparisons </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#qvals" target = "_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#interim" target = "_blank"><i class="fas fa-book-open"></i> interim analyses</a>',
-  '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank">PROJECT: EDA</a></b></font>',
-  '<a href = "https://www.nytimes.com/2020/10/14/health/covid-clinical-trials.html" target = "_blank">pausing trials</a> <br> <br>  <a href = "https://hardin47.github.io/CURV/scholars/hare.html" target = "_blank">Liz Hare</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/wu22_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 22</a> <br>  <a href="https://m150-method-biostat.netlify.app/handout/wu23_ma150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> WU 23</a>',  
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 12</a> - due 4.22.25 <br> <font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"><i class="fa-solid fa-list-check"></i> Project: EDA</a></b></font> due 4.23.25',
+  '<a href = "https://www.nytimes.com/2020/10/14/health/covid-clinical-trials.html" target = "_blank"><i class="fas fa-newspaper"></i> pausing trials</a> <br> <br>  ',
+  ' ',  
 
-'<font color = "#114B5F"><b>Week 14 <br> 4.25.23</b></font>', 
-'<font color = "#114B5F"><b>review & catch-up</b></font>',
-'<font color = "#114B5F"><b>exam 2 in class + <br> 4.27.23</b></font>',
- '<a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> HW11 pdf</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/HW11_m150_s23.Rmd" target = "_blank"><i class="fas fa-pencil-alt"></i> HW11 Rmd</a> <br> <a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> HW11 turn-in</a>',
-  '<a href="https://canvas.pomona.edu/" target = "_blank"><i class="fa-solid fa-paper-plane"></i> see Canvas</a> for sample exam 2 Q & sol',
-  '',
+"Week 14 <br> 4.28.25", 
+  '• multiple comparisons',
+  '<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#multcomp" target = "_blank"><i class="fas fa-book-open"></i> multiple comparisons </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#qvals" target = "_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#interim" target = "_blank"><i class="fas fa-book-open"></i> interim analyses</a>',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 13</a> - due 4.29.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 6 on 4.30.25',
+  '<a href = "" target = "_blank"><i class="fas fa-newspaper"></i> </a> <br> <br>  ',
+  ' ', 
 
-"Week 15 <br> 5.2.23", 
-  '<font color = "#114B5F"><b>Graphics presentations</b></font>',
-  '',
-'<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank">PROJECT: Graphic</a></b></font>',
-  '',
-  '',  
-  
-'<font color = "#114B5F"><b>Tuesday <br> 5.9.23 <br> 2-5pm</b></font>', '<font color = "#114B5F"><b>Final Project </b></font>',"", 
-  '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank">PROJECT: final</a></b></font>',
+"Week 15 <br> 5.5.25", 
+  ' ',
+  ' ',
+'<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"> <i class="fa-solid fa-list-check"></i> Project: Graphic</a></b></font> in class 5.7.25',
+  ' ',
+  ' ',
 
-  '',
-  ''   
+"Week 16 <br> 5.16.25", 
+  ' ',
+  ' ',
+'<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"> <i class="fa-solid fa-list-check"></i> Project: Final</a></b></font> due 5.16.25',
+  ' ',
+  ' '
   )
 ```
 
@@ -156,14 +160,14 @@ schedule <- tribble(
 ```{r}
 #| echo: false
 #| column: screen-inset
+# can also use column: screen-inset also the entire page??
 # can use column: page for the entire page
 # can use column: body-outset to bleed outside the center column of text
-schedule %>% 
-  mutate_all(linebreak) %>% # required for linebreaks to work
-  kbl(escape = FALSE, align = c(rep('l',6))) %>%
-  kable_styling(bootstrap_options = c("striped", "hover"),
-                full_width = TRUE) %>%
-  column_spec(1:6,extra_css = "vertical-align:top;")
+schedule |> 
+  gt::gt() |> 
+  gt::fmt_markdown(columns = everything()) |> 
+    gt::cols_width(date ~ pct(8),
+                 everything() ~ pct(23)) 
 ```
 
 
