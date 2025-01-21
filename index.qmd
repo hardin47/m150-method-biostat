@@ -40,7 +40,7 @@ schedule <- tribble(
   'Kuiper & Sklar: 2 <br> <a href="http://st47s.com/Math150/Notes/intro.html#intro" target = "_blank"><i class="fas fa-book-open"></i> introduction</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#ttest" target = "_blank"><i class="fas fa-book-open"></i> t-test</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#tslr" target = "_blank"><i class="fas fa-book-open"></i> t-test as SLR</a>', 
   ' ',
   '<a href = "https://hardin47.github.io/CURV/scholars/benn.html" target = "_blank">Emma Benn</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/ws1_ma150_notation.pdf" target = "_blank">{{< fa pencil >}} WS 1 - notation</a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/ws1_ma150_s25_notation.pdf" target = "_blank">{{< fa pencil >}} WS 1 - notation</a>',
 
 "Week 2 <br> 1.27.25", 
   '• SLR <br> • contingency analysis',
