@@ -25,9 +25,7 @@ Read the weekly <i class="fas fa-newspaper"></i> article before class every Mond
 
 -   Homework assignments are found at the <a href = "https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank"> <i class="fa-brands fa-github"></i> GitHub course organization</a>.  Due dates are provided on each assignment (roughly every other week).  See the <a href = "https://m150-method-biostat.netlify.app/github">course GitHub page</a> for more information on how to find, complete, and submit assignments.
 
-- There will be six in class quizzes.
-
--   Discuss the <i class="fas fa-lightbulb" target="_blank"></i> reflection questions and <i class="fas fa-balance-scale"></i> ethics considerations (see the <i class="fas fa-book-open"></i> class notes) with your classmates, mentor, and professor.
+-   There will be six in class quizzes.
 
 -   The textbook is **Practicing Statistics**, by Kuiper and Sklar.
 

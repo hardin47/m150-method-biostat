@@ -170,7 +170,6 @@ The data can be loaded in directly from Box using:
 
 
 
-
 ::: {.cell}
 
 ```{.r .cell-code}
@@ -178,7 +177,6 @@ HELPdata <- readr::read_csv("https://pomona.box.com/shared/static/nty3oxpb8db1y7
                      na=c("NA", ""))
 ```
 :::
-
 
 
 
@@ -215,7 +213,9 @@ The Cox PH analysis should include: an interpretation of your final survival mod
 
 4. A visualization to enter into the competition.  The visualization could be of the EDA variety, or it could be based on the model / results.  The different visualizations will be presented to the class on the last day of the semester (May 2).  The team whose visualization is best (secret ballot by the class) will earn an additional 5 points on the project.
 
-5. The final report which ties it all together should have an introduction, methods, results, discussion.  The <a href = "https://m150-method-biostat.netlify.app/handout/project_rubric.docx" target = "_blank">grading rubric</a> should help you put together the final written project.
+5. A reflection on the decision making (goes into the final report).  How did it feel to decide things?  What was easy to decide (e.g., method because you were told to use Cox PH)?  What was hard to decide (e.g., which variables to use)?  What about missingness, what did you do? Does it matter?  Reflect on the process and how you think your decisions may or may not have had an impact on the results you put forward. Also reflect on whether or not your decisions may have had any ethical consequences.
+
+6. The final report which ties it all together should have an introduction, methods, results, discussion.  The <a href = "https://m150-method-biostat.netlify.app/handout/project_rubric.docx" target = "_blank">grading rubric</a> should help you put together the final written project.
 
 
 ## Something New:
@@ -227,19 +227,17 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 * Power analysis  (a simulation?)
 * Derivation of the sample size calculation for the log rank test (and application to the data)
 * An analysis of the Schoenfeld residuals  (**how are they calculated** and why is that calculation relevant?)
+* Breslow estimate of the Survival curve under Cox PH assumption.
 * Bootstrapping the survival model (what are the assumptions?  what do you conclude?)
-* An analysis of possible time dependent covariates (what should you see? what do you see? do transformations help?)
 * An analysis / understanding / simulation of the multiple comparisons issues for assessing many different models (or other exploratory hypotheses).
 * Andersen-Gill extension of the Cox PH model for time-varying covariates (available in **rms** R package).  [Note: A-G isn't meant to test PH, per se, but rather it allows for variables that are time varying.]
 * Another topic related to survival analysis that you find interesting.
 
 
 
-
 ::: {.cell}
 
 :::
-
 
 
 
