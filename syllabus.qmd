@@ -114,17 +114,6 @@ Additionally, you are required to install RStudio and turn in all R assignments 
 (You can use the LaTeX compiler at:  <a href = "https://yihui.name/tinytex/" target = "_blank">https://yihui.name/tinytex/</a>)
 
 
-#### Canvas
-
-This course uses Canvas as the main learning management system. The Canvas login is <a href = "http://canvas.pomona.edu/" target = "_blank">http://canvas.pomona.edu/</a>.
-If you haven't used Canvas before, I recommend bookmarking <a href = "https://community.canvaslms.com/t5/Student-Guide/tkb-p/student" target = "_blank">Canvas Student Guides</a> and <a href = "https://community.canvaslms.com/t5/Video-Guide/tkb-p/videos#student-videos" target = "_blank">Canvas Student Videos</a> for easy reference to tips and tutorials.
-If you run into an issue with Canvas, help is available.
-
-* From anywhere in Canvas, select the Help button, located in the blue Global Navigation menu on the left.
-   - Click on Pomona Service Desk - Canvas Support to report a problem by submitting a service request ticket. Be sure to include "Canvas Issue" in your subject line.
-   - For additional assistance, you can click on Ask Your Instructor or simply send me an email.
-   
-Please be proactive and reach out for help as soon as possible to resolve the issue you are experiencing.
 
 ## Important Features
 
@@ -132,11 +121,24 @@ Please be proactive and reach out for help as soon as possible to resolve the is
 
 The prerequisites for this class are Introductory Statistics (Math 58 or equivalent) and completion of one semester of calculus. We rely heavily on these prerequisites, and students with no background in statistics or very light mathematics background will find themselves trying to catch up throughout the semester. You should be familiar with topics such as probability, confidence intervals, hypothesis testing, p-values, linear regression.
 
-#### Homework:
+##### Homework 
 
-Homework will be assigned from the text and due every Wednesday at 11:59pm.
+Homework will be assigned from the text and due every Tuesday at 11:59pm.
 One homework grade will be automatically dropped, so there are no late assignments.
 Homework will be turned in via Gradescope on Canvas.
+
+
+Homework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.
+
+[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.  
+[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. **Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers.**  
+[3] Close to all problems completed with less than 75% correct. OR an assignment that didn't make it all the way to Canvas as the correctly rendered pdf.  
+[2] More than half but fewer than all problems completed and > 75% correct.  
+[1] More than half but fewer than all problems completed and < 75% correct; OR less than half of problems completed.  
+[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub.  
+
+
+
 
 #### Project:
 
@@ -180,8 +182,8 @@ Please email and / or set up a time to talk if you have any questions about or d
 
 :::{.callout-tip icon=false}
 ## Grading
-  * 25% Homework
-  * 50% Midterms
-  * 20% Final Project
-  * 5% Class Participation 
+  * 30% Homework
+  * 30% Midterms
+  * 30% Final Project
+  * 10% Class Participation 
 :::
