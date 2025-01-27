@@ -59,6 +59,50 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 
 ---
 
+(@) R / R Studio / Quarto[^1b]
+    (a) all good
+    (b) started, progress is slow and steady
+    (c) started, very stuck
+    (d) haven’t started yet
+    (e) what do you mean by "R"?
+
+[^1b]: wherever you are, make sure you are communicating with me when you have questions!
+
+---
+
+(@) Git / GitHub[^2b]
+    (a) all good
+    (b) started, progress is slow and steady
+    (c) started, very stuck
+    (d) haven’t started yet
+    (e) what do you mean by "Git"?
+
+[^2b]: wherever you are, make sure you are communicating with me when you have questions!
+
+---
+
+(@) Where can I get feedback on my HW assignments / quizzes?[^2b]
+    (a) prof will return paper versions
+    (b) on Gradescope
+    (c) on Canvas
+    (d) on GitHub
+    
+[^2b]: b. on Gradescope
+
+---
+
+(@) Which of the following includes talking to the remote version of GitHub?[^3b]
+    (a) changing your name (updating the YAML)
+    (b) committing the file(s)
+    (c) pushing the file(s)
+    (d) some of the above
+    (e) all of the above
+    
+[^3b]: c. pushing the file(s)
+
+
+---
+
 3. The Central Limit Theorem (CLT) says:[^3]
    a. The sample average (statistic) converges to the true average (parameter)
    b. The sample average (statistic) converges to some point
