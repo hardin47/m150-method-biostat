@@ -33,7 +33,7 @@ library(survival)
 
 In terms of the prerequisite for Math 150, Methods in Biostatistics, you should know at least a little bit (hopefully a lotta bit) about the following topics.
 
-1. Hypothesis test, confidence interval, sample mean, central limit theorem, standard deviation, standard error of a statistics, p-value, t-test, chi-square test.[^1]
+(@) Hypothesis test, confidence interval, sample mean, central limit theorem, standard deviation, standard error of a statistics, p-value, t-test, chi-square test.[^1]
 
    (a) Never heard of it
    (b) Heard of it, but don't know anything about it
@@ -47,7 +47,7 @@ In terms of the prerequisite for Math 150, Methods in Biostatistics, you should 
 
 In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not need to know the following topics
 
-2. Interaction, simple linear regression, multiple linear regression, logistic regression, survival analysis, R.[^2]
+(@) Interaction, simple linear regression, multiple linear regression, logistic regression, survival analysis, R.[^2]
 
    (a) Never heard of it
    (b) Heard of it, but don't know anything about it
@@ -103,7 +103,7 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 
 ---
 
-3. The Central Limit Theorem (CLT) says:[^3]
+(@) The Central Limit Theorem (CLT) says:[^3]
    a. The sample average (statistic) converges to the true average (parameter)
    b. The sample average (statistic) converges to some point
    c. The distribution of the sample average (statistic) converges to a normal distribution
@@ -115,7 +115,7 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 
 ---
 
-4. The p-value is the probability:[^4]
+(@) The p-value is the probability:[^4]
    a. that the null hypothesis is true given the observed data.
    b. of data as or more extreme than the observed data given that the null hypothesis is true.
 
@@ -123,7 +123,7 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 
 ---
 
-5. Why do we use a t distribution (instead of a z / normal distribution) in the t-test?[^5]
+(@) Why do we use a t distribution (instead of a z / normal distribution) in the t-test?[^5]
    a. the technical conditions don't hold
    b. the means are quite variable
    c. we like the letter t
@@ -135,7 +135,7 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 ---
 
 
-6. What happens if a t-test is used but isn't appropriate (technical conditions don't hold)?[^6]
+(@) What happens if a t-test is used but isn't appropriate (technical conditions don't hold)?[^6]
    (a) the p-value isn't actually the probability of our data or more extreme if H0 is true.
    (b) the software won't give a p-value as output
    (c) the rejection region needs to be calculated in the opposite direction
@@ -145,7 +145,7 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 
 ---
 
-7. We use linear regression to run a test of means 
+(@) We use linear regression to run a test of means 
 ($x_i = 0$ for controls, group 1; $x_i = 1$ for cases, group 2)
 What is: $\sum_i x_i$?[^7]
    (a) $n$
@@ -158,7 +158,7 @@ What is: $\sum_i x_i$?[^7]
 
 ---
 
-8. We use linear regression to run a test of means 
+(@) We use linear regression to run a test of means 
 ($x_i = 0$ for controls, group 1; $x_i = 1$ for cases, group 2)
 What is: $\sum_i x_iy_i$?[^8]
    (a) $n$
@@ -171,7 +171,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-9. The regression technical conditions include:[^9]
+(@) The regression technical conditions include:[^9]
     (a) The Y variable is normally distributed
     (b) The X variable is normally distributed
     (c) The residuals are normally distributed
@@ -182,7 +182,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-10. We need the technical conditions to hold in order to calculate $b_0$ and $b_1.$[^10]
+(@) We need the technical conditions to hold in order to calculate $b_0$ and $b_1.$[^10]
 
     (a) TRUE
     (b) FALSE
@@ -192,7 +192,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-11. Why do we check technical conditions?[^11]
+(@) Why do we check technical conditions?[^11]
     (a) so that the inference is valid
     (b) so that the estimates are valid
     (c) so that the p-value is more likely to be small
@@ -203,7 +203,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-12. When writing the regression equation, why is there a hat ( ^) on the response variable?[^12]
+(@) When writing the regression equation, why is there a hat ( ^) on the response variable?[^12]
     (a) because the prediction is an estimate
     (b) because the prediction is an average
     (c) because the prediction may be due to extrapolation
@@ -214,7 +214,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-13. With a strong correlation and very small p-value, what can we conclude about happiness and life expectancy?[^13]
+(@) With a strong correlation and very small p-value, what can we conclude about happiness and life expectancy?[^13]
     (a) happiness causes longer lives
     (b) longer lives cause happiness
     (c) happiness and longer life are correlated
@@ -225,7 +225,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-14. If there is no relationship in the population (true correlation = 0), then r = 0.[^14]
+(@) If there is no relationship in the population (true correlation = 0), then r = 0.[^14]
     (a) TRUE
     (b) FALSE
 
@@ -233,7 +233,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-15. If there is no relationship in the population (true slope $\beta_1 = 0$), then $b_1=0$.[^15]
+(@) If there is no relationship in the population (true slope $\beta_1 = 0$), then $b_1=0$.[^15]
     (a) TRUE
     (b) FALSE
 
@@ -243,7 +243,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-16. Smaller variability around the regression line ($\sigma$):[^16]
+(@) Smaller variability around the regression line ($\sigma$):[^16]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn't necessarily change the variability of $b_1$.
@@ -252,7 +252,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-17. Smaller variability in the explanatory variable (SD(X) = $s_X$):[^17]
+(@) Smaller variability in the explanatory variable (SD(X) = $s_X$):[^17]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn't necessarily change the variability of $b_1$.
@@ -261,7 +261,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-18. A smaller sample size ($n$):[^18]
+(@) A smaller sample size ($n$):[^18]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn't necessarily change the variability of $b_1$.
@@ -270,7 +270,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-19. We transform our variables...[^19]
+(@) We transform our variables...[^19]
     (a) ... to find the highest $r^2$ value.
     (b) ... when the X variable is not normally distributed.
     (c) ... to make the model easier to interpret.
@@ -281,7 +281,7 @@ What is: $\sum_i x_iy_i$?[^8]
 
 ---
 
-20. In the Botox and Pain Relief example, the p-value is calculated.  What does "probability" refer to?[^20]
+(@) In the Botox and Pain Relief example, the p-value is calculated.  What does "probability" refer to?[^20]
     (a) random allocation
     (b) random sample
 
@@ -293,7 +293,7 @@ p-value = probability of the observed data or more extreme given the null hypoth
 
 ---
 
-21. "Observed data or more extreme" is:[^21]
+(@) "Observed data or more extreme" is:[^21]
     (a) fewer than 9
     (b) 9 or fewer
     (c) 9 or more
@@ -304,7 +304,7 @@ p-value = probability of the observed data or more extreme given the null hypoth
 ---
 
 
-22. What is the mean value of the null sampling distribution for the number of Botox therapy who showed pain reduction?[^22]
+(@) What is the mean value of the null sampling distribution for the number of Botox therapy who showed pain reduction?[^22]
     (a) 0
     (b) 9
     (c) 5.3
@@ -315,7 +315,7 @@ p-value = probability of the observed data or more extreme given the null hypoth
 
 ---
 
-23. What conclusion would you draw from the Back Pain and Botox study?[^23]
+(@) What conclusion would you draw from the Back Pain and Botox study?[^23]
     (a) Not enough evidence to conclude that Botox is more effective than the placebo.
     (b) Strong evidence that Botox is equally as effective as the placebo.
     (c) Strong evidence that Botox is more effective than the placebo.
@@ -324,7 +324,7 @@ p-value = probability of the observed data or more extreme given the null hypoth
 
 ---
 
-24. If we consider those in the study with back pain to be representative of all people with back pain, what would you conclude about the percentage of people who will have reduced back pain if they use Botox?[^24]
+(@) If we consider those in the study with back pain to be representative of all people with back pain, what would you conclude about the percentage of people who will have reduced back pain if they use Botox?[^24]
     (a) Substantially greater than 50%
     (b) Substantially less than 50%
     (c) Close to 50%
@@ -333,7 +333,7 @@ p-value = probability of the observed data or more extreme given the null hypoth
 
 ---
 
-25. Material check-in
+(@) Material check-in
     (a) So far, so good
     (b) Concepts are good, R is confusing
     (c) R is good, concepts are confusing
@@ -341,7 +341,7 @@ p-value = probability of the observed data or more extreme given the null hypoth
     
 ---
 
-26. People check-in
+(@) People check-in
     (a) So far, so good
     (b) I can go to office hours / mentor sessions, but I didn't happen to this week.
     (c) I can't make the scheduled office hours / mentor sessions
@@ -353,7 +353,7 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 ---
     
-27. Sample 1,000,000 people who are over 6' tall and 1,000,000 people who are under 6' tall.  Record if the person is in the NBA.  What is measurable?[^27]
+(@) Sample 1,000,000 people who are over 6' tall and 1,000,000 people who are under 6' tall.  Record if the person is in the NBA.  What is measurable?[^27]
     (a) P(NBA if 6' tall)
     (b) P(6' tall if in the NBA)
     (c) both
@@ -363,7 +363,7 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 ---
 
-28. Sample 100 people who are in the NBA and 100 people who are not in the NBA. Record if the person is over 6' tall. What is measurable?[^28]
+(@) Sample 100 people who are in the NBA and 100 people who are not in the NBA. Record if the person is over 6' tall. What is measurable?[^28]
     (a) P(NBA if 6' tall)
     (b) P(6' tall if in the NBA)
     (c) both
@@ -373,7 +373,7 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 ---
 
-29. Sample 10,000,000 people.  Record their height and whether or not they are in the NBA. What is measurable?[^29]
+(@) Sample 10,000,000 people.  Record their height and whether or not they are in the NBA. What is measurable?[^29]
     (a) P(NBA if 6' tall)
     (b) P(6' tall if in the NBA)
     (c) both
@@ -392,7 +392,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-30. Calcium channel blockers have recently been reported to be associated with increased mortality. Cardiac patients who recently died of their heart disease were compared to control cardiac patients with similar disease who survive. Assume such a study had found that 40% of the recent cardiac deaths were taking calcium channel blockers at the time of death, as compared to 25% of the controls.[^30]
+(@) Calcium channel blockers have recently been reported to be associated with increased mortality. Cardiac patients who recently died of their heart disease were compared to control cardiac patients with similar disease who survive. Assume such a study had found that 40% of the recent cardiac deaths were taking calcium channel blockers at the time of death, as compared to 25% of the controls.[^30]
     (a) Case-control
     (b) Cohort
     (c) Cross-classification
@@ -401,7 +401,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-31. It is well known that the use of urinary catheters conveys a substantial risk of urinary tract infection (UTI). A group of physicians believe that, in an intensive care setting, use of one particular type of urinary catheter is more likely to encourage infection than use of other types. They therefore review medical records over a recent period for all uses of urinary catheters in an ICU. They find that 200 new UTIs occurred during 1000 ICU patient-days of catheterization with the suspect type of catheter, as compared to 100 new UTIs during 5000 ICU-patient days of catheterization with all other types. Noting the increased frequency of new UTIs when the suspect catheter type is used, they regard their hypothesis as confirmed. To reduce nosocomial UTIs, they recommend discontinuing use of that type of catheter in the ICU.[^31]
+(@) It is well known that the use of urinary catheters conveys a substantial risk of urinary tract infection (UTI). A group of physicians believe that, in an intensive care setting, use of one particular type of urinary catheter is more likely to encourage infection than use of other types. They therefore review medical records over a recent period for all uses of urinary catheters in an ICU. They find that 200 new UTIs occurred during 1000 ICU patient-days of catheterization with the suspect type of catheter, as compared to 100 new UTIs during 5000 ICU-patient days of catheterization with all other types. Noting the increased frequency of new UTIs when the suspect catheter type is used, they regard their hypothesis as confirmed. To reduce nosocomial UTIs, they recommend discontinuing use of that type of catheter in the ICU.[^31]
     (a) Case-control
     (b) Cohort
     (c) Cross-classification
@@ -410,7 +410,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-32. When we select individuals based on the explanatory variable, we cannot accurately measure[^32]
+(@) When we select individuals based on the explanatory variable, we cannot accurately measure[^32]
     (a) the proportion of people in the population in each explanatory category
     (b) the proportion of people in the population in each response group
     (c) anything about the population
@@ -420,7 +420,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-33. Relative Risk is[^33]
+(@) Relative Risk is[^33]
     (a) the difference of two proportions
     (b) the ratio of two proportions
     (c) the log of the ratio of two proportions
@@ -430,7 +430,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-34. The odds ratio is "invariant to which variable is explanatory and which is response" means:[^34]
+(@) The odds ratio is "invariant to which variable is explanatory and which is response" means:[^34]
     (a) we always put the bigger odds in the numerator
     (b) we must collect data so that we can estimate the response in the population
     (c) which variable is called the explanatory changes the value of the OR
@@ -440,7 +440,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-35. In finding a CI for RR = p1/p2, why is it okay to exponentiate the end points of the interval for ln(p1/p2)?[^35]
+(@) In finding a CI for RR = p1/p2, why is it okay to exponentiate the end points of the interval for ln(p1/p2)?[^35]
     (a) Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
     (b) Because taking the natural log of the RR makes the  distribution approximately normal.
     (c) Because the natural log compresses values that are  bigger than 1 and spreads values that are smaller than 1.
@@ -450,7 +450,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-36. In order to find a CI for the true OR, our steps are:[^36]
+(@) In order to find a CI for the true OR, our steps are:[^36]
  i. find $\widehat{\ln(\mbox{OR})}$
  ii. add $\pm \ z^* \sqrt{\frac{1}{n_1 \hat{p}_1 (1-\hat{p}_1)} + \frac{1}{n_2 \hat{p}_2 (1-\hat{p}_2)}}$
  iii. take exp of the endpoints 
@@ -464,7 +464,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-37. I know where to find: the solutions to the warm-ups, the clicker questions (with solutions), and the HW solutions[^37]
+(@) I know where to find: the solutions to the warm-ups, the clicker questions (with solutions), and the HW solutions[^37]
      (a) TRUE
      (b) FALSE
      
@@ -474,7 +474,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 ---
 
 
-38. At the value $x = -\beta_0 / \beta_1$, the probability of success is:[^38]
+(@) At the value $x = -\beta_0 / \beta_1$, the probability of success is:[^38]
     (a) 0
     (b) 0.5
     (c) 1
@@ -485,7 +485,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-39. The logistic model gives probability of failure:[^39]
+(@) The logistic model gives probability of failure:[^39]
     (a) $\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}$
     (b) $\frac{1}{1+ e^{\beta_0+ \beta_1 x}}$
     (c) $e^{\beta_0+ \beta_1 x}$
@@ -496,7 +496,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-40. The logistic model gives odds of success:[^40]
+(@) The logistic model gives odds of success:[^40]
     (a) $\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}$
     (b) $\frac{1}{1+ e^{\beta_0+ \beta_1 x}}$
     (c) $e^{\beta_0+ \beta_1 x}$
@@ -507,7 +507,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-41. The logistic model gives odds of failure:[^41]
+(@) The logistic model gives odds of failure:[^41]
     (a) $\frac{e^{\beta_0+ \beta_1 x}}{1+ e^{\beta_0+ \beta_1 x}}$
     (b) $\frac{1}{1+ e^{\beta_0+ \beta_1 x}}$
     (c) $e^{\beta_0+ \beta_1 x}$
@@ -518,7 +518,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-42. With a logistic regression model, the relative risk of success (for a one unit increase in X) is:[^42]
+(@) With a logistic regression model, the relative risk of success (for a one unit increase in X) is:[^42]
     (a) $- \beta_0/\beta_1$
     (b) $\beta_0+ \beta_1 x$
     (c) $e^{\beta_0+ \beta_1 x}$
@@ -528,7 +528,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-43. If we want the relative risk of survival (for a one unit increase in X) to be independent of X, we should use which link:[^43]
+(@) If we want the relative risk of survival (for a one unit increase in X) to be independent of X, we should use which link:[^43]
     (a) linear
     (b) logistic
     (c) complementary log-log
@@ -538,7 +538,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-44.  You take a sample of size 4 from a binary population and get: FSFF. 
+(@) You take a sample of size 4 from a binary population and get: FSFF. 
 (failure, success, failure, failure) What is your guess for p = P(success)?[^44]
      (a) 0.05
      (b) 0.15
@@ -550,7 +550,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-45.  In a logistic regression model, the variability is given by[^45]
+(@) In a logistic regression model, the variability is given by[^45]
      (a) Normal Y given X
      (b) Binomial Y given X
      (c) Bernoulli Y given X
@@ -560,7 +560,7 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-46.  When trying to find estimates for $\beta_0$  and $\beta_1$, we maximize the likelihood.  $$\prod_{i=1}^n \bigg(\frac{e^{\beta_0+ \beta_1 x_i}}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{y_i}\bigg(\frac{1}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{1 - y_i}$$
+(@) When trying to find estimates for $\beta_0$  and $\beta_1$, we maximize the likelihood.  $$\prod_{i=1}^n \bigg(\frac{e^{\beta_0+ \beta_1 x_i}}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{y_i}\bigg(\frac{1}{1+ e^{\beta_0+ \beta_1 x_i}}\bigg)^{1 - y_i}$$
 Take the derivative with respect to which variable(s):[^46]
      (a) X
      (b) Y
@@ -572,7 +572,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-47. Maximum likelihood estimation seeks to:[^47]
+(@) Maximum likelihood estimation seeks to:[^47]
     (a) Find the data which are most likely under the model.
     (b) Find the parameters which are most likely under the model.
     (c) Find the parameters which make the data most likely under the model.
@@ -582,7 +582,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-48.  We use maximum likelihood estimation because:[^48]
+(@) We use maximum likelihood estimation because:[^48]
      (a) It gives an principled approach for estimating the parameters.
      (b) The estimates are asymptotically normally distributed.
      (c) The estimates are always easy to compute.
@@ -593,7 +593,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-49. We know that for a given data set (with MLEs of $b_0$,$b_1$):[^49]
+(@) We know that for a given data set (with MLEs of $b_0$,$b_1$):[^49]
     (a) $L(b_0,b_1)< L(b_0,\beta_1=0)$ always
     (b) $L(b_0,b_1)> L(b_0,\beta_1=0)$ always
     (c) $L(b_0,b_1) \leq L(b_0,\beta_1=0)$ always
@@ -604,7 +604,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-50. How many parameters did we estimate in the HERS warm-up with the additive model?[^50]
+(@) How many parameters did we estimate in the HERS warm-up with the additive model?[^50]
      a. 1
      b. 3
      c. 4
