@@ -1,5 +1,5 @@
 ---
-title: "The Best Schedule Ever"
+title: "Schedule"
 description: |
   Schedule for Math 150, Methods in Biostatistics, Spring 2025
 execute: 
@@ -47,7 +47,7 @@ schedule <- tribble(
   'Kuiper & Sklar: 2 & 6 <br> <a href="http://st47s.com/Math150/Notes/SLR.html#SLR" target = "_blank"><i class="fas fa-book-open"></i> SLR</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#fisher" target = "_blank"><i class="fas fa-book-open"></i> Fisher&#39;s Exact Test</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#catest" target = "_blank"><i class="fas fa-book-open"></i> categorical analysis</a>', 
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 1</a> - due 1.28.25',
   '<a href = "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962" target = "_blank"><i class="fas fa-newspaper"></i> A/B testing at Netflix</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/irrizarry.html" target = "_blank">Rafael Irizarry</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/ws2_ma150_s25_CI.pdf" target = "_blank">{{< fa pencil >}} WS 2 - CIs</a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/ws2_ma150_s25_CI.pdf" target = "_blank">{{< fa pencil >}} WS 2 - CIs</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws3_ma150_s25_cond.pdf" target = "_blank">{{< fa pencil >}} WS 3 - tech conds</a>',
 
 "Week 3 <br> 2.3.25",   
   '• contingency analysis',
