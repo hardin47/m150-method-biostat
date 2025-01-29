@@ -615,7 +615,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-51. How many parameters did we estimate in the HERS warm-up with the interaction model?[^51]
+(@) How many parameters did we estimate in the HERS warm-up with the interaction model?[^51]
      a. 3
      b. 4
      c. 6
@@ -626,7 +626,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-52. What are the df for the LRT addressing whether interaction is needed in the HERS warm-up?[^52]
+(@) What are the df for the LRT addressing whether interaction is needed in the HERS warm-up?[^52]
      a. 2
      b. 3
      c. 2760
@@ -637,7 +637,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-53. (Bird nest example) How many parameters do we estimate when considering Length as a categorical variable?  (the only variable)[^53]
+(@) (Bird nest example) How many parameters do we estimate when considering Length as a categorical variable?  (the only variable)[^53]
     (a) 0
     (b) 1
     (c) 2
@@ -648,7 +648,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-54. (Bird nest example) How many df for the LRT addressing whether Length (as a categorical variable) belongs in the model?[^54]
+(@) (Bird nest example) How many df for the LRT addressing whether Length (as a categorical variable) belongs in the model?[^54]
     (a) 0
     (b) 1
     (c) 2
@@ -659,7 +659,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-55. (Bird nest example) How many df for the LRT addressing whether Incubate and Color belong in the model (given Length is determined to be in the model)?[^55]
+(@) (Bird nest example) How many df for the LRT addressing whether Incubate and Color belong in the model (given Length is determined to be in the model)?[^55]
     (a) 0
     (b) 1
     (c) 2
@@ -670,7 +670,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-56. An interaction term in a multiple logistic regression model may be used when:[^56]
+(@) An interaction term in a multiple logistic regression model may be used when:[^56]
     (a) the model fit is poor.
     (b) there is a quadratic relationship between the response and explanatory variables.
     (c) neither one of two explanatory variables contribute significantly to the regression model.
@@ -680,7 +680,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-57. The interpretations of the main effects (on their own) make sense only when the interaction component is not significant.[^57]
+(@) The interpretations of the main effects (on their own) make sense only when the interaction component is not significant.[^57]
     (a)  TRUE
     (b)	 FALSE
 
@@ -688,7 +688,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-58. If the interaction is significant but the main effects aren't:[^58]
+(@) If the interaction is significant but the main effects aren't:[^58]
     (a) report on the significance of the main effects
     (b) remove the main effects from the model
     (c) avoid talking about main effects on their own
@@ -698,7 +698,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-59. With two variables of interest, what should you test first?[^59]
+(@) With two variables of interest, what should you test first?[^59]
     (a) Variable 1.
     (b) Variable 2.
     (c) The interaction between variables 1 and 2.
@@ -708,7 +708,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-60. Consider variable 1 is continuous and variable 2 has 4 levels.  How many degrees of freedom are associated with the drop in deviance test (LRT) of their overall interaction?[^60]
+(@) Consider variable 1 is continuous and variable 2 has 4 levels.  How many degrees of freedom are associated with the drop in deviance test (LRT) of their overall interaction?[^60]
     (a) 1
     (b) 2
     (c) 3
@@ -719,7 +719,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-61. When selecting variables, it is important that[^61]
+(@) When selecting variables, it is important that[^61]
     (a) The model predicts training data well
     (b) The model predicts test data well
     (c) The coefficients on the variables are all significant
@@ -729,7 +729,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-62. To get a sense of the true accuracy of the model, the test data should be assessed (for accuracy)[^62]
+(@) To get a sense of the true accuracy of the model, the test data should be assessed (for accuracy)[^62]
      a. on the first model only.
      b. on the last model only.
      c. on every model in the process.
@@ -738,7 +738,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-63. If I am using all features of my dataset and I achieve 100% accuracy on my training set, but ~70% on testing set, what should I look out for?[^63]
+(@) If I am using all features of my dataset and I achieve 100% accuracy on my training set, but ~70% on testing set, what should I look out for?[^63]
     (a) Underfitting
     (b) Nothing, the model is perfect
     (c) Overfitting
@@ -747,7 +747,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-64. If I am picking and choosing between features of my dataset and I achieve 30% accuracy on my training set, and ~30% on testing set, what should I look out for?[^64]
+(@) If I am picking and choosing between features of my dataset and I achieve 30% accuracy on my training set, and ~30% on testing set, what should I look out for?[^64]
     (a) Underfitting
     (b) Nothing, the model is perfect
     (c) Overfitting
@@ -756,7 +756,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-65. Cross validating will guarantee that the model does not overfit.[^65]
+(@) Cross validating will guarantee that the model does not overfit.[^65]
     (a)	TRUE
     (b)	FALSE
 
@@ -764,7 +764,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-66. Suppose we want to compute 10-Fold Cross-Validation error on 200 training examples. We need to compute a model error rate N1 times, and the Cross-Validation error is the average of the errors. To compute each error, we need to train a model with data of size N2, and test the model on the data of size N3.
+(@) Suppose we want to compute 10-Fold Cross-Validation error on 200 training examples. We need to compute a model error rate N1 times, and the Cross-Validation error is the average of the errors. To compute each error, we need to train a model with data of size N2, and test the model on the data of size N3.
 What are the numbers for N1, N2, N3?[^66]
     (a) N1 = 1, N2 = 180, N3 = 20
     (b) N1 = 10, N2 = 180, N3 = 20
@@ -776,7 +776,7 @@ What are the numbers for N1, N2, N3?[^66]
 
 ---
 
-67. You are reviewing papers for Fancy Conference, and you see submissions with the following claims. Which ones would you consider accepting?[^67]
+(@) You are reviewing papers for Fancy Conference, and you see submissions with the following claims. Which ones would you consider accepting?[^67]
      (a) My method achieves a training error lower than all previous  methods!
      (b) My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min test error.)
      (c) My method achieves a test error lower than all previous methods! (Footnote: When variables are chosen so as to min CV error.)
@@ -788,7 +788,7 @@ What are the numbers for N1, N2, N3?[^66]
 #| echo: false
 #| eval: false
 
-68. From the burn data, consider:  
+(@) From the burn data, consider:  
 $$P(\mbox{surv if } X = 0.4) = 0.3$$
 $$P(\mbox{surv if } X = 0.2) = 0.9$$
 The two points are concordant if[^68]
@@ -802,7 +802,7 @@ The two points are concordant if[^68]
 
 ---
 
-69. Which model is better (according to ROC)?[^69]
+(@) Which model is better (according to ROC)?[^69]
     (a) pink because it goes closer to (1,1)
     (b) pink because it is closer to y=x
     (c) blue because it is farther from y=x
@@ -829,7 +829,7 @@ ggplot(rocdata, aes(m = M, d = D, color = Z)) + geom_roc() +
 
 ---
 
-70. In ROC curve, the x-axis measures[^70]
+(@) In ROC curve, the x-axis measures[^70]
     (a) True Pos Rate which we want high
     (b) False Pos Rate which we want low
     (c) True Neg Rate which we want high
@@ -839,7 +839,7 @@ ggplot(rocdata, aes(m = M, d = D, color = Z)) + geom_roc() +
 
 ---
 
-71. Quiz on 11 topics (you know nothing).  Your friends know topics:  
+(@) Quiz on 11 topics (you know nothing).  Your friends know topics:  
 A: {1, 2, 3, 4, 5, 6, 7}  
 B: {8, 9, 10}  
 C: {1, 2, 3, 4, 8, 10}  
@@ -855,7 +855,7 @@ Who should you choose to help you answer the questions?[^71]
 
 ---
 
-72.  Who do you want to choose next?[^72]  
+(@) Who do you want to choose next?[^72]  
 A: {1, 2, 3, 4, 5, 6, 7}  
 B: {8, 9, 10}  
 C: {1, 2, 3, 4, 8, 10}  
@@ -870,7 +870,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-73.  If you can pick two people, who do you pick?[^73]  
+(@) If you can pick two people, who do you pick?[^73]  
 A: {1, 2, 3, 4, 5, 6, 7}   
 B: {8, 9, 10}   
 C: {1, 2, 3, 4, 8, 10}  
@@ -885,7 +885,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-74. The variables in the k-variable model identified by **forward** selection are a subset of the variables in the (k+1)-variable model identified by **forward** selection.[^74]
+(@) The variables in the k-variable model identified by **forward** selection are a subset of the variables in the (k+1)-variable model identified by **forward** selection.[^74]
     (a)	TRUE (always TRUE)
     (b)	FALSE (not always TRUE)
 
@@ -893,7 +893,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-75. The variables in the k-variable model identified by **backward** selection are a subset of the variables in the (k+1)-variable model identified by **backward** selection.[^75]
+(@) The variables in the k-variable model identified by **backward** selection are a subset of the variables in the (k+1)-variable model identified by **backward** selection.[^75]
     (a)	TRUE (always TRUE)
     (b)	FALSE (not always TRUE)
 
@@ -901,7 +901,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-76. The variables in the k-variable model identified by **backward** selection are a subset of the variables in the (k+1)-variable model identified by **forward** selection.[^76]
+(@) The variables in the k-variable model identified by **backward** selection are a subset of the variables in the (k+1)-variable model identified by **forward** selection.[^76]
     (a)	TRUE (always TRUE)
     (b)	FALSE (not always TRUE)
 
@@ -909,7 +909,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-77. The variables in the k-variable model identified by **forward** selection are a subset of the variables in the (k+1)-variable model identified by **backward** selection.[^77]
+(@) The variables in the k-variable model identified by **forward** selection are a subset of the variables in the (k+1)-variable model identified by **backward** selection.[^77]
     (a)	TRUE (always TRUE)
     (b)	FALSE (not always TRUE)
 
@@ -917,7 +917,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-78. The variables in the k-variable model identified by **best-subsets** selection are a subset of the variables in the (k+1)-variable model identified by **best-subsets** selection.[^78]
+(@) The variables in the k-variable model identified by **best-subsets** selection are a subset of the variables in the (k+1)-variable model identified by **best-subsets** selection.[^78]
     (a)	TRUE (always TRUE)
     (b)	FALSE (not always TRUE)
 
@@ -925,7 +925,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-79. In a drop-in-deviance test (LRT), the reduced model corresponds to the null hypothesis being true.[^79]
+(@) In a drop-in-deviance test (LRT), the reduced model corresponds to the null hypothesis being true.[^79]
     (a) TRUE
     (b) FALSE
 
@@ -933,7 +933,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-80.  In a drop-in-deviance test (LRT), the full model corresponds to the alternative hypothesis being true.[^80]
+(@) In a drop-in-deviance test (LRT), the full model corresponds to the alternative hypothesis being true.[^80]
      (a) TRUE
      (b) FALSE
 
@@ -941,7 +941,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-81. With model building:[^81]
+(@) With model building:[^81]
     (a)	There are many ways to find a good model.
     (b)	There is always one right answer.
     (c)	There is no end to the fun.
@@ -951,7 +951,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-82. When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:[^82]
+(@) When probability of being able to buy a candy bar is modeled as a function of the number of coins, the coefficient on number of coins is:[^82]
      (a) positive
      (b) negative
      (c) zero
@@ -961,7 +961,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-83.  When probability of being able to buy a candy bar is modeled as a function of the number of low coins, the coefficient on number of low coins is:[^83]
+(@) When probability of being able to buy a candy bar is modeled as a function of the number of low coins, the coefficient on number of low coins is:[^83]
      (a) positive
      (b) negative
      (c) zero
@@ -971,7 +971,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-84.  When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of coins is:[^84]
+(@) When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of coins is:[^84]
      (a) positive
      (b) negative
      (c) zero
@@ -981,7 +981,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-85. When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of low coins is:[^85]
+(@) When probability of being able to buy a candy bar is modeled as a function of the number of coins and number of low coins, the coefficient on number of low coins is:[^85]
      (a) positive
      (b) negative
      (c) zero
@@ -991,7 +991,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-86. If we consider the censored times to be event times, the empirical survival curve will (on average)[^86]
+(@) If we consider the censored times to be event times, the empirical survival curve will (on average)[^86]
     (a) underestimate the parameter
     (b) overestimate the parameter
     (c) sometimes under and sometimes overestimate the parameter
@@ -1000,7 +1000,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-87. $n_i - d_i = n_{i+1}$ when:[^87]
+(@) $n_i - d_i = n_{i+1}$ when:[^87]
     (a) there are no deaths at time $t_i$
     (b) there is no censoring at time $t_i$
     (c) there are no deaths at time $t_{i+1}$
@@ -1011,7 +1011,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-88. $\frac{(n_i - d_i)}{n_i} = 1$ when:[^88]
+(@) $\frac{(n_i - d_i)}{n_i} = 1$ when:[^88]
     (a) there are no deaths at time $t_i$
     (b) there is no censoring at time $t_i$
     (c) there are no deaths at time $t_{i+1}$
@@ -1023,7 +1023,7 @@ D: {5, 6, 7, 9, 11}
 ---
 
 
-89. Prop survive > 50 days, `treated` (turquoise line)[^89]
+(@) Prop survive > 50 days, `treated` (turquoise line)[^89]
     (a) ~0.65
     (b) ~0.35
     (c) ~0.45
@@ -1057,7 +1057,7 @@ survminer::ggsurvplot(conf.int = FALSE)
 
 ---
 
-90. Kaplan Meier curves (Log-Rank p-value),[^90]
+(@) Kaplan Meier curves (Log-Rank p-value),[^90]
     (a) blue is clearly better
     (b) red is clearly better
     (c) can't tell because they cross
@@ -1089,7 +1089,7 @@ survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
 ```
 ---
 
-91. In the log-rank test, why is it okay to consider only one cell of the 2x2 table at time $t_j$?[^91]
+(@) In the log-rank test, why is it okay to consider only one cell of the 2x2 table at time $t_j$?[^91]
      a. Because the row totals are fixed.
      b. Because the column totals are fixed.
      c. Because the row and column totals are fixed.
@@ -1099,7 +1099,7 @@ survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
 
 ---
 
-92. What does it mean for the log rank test to be more powerful than the Wilcoxon test?[^92]
+(@) What does it mean for the log rank test to be more powerful than the Wilcoxon test?[^92]
     a. log rank is more likely to reject $H_0$ when $H_0$ is true.
     b. log rank is more likely to reject $H_0$ when $H_0$ is false.
     c. log rank is less likely to reject $H_0$ when $H_0$ is true.
@@ -1109,7 +1109,7 @@ survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
 
 ---
 
-93. The hazard at time $t$ represents:[^93]
+(@) The hazard at time $t$ represents:[^93]
     (a) the probability of the event
     (b) the instantaneous rate of the event
     (c) the relative risk of the event
@@ -1119,7 +1119,7 @@ survminer::ggsurvplot(conf.int = FALSE, pval=TRUE)
 
 ---
 
-94. The last entry in the table for the h(t) column is `NA` because:[^94]
+(@) The last entry in the table for the h(t) column is `NA` because:[^94]
     (a) the last observation was a death
     (b) the last observation was censored
     (c) the time interval is too big
@@ -1134,7 +1134,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 ---
 
 
-95. Censored observations are$\ldots$?[^95]
+(@) Censored observations are$\ldots$?[^95]
     (a) More important than non-censored ones in survival analysis
     (b) Are assumed to be normally distributed over time
     (c) Are assumed to have the same survival chances as uncensored observations
@@ -1146,7 +1146,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-96. Survival Analysis: for a one unit change of an explanatory variable, the corresponding coefficient $e^\beta$ represents:[^96]
+(@) Survival Analysis: for a one unit change of an explanatory variable, the corresponding coefficient $e^\beta$ represents:[^96]
     (a) baseline survival
     (b) survival ratio
     (c) baseline hazard
@@ -1156,7 +1156,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-97. In survival analysis, the closest interpretation of the value $e^\beta$ is:[^97]
+(@) In survival analysis, the closest interpretation of the value $e^\beta$ is:[^97]
     (a) odds
     (b) probability
     (c) time to event
@@ -1167,7 +1167,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-98. Let the event be death.  If larger values of the explanatory variable are associated with higher likelihood of survival, the coefficient $(\beta)$ should be [^98]
+(@) Let the event be death.  If larger values of the explanatory variable are associated with higher likelihood of survival, the coefficient $(\beta)$ should be [^98]
     (a) bigger than 1
     (b) smaller than 1
     (c) positive
@@ -1178,7 +1178,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-99. Let the event be death.  If larger values of the variable are NOT associated with higher (or lower) likelihood of survival, the coefficient $(\beta)$ should be[^99]
+(@) Let the event be death.  If larger values of the variable are NOT associated with higher (or lower) likelihood of survival, the coefficient $(\beta)$ should be[^99]
     (a) bigger than 1
     (b) smaller than 1
     (c) positive
@@ -1189,7 +1189,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-100. BP violates the "linear HR" condition if:[^100]
+(@) BP violates the "linear HR" condition if:[^100]
      (a) the ln ratio of the hazard curves is not linear with respect to BP
      (b) the ln ratio of the survival curves is not linear with respect to BP
      (c) the effect of BP is to increase the hazard
@@ -1200,7 +1200,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-101. A Cox regression analysis:[^101]
+(@) A Cox regression analysis:[^101]
       (a) Is used to analyze survival data when individuals in the study are followed for varying lengths of time.
       (b) Can only be used when there are censored data
       (c) Assumes that the relative hazard for a particular variable is always constant 
@@ -1211,7 +1211,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-102. The effect of weight could violate PH if:[^102]
+(@) The effect of weight could violate PH if:[^102]
      (a) people of different weights are in control vs treatment group
      (b) people tend to weigh less over time
      (c) the hazard function for weight is not monotonic
@@ -1221,7 +1221,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-103. The effect of treatment could violate PH if:[^103]
+(@) The effect of treatment could violate PH if:[^103]
      (a) the treatment has no effect
      (b) the treatment produces short term benefits only
      (c) the treatment effect interacts with a different variable, like gender
@@ -1231,7 +1231,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-104. AIC, BIC, model validation, and stepwise regression are methods for[^104]
+(@) AIC, BIC, model validation, and stepwise regression are methods for[^104]
       a. parameter estimation 
       b. variable selection
 
@@ -1239,7 +1239,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-105. If $\alpha = 0.05$, I would expect 5% of all hypotheses to be rejected.[^105]
+(@) If $\alpha = 0.05$, I would expect 5% of all hypotheses to be rejected.[^105]
      (a) TRUE
      (b) FALSE
 
@@ -1247,7 +1247,7 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
-106. Power is:[^106]
+(@) Power is:[^106]
       (a) P(type I error)
       (b) P(type II error)
       (c) 1 – P(type I error)
@@ -1261,7 +1261,7 @@ power = P(rejecting when $H_0$ false)
 
 ---
 
-107. The p-value is[^107]
+(@) The p-value is[^107]
      (a) P($H_0$ is true | data)
      (b) P($H_a$ is true | data)
      (c) P(data | $H_0$ is true)
@@ -1277,7 +1277,7 @@ RA Fisher (1929)
 
 ---
 
-108. For hypothesis testing, the problem of multiple comparisons (also known as the multiple testing problem) results from the increase in ________ that occurs when statistical tests are used repeatedly.[^108]
+(@) For hypothesis testing, the problem of multiple comparisons (also known as the multiple testing problem) results from the increase in ________ that occurs when statistical tests are used repeatedly.[^108]
      (a) Type I errors 
      (b) Type II errors 
      (c) Null hypothesis
@@ -1287,7 +1287,7 @@ RA Fisher (1929)
 
 ---
 
-109. If $H_0$ is true, the p-values should be distributed:[^109]
+(@) If $H_0$ is true, the p-values should be distributed:[^109]
      (a) Uniformly (equal prob) on 0  to 1 
      (b) Uniformly on -1 to 1
      (c) Unimodal on 0 to 1
@@ -1298,7 +1298,7 @@ RA Fisher (1929)
 
 ---
 
-110. Given many many tests (presumably some are null and some are "true"), a good estimate of the number of null tests is:[^110]
+(@) Given many many tests (presumably some are null and some are "true"), a good estimate of the number of null tests is:[^110]
      (a) (# p-values > 0.5) / 2
      (b) (# p-values > 0.5) * 2
      (c) (# p-values < 0.5) / 2
@@ -1308,7 +1308,7 @@ RA Fisher (1929)
 
 ---
 
-111. What do I do if the adjusted p-value is bigger than 1?[^111]
+(@) What do I do if the adjusted p-value is bigger than 1?[^111]
      (a) Leave it unadjusted
      (b) Assign the value of the previous (“smaller”) p-value
      (c) Round it to 1
@@ -1318,7 +1318,7 @@ RA Fisher (1929)
 
 ---
 
-112. With Holm’s method, what do I do if the (m+1)^th adjusted p-value is smaller than the m^th adjusted p-value?[^112]
+(@) With Holm’s method, what do I do if the (m+1)^th adjusted p-value is smaller than the m^th adjusted p-value?[^112]
      (a) Leave it unadjusted
      (b) Assign the value of the m^th adjusted p-value to the (m+1)^th adjusted p-value
      (c) Round it to 1
@@ -1328,7 +1328,7 @@ RA Fisher (1929)
 
 ---
 
-113. The false discovery rate represents[^113]
+(@) The false discovery rate represents[^113]
      (a) the proportion of true discoveries out of the total tests
      (b) the proportion of true discoveries out of the total discoveries
      (c) the ratio of the number of true discoveries divided by the number of null discoveries
@@ -1339,7 +1339,7 @@ RA Fisher (1929)
 
 ---
 
-114. FDR and FWER differ in that[^114]
+(@) FDR and FWER differ in that[^114]
      (a) FDR is a rate and FWER is a probability
      (b) FDR controls the rate of false positives
      (c) FWER controls the probability of getting a false positive
@@ -1350,7 +1350,7 @@ RA Fisher (1929)
 
 ---
 
-115. Which multiple comparisons adjustment gives the highest power?[^115]
+(@) Which multiple comparisons adjustment gives the highest power?[^115]
      (a) Bonferonni
      (b) Holm
      (c) Benjamini-Hochberg

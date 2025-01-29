@@ -1,5 +1,5 @@
 ---
-title: "Schedule"
+title: "The Best Schedule Ever"
 description: |
   Schedule for Math 150, Methods in Biostatistics, Spring 2025
 execute: 
