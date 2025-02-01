@@ -33,7 +33,7 @@ library(survival)
 
 In terms of the prerequisite for Math 150, Methods in Biostatistics, you should know at least a little bit (hopefully a lotta bit) about the following topics.
 
-(@) Hypothesis test, confidence interval, sample mean, central limit theorem, standard deviation, standard error of a statistics, p-value, t-test, chi-square test.[^1]
+(@) Hypothesis test, confidence interval, sample mean, central limit theorem, standard deviation, standard error of a statistics, p-value, t-test, chi-squared test.[^1]
 
    (a) Never heard of it
    (b) Heard of it, but don't know anything about it
@@ -147,7 +147,7 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 
 (@) We use linear regression to run a test of means 
 ($x_i = 0$ for controls, group 1; $x_i = 1$ for cases, group 2)
-What is: $\sum_i x_i$?[^7]
+What is: $\sum_{i=1}^n x_i?$[^7]
    (a) $n$
    (b) $n_1$
    (c) $n_2$
@@ -160,7 +160,7 @@ What is: $\sum_i x_i$?[^7]
 
 (@) We use linear regression to run a test of means 
 ($x_i = 0$ for controls, group 1; $x_i = 1$ for cases, group 2)
-What is: $\sum_i x_iy_i$?[^8]
+What is: $\sum_{i=1}^n x_iy_i?$[^8]
    (a) $n$
    (b) $n_1$
    (c) $n_2$
