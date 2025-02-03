@@ -1,6 +1,3 @@
-
-<!-- the two formats are html and revealjs -->
-
 # Clicker Q
 
 to go with **Practicing Statistics** by Kuiper & Sklar.  Math 150 - Methods in Biostatistics.
@@ -289,7 +286,7 @@ What is: $\sum_{i=1}^n x_iy_i?$[^8]
 
 ---
 
-p-value = probability of the observed data or more extreme given the null hypothesis is true.
+(@) p-value = probability of the observed data or more extreme given the null hypothesis is true.
 
 ---
 
@@ -349,7 +346,7 @@ p-value = probability of the observed data or more extreme given the null hypoth
     
 ---
 
-See Canvas front page for **anonymous** survey / feedback for the class.  Also, if you are looking for people to work with, please contact me directly (non-anonymously!) so that I can connect you to people.
+(@) See Canvas front page for **anonymous** survey / feedback for the class.  Also, if you are looking for people to work with, please contact me directly (non-anonymously!) so that I can connect you to people.
 
 ---
     
