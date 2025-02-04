@@ -183,7 +183,7 @@ Please email and / or set up a time to talk if you have any questions about or d
 :::{.callout-tip icon=false}
 ## Grading
   * 30% Homework
-  * 30% Midterms
+  * 30% Quizzes
   * 30% Final Project
   * 10% Class Participation 
 :::
