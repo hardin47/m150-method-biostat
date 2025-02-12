@@ -60,8 +60,8 @@ schedule <- tribble(
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logmodel" target = "_blank"><i class="fas fa-book-open"></i> logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logMLE" target = "_blank"><i class="fas fa-book-open"></i> MLE</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 3</a> - due 2.11.25 ',
-  '<a href = "https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target = "_blank"><i class="fas fa-newspaper"></i> Obesity in Children Plummets</a> <br> <a href = "https://jamanetwork.com/journals/jama/fullarticle/1832542" target = "_blank"><i class="fas fa-newspaper"></i> JAMA article here (see Table 6)</a> <br> <a href = "https://www.nytimes.com/2020/04/17/parenting/growth-chart-accuracy.html" target = "_blank"><i class="fas fa-newspaper"></i> growth curves</a> <br><br> <a href = "https://hardin47.github.io/CURV/scholars/blackwell.html" target = "_blank">David Blackwell</a>',
-  ' ',
+  '<a href = "https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target = "_blank"><i class="fas fa-newspaper"></i> Obesity in Children Plummets</a> <br> <a href = "https://jamanetwork.com/journals/jama/fullarticle/1832542" target = "_blank"><i class="fas fa-newspaper"></i> JAMA article here (see Table 6)</a> <br> <a href = "https://www.nytimes.com/2020/04/17/parenting/growth-chart-accuracy.html" target = "_blank"><i class="fas fa-newspaper"></i> growth curves</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/santos.html" target = "_blank">Robert Santos</a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/ws5_ma150_s25_glms.pdf" target = "_blank">{{< fa pencil >}} WS 5 - log-linear model</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws6_ma150_s25_.pdf" target = "_blank">{{< fa pencil >}} WS 6 - </a>',
   
   
 "Week 5 <br> 2.17.25",
@@ -75,7 +75,7 @@ schedule <- tribble(
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="http://st47s.com/Math150/Notes/process.html" target = "_blank"><i class="fas fa-book-open"></i> model process</a> <br> <a href="http://st47s.com/Math150/Notes/process.html#cross-validation" target = "_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#roc" target = "_blank"><i class="fas fa-book-open"></i> ROC</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 5</a> - due 2.25.25 ',
-  '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank"><i class="fas fa-newspaper"></i> missing data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/santos.html" target = "_blank">Robert Santos</a>',
+  '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank"><i class="fas fa-newspaper"></i> missing data</a> ',
   '  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-21-tidymodels.html" target = "_blank"><i class="fas fa-pencil-alt"></i> tidymodels</a>',
 
 "Week 7 <br> 3.3.25", 
