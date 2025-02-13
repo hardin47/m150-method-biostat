@@ -78,13 +78,13 @@ In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not 
 
 ---
 
-(@) Where can I get feedback on my HW assignments / quizzes?[^2b]
+(@) Where can I get feedback on my HW assignments / quizzes?[^2c]
     (a) prof will return paper versions
     (b) on Gradescope
     (c) on Canvas
     (d) on GitHub
     
-[^2b]: b. on Gradescope
+[^2c]: b. on Gradescope
 
 ---
 
@@ -200,7 +200,7 @@ What is: $\sum_{i=1}^n x_iy_i?$[^8]
 
 ---
 
-(@) When writing the regression equation, why is there a hat ( ^) on the response variable?[^12]
+(@) When writing the regression equation, why is there a hat $(\ \hat{} \ )$ on the response variable?[^12]
     (a) because the prediction is an estimate
     (b) because the prediction is an average
     (c) because the prediction may be due to extrapolation
@@ -240,7 +240,7 @@ What is: $\sum_{i=1}^n x_iy_i?$[^8]
 
 ---
 
-(@) Smaller variability around the regression line ($\sigma$):[^16]
+(@) Smaller variability around the regression line $(\sigma):$[^16]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn't necessarily change the variability of $b_1$.
@@ -249,7 +249,7 @@ What is: $\sum_{i=1}^n x_iy_i?$[^8]
 
 ---
 
-(@) Smaller variability in the explanatory variable (SD(X) = $s_X$):[^17]
+(@) Smaller variability in the explanatory variable (SD(X) = $s_X):$[^17]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn't necessarily change the variability of $b_1$.
@@ -258,7 +258,7 @@ What is: $\sum_{i=1}^n x_iy_i?$[^8]
 
 ---
 
-(@) A smaller sample size ($n$):[^18]
+(@) A smaller sample size $(n):$[^18]
     (a) increases the variability of $b_1$.
     (b) decreases the variability of $b_1$.
     (c) doesn't necessarily change the variability of $b_1$.
@@ -286,7 +286,7 @@ What is: $\sum_{i=1}^n x_iy_i?$[^8]
 
 ---
 
-(@) p-value = probability of the observed data or more extreme given the null hypothesis is true.
+p-value = probability of the observed data or more extreme given the null hypothesis is true.
 
 ---
 
@@ -346,7 +346,7 @@ What is: $\sum_{i=1}^n x_iy_i?$[^8]
     
 ---
 
-(@) See Canvas front page for **anonymous** survey / feedback for the class.  Also, if you are looking for people to work with, please contact me directly (non-anonymously!) so that I can connect you to people.
+See Canvas front page for **anonymous** survey / feedback for the class.  Also, if you are looking for people to work with, please contact me directly (non-anonymously!) so that I can connect you to people.
 
 ---
     
