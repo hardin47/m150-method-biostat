@@ -461,11 +461,11 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-(@) I know where to find: the solutions to the warm-ups, the clicker questions (with solutions), and the HW solutions[^37]
+(@) I know where to find: the solutions to the worksheets, the clicker questions (with solutions), and the HW solutions[^37]
      (a) TRUE
      (b) FALSE
      
-[^37]: The warm-up solutions and clicker questions are on the main course website.  The HW solutions are on Canvas under Files.
+[^37]: The worksheet solutions and clicker questions are on the main course website.  The HW solutions are on Canvas under Files.
 
 
 ---
@@ -598,10 +598,32 @@ Take the derivative with respect to which variable(s):[^46]
 
 [^49]: d. $L(b_0,b_1) \geq L(b_0,\beta_1=0)$ always
 
+---
+
+(@) In a logistic regresion if $H_0$ is true, what is the probability of success?[^49a]
+   (a) $p_0$
+   (b) $\frac{e^{b_0}}{1 + e^{b_0}}$
+   (c) $\frac{e^{b_1}}{1 + e^{b_1}}$
+   (d) $e^{b_0}$
+   (e) $\frac{e^{b_0 + b_1 x_i}}{1 + e^{b_0 + b_1 x_i}}$
+
+   
+[^49a]: (b) $\frac{e^{b_0}}{1 + e^{b_0}}$
 
 ---
 
-(@) How many parameters did we estimate in the HERS warm-up with the additive model?[^50]
+(@) Which is the correct logistic regression model to predict disease status based on snoring (never, occasionally, often, always): $X_1 = 1$ for occastionally; $X_2 = 1$ for often; $X_3 = 1$ for always.[^49b]
+   (a) logit$(p) = \beta_0$   
+   (b) logit$(p) = \beta_0 + \beta_1 X$   
+   (c) logit$(p) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3$   
+   (d) logit$(p) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4$   
+   (e) logit$(p) = \beta_0 + \beta_1 (X_1 + X_2 + X_3)$   
+   
+[^49b]: (d) logit$(p) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4$ 
+
+---
+
+(@) How many parameters did we estimate in the HERS worksheet with the additive model?[^50]
      a. 1
      b. 3
      c. 4
@@ -612,7 +634,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-(@) How many parameters did we estimate in the HERS warm-up with the interaction model?[^51]
+(@) How many parameters did we estimate in the HERS worksheet with the interaction model?[^51]
      a. 3
      b. 4
      c. 6
@@ -623,7 +645,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-(@) What are the df for the LRT addressing whether interaction is needed in the HERS warm-up?[^52]
+(@) What are the df for the LRT addressing whether interaction is needed in the HERS worksheet?[^52]
      a. 2
      b. 3
      c. 2760
