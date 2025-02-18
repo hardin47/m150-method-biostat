@@ -44,7 +44,7 @@ schedule <- tribble(
 
 "Week 2 <br> 1.27.25", 
   '• SLR <br> • contingency analysis',
-  'Kuiper & Sklar: 2 & 6 <br> <a href="http://st47s.com/Math150/Notes/SLR.html#SLR" target = "_blank"><i class="fas fa-book-open"></i> SLR</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#fisher" target = "_blank"><i class="fas fa-book-open"></i> Fisher&#39;s Exact Test</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#catest" target = "_blank"><i class="fas fa-book-open"></i> categorical analysis</a>', 
+  'Kuiper & Sklar: 2 & 6 <br> <a href="http://st47s.com/Math150/Notes/SLR.html#SLR" target = "_blank"><i class="fas fa-book-open"></i> SLR</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#catest" target = "_blank"><i class="fas fa-book-open"></i> categorical analysis</a>', 
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 1</a> - due 1.28.25',
   '<a href = "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962" target = "_blank"><i class="fas fa-newspaper"></i> A/B testing at Netflix</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/irizarry.html" target = "_blank">Rafael Irizarry</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/ws2_ma150_s25_CI.pdf" target = "_blank">{{< fa pencil >}} WS 2 - CIs</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws3_ma150_s25_cond.pdf" target = "_blank">{{< fa pencil >}} WS 3 - tech conds</a>',
@@ -58,7 +58,7 @@ schedule <- tribble(
   
 "Week 4 <br> 2.10.25", 
   '• logistic regression',
-  'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logmodel" target = "_blank"><i class="fas fa-book-open"></i> logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#logMLE" target = "_blank"><i class="fas fa-book-open"></i> MLE</a>',
+  'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logreg.html#the-logistic-model" target = "_blank"><i class="fas fa-book-open"></i> logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logreg.html#logMLE" target = "_blank"><i class="fas fa-book-open"></i> MLE</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 3</a> - due 2.11.25 ',
   '<a href = "https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target = "_blank"><i class="fas fa-newspaper"></i> Obesity in Children Plummets</a> <br> <a href = "https://jamanetwork.com/journals/jama/fullarticle/1832542" target = "_blank"><i class="fas fa-newspaper"></i> JAMA article here (see Table 6)</a> <br> <a href = "https://www.nytimes.com/2020/04/17/parenting/growth-chart-accuracy.html" target = "_blank"><i class="fas fa-newspaper"></i> growth curves</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/santos.html" target = "_blank">Robert Santos</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/ws5_ma150_s25_glms.pdf" target = "_blank">{{< fa pencil >}} WS 5 - log-linear model</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws6_ma150_s25_mle.pdf" target = "_blank">{{< fa pencil >}} WS 6 - MLE</a>',
@@ -66,21 +66,21 @@ schedule <- tribble(
   
 "Week 5 <br> 2.17.25",
   '• logistic regression',
-  'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#loginf" target = "_blank"><i class="fas fa-book-open"></i> inference, logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#multlog" target = "_blank"><i class="fas fa-book-open"></i> multiple logistic regression</a>',
+  'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logreg.html#loginf" target = "_blank"><i class="fas fa-book-open"></i> inference, logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logreg.html#multlog" target = "_blank"><i class="fas fa-book-open"></i> multiple logistic regression</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 4</a> - due 2.18.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 2 on 2.19.25',
   '<a href = "https://weallcount.com/2019/06/21/intersectionality-data-2/" target = "_blank"><i class="fas fa-newspaper"></i> intersectional data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/rosenbluth.html" target = "_blank">Arianna Wright Rosenbluth</a>',
     '<a href="https://m150-method-biostat.netlify.app/handout/ws7_ma150_s25_interaction.pdf" target = "_blank">{{< fa pencil >}} WS 7 - interaction</a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/simppar_log.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> Simpson&#39;s Paradox</a>',
   
 "Week 6 <br> 2.24.25", 
   '• logistic regression',
-  'Kuiper & Sklar: 7 <br> <a href="http://st47s.com/Math150/Notes/process.html" target = "_blank"><i class="fas fa-book-open"></i> model process</a> <br> <a href="http://st47s.com/Math150/Notes/process.html#cross-validation" target = "_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="https://st47s.com/Math150/Notes/logistic-regression.html#roc" target = "_blank"><i class="fas fa-book-open"></i> ROC</a>',
+  'Kuiper & Sklar: 7 <br> <a href="http://st47s.com/Math150/Notes/process.html" target = "_blank"><i class="fas fa-book-open"></i> model process</a> <br> <a href="http://st47s.com/Math150/Notes/process.html#cross-validation" target = "_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="https://st47s.com/Math150/Notes/logreg.html#roc" target = "_blank"><i class="fas fa-book-open"></i> ROC</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 5</a> - due 2.25.25 ',
   '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank"><i class="fas fa-newspaper"></i> missing data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a>',
   '  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-21-tidymodels.html" target = "_blank"><i class="fas fa-pencil-alt"></i> tidymodels</a>',
 
 "Week 7 <br> 3.3.25", 
   '• modeling',
-  '<a href=  "https://st47s.com/Math150/Notes/logistic-regression.html#logstep" target = "_blank"><i class="fas fa-book-open"></i> model building</a> ',
+  '<a href=  "https://st47s.com/Math150/Notes/logreg.html#logstep" target = "_blank"><i class="fas fa-book-open"></i> model building</a> ',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 6</a> - due 3.4.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 3 on 3.5.25',
   '<a href = "https://journals.sagepub.com/doi/10.1177/2515245917747646" target = "_blank"><i class="fas fa-newspaper"></i> many models</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
   '   <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-28-ROC-onestep.html" target = "_blank"><i class="fas fa-pencil-alt"></i> ROC + one variable building</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/variables.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i>variable handout</a>',
