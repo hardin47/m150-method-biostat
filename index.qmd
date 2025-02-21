@@ -69,21 +69,21 @@ schedule <- tribble(
   'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/logreg.html#loginf" target = "_blank"><i class="fas fa-book-open"></i> inference, logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/logreg.html#multlog" target = "_blank"><i class="fas fa-book-open"></i> multiple logistic regression</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 4</a> - due 2.18.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 2 on 2.19.25',
   '<a href = "https://weallcount.com/2019/06/21/intersectionality-data-2/" target = "_blank"><i class="fas fa-newspaper"></i> intersectional data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/rosenbluth.html" target = "_blank">Arianna Wright Rosenbluth</a>',
-    '<a href="https://m150-method-biostat.netlify.app/handout/ws7_ma150_s25_interaction.pdf" target = "_blank">{{< fa pencil >}} WS 7 - interaction</a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/simppar_log.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> Simpson&#39;s Paradox</a>',
+    '<a href="https://m150-method-biostat.netlify.app/handout/ws7_ma150_s25_interaction.pdf" target = "_blank">{{< fa pencil >}} WS 7 - interaction</a> <br> <br> ',
   
 "Week 6 <br> 2.24.25", 
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="http://st47s.com/Math150/Notes/process.html" target = "_blank"><i class="fas fa-book-open"></i> model process</a> <br> <a href="http://st47s.com/Math150/Notes/process.html#cross-validation" target = "_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="https://st47s.com/Math150/Notes/logreg.html#roc" target = "_blank"><i class="fas fa-book-open"></i> ROC</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 5</a> - due 2.25.25 ',
-  '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank"><i class="fas fa-newspaper"></i> missing data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a>',
-  '  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-21-tidymodels.html" target = "_blank"><i class="fas fa-pencil-alt"></i> tidymodels</a>',
+  '<a href = "https://journals.sagepub.com/doi/10.1177/2515245917747646" target = "_blank"><i class="fas fa-newspaper"></i> many models <br> (Tables 3 & 4, Fig 2)</a>  <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/simppar_log.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> Simpson&#39;s Paradox</a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-28-ROC-onestep.html" target = "_blank"><i class="fas fa-pencil-alt"></i> ROC + one variable building</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/variables.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i>variable handout</a>',
 
 "Week 7 <br> 3.3.25", 
   '• modeling',
   '<a href=  "https://st47s.com/Math150/Notes/logreg.html#logstep" target = "_blank"><i class="fas fa-book-open"></i> model building</a> ',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 6</a> - due 3.4.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 3 on 3.5.25',
-  '<a href = "https://journals.sagepub.com/doi/10.1177/2515245917747646" target = "_blank"><i class="fas fa-newspaper"></i> many models</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
-  '   <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-28-ROC-onestep.html" target = "_blank"><i class="fas fa-pencil-alt"></i> ROC + one variable building</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/variables.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i>variable handout</a>',
+  '<a href = "https://www.kff.org/policy-watch/a-look-at-federal-health-data-taken-offline/" target = "_blank"><i class="fas fa-newspaper"></i> health data taken offline</a>  <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
+  ' <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-21-tidymodels.html" target = "_blank"><i class="fas fa-pencil-alt"></i> tidymodels</a>',
 
 
 "Week 8 <br> 3.10.25", 
@@ -135,7 +135,7 @@ schedule <- tribble(
   '• multiple comparisons',
   '<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#multcomp" target = "_blank"><i class="fas fa-book-open"></i> multiple comparisons </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#qvals" target = "_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#interim" target = "_blank"><i class="fas fa-book-open"></i> interim analyses</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 13</a> - due 4.29.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 6 on 4.30.25',
-  '<a href = "" target = "_blank"><i class="fas fa-newspaper"></i> </a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a>  ',
+  '<a href = "" target = "_blank"><i class="fas fa-newspaper"></i> </a> <a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank"><i class="fas fa-newspaper"></i> missing data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a>  ',
   ' ', 
 
 "Week 15 <br> 5.5.25", 
@@ -165,7 +165,8 @@ schedule |>
   gt::gt() |> 
   gt::fmt_markdown(columns = everything()) |> 
     gt::cols_width(date ~ pct(8),
-                 everything() ~ pct(23)) 
+                   agenda ~ pct(12),
+                   everything() ~ pct(20)) 
 ```
 
 
