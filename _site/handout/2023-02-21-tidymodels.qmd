@@ -15,6 +15,7 @@ format:
 execute:
   freeze: auto
 bibliography: book.bib
+embed-resources: true
 ---
 
 ```{r}

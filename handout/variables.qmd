@@ -1,6 +1,6 @@
 ---
 title: "Variables: one at a time"
-subtitle: "Math 150 - Spring 2023"
+subtitle: "Math 150 - Spring 2025"
 format: pdf
 ---
 

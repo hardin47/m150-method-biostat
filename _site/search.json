@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each week, follow the general process outlined below:\n\nEnjoy the  notes / text\nAttend class, review the  warm-up and solutions if you have any questions after completing it during class. Read the weekly  article before class every Monday.\nComplete the HW assignment ( pdf & qmd linked below),  submit the assignment via  Gradescope from  GitHub accessed on the course Canvas site. HW is due weekly on Tuesday at 11:59pm.\nHomework assignments are found at the   GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\nThere will be six in class quizzes.\nThe textbook is Practicing Statistics, by Kuiper and Sklar.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\nagenda\nreadings\nhomework\narticle (Mon)\nworksheets\n\n\n\n\nWeek 1  1.22.25\n• t-tests + • SLR\nKuiper & Sklar: 2   introduction   t-test   t-test as SLR\n\nEmma Benn\n WS 1 - notation\n\n\nWeek 2  1.27.25\n• SLR  • contingency analysis\nKuiper & Sklar: 2 & 6   SLR   categorical analysis\n HW 1 - due 1.28.25\n A/B testing at Netflix   Rafael Irizarry\n WS 2 - CIs   WS 3 - tech conds\n\n\nWeek 3  2.3.25\n• contingency analysis\nKuiper & Sklar: 6   types of studies   RR and CI   OR and CI\n HW 2 - due 2.4.25   Quiz 1 on 2.5.25\n what is efficacy?   efficacy   Desi Small-Rodriguez\n WS 4 - sampling distributions\n\n\nWeek 4  2.10.25\n• logistic regression\nKuiper & Sklar: 7   logistic regression   MLE\n HW 3 - due 2.11.25\n Obesity in Children Plummets   JAMA article here (see Table 6)   growth curves   Robert Santos\n WS 5 - log-linear model   WS 6 - MLE\n\n\nWeek 5  2.17.25\n• logistic regression\nKuiper & Sklar: 7   inference, logistic regression   multiple logistic regression\n HW 4 - due 2.18.25   Quiz 2 on 2.19.25\n intersectional data   Arianna Wright Rosenbluth\n WS 7 - interaction\n\n\nWeek 6  2.24.25\n• logistic regression\nKuiper & Sklar: 7   model process   cross validation   ROC\n HW 5 - due 2.25.25\n many models  (Tables 3 & 4, Fig 2)   \n WS 8 - drop-in-deviance test     Simpson's Paradox    ROC + one variable building  variable handout\n\n\nWeek 7  3.3.25\n• modeling\n model building\n HW 6 - due 3.4.25   Quiz 3 on 3.5.25\n health data taken offline   Jacqueline Hughes-Oliver\n   tidymodels\n\n\nWeek 8  3.10.25\n• survival analysis\nKuiper & Sklar: 9   time to event    KM curves\n HW 7 - due 3.11.25\n placebo effect (read abstract and Fig 3)   \n\n\n\nWeek 9  3.24.25\n• survival analysis\nKuiper & Sklar: 9   KM curves   KM CI\n HW 8 - due 3.25.25\n Alzheimer's   \n\n\n\nWeek 10  3.31.25\n• survival analysis\nKuiper & Sklar: 9   log rank tests    hazard functions\n HW 9 - due 4.1.25   Quiz 4 on 4.2.25\n the million veteran program   \n\n\n\nWeek 11  4.7.25\n• survival analysis\nKuiper & Sklar: 9   Cox PH model    multiple Cox PH\n HW 10 - due 4.8.25\n race-conscious medicine   \n  CHD & HR\n\n\nWeek 12  4.14.25\n• survival analysis\nKuiper & Sklar: 9   assessing PH    most published research\n HW 11 - due 4.15.25   Quiz 5 on 4.16.25\n most published research   science problems   abuse of power   \n\n\n\nWeek 13  4.21.25\n• multiple comparisons\n multiple comparisons    false discovery rate   interim analyses\n HW 12 - due 4.22.25   Project: EDA due 4.23.25\n pausing trials   \n\n\n\nWeek 14  4.28.25\n• multiple comparisons\n multiple comparisons    false discovery rate   interim analyses\n HW 13 - due 4.29.25   Quiz 6 on 4.30.25\n   missing data   \n\n\n\nWeek 15  5.5.25\n\n\n  Project: Graphic in class 5.7.25\n\n\n\n\nWeek 16  5.16.25\n\n\n  Project: Final due 5.16.25\n\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each week, follow the general process outlined below:\n\nEnjoy the  notes / text\nAttend class, review the  warm-up and solutions if you have any questions after completing it during class. Read the weekly  article before class every Monday.\nComplete the HW assignment ( pdf & qmd linked below),  submit the assignment via  Gradescope from  GitHub accessed on the course Canvas site. HW is due weekly on Tuesday at 11:59pm.\nHomework assignments are found at the   GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\nThere will be six in class quizzes.\nThe textbook is Practicing Statistics, by Kuiper and Sklar.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\nagenda\nreadings\nhomework\narticle (Mon)\nworksheets\n\n\n\n\nWeek 1  1.22.25\n• t-tests + • SLR\nKuiper & Sklar: 2   introduction   t-test   t-test as SLR\n\nEmma Benn\n WS 1 - notation\n\n\nWeek 2  1.27.25\n• SLR  • contingency analysis\nKuiper & Sklar: 2 & 6   SLR   categorical analysis\n HW 1 - due 1.28.25\n A/B testing at Netflix   Rafael Irizarry\n WS 2 - CIs   WS 3 - tech conds\n\n\nWeek 3  2.3.25\n• contingency analysis\nKuiper & Sklar: 6   types of studies   RR and CI   OR and CI\n HW 2 - due 2.4.25   Quiz 1 on 2.5.25\n what is efficacy?   efficacy   Desi Small-Rodriguez\n WS 4 - sampling distributions\n\n\nWeek 4  2.10.25\n• logistic regression\nKuiper & Sklar: 7   logistic regression   MLE\n HW 3 - due 2.11.25\n Obesity in Children Plummets   JAMA article here (see Table 6)   growth curves   Robert Santos\n WS 5 - log-linear model   WS 6 - MLE\n\n\nWeek 5  2.17.25\n• logistic regression\nKuiper & Sklar: 7   inference, logistic regression   multiple logistic regression\n HW 4 - due 2.18.25   Quiz 2 on 2.19.25\n intersectional data   Arianna Wright Rosenbluth\n WS 7 - interaction\n\n\nWeek 6  2.24.25\n• logistic regression\nKuiper & Sklar: 7   model process   cross validation   ROC\n HW 5 - due 2.25.25\n many models  (Tables 3 & 4, Fig 2)   \n WS 8 - drop-in-deviance test     WS 9 - cross validation       tidymodels   Simpson's Paradox\n\n\nWeek 7  3.3.25\n• modeling\n model building\n HW 6 - due 3.4.25   Quiz 3 on 3.5.25\n health data taken offline   Jacqueline Hughes-Oliver\n   ROC + one variable building  variable handout\n\n\nWeek 8  3.10.25\n• survival analysis\nKuiper & Sklar: 9   time to event    KM curves\n HW 7 - due 3.11.25\n placebo effect (read abstract and Fig 3)   \n\n\n\nWeek 9  3.24.25\n• survival analysis\nKuiper & Sklar: 9   KM curves   KM CI\n HW 8 - due 3.25.25\n Alzheimer's   \n\n\n\nWeek 10  3.31.25\n• survival analysis\nKuiper & Sklar: 9   log rank tests    hazard functions\n HW 9 - due 4.1.25   Quiz 4 on 4.2.25\n the million veteran program   \n\n\n\nWeek 11  4.7.25\n• survival analysis\nKuiper & Sklar: 9   Cox PH model    multiple Cox PH\n HW 10 - due 4.8.25\n race-conscious medicine   \n  CHD & HR\n\n\nWeek 12  4.14.25\n• survival analysis\nKuiper & Sklar: 9   assessing PH    most published research\n HW 11 - due 4.15.25   Quiz 5 on 4.16.25\n most published research   science problems   abuse of power   \n\n\n\nWeek 13  4.21.25\n• multiple comparisons\n multiple comparisons    false discovery rate   interim analyses\n HW 12 - due 4.22.25   Project: EDA due 4.23.25\n pausing trials   \n\n\n\nWeek 14  4.28.25\n• multiple comparisons\n multiple comparisons    false discovery rate   interim analyses\n HW 13 - due 4.29.25   Quiz 6 on 4.30.25\n   missing data   \n\n\n\nWeek 15  5.5.25\n\n\n  Project: Graphic in class 5.7.25\n\n\n\n\nWeek 16  5.16.25\n\n\n  Project: Final due 5.16.25\n\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -803,5 +803,495 @@
     "title": "Working on assignments with GitHub",
     "section": "Submitting assignments after having connected to GitHub",
     "text": "Submitting assignments after having connected to GitHub\nTo submit your assignment, complete the following steps:\n\nVia Canvas, access the course’s Gradescope site, select the appropriate assignment, and then choose GitHub as the submission method.\nSelect the appropriate GitHub repository. The branch will always be “main”.\n\nYou can submit multiple times before the deadline. Your last submission will determine your grade.\nOnce assignments are completely graded, you will be able to see your grade and assignment feedback on Gradescope. Grades will also be synced with Canvas."
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#agenda",
+    "href": "handout/2025-02-26-tidymodels.html#agenda",
+    "title": "Tidymodels",
+    "section": "Agenda",
+    "text": "Agenda\n\n\nWorkflow to help us think about model building\nBreaking up data for independent assessment\nAssessment metrics"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#feeders",
+    "href": "handout/2025-02-26-tidymodels.html#feeders",
+    "title": "Tidymodels",
+    "section": "Feeders",
+    "text": "Feeders\nHow are other characteristics related to the presence of squirrels?\n\nsite_data |&gt;\n  group_by(squirrels) |&gt;\n  summarise(nearby_feeders = mean(nearby_feeders, na.rm = TRUE))\n\n# A tibble: 2 × 2\n  squirrels    nearby_feeders\n  &lt;fct&gt;                 &lt;dbl&gt;\n1 no squirrels          0.344\n2 squirrels             0.456\n\n\nFor those observations that saw squirrels, 45% had feeders nearby; for those observations that did not see squirrels, 34% had feeders nearby."
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#other-variables",
+    "href": "handout/2025-02-26-tidymodels.html#other-variables",
+    "title": "Tidymodels",
+    "section": "Other variables",
+    "text": "Other variables\nWhat about some of the variables describing the habitat?\n\nvizcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsite_data |&gt;\n  group_by(squirrels) |&gt;\n  summarise(across(contains(\"hab\"), mean, na.rm = TRUE)) |&gt;\n  pivot_longer(contains(\"hab\")) |&gt;\n  mutate(name = str_remove(name, \"hab_\")) |&gt;\n  ggplot(aes(value, fct_reorder(name, value), fill = squirrels)) +\n  geom_col(alpha = 0.8, position = \"dodge\") +\n  scale_x_continuous(labels = scales::percent) +\n  labs(x = \"% of locations\", y = NULL, fill = NULL)"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#train-test",
+    "href": "handout/2025-02-26-tidymodels.html#train-test",
+    "title": "Tidymodels",
+    "section": "Train / test",
+    "text": "Train / test\nCreate an initial split:\n\nset.seed(470)\nfeeder_split &lt;- site_data |&gt;\n  initial_split(strata = squirrels) # default prop = 3/4 of each group\n\nSave training data\n\nfeeder_train &lt;- training(feeder_split)\ndim(feeder_train)\n\n[1] 176763     59\n\n\nSave testing data\n\nfeeder_test  &lt;- testing(feeder_split)\ndim(feeder_test)\n\n[1] 58922    59"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#training-data",
+    "href": "handout/2025-02-26-tidymodels.html#training-data",
+    "title": "Tidymodels",
+    "section": "Training data",
+    "text": "Training data\n\nfeeder_train\n\n# A tibble: 176,763 × 59\n   squirrels    yard_type_pavement yard_type_garden yard_type_landsca\n   &lt;fct&gt;                     &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt;\n 1 no squirrels                  0                0                 1\n 2 no squirrels                  0                0                 1\n 3 no squirrels                  0                0                 1\n 4 no squirrels                  0                0                 1\n 5 no squirrels                  0                0                 1\n 6 no squirrels                  0                0                 1\n 7 no squirrels                  0                0                 0\n 8 no squirrels                  0                0                 1\n 9 no squirrels                  0                0                 1\n10 no squirrels                  0                0                 1\n# ℹ 176,753 more rows\n# ℹ 55 more variables: yard_type_woods &lt;dbl&gt;, yard_type_desert &lt;dbl&gt;,\n#   hab_dcid_woods &lt;dbl&gt;, hab_evgr_woods &lt;dbl&gt;,\n#   hab_mixed_woods &lt;dbl&gt;, hab_orchard &lt;dbl&gt;, hab_park &lt;dbl&gt;,\n#   hab_water_fresh &lt;dbl&gt;, hab_water_salt &lt;dbl&gt;,\n#   hab_residential &lt;dbl&gt;, hab_industrial &lt;dbl&gt;,\n#   hab_agricultural &lt;dbl&gt;, hab_desert_scrub &lt;dbl&gt;, …"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#feature-engineering",
+    "href": "handout/2025-02-26-tidymodels.html#feature-engineering",
+    "title": "Tidymodels",
+    "section": "Feature engineering",
+    "text": "Feature engineering\n\nWe prefer simple models when possible, but parsimony does not mean sacrificing accuracy (or predictive performance) in the interest of simplicity\nVariables that go into the model and how they are represented are just as critical to success of the model\nFeature engineering allows us to get creative with our predictors in an effort to make them more useful for our model (to increase its predictive performance)\nFeature engineering is the act of creating new variables from the ones that already exist."
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#modeling-workflow",
+    "href": "handout/2025-02-26-tidymodels.html#modeling-workflow",
+    "title": "Tidymodels",
+    "section": "Modeling workflow",
+    "text": "Modeling workflow\n\nCreate a recipe for feature engineering steps to be applied to the training data\nFit the model to the training data after these steps have been applied\nUsing the model estimates from the training data, predict outcomes for the test data\nEvaluate the performance of the model on the test data"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#initiate-a-recipe",
+    "href": "handout/2025-02-26-tidymodels.html#initiate-a-recipe",
+    "title": "Tidymodels",
+    "section": "Initiate a recipe",
+    "text": "Initiate a recipe\n\nfeeder_rec &lt;- recipe(\n  squirrels ~ .,    # formula\n  data = feeder_train \n  )\n\nfeeder_rec"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#working-with-recipes",
+    "href": "handout/2025-02-26-tidymodels.html#working-with-recipes",
+    "title": "Tidymodels",
+    "section": "Working with recipes",
+    "text": "Working with recipes\n\nWhen building recipes you in a pipeline, you don’t get to see the effect of the recipe on your data, which can be unsettling\nYou can take a peek at what will happen when you ultimately apply the recipe to your data at the time of fitting the model\nThis requires two functions: prep() to train the recipe and bake() to apply it to your data\n\n\n\n\n\n\n\n\nNote\n\n\nUsing prep() and bake() are shown here for demonstrative purposes. They do not need to be a part of your pipeline. I do find them assuring, however, so that I can see the effects of the recipe steps as the recipe is built."
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#impute-missing-values-remove-zero-variance-predictors",
+    "href": "handout/2025-02-26-tidymodels.html#impute-missing-values-remove-zero-variance-predictors",
+    "title": "Tidymodels",
+    "section": "Impute missing values & Remove zero variance predictors",
+    "text": "Impute missing values & Remove zero variance predictors\nImpute missing values (replace with mean).\nRemove all predictors that contain only a single value\n\nfeeder_rec &lt;- feeder_rec |&gt;\n  step_impute_mean(all_numeric_predictors()) |&gt;\n  step_nzv(all_numeric_predictors())\n\nfeeder_rec"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#prep-and-bake",
+    "href": "handout/2025-02-26-tidymodels.html#prep-and-bake",
+    "title": "Tidymodels",
+    "section": "Prep and bake",
+    "text": "Prep and bake\n\nfeeder_rec_trained &lt;- prep(feeder_rec)\n\nbake(feeder_rec_trained, feeder_train)\n\n# A tibble: 176,763 × 59\n   yard_type_pavement yard_type_garden yard_type_landsca\n                &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt;\n 1                  0                0                 1\n 2                  0                0                 1\n 3                  0                0                 1\n 4                  0                0                 1\n 5                  0                0                 1\n 6                  0                0                 1\n 7                  0                0                 0\n 8                  0                0                 1\n 9                  0                0                 1\n10                  0                0                 1\n# ℹ 176,753 more rows\n# ℹ 56 more variables: yard_type_woods &lt;dbl&gt;, yard_type_desert &lt;dbl&gt;,\n#   hab_dcid_woods &lt;dbl&gt;, hab_evgr_woods &lt;dbl&gt;,\n#   hab_mixed_woods &lt;dbl&gt;, hab_orchard &lt;dbl&gt;, hab_park &lt;dbl&gt;,\n#   hab_water_fresh &lt;dbl&gt;, hab_water_salt &lt;dbl&gt;,\n#   hab_residential &lt;dbl&gt;, hab_industrial &lt;dbl&gt;,\n#   hab_agricultural &lt;dbl&gt;, hab_desert_scrub &lt;dbl&gt;, …"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#specify-model",
+    "href": "handout/2025-02-26-tidymodels.html#specify-model",
+    "title": "Tidymodels",
+    "section": "Specify model",
+    "text": "Specify model\n\nfeeder_log &lt;- logistic_reg() |&gt;\n  set_engine(\"glm\")\n\nfeeder_log\n\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#build-workflow",
+    "href": "handout/2025-02-26-tidymodels.html#build-workflow",
+    "title": "Tidymodels",
+    "section": "Build workflow",
+    "text": "Build workflow\nWorkflows bring together models and recipes so that they can be easily applied to both the training and test data.\n\nfeeder_wflow &lt;- workflow() |&gt;\n  add_recipe(feeder_rec) |&gt;\n  add_model(feeder_log) \n\n\nSee next slide for workflow…"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#view-workflow",
+    "href": "handout/2025-02-26-tidymodels.html#view-workflow",
+    "title": "Tidymodels",
+    "section": "View workflow",
+    "text": "View workflow\n\nfeeder_wflow\n\n══ Workflow ════════════════════════════════════════════════════════════════════\nPreprocessor: Recipe\nModel: logistic_reg()\n\n── Preprocessor ────────────────────────────────────────────────────────────────\n2 Recipe Steps\n\n• step_impute_mean()\n• step_nzv()\n\n── Model ───────────────────────────────────────────────────────────────────────\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#fit-model-to-training-data",
+    "href": "handout/2025-02-26-tidymodels.html#fit-model-to-training-data",
+    "title": "Tidymodels",
+    "section": "Fit model to training data",
+    "text": "Fit model to training data\n\nfeeder_fit &lt;- feeder_wflow |&gt;\n  fit(data = feeder_train)\n\nfeeder_fit |&gt; tidy()\n\n# A tibble: 59 × 5\n   term               estimate std.error statistic   p.value\n   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 (Intercept)         -1.42      0.0505    -28.2  2.26e-174\n 2 yard_type_pavement  -0.854     0.149      -5.74 9.23e-  9\n 3 yard_type_garden    -0.175     0.0392     -4.47 7.89e-  6\n 4 yard_type_landsca    0.168     0.0219      7.69 1.45e- 14\n 5 yard_type_woods      0.309     0.0170     18.1  1.59e- 73\n 6 yard_type_desert    -0.297     0.0789     -3.76 1.68e-  4\n 7 hab_dcid_woods       0.336     0.0161     20.9  6.55e- 97\n 8 hab_evgr_woods      -0.0797    0.0192     -4.15 3.36e-  5\n 9 hab_mixed_woods      0.420     0.0158     26.5  3.17e-155\n10 hab_orchard         -0.307     0.0252    -12.2  4.00e- 34\n# ℹ 49 more rows\n\n\n\n\nSo many predictors!"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#model-fit-summary",
+    "href": "handout/2025-02-26-tidymodels.html#model-fit-summary",
+    "title": "Tidymodels",
+    "section": "Model fit summary",
+    "text": "Model fit summary\n\nfeeder_fit |&gt; tidy() \n\n# A tibble: 59 × 5\n   term               estimate std.error statistic   p.value\n   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 (Intercept)         -1.42      0.0505    -28.2  2.26e-174\n 2 yard_type_pavement  -0.854     0.149      -5.74 9.23e-  9\n 3 yard_type_garden    -0.175     0.0392     -4.47 7.89e-  6\n 4 yard_type_landsca    0.168     0.0219      7.69 1.45e- 14\n 5 yard_type_woods      0.309     0.0170     18.1  1.59e- 73\n 6 yard_type_desert    -0.297     0.0789     -3.76 1.68e-  4\n 7 hab_dcid_woods       0.336     0.0161     20.9  6.55e- 97\n 8 hab_evgr_woods      -0.0797    0.0192     -4.15 3.36e-  5\n 9 hab_mixed_woods      0.420     0.0158     26.5  3.17e-155\n10 hab_orchard         -0.307     0.0252    -12.2  4.00e- 34\n# ℹ 49 more rows"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#all-together",
+    "href": "handout/2025-02-26-tidymodels.html#all-together",
+    "title": "Tidymodels",
+    "section": "All together",
+    "text": "All together\n\nrecipemodelworkflowfitpredict\n\n\n\nfeeder_rec &lt;- recipe(\n  squirrels ~ .,    # formula\n  data = feeder_train \n  ) |&gt;\n  step_impute_mean(all_numeric_predictors()) |&gt;\n  step_nzv(all_numeric_predictors())\n\nfeeder_rec\n\n\n\n\nfeeder_log &lt;- logistic_reg() |&gt;\n  set_engine(\"glm\")\n\nfeeder_log\n\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm \n\n\n\n\n\nfeeder_wflow &lt;- workflow() |&gt;\n  add_recipe(feeder_rec) |&gt;\n  add_model(feeder_log) \nfeeder_wflow\n\n══ Workflow ════════════════════════════════════════════════════════════════════\nPreprocessor: Recipe\nModel: logistic_reg()\n\n── Preprocessor ────────────────────────────────────────────────────────────────\n2 Recipe Steps\n\n• step_impute_mean()\n• step_nzv()\n\n── Model ───────────────────────────────────────────────────────────────────────\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm \n\n\n\n\n\nfeeder_fit &lt;- feeder_wflow |&gt;\n  fit(data = feeder_train)\n\nfeeder_fit |&gt; tidy()\n\n# A tibble: 59 × 5\n   term               estimate std.error statistic   p.value\n   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 (Intercept)         -1.42      0.0505    -28.2  2.26e-174\n 2 yard_type_pavement  -0.854     0.149      -5.74 9.23e-  9\n 3 yard_type_garden    -0.175     0.0392     -4.47 7.89e-  6\n 4 yard_type_landsca    0.168     0.0219      7.69 1.45e- 14\n 5 yard_type_woods      0.309     0.0170     18.1  1.59e- 73\n 6 yard_type_desert    -0.297     0.0789     -3.76 1.68e-  4\n 7 hab_dcid_woods       0.336     0.0161     20.9  6.55e- 97\n 8 hab_evgr_woods      -0.0797    0.0192     -4.15 3.36e-  5\n 9 hab_mixed_woods      0.420     0.0158     26.5  3.17e-155\n10 hab_orchard         -0.307     0.0252    -12.2  4.00e- 34\n# ℹ 49 more rows\n\n\n\n\n\nfeeder_train_pred &lt;- predict(feeder_fit, feeder_train, type = \"prob\") |&gt;\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.5,\n                                        \"squirrels\", \"no squirrels\"))) |&gt;\n  bind_cols(feeder_train |&gt; select(squirrels))\n\nfeeder_train_pred\n\n# A tibble: 176,763 × 4\n   `.pred_no squirrels` .pred_squirrels .pred_class squirrels   \n                  &lt;dbl&gt;           &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt;       \n 1                0.168           0.832 squirrels   no squirrels\n 2                0.168           0.832 squirrels   no squirrels\n 3                0.358           0.642 squirrels   no squirrels\n 4                0.166           0.834 squirrels   no squirrels\n 5                0.274           0.726 squirrels   no squirrels\n 6                0.191           0.809 squirrels   no squirrels\n 7                0.288           0.712 squirrels   no squirrels\n 8                0.184           0.816 squirrels   no squirrels\n 9                0.227           0.773 squirrels   no squirrels\n10                0.350           0.650 squirrels   no squirrels\n# ℹ 176,753 more rows"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#make-predictions-for-training-data",
+    "href": "handout/2025-02-26-tidymodels.html#make-predictions-for-training-data",
+    "title": "Tidymodels",
+    "section": "Make predictions for training data",
+    "text": "Make predictions for training data\n\nfeeder_train_pred &lt;- predict(feeder_fit, feeder_train, type = \"prob\") |&gt;\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.5,\n                                        \"squirrels\", \"no squirrels\"))) |&gt;\n  bind_cols(feeder_train |&gt; select(squirrels))\n\nfeeder_train_pred\n\n# A tibble: 176,763 × 4\n   `.pred_no squirrels` .pred_squirrels .pred_class squirrels   \n                  &lt;dbl&gt;           &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt;       \n 1                0.168           0.832 squirrels   no squirrels\n 2                0.168           0.832 squirrels   no squirrels\n 3                0.358           0.642 squirrels   no squirrels\n 4                0.166           0.834 squirrels   no squirrels\n 5                0.274           0.726 squirrels   no squirrels\n 6                0.191           0.809 squirrels   no squirrels\n 7                0.288           0.712 squirrels   no squirrels\n 8                0.184           0.816 squirrels   no squirrels\n 9                0.227           0.773 squirrels   no squirrels\n10                0.350           0.650 squirrels   no squirrels\n# ℹ 176,753 more rows"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#accuracy",
+    "href": "handout/2025-02-26-tidymodels.html#accuracy",
+    "title": "Tidymodels",
+    "section": "Accuracy",
+    "text": "Accuracy\n\nrbind(accuracy(feeder_train_pred, truth = squirrels, \n               estimate = .pred_class),\n      sensitivity(feeder_train_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      specificity(feeder_train_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"))\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary         0.815\n2 sensitivity binary         0.985\n3 specificity binary         0.101"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#visualizing-accuracy",
+    "href": "handout/2025-02-26-tidymodels.html#visualizing-accuracy",
+    "title": "Tidymodels",
+    "section": "Visualizing accuracy",
+    "text": "Visualizing accuracy\n\nfeeder_train_pred |&gt;\n  select(squirrels, .pred_class) |&gt;\n  yardstick::conf_mat(squirrels, .pred_class) |&gt;\n  autoplot(type = \"heatmap\") + \n  scale_fill_gradient(low=\"#D6EAF8\", high=\"#2E86C1\")"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#but-really",
+    "href": "handout/2025-02-26-tidymodels.html#but-really",
+    "title": "Tidymodels",
+    "section": "But, really…",
+    "text": "But, really…\nwho cares about predictions on training data?"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#make-predictions-for-testing-data",
+    "href": "handout/2025-02-26-tidymodels.html#make-predictions-for-testing-data",
+    "title": "Tidymodels",
+    "section": "Make predictions for testing data",
+    "text": "Make predictions for testing data\n\nfeeder_test_pred &lt;- predict(feeder_fit, feeder_test, type = \"prob\") |&gt;\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.5,\n                                        \"squirrels\", \"no squirrels\"))) |&gt;\n  bind_cols(feeder_test |&gt; select(squirrels))\n\nfeeder_test_pred\n\n# A tibble: 58,922 × 4\n   `.pred_no squirrels` .pred_squirrels .pred_class squirrels   \n                  &lt;dbl&gt;           &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt;       \n 1               0.201            0.799 squirrels   no squirrels\n 2               0.156            0.844 squirrels   no squirrels\n 3               0.352            0.648 squirrels   no squirrels\n 4               0.197            0.803 squirrels   squirrels   \n 5               0.121            0.879 squirrels   squirrels   \n 6               0.272            0.728 squirrels   squirrels   \n 7               0.0459           0.954 squirrels   squirrels   \n 8               0.0341           0.966 squirrels   squirrels   \n 9               0.0631           0.937 squirrels   squirrels   \n10               0.0312           0.969 squirrels   squirrels   \n# ℹ 58,912 more rows"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#evaluate-testing-data",
+    "href": "handout/2025-02-26-tidymodels.html#evaluate-testing-data",
+    "title": "Tidymodels",
+    "section": "Evaluate testing data",
+    "text": "Evaluate testing data\n\nrbind(accuracy(feeder_test_pred, truth = squirrels, \n               estimate = .pred_class),\n      sensitivity(feeder_test_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      specificity(feeder_test_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"))\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary        0.814 \n2 sensitivity binary        0.985 \n3 specificity binary        0.0988"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#evaluate-testing-data-1",
+    "href": "handout/2025-02-26-tidymodels.html#evaluate-testing-data-1",
+    "title": "Tidymodels",
+    "section": "Evaluate testing data",
+    "text": "Evaluate testing data\n\nfeeder_test_pred |&gt;\n  select(squirrels, .pred_class) |&gt;\n  yardstick::conf_mat(squirrels, .pred_class) |&gt;\n  autoplot(type = \"heatmap\") + \n  scale_fill_gradient(low=\"#D6EAF8\", high=\"#2E86C1\")"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#training-vs.-testing",
+    "href": "handout/2025-02-26-tidymodels.html#training-vs.-testing",
+    "title": "Tidymodels",
+    "section": "Training vs. testing",
+    "text": "Training vs. testing\n\nrbind(accuracy(feeder_train_pred, truth = squirrels, \n               estimate = .pred_class),\n      sensitivity(feeder_train_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      specificity(feeder_train_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"))\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary         0.815\n2 sensitivity binary         0.985\n3 specificity binary         0.101\n\nrbind(accuracy(feeder_test_pred, truth = squirrels, \n               estimate = .pred_class),\n      sensitivity(feeder_test_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      specificity(feeder_test_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"))\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary        0.814 \n2 sensitivity binary        0.985 \n3 specificity binary        0.0988"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#whats-up-with-training-data",
+    "href": "handout/2025-02-26-tidymodels.html#whats-up-with-training-data",
+    "title": "Tidymodels",
+    "section": "What’s up with training data?",
+    "text": "What’s up with training data?\n\nThe training set does not have the capacity to be a good arbiter of performance.\nIt is not an independent piece of information; predicting the training set can only reflect what the model already knows.\nSuppose you give a class a test, then give them the answers, then provide the same test. The student scores on the second test do not accurately reflect what they know about the subject; these scores would probably be higher than their results on the first test."
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#all-together-1",
+    "href": "handout/2025-02-26-tidymodels.html#all-together-1",
+    "title": "Tidymodels",
+    "section": "All together",
+    "text": "All together\n\nrecipemodelworkflowfitpredictassess\n\n\n\nfeeder_rec &lt;- recipe(\n  squirrels ~ .,    # formula\n  data = feeder_train \n  ) |&gt;\n  step_impute_mean(all_numeric_predictors()) |&gt;\n  step_nzv(all_numeric_predictors())\n\nfeeder_rec\n\n\n\n\nfeeder_log &lt;- logistic_reg() |&gt;\n  set_engine(\"glm\")\n\nfeeder_log\n\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm \n\n\n\n\n\nfeeder_wflow &lt;- workflow() |&gt;\n  add_recipe(feeder_rec) |&gt;\n  add_model(feeder_log) \n\nfeeder_wflow\n\n══ Workflow ════════════════════════════════════════════════════════════════════\nPreprocessor: Recipe\nModel: logistic_reg()\n\n── Preprocessor ────────────────────────────────────────────────────────────────\n2 Recipe Steps\n\n• step_impute_mean()\n• step_nzv()\n\n── Model ───────────────────────────────────────────────────────────────────────\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm \n\n\n\n\n\nfeeder_fit &lt;- feeder_wflow |&gt;\n  fit(data = feeder_train)\n\nfeeder_fit |&gt; tidy()\n\n# A tibble: 59 × 5\n   term               estimate std.error statistic   p.value\n   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 (Intercept)         -1.42      0.0505    -28.2  2.26e-174\n 2 yard_type_pavement  -0.854     0.149      -5.74 9.23e-  9\n 3 yard_type_garden    -0.175     0.0392     -4.47 7.89e-  6\n 4 yard_type_landsca    0.168     0.0219      7.69 1.45e- 14\n 5 yard_type_woods      0.309     0.0170     18.1  1.59e- 73\n 6 yard_type_desert    -0.297     0.0789     -3.76 1.68e-  4\n 7 hab_dcid_woods       0.336     0.0161     20.9  6.55e- 97\n 8 hab_evgr_woods      -0.0797    0.0192     -4.15 3.36e-  5\n 9 hab_mixed_woods      0.420     0.0158     26.5  3.17e-155\n10 hab_orchard         -0.307     0.0252    -12.2  4.00e- 34\n# ℹ 49 more rows\n\n\n\n\n\nfeeder_test_pred &lt;- predict(feeder_fit, feeder_test, type = \"prob\") |&gt;\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.5,\n                                        \"squirrels\", \"no squirrels\"))) |&gt;\n  bind_cols(feeder_test |&gt; select(squirrels))\n\nfeeder_train_pred\n\n# A tibble: 176,763 × 4\n   `.pred_no squirrels` .pred_squirrels .pred_class squirrels   \n                  &lt;dbl&gt;           &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt;       \n 1                0.168           0.832 squirrels   no squirrels\n 2                0.168           0.832 squirrels   no squirrels\n 3                0.358           0.642 squirrels   no squirrels\n 4                0.166           0.834 squirrels   no squirrels\n 5                0.274           0.726 squirrels   no squirrels\n 6                0.191           0.809 squirrels   no squirrels\n 7                0.288           0.712 squirrels   no squirrels\n 8                0.184           0.816 squirrels   no squirrels\n 9                0.227           0.773 squirrels   no squirrels\n10                0.350           0.650 squirrels   no squirrels\n# ℹ 176,753 more rows\n\n\n\n\n\nrbind(accuracy(feeder_test_pred, truth = squirrels, estimate = .pred_class),\n      sensitivity(feeder_test_pred, truth = squirrels, estimate = .pred_class),\n      specificity(feeder_test_pred, truth = squirrels, estimate = .pred_class))\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary        0.814 \n2 sensitivity binary        0.0988\n3 specificity binary        0.985"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#competing-models",
+    "href": "handout/2025-02-26-tidymodels.html#competing-models",
+    "title": "Tidymodels",
+    "section": "Competing models",
+    "text": "Competing models\n\nwe use the test data to assess how the model does. But we haven’t yet thought about how to use the data to build a particular model.\ncompare two different models to predict whether or not there are squirrels\n\nModel 1: removes the information about the habitat and about the trees and shrubs\nModel 2: removes the information about feeding the birds"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#compare-recipes",
+    "href": "handout/2025-02-26-tidymodels.html#compare-recipes",
+    "title": "Tidymodels",
+    "section": "Compare recipes",
+    "text": "Compare recipes\n\nrecipe 1recipe 2\n\n\n\nfeeder_rec1 &lt;- recipe(squirrels ~ ., data = feeder_train) |&gt;\n  # delete the habitat variables\n  step_rm(contains(\"hab\")) |&gt;\n  # delete the tree/shrub info\n  step_rm(contains(\"atleast\")) |&gt;\n  step_impute_mean(all_numeric_predictors()) |&gt;\n  step_nzv(all_numeric_predictors())\n\n\n\n\nfeeder_rec2 &lt;- recipe(squirrels ~ ., data = feeder_train) |&gt;\n  # delete the variables on when the birds were fed\n  step_rm(contains(\"fed\")) |&gt;\n  # delete the variables about the bird feeders\n  step_rm(contains(\"feed\")) |&gt;\n  step_impute_mean(all_numeric_predictors()) |&gt;\n  step_nzv(all_numeric_predictors())"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#how-can-we-decide",
+    "href": "handout/2025-02-26-tidymodels.html#how-can-we-decide",
+    "title": "Tidymodels",
+    "section": "How can we decide?",
+    "text": "How can we decide?\n\nmeasure which model does better on the test data\nmeasure which model does better on the training data\nmeasure which model does better on the cross validated data"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#how-does-cross-validation-work",
+    "href": "handout/2025-02-26-tidymodels.html#how-does-cross-validation-work",
+    "title": "Tidymodels",
+    "section": "How does cross validation work?",
+    "text": "How does cross validation work?\n\n4-fold CV is depicted. Notice that the holdout group is never used as part of the coefficient estimation process."
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#cross-validation-1",
+    "href": "handout/2025-02-26-tidymodels.html#cross-validation-1",
+    "title": "Tidymodels",
+    "section": "Cross validation",
+    "text": "Cross validation\nMore specifically, v-fold cross validation:\n\nRandomly partition the training data into v group\nUse v-1 groups to build the model (calculate MLEs); use 1 group for prediction / assessment\nRepeat v times, updating which group is used for assessment each time"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#cross-validation-step-1",
+    "href": "handout/2025-02-26-tidymodels.html#cross-validation-step-1",
+    "title": "Tidymodels",
+    "section": "Cross validation, step 1",
+    "text": "Cross validation, step 1\nConsider the example below where the training data are randomly split into 3 partitions:\n\nSplitting the data into a partition of v=3 groups. Source: (Kuhn and Silge 2022)"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#cross-validation-steps-2-and-3",
+    "href": "handout/2025-02-26-tidymodels.html#cross-validation-steps-2-and-3",
+    "title": "Tidymodels",
+    "section": "Cross validation, steps 2 and 3",
+    "text": "Cross validation, steps 2 and 3\n\nUse 1 partition for assessment, and the remaining v-1 partitions for analysis\nRepeat v times, updating which partition is used for assessment each time\n\n\nWith the data split into three groups, we can see how 2/3 of the observations are used to fit the model and 1/3 of the observations are used to estimate the performance of the model. Source: (Kuhn and Silge 2022)"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#cross-validation-using-tidymodels",
+    "href": "handout/2025-02-26-tidymodels.html#cross-validation-using-tidymodels",
+    "title": "Tidymodels",
+    "section": "Cross validation using tidymodels",
+    "text": "Cross validation using tidymodels\n\nset.seed(4747)\nfolds &lt;- vfold_cv(feeder_train, v = 3, strata = squirrels)\nfolds\n\n#  3-fold cross-validation using stratification \n# A tibble: 3 × 2\n  splits                 id   \n  &lt;list&gt;                 &lt;chr&gt;\n1 &lt;split [117841/58922]&gt; Fold1\n2 &lt;split [117842/58921]&gt; Fold2\n3 &lt;split [117843/58920]&gt; Fold3"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#fit-the-model-separately-to-each-fold",
+    "href": "handout/2025-02-26-tidymodels.html#fit-the-model-separately-to-each-fold",
+    "title": "Tidymodels",
+    "section": "Fit the model separately to each fold",
+    "text": "Fit the model separately to each fold\n\nrecipemodelworkflowfitpredictassess\n\n\n\nfeeder_rec1 &lt;- recipe(squirrels ~ ., data = feeder_train) |&gt;\n  # delete the habitat variables\n  step_rm(contains(\"hab\")) |&gt;\n  # delete the tree/shrub info\n  step_rm(contains(\"atleast\")) |&gt;\n  step_impute_mean(all_numeric_predictors()) |&gt;\n  step_nzv(all_numeric_predictors())\n\nfeeder_rec1\n\n\n\n\nfeeder_log &lt;- logistic_reg() |&gt;\n  set_engine(\"glm\")\n\nfeeder_log\n\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm \n\n\n\n\n\nfeeder_wflow1 &lt;- workflow() |&gt;\n  add_recipe(feeder_rec1) |&gt;\n  add_model(feeder_log) \n\nfeeder_wflow1\n\n══ Workflow ════════════════════════════════════════════════════════════════════\nPreprocessor: Recipe\nModel: logistic_reg()\n\n── Preprocessor ────────────────────────────────────────────────────────────────\n4 Recipe Steps\n\n• step_rm()\n• step_rm()\n• step_impute_mean()\n• step_nzv()\n\n── Model ───────────────────────────────────────────────────────────────────────\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm \n\n\n\n\n\nmetrics_interest &lt;- metric_set(accuracy, roc_auc, \n                              sensitivity, specificity)\n\nfeeder_fit_rs1 &lt;- feeder_wflow1 |&gt;\n  fit_resamples(resamples = folds,\n                metrics = metrics_interest,\n                control = control_resamples(save_pred = TRUE,\n                                            event_level = \"second\"))\n\n\n\n\nfeeder_fit_rs1 |&gt; augment() |&gt;\n  select(squirrels, .pred_class) |&gt;\n  yardstick::conf_mat(squirrels, .pred_class) |&gt;\n  autoplot(type = \"heatmap\") + \n  scale_fill_gradient(low=\"#D6EAF8\", high=\"#2E86C1\") \n\n\n\n\n\n\n\n\n\n\n\ncollect_metrics(feeder_fit_rs1)\n\n# A tibble: 4 × 6\n  .metric     .estimator   mean     n  std_err .config             \n  &lt;chr&gt;       &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;               \n1 accuracy    binary     0.809      3 0.000247 Preprocessor1_Model1\n2 roc_auc     binary     0.663      3 0.00180  Preprocessor1_Model1\n3 sensitivity binary     0.996      3 0.000190 Preprocessor1_Model1\n4 specificity binary     0.0265     3 0.000545 Preprocessor1_Model1"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#repeat-the-cv-analysis-for-the-second-model",
+    "href": "handout/2025-02-26-tidymodels.html#repeat-the-cv-analysis-for-the-second-model",
+    "title": "Tidymodels",
+    "section": "Repeat the CV analysis for the second model",
+    "text": "Repeat the CV analysis for the second model\n\nrecipemodelworkflowfitpredictassess\n\n\n\nfeeder_rec2 &lt;- recipe(squirrels ~ ., data = feeder_train) |&gt;\n  # delete the variables on when the birds were fed\n  step_rm(contains(\"fed\")) |&gt;\n  # delete the variables about the bird feeders\n  step_rm(contains(\"feed\")) |&gt;\n  step_impute_mean(all_numeric_predictors()) |&gt;\n  step_nzv(all_numeric_predictors())\n\nfeeder_rec2\n\n\n\n\nfeeder_log &lt;- logistic_reg() |&gt;\n  set_engine(\"glm\")\n\nfeeder_log\n\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm \n\n\n\n\n\nfeeder_wflow2 &lt;- workflow() |&gt;\n  add_recipe(feeder_rec2) |&gt;\n  add_model(feeder_log) \n\nfeeder_wflow2\n\n══ Workflow ════════════════════════════════════════════════════════════════════\nPreprocessor: Recipe\nModel: logistic_reg()\n\n── Preprocessor ────────────────────────────────────────────────────────────────\n4 Recipe Steps\n\n• step_rm()\n• step_rm()\n• step_impute_mean()\n• step_nzv()\n\n── Model ───────────────────────────────────────────────────────────────────────\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm \n\n\n\n\n\nmetrics_interest &lt;- metric_set(accuracy, roc_auc, \n                              sensitivity, specificity)\n\nfeeder_fit_rs2 &lt;- feeder_wflow2 |&gt;\n  fit_resamples(resamples = folds,\n                metrics = metrics_interest,\n                control = control_resamples(save_pred = TRUE,\n                                            event_level = \"second\"))\n\n\n\n\nfeeder_fit_rs2 |&gt; augment() |&gt;\n  select(squirrels, .pred_class) |&gt;\n  yardstick::conf_mat(squirrels, .pred_class) |&gt;\n  autoplot(type = \"heatmap\") + \n  scale_fill_gradient(low=\"#D6EAF8\", high=\"#2E86C1\") \n\n\n\n\n\n\n\n\n\n\n\ncollect_metrics(feeder_fit_rs2)\n\n# A tibble: 4 × 6\n  .metric     .estimator   mean     n  std_err .config             \n  &lt;chr&gt;       &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;               \n1 accuracy    binary     0.813      3 0.000325 Preprocessor1_Model1\n2 roc_auc     binary     0.698      3 0.00228  Preprocessor1_Model1\n3 sensitivity binary     0.990      3 0.000424 Preprocessor1_Model1\n4 specificity binary     0.0693     3 0.000291 Preprocessor1_Model1"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#compare-two-models",
+    "href": "handout/2025-02-26-tidymodels.html#compare-two-models",
+    "title": "Tidymodels",
+    "section": "Compare two models",
+    "text": "Compare two models\nModel 1\n\ncollect_metrics(feeder_fit_rs1)\n\n# A tibble: 4 × 6\n  .metric     .estimator   mean     n  std_err .config             \n  &lt;chr&gt;       &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;               \n1 accuracy    binary     0.809      3 0.000247 Preprocessor1_Model1\n2 roc_auc     binary     0.663      3 0.00180  Preprocessor1_Model1\n3 sensitivity binary     0.996      3 0.000190 Preprocessor1_Model1\n4 specificity binary     0.0265     3 0.000545 Preprocessor1_Model1\n\n\nModel 2\n\ncollect_metrics(feeder_fit_rs2)\n\n# A tibble: 4 × 6\n  .metric     .estimator   mean     n  std_err .config             \n  &lt;chr&gt;       &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;               \n1 accuracy    binary     0.813      3 0.000325 Preprocessor1_Model1\n2 roc_auc     binary     0.698      3 0.00228  Preprocessor1_Model1\n3 sensitivity binary     0.990      3 0.000424 Preprocessor1_Model1\n4 specificity binary     0.0693     3 0.000291 Preprocessor1_Model1"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#cross-validation-then-test-data",
+    "href": "handout/2025-02-26-tidymodels.html#cross-validation-then-test-data",
+    "title": "Tidymodels",
+    "section": "Cross validation then test data",
+    "text": "Cross validation then test data\n\nNested cross-validation: two cross-validation loops are run one inside the other. (Varoquaux et al. 2017)"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#bias-variance-trade-off",
+    "href": "handout/2025-02-26-tidymodels.html#bias-variance-trade-off",
+    "title": "Tidymodels",
+    "section": "Bias-variance trade-off",
+    "text": "Bias-variance trade-off\n\nTest and training error as a function of model complexity. Note that the error goes down monotonically only for the training data. Be careful not to overfit!! (Hastie, Tibshirani, and Friedman 2001)"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#references",
+    "href": "handout/2025-02-26-tidymodels.html#references",
+    "title": "Tidymodels",
+    "section": "",
+    "text": "Hastie, T., R. Tibshirani, and J. Friedman. 2001. The Elements of Statistical Learning. Springer.\n\n\nKuhn, Max, and Julia Silge. 2022. Tidy Modeling with r. https://www.tmwr.org/.\n\n\nVaroquaux, G., P. Reddy Raamana, D. Engemann, A. Hoyos-Idrobo, Y. Schwartz, and B. Thirion. 2017. “Assessing and Tuning Brain Decoders: Cross-Validation, Caveats, and Guidelines.” NeuroImage 145: 166–79."
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#comparing-models",
+    "href": "handout/2025-02-26-tidymodels.html#comparing-models",
+    "title": "Tidymodels",
+    "section": "Comparing Models",
+    "text": "Comparing Models\n\n\n\n\n\n\n\nData Modeling: The analysis in this culture starts with assuming a stochastic data model for the inside of the black box…The values of the parameters are estimated from the data and the model then used for information and/or prediction\nAlgorithmic Modeling: The analysis in this culture considers the inside of the box complex and unknown. The approach is to find a function f(x) — an algorithm that operates on x to predict the responses y.\n\nReference: Leo Breiman (2001)"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#data-goal",
+    "href": "handout/2025-02-26-tidymodels.html#data-goal",
+    "title": "Tidymodels",
+    "section": "Data & goal",
+    "text": "Data & goal\n\nData: Project FeederWatch#TidyTuesday dataset on Project FeederWatch, a citizen science project for bird science, by way of TidyTuesday.\nCan the characteristics of the bird feeder site like the surrounding yard and habitat predict whether a bird feeder site will be used by squirrels?\n\n\ndatacode\n\n\n\n\n# A tibble: 235,685 × 59\n   squirrels    yard_type_pavement yard_type_garden yard_type_landsca\n   &lt;fct&gt;                     &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt;\n 1 no squirrels                  0                0                 1\n 2 no squirrels                  0                0                 1\n 3 no squirrels                  0                0                 1\n 4 no squirrels                  0                0                 1\n 5 no squirrels                  0                0                 1\n 6 no squirrels                  0                0                 1\n 7 squirrels                     0                0                 0\n 8 squirrels                     0                0                 0\n 9 squirrels                     0                0                 0\n10 squirrels                     0                0                 0\n# ℹ 235,675 more rows\n# ℹ 55 more variables: yard_type_woods &lt;dbl&gt;, yard_type_desert &lt;dbl&gt;,\n#   hab_dcid_woods &lt;dbl&gt;, hab_evgr_woods &lt;dbl&gt;,\n#   hab_mixed_woods &lt;dbl&gt;, hab_orchard &lt;dbl&gt;, hab_park &lt;dbl&gt;,\n#   hab_water_fresh &lt;dbl&gt;, hab_water_salt &lt;dbl&gt;,\n#   hab_residential &lt;dbl&gt;, hab_industrial &lt;dbl&gt;,\n#   hab_agricultural &lt;dbl&gt;, hab_desert_scrub &lt;dbl&gt;, …\n\n\n\n\n\nsite_data &lt;- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-10/PFW_count_site_data_public_2021.csv') |&gt;\n  mutate(squirrels = as.factor(ifelse(squirrels, \"squirrels\", \"no squirrels\"))) |&gt; \n  filter(!is.na(squirrels))\n\nsite_data &lt;- site_data |&gt;\n  select(where(~!all(is.na(.x)))) |&gt;\n  select(-loc_id, -proj_period_id, -fed_yr_round) |&gt;\n  select(squirrels, everything()) \n\nsite_data"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#how-many-squirrels",
+    "href": "handout/2025-02-26-tidymodels.html#how-many-squirrels",
+    "title": "Tidymodels",
+    "section": "How many squirrels?",
+    "text": "How many squirrels?\n\nsite_data |&gt;\n  group_by(squirrels) |&gt;\n  summarise(number_squirrels = n())\n\n# A tibble: 2 × 2\n  squirrels    number_squirrels\n  &lt;fct&gt;                   &lt;int&gt;\n1 no squirrels            45323\n2 squirrels              190362"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#different-predictions-for-training-data",
+    "href": "handout/2025-02-26-tidymodels.html#different-predictions-for-training-data",
+    "title": "Tidymodels",
+    "section": "Different predictions for training data",
+    "text": "Different predictions for training data\nNote that you now have to be predicted 0.75 to be a squirrel!\n\nfeeder_train_pred_0.75 &lt;- predict(feeder_fit, feeder_train, type = \"prob\") |&gt;\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.75,\n                                        \"squirrels\", \"no squirrels\"))) |&gt;\n  bind_cols(feeder_train |&gt; select(squirrels))\n\nfeeder_train_pred\n\n# A tibble: 176,763 × 4\n   `.pred_no squirrels` .pred_squirrels .pred_class squirrels   \n                  &lt;dbl&gt;           &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt;       \n 1                0.168           0.832 squirrels   no squirrels\n 2                0.168           0.832 squirrels   no squirrels\n 3                0.358           0.642 squirrels   no squirrels\n 4                0.166           0.834 squirrels   no squirrels\n 5                0.274           0.726 squirrels   no squirrels\n 6                0.191           0.809 squirrels   no squirrels\n 7                0.288           0.712 squirrels   no squirrels\n 8                0.184           0.816 squirrels   no squirrels\n 9                0.227           0.773 squirrels   no squirrels\n10                0.350           0.650 squirrels   no squirrels\n# ℹ 176,753 more rows\n\n\n\nrbind(accuracy(feeder_train_pred_0.75, truth = squirrels, \n               estimate = .pred_class),\n      sensitivity(feeder_train_pred_0.75, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      specificity(feeder_train_pred_0.75, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"))\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary         0.744\n2 sensitivity binary         0.805\n3 specificity binary         0.490"
+  },
+  {
+    "objectID": "handout/2025-02-26-tidymodels.html#feature-engineering---examples",
+    "href": "handout/2025-02-26-tidymodels.html#feature-engineering---examples",
+    "title": "Tidymodels",
+    "section": "Feature engineering - examples",
+    "text": "Feature engineering - examples\n\ndate: change to weekend / weekday\ncategorical: reduce # levels, one-hot encoding\nnumerical: transform using square, ln, normalize, scale\nbin numerical data to make it categorical\nmissing data: its own level? impute?\nadjust outliers"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html",
+    "href": "handout/2025-03-03-ROC-onestep.html",
+    "title": "ROC + Adding Variables",
+    "section": "",
+    "text": "Metric: Receiver Operating Characteristic (ROC) Curves\nMetrics: AIC & BIC\nModel building one variables at a time\n\n\n\n# load packages\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(gghighlight)\nlibrary(knitr)\n\n# set default theme and larger font size for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 20))"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#agenda",
+    "href": "handout/2025-03-03-ROC-onestep.html#agenda",
+    "title": "ROC + Adding Variables",
+    "section": "",
+    "text": "Metric: Receiver Operating Characteristic (ROC) Curves\nMetrics: AIC & BIC\nModel building one variables at a time\n\n\n\n# load packages\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(gghighlight)\nlibrary(knitr)\n\n# set default theme and larger font size for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 20))"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#make-predictions-for-test-data",
+    "href": "handout/2025-03-03-ROC-onestep.html#make-predictions-for-test-data",
+    "title": "ROC + Adding Variables",
+    "section": "Make predictions for test data",
+    "text": "Make predictions for test data\n\nfeeder_test_pred &lt;- predict(feeder_fit, feeder_test, type = \"prob\") %&gt;%\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.5,\n                                        \"squirrels\", \"no squirrels\"))) %&gt;%\n  bind_cols(feeder_test %&gt;% select(squirrels))\n\nfeeder_test_pred\n\n# A tibble: 58,922 × 4\n   `.pred_no squirrels` .pred_squirrels .pred_class squirrels   \n                  &lt;dbl&gt;           &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt;       \n 1               0.201            0.799 squirrels   no squirrels\n 2               0.156            0.844 squirrels   no squirrels\n 3               0.352            0.648 squirrels   no squirrels\n 4               0.197            0.803 squirrels   squirrels   \n 5               0.121            0.879 squirrels   squirrels   \n 6               0.272            0.728 squirrels   squirrels   \n 7               0.0459           0.954 squirrels   squirrels   \n 8               0.0341           0.966 squirrels   squirrels   \n 9               0.0631           0.937 squirrels   squirrels   \n10               0.0312           0.969 squirrels   squirrels   \n# ℹ 58,912 more rows"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#accuracy",
+    "href": "handout/2025-03-03-ROC-onestep.html#accuracy",
+    "title": "ROC + Adding Variables",
+    "section": "Accuracy",
+    "text": "Accuracy\n\nrbind(accuracy(feeder_test_pred, truth = squirrels, \n               estimate = .pred_class),\n      sensitivity(feeder_test_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      specificity(feeder_test_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\")#,\n      #roc_auc(feeder_test_pred, truth = squirrels, \n                  #estimate = .pred_squirrels, event_level = \"second\")\n      )\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary        0.814 \n2 sensitivity binary        0.985 \n3 specificity binary        0.0988"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#roc-curves",
+    "href": "handout/2025-03-03-ROC-onestep.html#roc-curves",
+    "title": "ROC + Adding Variables",
+    "section": "ROC Curves",
+    "text": "ROC Curves\nReceiver Operating Characteristic Curves\n\nTPR = sensitivity = # of true predicted true / # true\nFPR = 1 - specificity = # false predicted true / # false\n\nHow can the plot use many TPRs and FPRs ???"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#roc-curve",
+    "href": "handout/2025-03-03-ROC-onestep.html#roc-curve",
+    "title": "ROC + Adding Variables",
+    "section": "ROC Curve",
+    "text": "ROC Curve\n\nlibrary(plotROC)\n\nfeeder_test_pred %&gt;%\n  ggplot() + \n  geom_roc(aes(d = squirrels, m = .pred_squirrels)) +\n  geom_abline(intercept = 0, slope = 1)"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#visualizing-accuracy",
+    "href": "handout/2025-03-03-ROC-onestep.html#visualizing-accuracy",
+    "title": "ROC + Adding Variables",
+    "section": "Visualizing accuracy",
+    "text": "Visualizing accuracy\n\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary        0.814 \n2 sensitivity binary        0.985 \n3 specificity binary        0.0988"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#different-cut-off-0.8",
+    "href": "handout/2025-03-03-ROC-onestep.html#different-cut-off-0.8",
+    "title": "ROC + Adding Variables",
+    "section": "Different cut-off = 0.8?",
+    "text": "Different cut-off = 0.8?\n\nfeeder_test_pred &lt;- predict(feeder_fit, feeder_test, type = \"prob\") %&gt;%\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.8,\n                                        \"squirrels\", \"no squirrels\"))) %&gt;%\n  bind_cols(feeder_test %&gt;% select(squirrels))\n\n\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary         0.675\n2 sensitivity binary         0.683\n3 specificity binary         0.641"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#different-cut-off-0.15",
+    "href": "handout/2025-03-03-ROC-onestep.html#different-cut-off-0.15",
+    "title": "ROC + Adding Variables",
+    "section": "Different cut-off = 0.15?",
+    "text": "Different cut-off = 0.15?\n\nfeeder_test_pred &lt;- predict(feeder_fit, feeder_test, type = \"prob\") %&gt;%\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.15,\n                                        \"squirrels\", \"no squirrels\"))) %&gt;%\n  bind_cols(feeder_test %&gt;% select(squirrels))\n\n\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary       0.807  \n2 sensitivity binary       0.999  \n3 specificity binary       0.00141"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#roc-curve-1",
+    "href": "handout/2025-03-03-ROC-onestep.html#roc-curve-1",
+    "title": "ROC + Adding Variables",
+    "section": "ROC Curve",
+    "text": "ROC Curve\n\n#roc_auc(feeder_test_pred, truth = squirrels, \n#                  estimate = .pred_squirrels, event_level = \"second\")\n\n\nfeeder_test_pred %&gt;%\n  ggplot() + \n  geom_roc(aes(d = squirrels, m = .pred_squirrels)) +\n  geom_abline(intercept = 0, slope = 1)\n\n\n\n\nTo get a single value (for model comparison), we use the area under the ROC curve."
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#aoc",
+    "href": "handout/2025-03-03-ROC-onestep.html#aoc",
+    "title": "ROC + Adding Variables",
+    "section": "AOC",
+    "text": "AOC\n\n\n\n\n\nAlexandria Ocasio-Cortez as Area Over the Curve. I didn’t make the image, and I don’t know who did!"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#more-metrics",
+    "href": "handout/2025-03-03-ROC-onestep.html#more-metrics",
+    "title": "ROC + Adding Variables",
+    "section": "More metrics",
+    "text": "More metrics\n\nAIC: Akaike’s Information Criteria = \\(-2\\ln L + 2p\\)\nBIC: Bayesian Information Criteria = \\(-2 \\ln L + p \\ln(n)\\)\n\n\nchoose a model with the smallest AIC or BIC"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#tools",
+    "href": "handout/2025-03-03-ROC-onestep.html#tools",
+    "title": "ROC + Adding Variables",
+    "section": "Tools 😖",
+    "text": "Tools 😖\n\ntidymodels does not make it easy to add or drop 1 variable at a time.\nadd1() and drop1() functions do not make it easy to work with dozens of predictors and missing data.\n\nTherefore, we’ll go back to the bird data from HW 5.\n\nnests %&gt;% select(Location) %&gt;% table()\n\nLocation\n  bank  conif  decid ground  shrub   snag   wall \n     3     14     25     19     17      4      4"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#forward-1",
+    "href": "handout/2025-03-03-ROC-onestep.html#forward-1",
+    "title": "ROC + Adding Variables",
+    "section": "Forward +1",
+    "text": "Forward +1\n\nglm(`Closed?` ~ 1, data = nests, family=\"binomial\") %&gt;%\n  add1(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling + Totcare, test = \"Chisq\")\n\nSingle term additions\n\nModel:\n`Closed?` ~ 1\n         Df Deviance     AIC     LRT  Pr(&gt;Chi)    \n&lt;none&gt;       108.533 110.533                      \nLength    1  105.296 109.296  3.2373 0.0719792 .  \nLocation  6   77.065  91.065 31.4684 2.063e-05 ***\nNo.eggs   1   90.951  94.951 17.5816 2.752e-05 ***\nColor     1  108.087 112.087  0.4463 0.5041175    \nIncubate  1  108.267 112.267  0.2658 0.6061875    \nNestling  1   93.825  97.825 14.7078 0.0001255 ***\nTotcare   1   98.964 102.964  9.5688 0.0019791 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#forward-2",
+    "href": "handout/2025-03-03-ROC-onestep.html#forward-2",
+    "title": "ROC + Adding Variables",
+    "section": "Forward +2",
+    "text": "Forward +2\n\nglm(`Closed?` ~ Location, data = nests, family=\"binomial\") %&gt;%\n  add1(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling + Totcare, test = \"Chisq\")\n\nSingle term additions\n\nModel:\n`Closed?` ~ Location\n         Df Deviance    AIC     LRT  Pr(&gt;Chi)    \n&lt;none&gt;        77.065 91.065                      \nLength    1   71.704 87.704  5.3605    0.0206 *  \nNo.eggs   1   61.211 77.211 15.8530 6.846e-05 ***\nColor     1   74.758 90.758  2.3070    0.1288    \nIncubate  1   74.829 90.829  2.2355    0.1349    \nNestling  1   74.722 90.722  2.3425    0.1259    \nTotcare   1   76.635 92.635  0.4300    0.5120    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#forward-3",
+    "href": "handout/2025-03-03-ROC-onestep.html#forward-3",
+    "title": "ROC + Adding Variables",
+    "section": "Forward +3",
+    "text": "Forward +3\n\nglm(`Closed?` ~ No.eggs + Location, data = nests, family=\"binomial\") %&gt;%\n  add1(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling + Totcare, test = \"Chisq\")\n\nSingle term additions\n\nModel:\n`Closed?` ~ No.eggs + Location\n         Df Deviance    AIC     LRT Pr(&gt;Chi)  \n&lt;none&gt;        61.211 77.211                   \nLength    1   58.229 76.229 2.98230  0.08418 .\nColor     1   59.925 77.925 1.28650  0.25669  \nIncubate  1   59.891 77.891 1.32019  0.25056  \nNestling  1   59.247 77.247 1.96461  0.16102  \nTotcare   1   60.751 78.751 0.46084  0.49723  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#backward--1",
+    "href": "handout/2025-03-03-ROC-onestep.html#backward--1",
+    "title": "ROC + Adding Variables",
+    "section": "Backward -1",
+    "text": "Backward -1\n\nglm(`Closed?` ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling + Totcare, data = nests, family=\"binomial\") %&gt;%\n  drop1(test = \"Chisq\")\n\nSingle term deletions\n\nModel:\n`Closed?` ~ Length + Location + No.eggs + Color + Incubate + \n    Nestling + Totcare\n         Df Deviance    AIC     LRT Pr(&gt;Chi)   \n&lt;none&gt;        46.252 70.252                    \nLength    1   52.812 74.812  6.5600 0.010430 * \nLocation  6   66.017 78.017 19.7648 0.003049 **\nNo.eggs   1   56.049 78.049  9.7973 0.001748 **\nColor     1   46.997 68.997  0.7457 0.387857   \nIncubate  0   46.252 70.252  0.0000            \nNestling  0   46.252 70.252  0.0000            \nTotcare   0   46.252 70.252  0.0000            \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#backward--2",
+    "href": "handout/2025-03-03-ROC-onestep.html#backward--2",
+    "title": "ROC + Adding Variables",
+    "section": "Backward -2",
+    "text": "Backward -2\n\nglm(`Closed?` ~ Length + Location + No.eggs + Color +\n         Incubate  + Totcare, data = nests, family=\"binomial\") %&gt;%\n  drop1(test = \"Chisq\")\n\nSingle term deletions\n\nModel:\n`Closed?` ~ Length + Location + No.eggs + Color + Incubate + \n    Totcare\n         Df Deviance    AIC     LRT Pr(&gt;Chi)   \n&lt;none&gt;        46.252 70.252                    \nLength    1   52.812 74.812  6.5600 0.010430 * \nLocation  6   66.017 78.017 19.7648 0.003049 **\nNo.eggs   1   56.049 78.049  9.7973 0.001748 **\nColor     1   46.997 68.997  0.7457 0.387857   \nIncubate  1   49.031 71.031  2.7796 0.095472 . \nTotcare   1   56.989 78.989 10.7368 0.001050 **\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#backward--2-1",
+    "href": "handout/2025-03-03-ROC-onestep.html#backward--2-1",
+    "title": "ROC + Adding Variables",
+    "section": "Backward -2",
+    "text": "Backward -2\n\nglm(`Closed?` ~ Length + Location + No.eggs + Incubate  + Totcare, \n    data = nests, family=\"binomial\") %&gt;%\n  drop1(test = \"Chisq\")\n\nSingle term deletions\n\nModel:\n`Closed?` ~ Length + Location + No.eggs + Incubate + Totcare\n         Df Deviance    AIC     LRT Pr(&gt;Chi)    \n&lt;none&gt;        46.997 68.997                     \nLength    1   53.878 73.878  6.8809 0.008712 ** \nLocation  6   66.664 76.664 19.6663 0.003175 ** \nNo.eggs   1   57.418 77.418 10.4201 0.001247 ** \nIncubate  1   49.839 69.839  2.8416 0.091854 .  \nTotcare   1   58.227 78.227 11.2297 0.000805 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#backward--3",
+    "href": "handout/2025-03-03-ROC-onestep.html#backward--3",
+    "title": "ROC + Adding Variables",
+    "section": "Backward -3",
+    "text": "Backward -3\n\nglm(`Closed?` ~ Length + Location + No.eggs + Totcare, \n    data = nests, family=\"binomial\") %&gt;%\n  drop1(test = \"Chisq\")\n\nSingle term deletions\n\nModel:\n`Closed?` ~ Length + Location + No.eggs + Totcare\n         Df Deviance    AIC     LRT  Pr(&gt;Chi)    \n&lt;none&gt;        49.839 69.839                      \nLength    1   60.751 78.751 10.9116 0.0009556 ***\nLocation  6   69.236 77.236 19.3974 0.0035425 ** \nNo.eggs   1   61.940 79.940 12.1013 0.0005039 ***\nTotcare   1   58.229 76.229  8.3902 0.0037725 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#automatic-forward-w-aic",
+    "href": "handout/2025-03-03-ROC-onestep.html#automatic-forward-w-aic",
+    "title": "ROC + Adding Variables",
+    "section": "Automatic: Forward w AIC",
+    "text": "Automatic: Forward w AIC\n\nglm(`Closed?` ~ 1, data = nests, family=\"binomial\") %&gt;%\n  stats::step(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling + Totcare, \n         direction = \"forward\", k = 2)\n\nStart:  AIC=110.53\n`Closed?` ~ 1\n\n           Df Deviance     AIC\n+ Location  6   77.065  91.065\n+ No.eggs   1   90.951  94.951\n+ Nestling  1   93.825  97.825\n+ Totcare   1   98.964 102.964\n+ Length    1  105.296 109.296\n&lt;none&gt;         108.533 110.533\n+ Color     1  108.087 112.087\n+ Incubate  1  108.267 112.267\n\nStep:  AIC=91.06\n`Closed?` ~ Location\n\n           Df Deviance    AIC\n+ No.eggs   1   61.211 77.211\n+ Length    1   71.704 87.704\n+ Nestling  1   74.722 90.722\n+ Color     1   74.758 90.758\n+ Incubate  1   74.829 90.829\n&lt;none&gt;          77.065 91.065\n+ Totcare   1   76.635 92.635\n\nStep:  AIC=77.21\n`Closed?` ~ Location + No.eggs\n\n           Df Deviance    AIC\n+ Length    1   58.229 76.229\n&lt;none&gt;          61.211 77.211\n+ Nestling  1   59.247 77.247\n+ Incubate  1   59.891 77.891\n+ Color     1   59.925 77.925\n+ Totcare   1   60.751 78.751\n\nStep:  AIC=76.23\n`Closed?` ~ Location + No.eggs + Length\n\n           Df Deviance    AIC\n+ Nestling  1   47.292 67.292\n+ Totcare   1   49.839 69.839\n&lt;none&gt;          58.229 76.229\n+ Color     1   56.989 76.989\n+ Incubate  1   58.227 78.227\n\nStep:  AIC=67.29\n`Closed?` ~ Location + No.eggs + Length + Nestling\n\n           Df Deviance    AIC\n&lt;none&gt;          47.292 67.292\n+ Color     1   46.580 68.580\n+ Incubate  1   46.997 68.997\n+ Totcare   1   46.997 68.997\n\n\n\nCall:  glm(formula = `Closed?` ~ Location + No.eggs + Length + Nestling, \n    family = \"binomial\", data = nests)\n\nCoefficients:\n   (Intercept)   Locationconif   Locationdecid  Locationground   Locationshrub  \n       11.1085        -19.2865        -16.8603        -20.5222        -18.6448  \n  Locationsnag    Locationwall         No.eggs          Length        Nestling  \n        0.6949        -18.3127          0.7950         -0.2194          0.3983  \n\nDegrees of Freedom: 85 Total (i.e. Null);  76 Residual\nNull Deviance:      108.5 \nResidual Deviance: 47.29    AIC: 67.29"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#final-forward-aic",
+    "href": "handout/2025-03-03-ROC-onestep.html#final-forward-aic",
+    "title": "ROC + Adding Variables",
+    "section": "Final Forward AIC",
+    "text": "Final Forward AIC\n\nglm(`Closed?` ~ Length + Location + No.eggs + Nestling,\n    data = nests, family=\"binomial\") %&gt;% tidy()\n\n# A tibble: 10 × 5\n   term           estimate std.error statistic p.value\n   &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)      11.1   3328.      0.00334  0.997  \n 2 Length           -0.219    0.0754 -2.91     0.00364\n 3 Locationconif   -19.3   3328.     -0.00580  0.995  \n 4 Locationdecid   -16.9   3328.     -0.00507  0.996  \n 5 Locationground  -20.5   3328.     -0.00617  0.995  \n 6 Locationshrub   -18.6   3328.     -0.00560  0.996  \n 7 Locationsnag      0.695 4313.      0.000161 1.00   \n 8 Locationwall    -18.3   3328.     -0.00550  0.996  \n 9 No.eggs           0.795    0.262   3.04     0.00238\n10 Nestling          0.398    0.144   2.76     0.00577"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#automatic-backward-w-bic",
+    "href": "handout/2025-03-03-ROC-onestep.html#automatic-backward-w-bic",
+    "title": "ROC + Adding Variables",
+    "section": "Automatic: Backward w BIC",
+    "text": "Automatic: Backward w BIC\n\nglm(`Closed?` ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling + Totcare,\n    data = nests, family=\"binomial\") %&gt;%\n  stats::step(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling + Totcare, \n         direction = \"backward\", k = log(86))\n\nStart:  AIC=99.7\n`Closed?` ~ Length + Location + No.eggs + Color + Incubate + \n    Nestling + Totcare\n\n\nStep:  AIC=99.7\n`Closed?` ~ Length + Location + No.eggs + Color + Incubate + \n    Nestling\n\n           Df Deviance     AIC\n- Location  6   66.017  92.743\n- Incubate  1   46.580  95.577\n- Color     1   46.997  95.995\n&lt;none&gt;          46.252  99.704\n- Length    1   52.812 101.810\n- No.eggs   1   56.049 105.047\n- Nestling  1   56.989 105.986\n\nStep:  AIC=92.74\n`Closed?` ~ Length + No.eggs + Color + Incubate + Nestling\n\n           Df Deviance     AIC\n- Incubate  1   66.175  88.447\n- Color     1   66.664  88.935\n&lt;none&gt;          66.017  92.743\n- No.eggs   1   74.635  96.907\n- Length    1   75.000  97.272\n- Nestling  1   85.891 108.163\n\nStep:  AIC=88.45\n`Closed?` ~ Length + No.eggs + Color + Nestling\n\n           Df Deviance     AIC\n- Color     1   66.762  84.579\n&lt;none&gt;          66.175  88.447\n- No.eggs   1   75.577  93.395\n- Length    1   79.115  96.932\n- Nestling  1   89.064 106.881\n\nStep:  AIC=84.58\n`Closed?` ~ Length + No.eggs + Nestling\n\n           Df Deviance     AIC\n&lt;none&gt;          66.762  84.579\n- No.eggs   1   76.704  90.067\n- Length    1   79.162  92.525\n- Nestling  1   90.053 103.416\n\n\n\nCall:  glm(formula = `Closed?` ~ Length + No.eggs + Nestling, family = \"binomial\", \n    data = nests)\n\nCoefficients:\n(Intercept)       Length      No.eggs     Nestling  \n    -6.7711      -0.1871       0.6476       0.4062  \n\nDegrees of Freedom: 85 Total (i.e. Null);  82 Residual\nNull Deviance:      108.5 \nResidual Deviance: 66.76    AIC: 74.76"
+  },
+  {
+    "objectID": "handout/2025-03-03-ROC-onestep.html#final-backward-bic",
+    "href": "handout/2025-03-03-ROC-onestep.html#final-backward-bic",
+    "title": "ROC + Adding Variables",
+    "section": "Final Backward BIC",
+    "text": "Final Backward BIC\n\nglm(`Closed?` ~ Length + No.eggs + Nestling,\n    data = nests, family=\"binomial\") %&gt;% tidy()\n\n# A tibble: 4 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   -6.77     1.73       -3.90 0.0000946\n2 Length        -0.187    0.0598     -3.13 0.00177  \n3 No.eggs        0.648    0.245       2.65 0.00815  \n4 Nestling       0.406    0.107       3.78 0.000156"
   }
 ]

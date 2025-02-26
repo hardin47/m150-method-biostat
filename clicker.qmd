@@ -612,7 +612,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-(@) Which is the correct logistic regression model to predict disease status based on snoring (never, occasionally, often, always): $X_1 = 1$ for occastionally; $X_2 = 1$ for often; $X_3 = 1$ for always.[^49b]
+(@) Which is the correct logistic regression model to predict disease status based on snoring (never, occasionally, often, always): $X_1 = 1$ for occasionally; $X_2 = 1$ for often; $X_3 = 1$ for always.[^49b]
    (a) logit$(p) = \beta_0$   
    (b) logit$(p) = \beta_0 + \beta_1 X$   
    (c) logit$(p) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3$   
