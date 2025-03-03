@@ -282,7 +282,8 @@ feeder_rec
 
 feeder_rec_trained <- prep(feeder_rec)
 
-bake(feeder_rec_trained, feeder_train)
+bake(feeder_rec_trained, feeder_train) |> 
+  select(starts_with("hab"), everything()) # re-ordering the columns
 ```
 
 # Building workflows
@@ -293,7 +294,7 @@ bake(feeder_rec_trained, feeder_train)
 #| echo: true
 
 feeder_log <- logistic_reg() |>
-  set_engine("glm")
+  set_engine(engine = "glm", family = "binomial")
 
 feeder_log
 ```
@@ -392,7 +393,7 @@ feeder_fit |> tidy()
 ## predict
 
 ```{r echo = TRUE}
-feeder_train_pred <- predict(feeder_fit, feeder_train, type = "prob") |>
+feeder_train_pred <- predict(object = feeder_fit, new_data = feeder_train, type = "prob") |>
   mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.5,
                                         "squirrels", "no squirrels"))) |>
   bind_cols(feeder_train |> select(squirrels))
@@ -415,7 +416,7 @@ feeder_train_pred
 
 ```{r}
 #| echo: true
-feeder_train_pred <- predict(feeder_fit, feeder_train, type = "prob") |>
+feeder_train_pred <- predict(object = feeder_fit, new_data = feeder_train, type = "prob") |>
   mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.5,
                                         "squirrels", "no squirrels"))) |>
   bind_cols(feeder_train |> select(squirrels))
@@ -428,11 +429,11 @@ feeder_train_pred
 ```{r}
 #| echo: true
 
-rbind(accuracy(feeder_train_pred, truth = squirrels, 
+rbind(accuracy(data = feeder_train_pred, truth = squirrels, 
                estimate = .pred_class),
-      sensitivity(feeder_train_pred, truth = squirrels, 
+      sensitivity(data = feeder_train_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"),
-      specificity(feeder_train_pred, truth = squirrels, 
+      specificity(data = feeder_train_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"))
 ```
 
@@ -448,32 +449,6 @@ feeder_train_pred |>
   scale_fill_gradient(low="#D6EAF8", high="#2E86C1") 
 ```
 
-## Different predictions for training data
-
-Note that you now have to be predicted 0.75 to be a squirrel!
-
-```{r}
-#| echo: true
-feeder_train_pred_0.75 <- predict(feeder_fit, feeder_train, type = "prob") |>
-  mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.75,
-                                        "squirrels", "no squirrels"))) |>
-  bind_cols(feeder_train |> select(squirrels))
-
-feeder_train_pred
-```
-
-
-```{r}
-#| echo: true
-
-rbind(accuracy(feeder_train_pred_0.75, truth = squirrels, 
-               estimate = .pred_class),
-      sensitivity(feeder_train_pred_0.75, truth = squirrels, 
-                  estimate = .pred_class, event_level = "second"),
-      specificity(feeder_train_pred_0.75, truth = squirrels, 
-                  estimate = .pred_class, event_level = "second"))
-```
-
 
 ## But, really...
 
@@ -484,7 +459,7 @@ rbind(accuracy(feeder_train_pred_0.75, truth = squirrels,
 ```{r}
 #| echo: true
 
-feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") |>
+feeder_test_pred <- predict(object = feeder_fit, new_data = feeder_test, type = "prob") |>
   mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.5,
                                         "squirrels", "no squirrels"))) |>
   bind_cols(feeder_test |> select(squirrels))
@@ -492,16 +467,17 @@ feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") |>
 feeder_test_pred
 ```
 
+
 ## Evaluate testing data
 
 ```{r}
 #| echo: true
 
-rbind(accuracy(feeder_test_pred, truth = squirrels, 
+rbind(accuracy(data = feeder_test_pred, truth = squirrels, 
                estimate = .pred_class),
-      sensitivity(feeder_test_pred, truth = squirrels, 
+      sensitivity(data = feeder_test_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"),
-      specificity(feeder_test_pred, truth = squirrels, 
+      specificity(data = feeder_test_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"))
 ```
 
@@ -517,24 +493,62 @@ feeder_test_pred |>
   scale_fill_gradient(low="#D6EAF8", high="#2E86C1") 
 ```
 
+## Different predictions for test data
+
+Note that you now have to be predicted 0.75 to be a squirrel!
+
+```{r}
+#| echo: true
+feeder_test_pred_0.75 <- predict(object = feeder_fit, new_data = feeder_test, type = "prob") |>
+  mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.75,
+                                        "squirrels", "no squirrels"))) |>
+  bind_cols(feeder_test |> select(squirrels))
+
+feeder_test_pred_0.75
+```
+
+## Accuracy for different prediction cutoff
+
+```{r}
+#| echo: true
+
+rbind(accuracy(data = feeder_test_pred_0.75, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(data = feeder_test_pred_0.75, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(data = feeder_test_pred_0.75, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"))
+
+rbind(accuracy(data = feeder_test_pred, truth = squirrels, 
+               estimate = .pred_class),
+      sensitivity(data = feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"),
+      specificity(data = feeder_test_pred, truth = squirrels, 
+                  estimate = .pred_class, event_level = "second"))
+```
+
+
+
 ## Training vs. testing
 
 ```{r}
-rbind(accuracy(feeder_train_pred, truth = squirrels, 
+rbind(accuracy(data = feeder_train_pred, truth = squirrels, 
                estimate = .pred_class),
-      sensitivity(feeder_train_pred, truth = squirrels, 
+      sensitivity(data = feeder_train_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"),
-      specificity(feeder_train_pred, truth = squirrels, 
+      specificity(data = feeder_train_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"))
 
-rbind(accuracy(feeder_test_pred, truth = squirrels, 
+rbind(accuracy(data = feeder_test_pred, truth = squirrels, 
                estimate = .pred_class),
-      sensitivity(feeder_test_pred, truth = squirrels, 
+      sensitivity(data = feeder_test_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"),
-      specificity(feeder_test_pred, truth = squirrels, 
+      specificity(data = feeder_test_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"))
 
 ```
+
+
 
 ## What's up with training data? {.smaller}
 
@@ -591,7 +605,7 @@ feeder_fit |> tidy()
 ## predict
 
 ```{r echo = TRUE}
-feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") |>
+feeder_test_pred <- predict(object = feeder_fit, new_data = feeder_test, type = "prob") |>
   mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.5,
                                         "squirrels", "no squirrels"))) |>
   bind_cols(feeder_test |> select(squirrels))
@@ -602,9 +616,9 @@ feeder_train_pred
 ## assess
 
 ```{r echo = TRUE}
-rbind(accuracy(feeder_test_pred, truth = squirrels, estimate = .pred_class),
-      sensitivity(feeder_test_pred, truth = squirrels, estimate = .pred_class),
-      specificity(feeder_test_pred, truth = squirrels, estimate = .pred_class))
+rbind(accuracy(data = feeder_test_pred, truth = squirrels, estimate = .pred_class),
+      sensitivity(data = feeder_test_pred, truth = squirrels, estimate = .pred_class),
+      specificity(data = feeder_test_pred, truth = squirrels, estimate = .pred_class))
 ```
 
 :::
@@ -698,7 +712,7 @@ knitr::include_graphics("figs/three-CV-iter.svg")
 
 ```{r echo = TRUE}
 set.seed(4747)
-folds <- vfold_cv(feeder_train, v = 3, strata = squirrels)
+folds <- vfold_cv(data = feeder_train, v = 3, strata = squirrels)
 folds
 ```
 
@@ -726,7 +740,7 @@ feeder_rec1
 
 ```{r echo = TRUE}
 feeder_log <- logistic_reg() |>
-  set_engine("glm")
+  set_engine(engine = "glm", family = "binomial")
 
 feeder_log
 ```
@@ -792,7 +806,7 @@ feeder_rec2
 
 ```{r echo = TRUE}
 feeder_log <- logistic_reg() |>
-  set_engine("glm")
+  set_engine(engine = "glm", family = "binomial")
 
 feeder_log
 ```
