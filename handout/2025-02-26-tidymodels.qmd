@@ -507,7 +507,7 @@ feeder_test_pred_0.75 <- predict(object = feeder_fit, new_data = feeder_test, ty
 feeder_test_pred_0.75
 ```
 
-## Accuracy for different prediction cutoff
+## Different prediction cutoff
 
 ```{r}
 #| echo: true
@@ -610,15 +610,15 @@ feeder_test_pred <- predict(object = feeder_fit, new_data = feeder_test, type = 
                                         "squirrels", "no squirrels"))) |>
   bind_cols(feeder_test |> select(squirrels))
 
-feeder_train_pred
+feeder_test_pred
 ```
 
 ## assess
 
 ```{r echo = TRUE}
 rbind(accuracy(data = feeder_test_pred, truth = squirrels, estimate = .pred_class),
-      sensitivity(data = feeder_test_pred, truth = squirrels, estimate = .pred_class),
-      specificity(data = feeder_test_pred, truth = squirrels, estimate = .pred_class))
+      sensitivity(data = feeder_test_pred, truth = squirrels, estimate = .pred_class, event_level = "second"),
+      specificity(data = feeder_test_pred, truth = squirrels, estimate = .pred_class, event_level = "second"))
 ```
 
 :::

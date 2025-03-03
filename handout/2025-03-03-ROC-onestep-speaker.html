@@ -196,7 +196,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">ROC + Adding Variables</h1>
-  <p class="subtitle">Math 150 - Spring 2023</p>
+  <p class="subtitle">Math 150 - Spring 2025</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -326,10 +326,10 @@ $ count_area_size_sq_m_atleast &lt;dbl&gt; 1.01, 1.01, 1.01, 1.01, 1.01, 1.01, 3
 <section id="make-predictions-for-test-data" class="slide level2">
 <h2>Make predictions for test data</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>feeder_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(feeder_fit, feeder_test, <span class="at">type =</span> <span class="st">"prob"</span>) <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>feeder_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(feeder_fit, feeder_test, <span class="at">type =</span> <span class="st">"prob"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb3-2"><a></a>  <span class="fu">mutate</span>(<span class="at">.pred_class =</span> <span class="fu">as.factor</span>(<span class="fu">ifelse</span>(.pred_squirrels <span class="sc">&gt;=</span><span class="fl">0.5</span>,</span>
-<span id="cb3-3"><a></a>                                        <span class="st">"squirrels"</span>, <span class="st">"no squirrels"</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a></a>  <span class="fu">bind_cols</span>(feeder_test <span class="sc">%&gt;%</span> <span class="fu">select</span>(squirrels))</span>
+<span id="cb3-3"><a></a>                                        <span class="st">"squirrels"</span>, <span class="st">"no squirrels"</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">bind_cols</span>(feeder_test <span class="sc">|&gt;</span> <span class="fu">select</span>(squirrels))</span>
 <span id="cb3-5"><a></a></span>
 <span id="cb3-6"><a></a>feeder_test_pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -358,17 +358,18 @@ $ count_area_size_sq_m_atleast &lt;dbl&gt; 1.01, 1.01, 1.01, 1.01, 1.01, 1.01, 3
 <span id="cb5-3"><a></a>      <span class="fu">sensitivity</span>(feeder_test_pred, <span class="at">truth =</span> squirrels, </span>
 <span id="cb5-4"><a></a>                  <span class="at">estimate =</span> .pred_class, <span class="at">event_level =</span> <span class="st">"second"</span>),</span>
 <span id="cb5-5"><a></a>      <span class="fu">specificity</span>(feeder_test_pred, <span class="at">truth =</span> squirrels, </span>
-<span id="cb5-6"><a></a>                  <span class="at">estimate =</span> .pred_class, <span class="at">event_level =</span> <span class="st">"second"</span>)<span class="co">#,</span></span>
-<span id="cb5-7"><a></a>      <span class="co">#roc_auc(feeder_test_pred, truth = squirrels, </span></span>
-<span id="cb5-8"><a></a>                  <span class="co">#estimate = .pred_squirrels, event_level = "second")</span></span>
+<span id="cb5-6"><a></a>                  <span class="at">estimate =</span> .pred_class, <span class="at">event_level =</span> <span class="st">"second"</span>),</span>
+<span id="cb5-7"><a></a>      <span class="fu">roc_auc</span>(feeder_test_pred, <span class="at">truth =</span> squirrels, </span>
+<span id="cb5-8"><a></a>                  .pred_squirrels, <span class="at">event_level =</span> <span class="st">"second"</span>)</span>
 <span id="cb5-9"><a></a>      )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
+<pre><code># A tibble: 4 × 3
   .metric     .estimator .estimate
   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 1 accuracy    binary        0.814 
 2 sensitivity binary        0.985 
-3 specificity binary        0.0988</code></pre>
+3 specificity binary        0.0988
+4 roc_auc     binary        0.721 </code></pre>
 </div>
 </div>
 </section>
@@ -389,12 +390,13 @@ $ count_area_size_sq_m_atleast &lt;dbl&gt; 1.01, 1.01, 1.01, 1.01, 1.01, 1.01, 3
 <h2>Visualizing accuracy</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
+<pre><code># A tibble: 4 × 3
   .metric     .estimator .estimate
   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 1 accuracy    binary        0.814 
 2 sensitivity binary        0.985 
-3 specificity binary        0.0988</code></pre>
+3 specificity binary        0.0988
+4 roc_auc     binary        0.721 </code></pre>
 </div>
 </div>
 
@@ -402,19 +404,20 @@ $ count_area_size_sq_m_atleast &lt;dbl&gt; 1.01, 1.01, 1.01, 1.01, 1.01, 1.01, 3
 <section id="different-cut-off-0.8" class="slide level2">
 <h2>Different cut-off = 0.8?</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>feeder_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(feeder_fit, feeder_test, <span class="at">type =</span> <span class="st">"prob"</span>) <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>feeder_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(feeder_fit, feeder_test, <span class="at">type =</span> <span class="st">"prob"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb8-2"><a></a>  <span class="fu">mutate</span>(<span class="at">.pred_class =</span> <span class="fu">as.factor</span>(<span class="fu">ifelse</span>(.pred_squirrels <span class="sc">&gt;=</span><span class="fl">0.8</span>,</span>
-<span id="cb8-3"><a></a>                                        <span class="st">"squirrels"</span>, <span class="st">"no squirrels"</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb8-4"><a></a>  <span class="fu">bind_cols</span>(feeder_test <span class="sc">%&gt;%</span> <span class="fu">select</span>(squirrels))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-3"><a></a>                                        <span class="st">"squirrels"</span>, <span class="st">"no squirrels"</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a></a>  <span class="fu">bind_cols</span>(feeder_test <span class="sc">|&gt;</span> <span class="fu">select</span>(squirrels))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
+<pre><code># A tibble: 4 × 3
   .metric     .estimator .estimate
   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 1 accuracy    binary         0.675
 2 sensitivity binary         0.683
-3 specificity binary         0.641</code></pre>
+3 specificity binary         0.641
+4 roc_auc     binary         0.721</code></pre>
 </div>
 </div>
 
@@ -422,19 +425,20 @@ $ count_area_size_sq_m_atleast &lt;dbl&gt; 1.01, 1.01, 1.01, 1.01, 1.01, 1.01, 3
 <section id="different-cut-off-0.15" class="slide level2">
 <h2>Different cut-off = 0.15?</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>feeder_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(feeder_fit, feeder_test, <span class="at">type =</span> <span class="st">"prob"</span>) <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>feeder_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(feeder_fit, feeder_test, <span class="at">type =</span> <span class="st">"prob"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb10-2"><a></a>  <span class="fu">mutate</span>(<span class="at">.pred_class =</span> <span class="fu">as.factor</span>(<span class="fu">ifelse</span>(.pred_squirrels <span class="sc">&gt;=</span><span class="fl">0.15</span>,</span>
-<span id="cb10-3"><a></a>                                        <span class="st">"squirrels"</span>, <span class="st">"no squirrels"</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">bind_cols</span>(feeder_test <span class="sc">%&gt;%</span> <span class="fu">select</span>(squirrels))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-3"><a></a>                                        <span class="st">"squirrels"</span>, <span class="st">"no squirrels"</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a></a>  <span class="fu">bind_cols</span>(feeder_test <span class="sc">|&gt;</span> <span class="fu">select</span>(squirrels))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
+<pre><code># A tibble: 4 × 3
   .metric     .estimator .estimate
   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 1 accuracy    binary       0.807  
 2 sensitivity binary       0.999  
-3 specificity binary       0.00141</code></pre>
+3 specificity binary       0.00141
+4 roc_auc     binary       0.721  </code></pre>
 </div>
 </div>
 
@@ -442,8 +446,14 @@ $ count_area_size_sq_m_atleast &lt;dbl&gt; 1.01, 1.01, 1.01, 1.01, 1.01, 1.01, 3
 <section id="roc-curve-1" class="slide level2">
 <h2>ROC Curve</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co">#roc_auc(feeder_test_pred, truth = squirrels, </span></span>
-<span id="cb12-2"><a></a><span class="co">#                  estimate = .pred_squirrels, event_level = "second")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">roc_auc</span>(<span class="at">data =</span> feeder_test_pred, <span class="at">truth =</span> squirrels, </span>
+<span id="cb12-2"><a></a>                  .pred_squirrels, <span class="at">event_level =</span> <span class="st">"second"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  .metric .estimator .estimate
+  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
+1 roc_auc binary         0.721</code></pre>
+</div>
 </div>
 
 <img data-src="2025-03-03-ROC-onestep_files/figure-revealjs/unnamed-chunk-17-1.png" style="width:90.0%" class="r-stretch quarto-figure-center"><p class="caption">To get a single value (for model comparison), we use the area under the ROC curve.</p></section>
@@ -492,9 +502,9 @@ $ count_area_size_sq_m_atleast &lt;dbl&gt; 1.01, 1.01, 1.01, 1.01, 1.01, 1.01, 3
 <section id="forward-1" class="slide level2">
 <h2>Forward +1</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a></a>  <span class="fu">add1</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
-<span id="cb14-3"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, <span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">add1</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
+<span id="cb15-3"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, <span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Single term additions
 
@@ -517,9 +527,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="forward-2" class="slide level2">
 <h2>Forward +2</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Location, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb16-2"><a></a>  <span class="fu">add1</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
-<span id="cb16-3"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, <span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Location, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">add1</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
+<span id="cb17-3"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, <span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Single term additions
 
@@ -541,9 +551,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="forward-3" class="slide level2">
 <h2>Forward +3</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> No.eggs <span class="sc">+</span> Location, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb18-2"><a></a>  <span class="fu">add1</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
-<span id="cb18-3"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, <span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> No.eggs <span class="sc">+</span> Location, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb19-2"><a></a>  <span class="fu">add1</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
+<span id="cb19-3"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, <span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Single term additions
 
@@ -564,9 +574,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="backward--1" class="slide level2">
 <h2>Backward -1</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
-<span id="cb20-2"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb20-3"><a></a>  <span class="fu">drop1</span>(<span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
+<span id="cb21-2"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb21-3"><a></a>  <span class="fu">drop1</span>(<span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Single term deletions
 
@@ -590,9 +600,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="backward--2" class="slide level2">
 <h2>Backward -2</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
-<span id="cb22-2"><a></a>         Incubate  <span class="sc">+</span> Totcare, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb22-3"><a></a>  <span class="fu">drop1</span>(<span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
+<span id="cb23-2"><a></a>         Incubate  <span class="sc">+</span> Totcare, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a></a>  <span class="fu">drop1</span>(<span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Single term deletions
 
@@ -615,9 +625,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="backward--2-1" class="slide level2">
 <h2>Backward -2</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Incubate  <span class="sc">+</span> Totcare, </span>
-<span id="cb24-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb24-3"><a></a>  <span class="fu">drop1</span>(<span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Incubate  <span class="sc">+</span> Totcare, </span>
+<span id="cb25-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-3"><a></a>  <span class="fu">drop1</span>(<span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Single term deletions
 
@@ -638,9 +648,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="backward--3" class="slide level2">
 <h2>Backward -3</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Totcare, </span>
-<span id="cb26-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb26-3"><a></a>  <span class="fu">drop1</span>(<span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Totcare, </span>
+<span id="cb27-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb27-3"><a></a>  <span class="fu">drop1</span>(<span class="at">test =</span> <span class="st">"Chisq"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Single term deletions
 
@@ -660,10 +670,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="automatic-forward-w-aic" class="slide level2">
 <h2>Automatic: Forward w AIC</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb28-2"><a></a>  stats<span class="sc">::</span><span class="fu">step</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
-<span id="cb28-3"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, </span>
-<span id="cb28-4"><a></a>         <span class="at">direction =</span> <span class="st">"forward"</span>, <span class="at">k =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a></a>  stats<span class="sc">::</span><span class="fu">step</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
+<span id="cb29-3"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, </span>
+<span id="cb29-4"><a></a>         <span class="at">direction =</span> <span class="st">"forward"</span>, <span class="at">k =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Start:  AIC=110.53
 `Closed?` ~ 1
@@ -740,8 +750,8 @@ Residual Deviance: 47.29    AIC: 67.29</code></pre>
 <section id="final-forward-aic" class="slide level2">
 <h2>Final Forward AIC</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Nestling,</span>
-<span id="cb31-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Nestling,</span>
+<span id="cb32-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 5
    term           estimate std.error statistic p.value
@@ -762,12 +772,12 @@ Residual Deviance: 47.29    AIC: 67.29</code></pre>
 <section id="automatic-backward-w-bic" class="slide level2">
 <h2>Automatic: Backward w BIC</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
-<span id="cb33-2"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare,</span>
-<span id="cb33-3"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb33-4"><a></a>  stats<span class="sc">::</span><span class="fu">step</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
-<span id="cb33-5"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, </span>
-<span id="cb33-6"><a></a>         <span class="at">direction =</span> <span class="st">"backward"</span>, <span class="at">k =</span> <span class="fu">log</span>(<span class="dv">86</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
+<span id="cb34-2"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare,</span>
+<span id="cb34-3"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-4"><a></a>  stats<span class="sc">::</span><span class="fu">step</span>(<span class="at">scope =</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Color <span class="sc">+</span></span>
+<span id="cb34-5"><a></a>         Incubate <span class="sc">+</span> Nestling <span class="sc">+</span> Totcare, </span>
+<span id="cb34-6"><a></a>         <span class="at">direction =</span> <span class="st">"backward"</span>, <span class="at">k =</span> <span class="fu">log</span>(<span class="dv">86</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Start:  AIC=99.7
 `Closed?` ~ Length + Location + No.eggs + Color + Incubate + 
@@ -835,8 +845,8 @@ Residual Deviance: 66.76    AIC: 74.76</code></pre>
 <section id="final-backward-bic" class="slide level2">
 <h2>Final Backward BIC</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> No.eggs <span class="sc">+</span> Nestling,</span>
-<span id="cb36-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> No.eggs <span class="sc">+</span> Nestling,</span>
+<span id="cb37-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
   term        estimate std.error statistic   p.value

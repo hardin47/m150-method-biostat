@@ -1,6 +1,6 @@
 ---
 title: "ROC + Adding Variables"
-subtitle: "Math 150 - Spring 2023"
+subtitle: "Math 150 - Spring 2025"
 author: "Jo Hardin"
 footer: "[https://m150-method-biostat.netlify.app/](https://m150-method-biostat.netlify.app/)"
 logo: "../images/st47s.png"
@@ -55,13 +55,13 @@ ggplot2::theme_set(ggplot2::theme_minimal(base_size = 20))
 -   Which variables do the best job of modeling whether a bird feeder site will be used by squirrels?
 
 ```{r}
-site_data <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-10/PFW_count_site_data_public_2021.csv') %>%
+site_data <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-10/PFW_count_site_data_public_2021.csv') |>
   mutate(squirrels = as.factor(ifelse(squirrels, "squirrels", "no squirrels")))
 
-site_data <- site_data %>%
-  filter(!is.na(squirrels)) %>%
-  select(where(~!all(is.na(.x)))) %>%
-  select(-loc_id, -proj_period_id, -fed_yr_round) %>%
+site_data <- site_data |>
+  filter(!is.na(squirrels)) |>
+  select(where(~!all(is.na(.x)))) |>
+  select(-loc_id, -proj_period_id, -fed_yr_round) |>
   select(squirrels, everything()) 
 
 glimpse(site_data)
@@ -76,7 +76,7 @@ For illustrative purposes, we go back to test/training model, although ROC can a
 #| echo: false
 
 set.seed(470)
-feeder_split <- site_data %>%
+feeder_split <- site_data |>
   initial_split(strata = squirrels) # prop = 3/4 in each group, by default
 
 feeder_train <- training(feeder_split)
@@ -85,23 +85,23 @@ feeder_test  <- testing(feeder_split)
 feeder_rec <- recipe(
   squirrels ~ .,    # formula
   data = feeder_train 
-  ) %>%
-  step_impute_mean(all_numeric_predictors()) %>%
+  ) |>
+  step_impute_mean(all_numeric_predictors()) |>
   step_nzv(all_numeric_predictors())
 
 
-feeder_log <- logistic_reg() %>%
+feeder_log <- logistic_reg() |>
   set_engine("glm")
 
 
-feeder_wflow <- workflow() %>%
-  add_recipe(feeder_rec) %>%
+feeder_wflow <- workflow() |>
+  add_recipe(feeder_rec) |>
   add_model(feeder_log) 
 
-feeder_fit <- feeder_wflow %>%
+feeder_fit <- feeder_wflow |>
   fit(data = feeder_train)
 
-feeder_fit %>% tidy()
+feeder_fit |> tidy()
 ```
 
 
@@ -116,10 +116,10 @@ feeder_fit %>% tidy()
 
 ```{r}
 #| echo: true
-feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") %>%
+feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") |>
   mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.5,
-                                        "squirrels", "no squirrels"))) %>%
-  bind_cols(feeder_test %>% select(squirrels))
+                                        "squirrels", "no squirrels"))) |>
+  bind_cols(feeder_test |> select(squirrels))
 
 feeder_test_pred
 ```
@@ -134,9 +134,9 @@ rbind(accuracy(feeder_test_pred, truth = squirrels,
       sensitivity(feeder_test_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"),
       specificity(feeder_test_pred, truth = squirrels, 
-                  estimate = .pred_class, event_level = "second")#,
-      #roc_auc(feeder_test_pred, truth = squirrels, 
-                  #estimate = .pred_squirrels, event_level = "second")
+                  estimate = .pred_class, event_level = "second"),
+      roc_auc(feeder_test_pred, truth = squirrels, 
+                  .pred_squirrels, event_level = "second")
       )
 ```
 
@@ -154,7 +154,7 @@ How can the plot use many TPRs and FPRs ???
 ```{r}
 library(plotROC)
 
-feeder_test_pred %>%
+feeder_test_pred |>
   ggplot() + 
   geom_roc(aes(d = squirrels, m = .pred_squirrels)) +
   geom_abline(intercept = 0, slope = 1)
@@ -171,9 +171,9 @@ rbind(accuracy(feeder_test_pred, truth = squirrels,
       sensitivity(feeder_test_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"),
       specificity(feeder_test_pred, truth = squirrels, 
-                  estimate = .pred_class, event_level = "second")#,
-      #roc_auc(feeder_test_pred, truth = squirrels, 
-                  #estimate = .pred_squirrels, event_level = "second")
+                  estimate = .pred_class, event_level = "second"),
+      roc_auc(feeder_test_pred, truth = squirrels, 
+                  .pred_squirrels, event_level = "second")
       )
 ```
 
@@ -183,8 +183,8 @@ rbind(accuracy(feeder_test_pred, truth = squirrels,
 library(scales)
 library(ggthemes)
 
-feeder_test_pred %>%
-  mutate(correct_class = ifelse(.pred_class == squirrels, "correct classification", "misclassification")) %>%
+feeder_test_pred |>
+  mutate(correct_class = ifelse(.pred_class == squirrels, "correct classification", "misclassification")) |>
   ggplot() +
   geom_jitter(aes(x = .pred_squirrels, y = squirrels, 
                   color = correct_class, shape = correct_class),
@@ -203,10 +203,10 @@ feeder_test_pred %>%
 
 ```{r}
 #| echo: true
-feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") %>%
+feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") |>
   mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.8,
-                                        "squirrels", "no squirrels"))) %>%
-  bind_cols(feeder_test %>% select(squirrels))
+                                        "squirrels", "no squirrels"))) |>
+  bind_cols(feeder_test |> select(squirrels))
 ```
 
 ```{r}
@@ -217,16 +217,16 @@ rbind(accuracy(feeder_test_pred, truth = squirrels,
       sensitivity(feeder_test_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"),
       specificity(feeder_test_pred, truth = squirrels, 
-                  estimate = .pred_class, event_level = "second")#,
-      #roc_auc(feeder_test_pred, truth = squirrels, 
-                  #estimate = .pred_squirrels, event_level = "second"
+                  estimate = .pred_class, event_level = "second"),
+      roc_auc(feeder_test_pred, truth = squirrels, 
+                  .pred_squirrels, event_level = "second")
       )
 ```
 
 ```{r}
 #| echo: false
-feeder_test_pred %>%
-  mutate(correct_class = ifelse(.pred_class == squirrels, "correct classification", "misclassification")) %>%
+feeder_test_pred |>
+  mutate(correct_class = ifelse(.pred_class == squirrels, "correct classification", "misclassification")) |>
   ggplot() +
   geom_jitter(aes(x = .pred_squirrels, y = squirrels, 
                   color = correct_class, shape = correct_class),
@@ -246,10 +246,10 @@ feeder_test_pred %>%
 
 ```{r}
 #| echo: true
-feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") %>%
+feeder_test_pred <- predict(feeder_fit, feeder_test, type = "prob") |>
   mutate(.pred_class = as.factor(ifelse(.pred_squirrels >=0.15,
-                                        "squirrels", "no squirrels"))) %>%
-  bind_cols(feeder_test %>% select(squirrels))
+                                        "squirrels", "no squirrels"))) |>
+  bind_cols(feeder_test |> select(squirrels))
 ```
 
 ```{r}
@@ -260,16 +260,16 @@ rbind(accuracy(feeder_test_pred, truth = squirrels,
       sensitivity(feeder_test_pred, truth = squirrels, 
                   estimate = .pred_class, event_level = "second"),
       specificity(feeder_test_pred, truth = squirrels, 
-                  estimate = .pred_class, event_level = "second")#,
-      #roc_auc(feeder_test_pred, truth = squirrels, 
-      #            estimate = .pred_squirrels, event_level = "second")
+                  estimate = .pred_class, event_level = "second"),
+      roc_auc(feeder_test_pred, truth = squirrels, 
+                  .pred_squirrels, event_level = "second")
       )
 ```
 
 ```{r}
 #| echo: false
-feeder_test_pred %>%
-  mutate(correct_class = ifelse(.pred_class == squirrels, "correct classification", "misclassification")) %>%
+feeder_test_pred |>
+  mutate(correct_class = ifelse(.pred_class == squirrels, "correct classification", "misclassification")) |>
   ggplot() +
   geom_jitter(aes(x = .pred_squirrels, y = squirrels, 
                   color = correct_class, shape = correct_class),
@@ -288,13 +288,13 @@ feeder_test_pred %>%
 ```{r}
 #| echo: true
 
-#roc_auc(feeder_test_pred, truth = squirrels, 
-#                  estimate = .pred_squirrels, event_level = "second")
+roc_auc(data = feeder_test_pred, truth = squirrels, 
+                  .pred_squirrels, event_level = "second")
 ```
 
 ```{r}
 #| fig.cap: To get a single value (for model comparison), we use the area under the ROC curve.  
-feeder_test_pred %>%
+feeder_test_pred |>
   ggplot() + 
   geom_roc(aes(d = squirrels, m = .pred_squirrels)) +
   geom_abline(intercept = 0, slope = 1)
@@ -337,8 +337,8 @@ Therefore, we'll go back to the bird data from HW 5.
 ```{r}
 #| echo: false
 
-nests <- readr::read_csv("./data/C7 Birdnest.csv", na="*") %>%
-  drop_na() %>%
+nests <- readr::read_csv("./data/C7 Birdnest.csv", na="*") |>
+  drop_na() |>
   mutate(Location = case_when(
     Location == "bridge" ~ "wall",
     Location == "building" ~ "wall",
@@ -348,7 +348,7 @@ nests <- readr::read_csv("./data/C7 Birdnest.csv", na="*") %>%
 ```
 
 ```{r}
-nests %>% select(Location) %>% table()
+nests |> select(Location) |> table()
 ```
 
 
@@ -357,7 +357,7 @@ nests %>% select(Location) %>% table()
 ```{r}
 #| echo: true
 
-glm(`Closed?` ~ 1, data = nests, family="binomial") %>%
+glm(`Closed?` ~ 1, data = nests, family="binomial") |>
   add1(scope = ~ Length + Location + No.eggs + Color +
          Incubate + Nestling + Totcare, test = "Chisq")
 ```
@@ -367,7 +367,7 @@ glm(`Closed?` ~ 1, data = nests, family="binomial") %>%
 ```{r}
 #| echo: true
 
-glm(`Closed?` ~ Location, data = nests, family="binomial") %>%
+glm(`Closed?` ~ Location, data = nests, family="binomial") |>
   add1(scope = ~ Length + Location + No.eggs + Color +
          Incubate + Nestling + Totcare, test = "Chisq")
 ```
@@ -378,7 +378,7 @@ glm(`Closed?` ~ Location, data = nests, family="binomial") %>%
 ```{r}
 #| echo: true
 
-glm(`Closed?` ~ No.eggs + Location, data = nests, family="binomial") %>%
+glm(`Closed?` ~ No.eggs + Location, data = nests, family="binomial") |>
   add1(scope = ~ Length + Location + No.eggs + Color +
          Incubate + Nestling + Totcare, test = "Chisq")
 ```
@@ -390,7 +390,7 @@ glm(`Closed?` ~ No.eggs + Location, data = nests, family="binomial") %>%
 #| echo: true
 
 glm(`Closed?` ~ Length + Location + No.eggs + Color +
-         Incubate + Nestling + Totcare, data = nests, family="binomial") %>%
+         Incubate + Nestling + Totcare, data = nests, family="binomial") |>
   drop1(test = "Chisq")
 ```
 
@@ -400,7 +400,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Color +
 #| echo: true
 
 glm(`Closed?` ~ Length + Location + No.eggs + Color +
-         Incubate  + Totcare, data = nests, family="binomial") %>%
+         Incubate  + Totcare, data = nests, family="binomial") |>
   drop1(test = "Chisq")
 ```
 
@@ -410,7 +410,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Color +
 #| echo: true
 
 glm(`Closed?` ~ Length + Location + No.eggs + Incubate  + Totcare, 
-    data = nests, family="binomial") %>%
+    data = nests, family="binomial") |>
   drop1(test = "Chisq")
 ```
 
@@ -421,7 +421,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Incubate  + Totcare,
 #| echo: true
 
 glm(`Closed?` ~ Length + Location + No.eggs + Totcare, 
-    data = nests, family="binomial") %>%
+    data = nests, family="binomial") |>
   drop1(test = "Chisq")
 ```
 
@@ -432,7 +432,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Totcare,
 ```{r}
 #| echo: true
 
-glm(`Closed?` ~ 1, data = nests, family="binomial") %>%
+glm(`Closed?` ~ 1, data = nests, family="binomial") |>
   stats::step(scope = ~ Length + Location + No.eggs + Color +
          Incubate + Nestling + Totcare, 
          direction = "forward", k = 2)
@@ -445,7 +445,7 @@ glm(`Closed?` ~ 1, data = nests, family="binomial") %>%
 #| echo: true
 
 glm(`Closed?` ~ Length + Location + No.eggs + Nestling,
-    data = nests, family="binomial") %>% tidy()
+    data = nests, family="binomial") |> tidy()
 ```
 
 
@@ -456,7 +456,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Nestling,
 
 glm(`Closed?` ~ Length + Location + No.eggs + Color +
          Incubate + Nestling + Totcare,
-    data = nests, family="binomial") %>%
+    data = nests, family="binomial") |>
   stats::step(scope = ~ Length + Location + No.eggs + Color +
          Incubate + Nestling + Totcare, 
          direction = "backward", k = log(86))
@@ -470,7 +470,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Color +
 #| echo: true
 
 glm(`Closed?` ~ Length + No.eggs + Nestling,
-    data = nests, family="binomial") %>% tidy()
+    data = nests, family="binomial") |> tidy()
 ```
 
 ---
