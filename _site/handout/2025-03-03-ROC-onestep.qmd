@@ -11,9 +11,10 @@ format:
     transition: fade
     slide-number: true
     incremental: false 
-    chalkboard: true
+    scrollable: true
 execute:
-  freeze: auto
+  warning: false
+  message: false
 from: markdown+emoji
 bibliography: book.bib
 ---
@@ -404,7 +405,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Color +
   drop1(test = "Chisq")
 ```
 
-## Backward -2 
+## Backward -3 
 
 ```{r}
 #| echo: true
@@ -415,7 +416,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Incubate  + Totcare,
 ```
 
 
-## Backward -3 
+## Backward -4 
 
 ```{r}
 #| echo: true
@@ -474,3 +475,23 @@ glm(`Closed?` ~ Length + No.eggs + Nestling,
 ```
 
 ---
+
+## Final model comparison
+
+### Forward (AIC)
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Length + Location + No.eggs + Nestling,
+    data = nests, family="binomial") |> tidy()
+```
+
+### Backward (BIC)
+
+```{r}
+#| echo: true
+
+glm(`Closed?` ~ Length + No.eggs + Nestling,
+    data = nests, family="binomial") |> tidy()
+```

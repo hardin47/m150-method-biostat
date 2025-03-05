@@ -99,8 +99,6 @@
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -113,6 +111,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -622,8 +621,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="backward--2-1" class="slide level2">
-<h2>Backward -2</h2>
+<section id="backward--3" class="slide level2">
+<h2>Backward -3</h2>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Incubate  <span class="sc">+</span> Totcare, </span>
 <span id="cb25-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
@@ -645,8 +644,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="backward--3" class="slide level2">
-<h2>Backward -3</h2>
+<section id="backward--4" class="slide level2">
+<h2>Backward -4</h2>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Totcare, </span>
 <span id="cb27-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
@@ -858,8 +857,42 @@ Residual Deviance: 66.76    AIC: 74.76</code></pre>
 </div>
 </div>
 </section>
-<section class="slide level2">
-
+<section id="final-model-comparison" class="slide level2">
+<h2>Final model comparison</h2>
+<h3 id="forward-aic">Forward (AIC)</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> Location <span class="sc">+</span> No.eggs <span class="sc">+</span> Nestling,</span>
+<span id="cb39-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 5
+   term           estimate std.error statistic p.value
+   &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+ 1 (Intercept)      11.1   3328.      0.00334  0.997  
+ 2 Length           -0.219    0.0754 -2.91     0.00364
+ 3 Locationconif   -19.3   3328.     -0.00580  0.995  
+ 4 Locationdecid   -16.9   3328.     -0.00507  0.996  
+ 5 Locationground  -20.5   3328.     -0.00617  0.995  
+ 6 Locationshrub   -18.6   3328.     -0.00560  0.996  
+ 7 Locationsnag      0.695 4313.      0.000161 1.00   
+ 8 Locationwall    -18.3   3328.     -0.00550  0.996  
+ 9 No.eggs           0.795    0.262   3.04     0.00238
+10 Nestling          0.398    0.144   2.76     0.00577</code></pre>
+</div>
+</div>
+<h3 id="backward-bic">Backward (BIC)</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">glm</span>(<span class="st">`</span><span class="at">Closed?</span><span class="st">`</span> <span class="sc">~</span> Length <span class="sc">+</span> No.eggs <span class="sc">+</span> Nestling,</span>
+<span id="cb41-2"><a></a>    <span class="at">data =</span> nests, <span class="at">family=</span><span class="st">"binomial"</span>) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  term        estimate std.error statistic   p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)   -6.77     1.73       -3.90 0.0000946
+2 Length        -0.187    0.0598     -3.13 0.00177  
+3 No.eggs        0.648    0.245       2.65 0.00815  
+4 Nestling       0.406    0.107       3.78 0.000156 </code></pre>
+</div>
+</div>
 
 
 </section></section>
@@ -878,7 +911,6 @@ Residual Deviance: 66.76    AIC: 74.76</code></pre>
   <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../site_libs/revealjs/plugin/multiplex/socket.io.js"></script>
   <script src="../site_libs/revealjs/plugin/multiplex/multiplex.js"></script>
   <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
@@ -902,8 +934,7 @@ Residual Deviance: 66.76    AIC: 74.76</code></pre>
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'multiplex': {"secret":"17409759140662226017","id":"747b823833c5e252","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
@@ -1075,7 +1106,7 @@ Residual Deviance: 66.76    AIC: 74.76</code></pre>
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
