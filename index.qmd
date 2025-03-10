@@ -75,7 +75,7 @@ schedule <- tribble(
   '• logistic regression',
   'Kuiper & Sklar: 7 <br> <a href="http://st47s.com/Math150/Notes/process.html" target = "_blank"><i class="fas fa-book-open"></i> model process</a> <br> <a href="http://st47s.com/Math150/Notes/process.html#cross-validation" target = "_blank"><i class="fas fa-book-open"></i> cross validation</a> <br> <a href="https://st47s.com/Math150/Notes/logreg.html#roc" target = "_blank"><i class="fas fa-book-open"></i> ROC</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 5</a> - due 2.25.25 ',
-  '<a href = "https://journals.sagepub.com/doi/10.1177/2515245917747646" target = "_blank"><i class="fas fa-newspaper"></i> many models <br> (Tables 3 & 4, Fig 2)</a>  <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a>',
+  '<a href = "https://journals.sagepub.com/doi/10.1177/2515245917747646" target = "_blank"><i class="fas fa-newspaper"></i> many models <br> (Tables 3 & 4, Fig 2)</a>  <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/bowman.html" target = "_blank">DuBois Boman</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/ws8_ma150_s25_lrt.pdf" target = "_blank">{{< fa pencil >}} WS 8 - drop-in-deviance test </a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws9_ma150_s25_cv.pdf" target = "_blank">{{< fa pencil >}} WS 9 - cross validation </a> <br> <br>  <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-02-26-tidymodels.html" target = "_blank"><i class="fas fa-desktop"></i> tidymodels</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/simppar_log.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i> Simpson&#39;s Paradox</a> ',
 
 "Week 7 <br> 3.3.25", 
@@ -90,7 +90,7 @@ schedule <- tribble(
   '• survival analysis',
   'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#timedata" target = "_blank"><i class="fas fa-book-open"></i> time to event </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KM" target = "_blank"><i class="fas fa-book-open"></i> KM curves</a> ',
   ' ',
-  '<a href = "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target = "_blank"><i class="fas fa-newspaper"></i> placebo effect (read abstract and Fig 3)</a> <br> <br>  <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a>',
+  '<a href = "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target = "_blank"><i class="fas fa-newspaper"></i> placebo effect (read abstract and Fig 3)</a> <br> <br>  <a href = "https://hardin47.github.io/CURV/scholars/nuzzo.html" target = "_blank">Regina Nuzzo</a>',
   ' ', 
 
 "3.17.25", '• Spring Break', ' ', ' ', ' ', ' ',
