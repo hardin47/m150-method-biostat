@@ -902,6 +902,57 @@ D: {5, 6, 7, 9, 11}
 
 [^73]:  e. C and D
 
+
+---
+
+(@) Which variable should I put in first for the forward model process?[^73a]
+    (a)	`Location` 
+    (b)	`No.eggs`
+    (c) `Color`
+    (d) `Incubate` 
+    (e) `Nestling` 
+
+
+[^73a]: a. Location has the largest test statistic and correspondingly smallest p-value.
+
+
+---
+
+(@) Which variable should I put in second for the forward model process?[^73b]
+    (a)	`Location` 
+    (b)	`No.eggs`
+    (c) `Color`
+    (d) `Incubate` 
+    (e) `Nestling` 
+
+[^73b]: a. `No.eggs` has the largest test statistic and correspondingly smallest p-value.
+
+---
+
+(@) Which variable should I remove first for the backward model process?[^73a]
+    (a)	`Location` 
+    (b)	`No.eggs`
+    (c) `Color`
+    (d) `Incubate` 
+    (e) `Nestling` 
+
+
+[^73a]: d. or e. Hard to say, could have removed `Incubate`, `Nestling`, or `Totcare`.  (I removed `Nestling`.)
+
+
+---
+
+(@) Which variable should I remove second for the backward model process?[^73b]
+    (a)	`Location` 
+    (b)	`No.eggs`
+    (c) `Color`
+    (d) `Incubate` 
+    (e) `Nestling` 
+
+[^73b]: c. `Color` has the smalles test statistic and correspondingly largest p-value.
+
+
+
 ---
 
 (@) The variables in the k-variable model identified by **forward** selection are a subset of the variables in the (k+1)-variable model identified by **forward** selection.[^74]
