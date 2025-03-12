@@ -1070,6 +1070,15 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
+(@) If we remove all the censored observations, the empirical survival curve will (on average)[^86a]
+    (a) underestimate the parameter
+    (b) overestimate the parameter
+    (c) sometimes under and sometimes overestimate the parameter
+
+[^86a]: c. sometimes under and sometimes overestimate the parameter. Because censoring and survival time are independent, there isn't any reason why the censored observations would be different from the other observations. However, removing censored observations isn't ideal because you lose information.
+
+---
+
 (@) $n_i - d_i = n_{i+1}$ when:[^87]
     (a) there are no deaths at time $t_i$
     (b) there is no censoring at time $t_i$

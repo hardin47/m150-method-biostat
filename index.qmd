@@ -86,12 +86,15 @@ schedule <- tribble(
   '<a href="https://m150-method-biostat.netlify.app/handout/ws9_ma150_s25_roc.pdf" target = "_blank">{{< fa pencil >}} WS 10 - ROC </a> <br> <br><br> <br> <a href="https://m150-method-biostat.netlify.app/handout/2025-03-03-ROC-onestep.html" target = "_blank"><i class="fas fa-desktop"></i> ROC + one variable building</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/variables.pdf" target = "_blank"><i class="fas fa-pencil-alt"></i>variable handout</a>',
 
 
+
+#read the placebo effect paper more carefully so that i know what to present before class!
 "Week 8 <br> 3.10.25", 
   '• survival analysis',
   'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#timedata" target = "_blank"><i class="fas fa-book-open"></i> time to event </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KM" target = "_blank"><i class="fas fa-book-open"></i> KM curves</a> ',
   ' ',
   '<a href = "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target = "_blank"><i class="fas fa-newspaper"></i> placebo effect (read abstract and Fig 3)</a> <br> <br>  <a href = "https://hardin47.github.io/CURV/scholars/nuzzo.html" target = "_blank">Regina Nuzzo</a>',
   '<a href="https://m150-method-biostat.netlify.app/handout/ws11_ma150_s25_forward.pdf" target = "_blank">{{< fa pencil >}} WS 11 - forward selection </a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws12_ma150_s25_censored.pdf" target = "_blank">{{< fa pencil >}} WS 12 - censored observations </a> <br> <br>', 
+
 
 "3.17.25", '• Spring Break', ' ', ' ', ' ', ' ',
   
