@@ -112,7 +112,7 @@ schedule <- tribble(
   'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#logrank" target = "_blank"><i class="fas fa-book-open"></i> log rank tests </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#hazfunc" target = "_blank"><i class="fas fa-book-open"></i> hazard functions</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 8</a> - due 4.1.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 4 on 4.2.25',
   '<a href = "https://www.sciencedirect.com/science/article/pii/S000291652366280X?via%3Dihub" target = "_blank"><i class="fas fa-newspaper"></i> the million veteran program</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/echohawk.html" target = "_blank">Abigail Echo-Hawk</a>',
-  '  ', 
+  ' <br> <a href="https://m150-method-biostat.netlify.app/handout/ws15_ma150_s25_hazard.pdf" target = "_blank">{{< fa pencil >}} WS 15 - hazard functions</a>', 
 
 "Week 11 <br> 4.7.25", 
   '• survival analysis',
