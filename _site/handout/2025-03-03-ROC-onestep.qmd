@@ -360,7 +360,7 @@ nests |> select(Location) |> table()
 
 glm(`Closed?` ~ 1, data = nests, family="binomial") |>
   add1(scope = ~ Length + Location + No.eggs + Color +
-         Incubate + Nestling + Totcare, test = "Chisq")
+         Incubate + Nestling, test = "Chisq")
 ```
 
 ## Forward +2
@@ -370,7 +370,7 @@ glm(`Closed?` ~ 1, data = nests, family="binomial") |>
 
 glm(`Closed?` ~ Location, data = nests, family="binomial") |>
   add1(scope = ~ Length + Location + No.eggs + Color +
-         Incubate + Nestling + Totcare, test = "Chisq")
+         Incubate + Nestling, test = "Chisq")
 ```
 
 
@@ -381,7 +381,7 @@ glm(`Closed?` ~ Location, data = nests, family="binomial") |>
 
 glm(`Closed?` ~ No.eggs + Location, data = nests, family="binomial") |>
   add1(scope = ~ Length + Location + No.eggs + Color +
-         Incubate + Nestling + Totcare, test = "Chisq")
+         Incubate + Nestling, test = "Chisq")
 ```
 
 
@@ -391,7 +391,7 @@ glm(`Closed?` ~ No.eggs + Location, data = nests, family="binomial") |>
 #| echo: true
 
 glm(`Closed?` ~ Length + Location + No.eggs + Color +
-         Incubate + Nestling + Totcare, data = nests, family="binomial") |>
+         Incubate + Nestling, data = nests, family="binomial") |>
   drop1(test = "Chisq")
 ```
 
@@ -401,7 +401,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Color +
 #| echo: true
 
 glm(`Closed?` ~ Length + Location + No.eggs + Color +
-         Incubate  + Totcare, data = nests, family="binomial") |>
+         Nestling, data = nests, family="binomial") |>
   drop1(test = "Chisq")
 ```
 
@@ -410,18 +410,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Color +
 ```{r}
 #| echo: true
 
-glm(`Closed?` ~ Length + Location + No.eggs + Incubate  + Totcare, 
-    data = nests, family="binomial") |>
-  drop1(test = "Chisq")
-```
-
-
-## Backward -4 
-
-```{r}
-#| echo: true
-
-glm(`Closed?` ~ Length + Location + No.eggs + Totcare, 
+glm(`Closed?` ~ Length + Location + No.eggs + Nestling, 
     data = nests, family="binomial") |>
   drop1(test = "Chisq")
 ```
@@ -435,7 +424,7 @@ glm(`Closed?` ~ Length + Location + No.eggs + Totcare,
 
 glm(`Closed?` ~ 1, data = nests, family="binomial") |>
   stats::step(scope = ~ Length + Location + No.eggs + Color +
-         Incubate + Nestling + Totcare, 
+         Incubate + Nestling, 
          direction = "forward", k = 2)
 
 ```
@@ -456,10 +445,10 @@ glm(`Closed?` ~ Length + Location + No.eggs + Nestling,
 #| echo: true
 
 glm(`Closed?` ~ Length + Location + No.eggs + Color +
-         Incubate + Nestling + Totcare,
+         Incubate + Nestling,
     data = nests, family="binomial") |>
   stats::step(scope = ~ Length + Location + No.eggs + Color +
-         Incubate + Nestling + Totcare, 
+         Incubate + Nestling, 
          direction = "backward", k = log(86))
 
 ```
