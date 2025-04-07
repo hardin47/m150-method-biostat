@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -147,120 +176,110 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>More info on the final project soon!</p>
+<section id="survival-analysis-project" class="level1">
+<h1>Survival Analysis Project</h1>
+<section id="health-evaluation-and-linkage-to-primary-care" class="level2">
+<h2 class="anchored" data-anchor-id="health-evaluation-and-linkage-to-primary-care">Health Evaluation and Linkage to Primary Care</h2>
+<p>The HELP study was a clinical trial for adult inpatients recruited from a detoxification unit. Patients with no primary care physician were randomized to receive a multidisciplinary assessment and a brief motivational intervention or usual care, with the goal of linking them to primary medical care.</p>
+<p>The primary endpoint was whether or not the individual connected to primary care. That is, the “event” of interest is an appointment with a primary care physician.</p>
+<section id="primay-reference" class="level4">
+<h4 class="anchored" data-anchor-id="primay-reference">Primay Reference:</h4>
+<p>Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R. <a href="https://pubmed.ncbi.nlm.nih.gov/12653820/" target="_blank">Linking alcohol and drug-dependent adults to primary medical care: A randomized controlled trial of a multi-disciplinary health intervention in a detoxification unit</a>. <strong>Addiction</strong>, 2003; 98(4):509-516. (You should be able to access the article through the Claremont Colleges Library after you login.)</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
 <!--
-
-# Survival Analysis Project
-
-## Health Evaluation and Linkage to Primary Care
-The HELP study was a clinical trial for adult inpatients recruited from a detoxification unit. Patients with no primary care physician were randomized to receive a multidisciplinary assessment and a brief motivational intervention or usual care, with the goal of linking them to primary medical care.
-
-
-The primary endpoint was whether or not the individual connected to primary care.  That is, the "event" of interest is an appointment with a primary care physician.
-
-
-#### Primay Reference:
-Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R. <a href = "https://pubmed.ncbi.nlm.nih.gov/12653820/" target = "_blank">Linking alcohol and drug-dependent adults to primary medical care: A randomized controlled trial of a multi-disciplinary health intervention in a detoxification unit</a>. **Addiction**, 2003; 98(4):509-516. (You should be able to access the article through the Claremont Colleges Library after you login.)
-
-
-### Data
 is comma delimited at <a href = "https://pomona.box.com/s/nty3oxpb8db1y763l6uusxtq4gukbcev" target = "_blank">https://pomona.box.com/s/nty3oxpb8db1y763l6uusxtq4gukbcev</a>
-
-The data can be loaded in directly from Box using:
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-HELPdata <- readr::read_csv("https://pomona.box.com/shared/static/nty3oxpb8db1y763l6uusxtq4gukbcev",
-                     na=c("NA", ""))
-```
-:::
-
-
-
-
-Please use the above dataset in your analysis.  However, feel free to look at the many variables that are described in the related dataset `HELPfull` (available in the **mosaic** package).  Some things to notice:
-
-* The treatment variable (intervention) is called `group`.
-* The primary endpoint is marked by time: `dayslink` and censoring indicator: `linkstatus`.
-* While there is certainly interest in the intervention, there is room for additional demographic variables to be associated with linking to primary care.
-* The goal of the semester project is to create a Cox Proportional Hazard model which uses explanatory variables to model hazard of "event".
-
-### Due Dates
-* **Wednesday, April 23**. Post to Canvas both the Quarto file and the corresponding pdf document:  
-   * Include the names of the individuals in the group.
-   * Some sort of EDA (exploratory data analysis).  Do not print the data, but do something that indicates you've uploaded the data and know what some of the variables are.  You might have some summary statistics or a graph.  The idea here is to explore the variables, not to run survival curves.  What can you learn about the many many variables?  How do they relate to one another?  What about all the missingness? This is *not* an extensive assignment.  [Again, the question here is not about the response variable, it's about all the predictor variables.  Learn about the dataset!]
-   * Outline the "something new" part of the assignment.  You should indicate who is doing what, what resources each of you will use to learn about your new topic, and a few sentences on what the topic is or how it relates to survival analysis / the analysis at hand.  Additionally, for each "new" thing, provide 1-2 sentences describing what will be **challenging** about learning something new.
-
-* (Optional) **Monday, May 5**. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 1st. (If you are a graduating senior who would like feedback, please provide me a draft by **Friday, May 2nd**.)
-
-* **Wednesday, May 7**. Last day of class, each person / group will present their visualization, and there will be secret ballot voting for the best visualization of the data / model.
-
-* **Friday, May 16**.  Complete assignment is due (turn in **both** the qmd and knitted pdf to Canvas). (If you are a graduating senior, the final assignment is due by **noon on Thursday, May 8**.)
-
-## Assignment
-The analysis should be done in a complete Quarto file and posted to your Canvas dropbox.   The final report should address the following tasks below but should not enumerate the tasks.
-
-
-1. Exploratory data analysis.  Graphical and numerical summaries of the data (both explanatory and response variables).  Do *not* attach every single graph you try.  Instead, choose only a few images that give the reader a sense of the variables and their relationships.
-2. Cox PH model.  Using model building techniques, choose a subset of variables (including transformations, interactions, etc.) to find the model which produces the best survival information.  The team whose model is best^[measured by the $c$ index] on a hold-out sample will earn an additional 5 points on the project.  
-In the final write-up, make sure the final model is very clearly specified.  
-The Cox PH analysis should include: an interpretation of your final survival model including a discussion of the sign of the coefficients (note:  feel free to use interactions)  Which variable(s) are in?  Which are out?  What do you conclude about linking to primary care?  Is there anything worth mentioning about how you got to your final model? What can you say about causation?  What can you say about generalizing to a larger population?
-
-3. Something new.  Each individual in the class will learn a new idea related to survival analysis (see below).   The new part will be assessed on your ability to explain the new idea.  That is, you must indicate a complete understanding of the topic as well as an adequate use of the method applied to the dataset.
-
-4. A visualization to enter into the competition.  The visualization could be of the EDA variety, or it could be based on the model / results.  The different visualizations will be presented to the class on the last day of the semester (May 2).  The team whose visualization is best (secret ballot by the class) will earn an additional 5 points on the project.
-
-5. A reflection on the decision making (goes into the final report).  How did it feel to decide things?  What was easy to decide (e.g., method because you were told to use Cox PH)?  What was hard to decide (e.g., which variables to use)?  What about missingness, what did you do? Does it matter?  Reflect on the process and how you think your decisions may or may not have had an impact on the results you put forward. Also reflect on whether or not your decisions may have had any ethical consequences.
-
-6. The final report which ties it all together should have an introduction, methods, results, discussion.  The <a href = "https://m150-method-biostat.netlify.app/handout/project_rubric.docx" target = "_blank">grading rubric</a> should help you put together the final written project.
-
-
-## Something New:
-Each individual should have some analysis that goes beyond a Cox PH model.   For your analysis, you should give details of what is going on, how it is relevant, what are the technical conditions, what are the conclusions, etc.  Your analysis should indicate a sense that you understand and that you can communicate the results to a possible client.  Some possible topics to investigate include:
-
-* Investigation of the proportional hazards assumption  (what does the R function `cox.zph()` do?)
-* Exponential or Weibull PH regression (parametric survival model)
-* Deriving / detailing AIC & BIC for model selection on Cox PH
-* Power analysis  (a simulation?)
-* Derivation of the sample size calculation for the log rank test (and application to the data)
-* An analysis of the Schoenfeld residuals  (**how are they calculated** and why is that calculation relevant?)
-* Breslow estimate of the Survival curve under Cox PH assumption.
-* Bootstrapping the survival model (what are the assumptions?  what do you conclude?)
-* An analysis / understanding / simulation of the multiple comparisons issues for assessing many different models (or other exploratory hypotheses).
-* Andersen-Gill extension of the Cox PH model for time-varying covariates (available in **rms** R package).  [Note: A-G isn't meant to test PH, per se, but rather it allows for variables that are time varying.]
-* Another topic related to survival analysis that you find interesting.
-
-
-
-::: {.cell}
-
-:::
-
-
-
-## R thoughts
-* Use Quarto to create a reproducible analysis.  Anyone should be able to run your analysis using only the .qmd file.
-* Turn in both .qmd and .pdf files for your final analysis.
-* If you are working in pairs, the project is extended in two ways.  1.  You must *both* be able to work on the files.  Ideally, you will share your work via GitHub or other software which tracks changes and coordinates work.  2. You must do *two* new items (one each).
-* Note that the event of interest is "visit to primary care physician."
-* Be as creative as possible trying to think about how you might like to graphically display the data.  If you come up with a cool idea for a graph but don't know how to implement it, **please let me know, and I will write the code for you!!**
-* Please do not re-code the variables or change the variable names outside of R. You may, however, transform (`mutate()`) the variables within your R code (that is, for example, if you wanted to divide months by 12 to have years, or square a variable, etc.).  
-
-
-#### Assessment:
-* Your primary assessment will be based on the above items (modeling, understanding of new topic, additional analysis, interpretation).
-* Additionally there will be two competitions.  Winning either will add 5 points (out of 100) to your score.
-   * Graphic:  the class will vote on who has the best graphic.
-   * Model:  using a holdout sample (I only gave you part of the data), I will assess your final model.  The group whose model best describes the holdout sample (as measured by the <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4886856/" target = "_blank">c-index</a>) will win the model prize.
-
 -->
+<p>The data can be loaded in directly from Box using a link which will be posted soon (check back here in a week or so):</p>
+<p>Please use the above dataset in your analysis. However, feel free to look at the many variables that are described in the related dataset <code>HELPfull</code> (available in the <strong>mosaic</strong> package). Some things to notice:</p>
+<ul>
+<li>The treatment variable (intervention) is called <code>group</code>.</li>
+<li>The primary endpoint is marked by time: <code>dayslink</code> and censoring indicator: <code>linkstatus</code>.</li>
+<li>While there is certainly interest in the intervention, there is room for additional demographic variables to be associated with linking to primary care.</li>
+<li>The goal of the semester project is to create a Cox Proportional Hazard model which uses explanatory variables to model hazard of “event”.</li>
+</ul>
+</section>
+<section id="due-dates" class="level3">
+<h3 class="anchored" data-anchor-id="due-dates">Due Dates</h3>
+<ul>
+<li><p><strong>Wednesday, April 23</strong>. Post to Canvas both the Quarto file and the corresponding pdf document:</p>
+<ul>
+<li>Include the names of the individuals in the group.</li>
+<li>Some sort of EDA (exploratory data analysis). Do not print the data, but do something that indicates you’ve uploaded the data and know what some of the variables are. You might have some summary statistics or a graph. The idea here is to explore the variables, not to run survival curves. What can you learn about the many many variables? How do they relate to one another? What about all the missingness? This is <em>not</em> an extensive assignment. [Again, the question here is not about the response variable, it’s about all the predictor variables. Learn about the dataset!]</li>
+<li>Outline the “something new” part of the assignment. You should indicate who is doing what, what resources each of you will use to learn about your new topic, and a few sentences on what the topic is or how it relates to survival analysis / the analysis at hand. Additionally, for each “new” thing, provide 1-2 sentences describing what will be <strong>challenging</strong> about learning something new.</li>
+</ul></li>
+<li><p>(Optional) <strong>Monday, May 5</strong>. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 5th (or May 2nd). (If you are a graduating senior who would like feedback, please provide me a draft by <strong>Friday, May 2nd</strong>.)</p></li>
+<li><p><strong>Wednesday, May 7</strong>. Last day of class, each person / group will present their visualization, and there will be secret ballot voting for the best visualization of the data / model.</p></li>
+<li><p><strong>Friday, May 16</strong>. Complete assignment is due (turn in <strong>both</strong> the qmd and knitted pdf to your GitHub repository). I will be grading from GitHub directly, so no need to turn in to Gradescope. (If you are a graduating senior, the final assignment is due by <strong>noon on Thursday, May 8</strong>.)</p></li>
+<li><p>If you are on a team with a graduating senior, then your due dates are all the same as the graduating seniors.</p></li>
+</ul>
+</section>
+</section>
+<section id="assignment" class="level2">
+<h2 class="anchored" data-anchor-id="assignment">Assignment</h2>
+<p>The analysis should be done in a complete Quarto file and pushed to the GitHub repo I will create for your team. The final report should address the following tasks below but should <strong>not</strong> enumerate the tasks (it should be written like a final report).</p>
+<ol type="1">
+<li><p>Exploratory data analysis. Graphical and numerical summaries of the data (both explanatory and response variables). Please do <em>not</em> attach every single graph you try. Instead, choose only a few images that give the reader a sense of the variables and their relationships.</p></li>
+<li><p>Cox PH model. Using model building techniques, choose a subset of variables (including transformations, interactions, etc.) to find the model which produces the best survival information. The team whose model is best<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> on a hold-out sample will earn an additional 3 points on the project.<br>
+In the final write-up, make sure the final model is very clearly specified.<br>
+The Cox PH analysis should include: an interpretation of your final survival model including a discussion of the sign of the coefficients (note: feel free to use interactions) Which variable(s) are in? Which are out? What do you conclude about linking to primary care? Is there anything worth mentioning about how you got to your final model? What can you say about causation? What can you say about generalizing to a larger population?</p></li>
+<li><p>Something new. Each individual in the class will learn a new idea related to survival analysis (see below). The new part will be assessed on your ability to explain the new idea. That is, you must indicate a complete understanding of the topic as well as an adequate use of the method applied to the dataset.</p></li>
+<li><p>A visualization to enter into the competition. The visualization could be of the EDA variety, or it could be based on the model / results. The different visualizations will be presented to the class on the last day of the semester (May 7). The team whose visualization is best (secret ballot by the class) will earn an additional 3 points on the project. The visualization should be included in your GitHub repo (either within the final report or as a separate png / jpg / etc.).</p></li>
+<li><p>A reflection on the decision making (goes into the final report). How did it feel to decide things? What was easy to decide (e.g., method because you were told to use Cox PH)? What was hard to decide (e.g., which variables to use)? What about missingness, what did you do? Does it matter? Reflect on the process and how you think your decisions may or may not have had an impact on the results you put forward. Also reflect on whether or not your decisions may have had any ethical consequences.</p></li>
+<li><p>The final report which ties it all together should have an introduction, methods, results, discussion. The <a href="https://m150-method-biostat.netlify.app/handout/project_rubric.docx" target="_blank">grading rubric</a> should help you put together the final written project.</p></li>
+</ol>
+</section>
+<section id="something-new" class="level2">
+<h2 class="anchored" data-anchor-id="something-new">Something New:</h2>
+<p>Each individual should have some analysis that goes beyond a Cox PH model. For your analysis, you should give details of what is going on, how it is relevant, what are the technical conditions, what are the conclusions, etc. Your analysis should indicate a sense that you understand and that you can communicate the results to a possible client. Some possible topics to investigate include:</p>
+<ul>
+<li>Investigation of the proportional hazards assumption (what does the R function <code>cox.zph()</code> do?)</li>
+<li>Exponential or Weibull PH regression (parametric survival model)</li>
+<li>Deriving / detailing AIC &amp; BIC for model selection on Cox PH</li>
+<li>Power analysis (a simulation?)</li>
+<li>Derivation of the sample size calculation for the log rank test (and application to the data)</li>
+<li>An analysis of the Schoenfeld residuals (<strong>how are they calculated</strong> and why is that calculation relevant?)</li>
+<li>Breslow estimate of the Survival curve under Cox PH assumption.</li>
+<li>Bootstrapping the survival model (what are the assumptions? what do you conclude?)</li>
+<li>An analysis / understanding / simulation of the multiple comparisons issues for assessing many different models (or other exploratory hypotheses).</li>
+<li>Andersen-Gill extension of the Cox PH model for time-varying covariates (available in <strong>rms</strong> R package). [Note: A-G isn’t meant to test PH, per se, but rather it allows for variables that are time varying.]</li>
+<li>Another topic related to survival analysis that you find interesting.</li>
+</ul>
+</section>
+<section id="r-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="r-thoughts">R thoughts</h2>
+<ul>
+<li>Use Quarto to create a reproducible analysis. Anyone should be able to run your analysis using only the .qmd file and the dataset.</li>
+<li>Turn in both .qmd and .pdf files for your final analysis.</li>
+<li>If you are working in pairs, the project is extended in two ways. 1. You must <em>both</em> be working on the files in GitHub. That is, each person must make commits to the repository. 2. You must do <em>two</em> new items (one each).</li>
+<li>Note that the event of interest is “visit to primary care physician.”</li>
+<li>Be as creative as possible trying to think about how you might like to graphically display the data. If you come up with a cool idea for a graph but don’t know how to implement it, <strong>please let me know, and I will write the code for you!!</strong></li>
+<li>Please do not re-code the variables or change the variable names outside of R. You may, however, transform (<code>mutate()</code>) the variables within your R code (that is, for example, if you wanted to divide months by 12 to have years, or square a variable, etc.).</li>
+</ul>
+<section id="assessment" class="level4">
+<h4 class="anchored" data-anchor-id="assessment">Assessment:</h4>
+<ul>
+<li>Your primary assessment will be based on the above items (modeling, understanding of new topic, additional analysis, interpretation).</li>
+<li>Additionally there will be two competitions. Winning either will add 3 points (out of 85) to your score.
+<ul>
+<li>Graphic: the class will vote on who has the best graphic.</li>
+<li>Model: using a holdout sample (I only gave you part of the data), I will assess your final model. The group whose model best describes the holdout sample (as measured by the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4886856/" target="_blank">c-index</a>) will win the model prize.</li>
+</ul></li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>measured by the <span class="math inline">\(c\)</span> index<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -3,9 +3,6 @@ title: "Final Project"
 format: html
 ---
 
-More info on the final project soon!
-
-<!--
 
 # Survival Analysis Project
 
@@ -21,13 +18,16 @@ Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R. <a href = "https
 
 
 ### Data
+<!--
 is comma delimited at <a href = "https://pomona.box.com/s/nty3oxpb8db1y763l6uusxtq4gukbcev" target = "_blank">https://pomona.box.com/s/nty3oxpb8db1y763l6uusxtq4gukbcev</a>
+-->
 
-The data can be loaded in directly from Box using:
+The data can be loaded in directly from Box using a link which will be posted soon (check back here in a week or so):
 
 ```{r}
 #| warning: false
 #| message: false
+#| echo: false
 
 HELPdata <- readr::read_csv("https://pomona.box.com/shared/static/nty3oxpb8db1y763l6uusxtq4gukbcev",
                      na=c("NA", ""))
@@ -47,24 +47,26 @@ Please use the above dataset in your analysis.  However, feel free to look at th
    * Some sort of EDA (exploratory data analysis).  Do not print the data, but do something that indicates you've uploaded the data and know what some of the variables are.  You might have some summary statistics or a graph.  The idea here is to explore the variables, not to run survival curves.  What can you learn about the many many variables?  How do they relate to one another?  What about all the missingness? This is *not* an extensive assignment.  [Again, the question here is not about the response variable, it's about all the predictor variables.  Learn about the dataset!]
    * Outline the "something new" part of the assignment.  You should indicate who is doing what, what resources each of you will use to learn about your new topic, and a few sentences on what the topic is or how it relates to survival analysis / the analysis at hand.  Additionally, for each "new" thing, provide 1-2 sentences describing what will be **challenging** about learning something new.
 
-* (Optional) **Monday, May 5**. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 1st. (If you are a graduating senior who would like feedback, please provide me a draft by **Friday, May 2nd**.)
+* (Optional) **Monday, May 5**. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 5th (or May 2nd). (If you are a graduating senior who would like feedback, please provide me a draft by **Friday, May 2nd**.)
 
 * **Wednesday, May 7**. Last day of class, each person / group will present their visualization, and there will be secret ballot voting for the best visualization of the data / model.
 
-* **Friday, May 16**.  Complete assignment is due (turn in **both** the qmd and knitted pdf to Canvas). (If you are a graduating senior, the final assignment is due by **noon on Thursday, May 8**.)
+* **Friday, May 16**.  Complete assignment is due (turn in **both** the qmd and knitted pdf to your GitHub repository). I will be grading from GitHub directly, so no need to turn in to Gradescope. (If you are a graduating senior, the final assignment is due by **noon on Thursday, May 8**.)
+
+* If you are on a team with a graduating senior, then your due dates are all the same as the graduating seniors.
 
 ## Assignment
-The analysis should be done in a complete Quarto file and posted to your Canvas dropbox.   The final report should address the following tasks below but should not enumerate the tasks.
+The analysis should be done in a complete Quarto file and pushed to the GitHub repo I will create for your team. The final report should address the following tasks below but should **not** enumerate the tasks (it should be written like a final report).
 
 
-1. Exploratory data analysis.  Graphical and numerical summaries of the data (both explanatory and response variables).  Do *not* attach every single graph you try.  Instead, choose only a few images that give the reader a sense of the variables and their relationships.
-2. Cox PH model.  Using model building techniques, choose a subset of variables (including transformations, interactions, etc.) to find the model which produces the best survival information.  The team whose model is best^[measured by the $c$ index] on a hold-out sample will earn an additional 5 points on the project.  
+1. Exploratory data analysis.  Graphical and numerical summaries of the data (both explanatory and response variables). Please do *not* attach every single graph you try.  Instead, choose only a few images that give the reader a sense of the variables and their relationships.
+2. Cox PH model.  Using model building techniques, choose a subset of variables (including transformations, interactions, etc.) to find the model which produces the best survival information.  The team whose model is best^[measured by the $c$ index] on a hold-out sample will earn an additional 3 points on the project.  
 In the final write-up, make sure the final model is very clearly specified.  
 The Cox PH analysis should include: an interpretation of your final survival model including a discussion of the sign of the coefficients (note:  feel free to use interactions)  Which variable(s) are in?  Which are out?  What do you conclude about linking to primary care?  Is there anything worth mentioning about how you got to your final model? What can you say about causation?  What can you say about generalizing to a larger population?
 
 3. Something new.  Each individual in the class will learn a new idea related to survival analysis (see below).   The new part will be assessed on your ability to explain the new idea.  That is, you must indicate a complete understanding of the topic as well as an adequate use of the method applied to the dataset.
 
-4. A visualization to enter into the competition.  The visualization could be of the EDA variety, or it could be based on the model / results.  The different visualizations will be presented to the class on the last day of the semester (May 2).  The team whose visualization is best (secret ballot by the class) will earn an additional 5 points on the project.
+4. A visualization to enter into the competition.  The visualization could be of the EDA variety, or it could be based on the model / results.  The different visualizations will be presented to the class on the last day of the semester (May 7).  The team whose visualization is best (secret ballot by the class) will earn an additional 3 points on the project. The visualization should be included in your GitHub repo (either within the final report or as a separate png / jpg / etc.).
 
 5. A reflection on the decision making (goes into the final report).  How did it feel to decide things?  What was easy to decide (e.g., method because you were told to use Cox PH)?  What was hard to decide (e.g., which variables to use)?  What about missingness, what did you do? Does it matter?  Reflect on the process and how you think your decisions may or may not have had an impact on the results you put forward. Also reflect on whether or not your decisions may have had any ethical consequences.
 
@@ -97,9 +99,9 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 ```
 
 ## R thoughts
-* Use Quarto to create a reproducible analysis.  Anyone should be able to run your analysis using only the .qmd file.
+* Use Quarto to create a reproducible analysis.  Anyone should be able to run your analysis using only the .qmd file and the dataset.
 * Turn in both .qmd and .pdf files for your final analysis.
-* If you are working in pairs, the project is extended in two ways.  1.  You must *both* be able to work on the files.  Ideally, you will share your work via GitHub or other software which tracks changes and coordinates work.  2. You must do *two* new items (one each).
+* If you are working in pairs, the project is extended in two ways.  1.  You must *both* be working on the files in GitHub. That is, each person must make commits to the repository.  2. You must do *two* new items (one each).
 * Note that the event of interest is "visit to primary care physician."
 * Be as creative as possible trying to think about how you might like to graphically display the data.  If you come up with a cool idea for a graph but don't know how to implement it, **please let me know, and I will write the code for you!!**
 * Please do not re-code the variables or change the variable names outside of R. You may, however, transform (`mutate()`) the variables within your R code (that is, for example, if you wanted to divide months by 12 to have years, or square a variable, etc.).  
@@ -107,9 +109,9 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 
 #### Assessment:
 * Your primary assessment will be based on the above items (modeling, understanding of new topic, additional analysis, interpretation).
-* Additionally there will be two competitions.  Winning either will add 5 points (out of 100) to your score.
+* Additionally there will be two competitions.  Winning either will add 3 points (out of 85) to your score.
    * Graphic:  the class will vote on who has the best graphic.
    * Model:  using a holdout sample (I only gave you part of the data), I will assess your final model.  The group whose model best describes the holdout sample (as measured by the <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4886856/" target = "_blank">c-index</a>) will win the model prize.
 
--->
+
 
