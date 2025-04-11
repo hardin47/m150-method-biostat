@@ -132,14 +132,14 @@ schedule <- tribble(
 "Week 13 <br> 4.21.25", 
   '• multiple comparisons',
   '<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#multcomp" target = "_blank"><i class="fas fa-book-open"></i> multiple comparisons </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#qvals" target = "_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#interim" target = "_blank"><i class="fas fa-book-open"></i> interim analyses</a>',
-  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 11</a> - due 4.22.25 <br> <font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"><i class="fa-solid fa-list-check"></i> Project: EDA</a></b></font> due 4.23.25',
+  '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"><i class="fa-solid fa-list-check"></i> Project: EDA</a></b></font> due 4.23.25',
   '<a href = "https://www.nytimes.com/2020/10/14/health/covid-clinical-trials.html" target = "_blank"><i class="fas fa-newspaper"></i> pausing trials</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a> ',
   ' ',  
 
 "Week 14 <br> 4.28.25", 
   '• multiple comparisons',
   '<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#multcomp" target = "_blank"><i class="fas fa-book-open"></i> multiple comparisons </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#qvals" target = "_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#interim" target = "_blank"><i class="fas fa-book-open"></i> interim analyses</a>',
-  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 12</a> - due 4.29.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 6 on 4.30.25',
+  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 11</a> - due 4.29.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 6 on 4.30.25',
   '<a href = "https://towardsdatascience.com/missing-data-effects-on-the-correlation-between-ice-cream-sales-and-temperature-f4bb2b3fcde1" target = "_blank"><i class="fas fa-newspaper"></i> missing data</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a>  ',
   ' ', 
 
