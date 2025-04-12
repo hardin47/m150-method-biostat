@@ -18,18 +18,16 @@ Samet JH, Larson MJ, Horton NJ, Doyle K, Winter M, and Saitz R. <a href = "https
 
 
 ### Data
-<!--
-is comma delimited at <a href = "https://pomona.box.com/s/nty3oxpb8db1y763l6uusxtq4gukbcev" target = "_blank">https://pomona.box.com/s/nty3oxpb8db1y763l6uusxtq4gukbcev</a>
--->
 
-The data can be loaded in directly from Box using a link which will be posted soon (check back here in a week or so):
+
+The data can be loaded in directly from Box at: <a href = "https://pomona.box.com/shared/static/uicqv6s6o5icfc14r9acu1kaafxisp3l.csv" target = "_blank">https://pomona.box.com/shared/static/uicqv6s6o5icfc14r9acu1kaafxisp3l.csv</a>
 
 ```{r}
 #| warning: false
 #| message: false
 #| echo: false
 
-HELPdata <- readr::read_csv("https://pomona.box.com/shared/static/nty3oxpb8db1y763l6uusxtq4gukbcev",
+HELPdata <- readr::read_csv("https://pomona.box.com/shared/static/uicqv6s6o5icfc14r9acu1kaafxisp3l.csv",
                      na=c("NA", ""))
 ```
 
