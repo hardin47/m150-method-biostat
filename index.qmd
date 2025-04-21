@@ -126,7 +126,7 @@ schedule <- tribble(
   'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#testingph" target = "_blank"><i class="fas fa-book-open"></i> assessing PH </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#Ioannidis" target = "_blank"><i class="fas fa-book-open"></i> most published research</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 10</a> - due 4.15.25 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 5 on 4.16.25',
   '<a href = "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124" target = "_blank"><i class="fas fa-newspaper"></i> most published research</a> <br> <a href = "https://replicationindex.com/2020/12/24/ioannidis-is-wrong/" target = "_blank"><i class="fas fa-newspaper"></i> science problems</a> <br> <br> <a href = "https://twitter.com/GidMK/status/1376304539897237508?s=20" target = "_blank">abuse of power</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a>',
-  ' ',  
+  '<a href="https://m150-method-biostat.netlify.app/handout/ws18_ma150_s25_ionnidis.pdf" target = "_blank">{{< fa pencil >}} WS 18 - Ionnidis</a>',  
 
 
 "Week 13 <br> 4.21.25", 
@@ -134,7 +134,7 @@ schedule <- tribble(
   '<a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#multcomp" target = "_blank"><i class="fas fa-book-open"></i> multiple comparisons </a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#qvals" target = "_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/multiple-comparisons.html#interim" target = "_blank"><i class="fas fa-book-open"></i> interim analyses</a>',
   '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"><i class="fa-solid fa-list-check"></i> Project: EDA</a></b></font> due 4.23.25',
   '<a href = "https://www.nytimes.com/2020/10/14/health/covid-clinical-trials.html" target = "_blank"><i class="fas fa-newspaper"></i> pausing trials</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/.html" target = "_blank"></a> ',
-  ' ',  
+  '<a href="https://m150-method-biostat.netlify.app/handout/ws19_ma150_s25_pH0.pdf" target = "_blank">{{< fa pencil >}} WS 19 - Rejecting null hypotheses</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws20_ma150_s25_.pdf" target = "_blank">{{< fa pencil >}} WS 20 - </a>',  
 
 "Week 14 <br> 4.28.25", 
   '• multiple comparisons',
