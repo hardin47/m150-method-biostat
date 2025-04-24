@@ -144,8 +144,9 @@ schedule <- tribble(
   ' ', 
 
 "Week 15 <br> 5.5.25", 
-  ' ',
-  ' ',
+  '• Poisson regression',
+'<a href="https://st47s.com/Math150/Notes/poisson-regression.html" target = "_blank"><i class="fas fa-book-open"></i> Poisson regression </a>',
+
 '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"> <i class="fa-solid fa-list-check"></i> Project: Graphic</a></b></font> in class 5.7.25',
   '<a href = "https://watermark.silverchair.com/qmaf029.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAA3AwggNsBgkqhkiG9w0BBwagggNdMIIDWQIBADCCA1IGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM4DHOnMNdg2LEvP78AgEQgIIDI-ITbRB99NJUANSvxYNmbWJCpRyPwku3qkj3P0zlLjbU6wP-_v4fGLpMRUhsml1jwQxPvnGdEWVeSeoK6X2qGHh5AnkatN-vvrcHY1QcfUnDZIKS9q7JGxruDviQLTTaY8q3LNT6NLtF5H1nOCTL655PG1l4q5U6R-LY3_hMvHva8u8OA67KDpvdQPLL1AFBGl0VEIRadKDYwEoqx07Vui9pfqWwFmEF6pnCPAYtpjjhH4tEOgweeZnLYxLMeLrs2PSHqd_j2SL4WpfhC9YOdIjSnDVgjVk6M6tsjIuaQBcVfGv1Ho9QQoovxBCLqk3ukutpDVrzqnzW8fzJnO5GigWJ44WztiDTTafefUo3iFv4UvME7m1rhlRdu3gKnHM-2Nvs__dNblU8tdYDbdwUudTtzcdoT__qoC13jsKH2Tz5CR6m5sP6AchczXVlBY0HWZgSQ2wRBMmpYy9Zj_twsW9PMU6PNzymzN7kcbBQ9u63LoYV6aOC4sme4berCr41oVpbmAILWgKYkQOF3m-Y4AmZvqY4Reag822uHF4j_kU8o_iTtB6bozMoQMdbG07-m6gXxXwwrZPHjqYwPMpZBlCPxjzxSGTB5ls4hNX8hx8QpSG-OxHlOzjVUZSv-BGoF53u2RobeD2RiSVW9RNT2uCIXE0nVC2M9NwHdrD3WznzeetLibSjgfcl22CFNeO7XNO3G6K4xEONSjZsjwcBWYhc1TDvB2te3bFXZj06HKxvmgdMoXP8D4BUm0dLTl8CtQu6pDdM2Ds7IpV-CzoThXoa8Lp15aa-ujqhavd8N1xCaLAnzaYcgvrKusBo2EkpIfSr7ubOoWNkDXypY939GyA_uJoJfL5cIk9273oNGS8n4ihRcZhOx47tl2OGIXZv8Yav7FiadZ1MACmDaqlbexyc2sleWP3bBjyPWgnYwiW7vXNSAqpGQZbxVK7McYG9JUfSwc472is1cRKsrLm4cO_hrtRf6nl-22DWlzSdaEfuvdUt7aesNfAR8YwkW-Frs9uyu1UArwY5eHGci3a6tBefLIlHkpkaGX0AiG25UaWFH393" target = "_blank"><i class="fas fa-newspaper"></i> non-comparative trials</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/blackwell.html" target = "_blank">David Blackwell</a>',
   ' ',
