@@ -40,7 +40,7 @@ Please use the above dataset in your analysis.  However, feel free to look at th
 * The goal of the semester project is to create a Cox Proportional Hazard model which uses explanatory variables to model hazard of "event".
 
 ### Due Dates
-* **Wednesday, April 23**. Post to Canvas both the Quarto file and the corresponding pdf document:  
+* **Wednesday, April 23**. Post (to the GitHub repo that I created) both the Quarto file and the corresponding pdf document:  
    * Include the names of the individuals in the group.
    * Some sort of EDA (exploratory data analysis).  Do not print the data, but do something that indicates you've uploaded the data and know what some of the variables are.  You might have some summary statistics or a graph.  The idea here is to explore the variables, not to run survival curves.  What can you learn about the many many variables?  How do they relate to one another?  What about all the missingness? This is *not* an extensive assignment.  [Again, the question here is not about the response variable, it's about all the predictor variables.  Learn about the dataset!]
    * Outline the "something new" part of the assignment.  You should indicate who is doing what, what resources each of you will use to learn about your new topic, and a few sentences on what the topic is or how it relates to survival analysis / the analysis at hand.  Additionally, for each "new" thing, provide 1-2 sentences describing what will be **challenging** about learning something new.
