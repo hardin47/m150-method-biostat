@@ -1439,7 +1439,28 @@ RA Fisher (1929)
 
 ---
 
+(@) Which stopping criteria is most aggressive with respect to stopping early (i.e., is most likely to stop early)?[^116]
+     (a) Bonferonni
+     (b) Pocock
+     (c) Peto
+     (d) O'Brien-Fleming
 
+[^116]: b. Pocock
+
+---
+
+(@) Why do we want to stop early?[^117]
+     (a) get out positive results sooner
+     (b) get out negative results sooner
+     (c) use fewer observations (people)
+     (d) all of the above
+     (e) control the type I error
+     
+[^117]: d. all of the above. We restrict our analysis to a situation of controling the type I error. However, that isn't why we **want** to stop early. We **want** to stop early for the other reasons listed.
+
+
+
+---
 
 
 
