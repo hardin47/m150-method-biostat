@@ -77,7 +77,7 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 * Investigation of the proportional hazards assumption  (what does the R function `cox.zph()` do?)
 * Exponential or Weibull PH regression (parametric survival model)
 * Deriving / detailing AIC & BIC for model selection on Cox PH
-* Power analysis  (a simulation?)
+* Power analysis  (a simulation? It is okay for you to use a built in function, but you'll need to know and explain what that function is doing.)
 * Derivation of the sample size calculation for the log rank test (and application to the data)
 * An analysis of the Schoenfeld residuals  (**how are they calculated** and why is that calculation relevant?)
 * Breslow estimate of the Survival curve under Cox PH assumption.
