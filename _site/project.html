@@ -234,14 +234,15 @@ The Cox PH analysis should include: an interpretation of your final survival mod
 <ul>
 <li>Investigation of the proportional hazards assumption (what does the R function <code>cox.zph()</code> do?)</li>
 <li>Exponential or Weibull PH regression (parametric survival model)</li>
-<li>Deriving / detailing AIC &amp; BIC for model selection on Cox PH</li>
-<li>Power analysis (a simulation? It is okay for you to use a built in function, but you’ll need to know and explain what that function is doing.)</li>
+<li>Deriving / detailing AIC &amp; BIC for model selection on Cox PH. Should include a complete understanding of the relevant likelihood.</li>
+<li>Power analysis (you would either need to explain the details of what the power function does (if you choose to use a built in function) or you need complete a simulation to find the power under various settings of things like sample size and HR)</li>
 <li>Derivation of the sample size calculation for the log rank test (and application to the data)</li>
-<li>An analysis of the Schoenfeld residuals (<strong>how are they calculated</strong> and why is that calculation relevant?)</li>
+<li>An analysis of the Schoenfeld residuals (<strong>how are they calculated</strong> and why is that calculation relevant to PH?)</li>
 <li>Breslow estimate of the Survival curve under Cox PH assumption.</li>
 <li>Bootstrapping the survival model (what are the assumptions? what do you conclude?)</li>
 <li>An analysis / understanding / simulation of the multiple comparisons issues for assessing many different models (or other exploratory hypotheses).</li>
 <li>Andersen-Gill extension of the Cox PH model for time-varying covariates (available in <strong>rms</strong> R package). [Note: A-G isn’t meant to test PH, per se, but rather it allows for variables that are time varying.]</li>
+<li>Lasso or Ridge regression on the Cox PH model (you will need to describe what Lasso / Ridge does and how the coefficients are estimated in the new model paradigm)</li>
 <li>Another topic related to survival analysis that you find interesting.</li>
 </ul>
 </section>
@@ -263,7 +264,7 @@ The Cox PH analysis should include: an interpretation of your final survival mod
 <li>Additionally there will be two competitions. Winning either will add 3 points (out of 85) to your score.
 <ul>
 <li>Graphic: the class will vote on who has the best graphic.</li>
-<li>Model: using a holdout sample (I only gave you part of the data), I will assess your final model. The group whose model best describes the holdout sample (as measured by the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4886856/" target="_blank">c-index</a>) will win the model prize.</li>
+<li>Model: using a holdout sample (I only gave you part of the data), I will assess your final model. The group whose model best describes the holdout sample (as measured by the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4886856/" target="_blank">c-index</a> with a slight adjustment to benefit models that predit on the highest number of observations) will win the model prize.</li>
 </ul></li>
 </ul>
 

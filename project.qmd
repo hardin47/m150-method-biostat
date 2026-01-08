@@ -77,14 +77,15 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 
 * Investigation of the proportional hazards assumption  (what does the R function `cox.zph()` do?)
 * Exponential or Weibull PH regression (parametric survival model)
-* Deriving / detailing AIC & BIC for model selection on Cox PH
-* Power analysis  (a simulation? It is okay for you to use a built in function, but you'll need to know and explain what that function is doing.)
+* Deriving / detailing AIC & BIC for model selection on Cox PH. Should include a complete understanding of the relevant likelihood.
+* Power analysis  (you would either need to explain the details of what the power function does (if you choose to use a built in function) or you need complete a simulation to find the power under various settings of things like sample size and HR)
 * Derivation of the sample size calculation for the log rank test (and application to the data)
-* An analysis of the Schoenfeld residuals  (**how are they calculated** and why is that calculation relevant?)
+* An analysis of the Schoenfeld residuals  (**how are they calculated** and why is that calculation relevant to PH?)
 * Breslow estimate of the Survival curve under Cox PH assumption.
 * Bootstrapping the survival model (what are the assumptions?  what do you conclude?)
 * An analysis / understanding / simulation of the multiple comparisons issues for assessing many different models (or other exploratory hypotheses).
 * Andersen-Gill extension of the Cox PH model for time-varying covariates (available in **rms** R package).  [Note: A-G isn't meant to test PH, per se, but rather it allows for variables that are time varying.]
+* Lasso or Ridge regression on the Cox PH model (you will need to describe what Lasso / Ridge does and how the coefficients are estimated in the new model paradigm)
 * Another topic related to survival analysis that you find interesting.
 
 ```{r}
@@ -111,7 +112,7 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 * Your primary assessment will be based on the above items (modeling, understanding of new topic, additional analysis, interpretation).
 * Additionally there will be two competitions.  Winning either will add 3 points (out of 85) to your score.
    * Graphic:  the class will vote on who has the best graphic.
-   * Model:  using a holdout sample (I only gave you part of the data), I will assess your final model.  The group whose model best describes the holdout sample (as measured by the <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4886856/" target = "_blank">c-index</a>) will win the model prize.
+   * Model:  using a holdout sample (I only gave you part of the data), I will assess your final model.  The group whose model best describes the holdout sample (as measured by the <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4886856/" target = "_blank">c-index</a> with a slight adjustment to benefit models that predit on the highest number of observations) will win the model prize.
 
 
 
