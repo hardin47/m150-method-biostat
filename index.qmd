@@ -132,7 +132,7 @@ schedule <- tribble(
 "Week 13 <br> 4.20.26", 
   '• multiple comparisons',
   '<a href="https://st47s.com/Math150/Notes/07-MC.html#multcomp" target = "_blank"><i class="fas fa-book-open"></i> multiple comparisons </a> <br> <a href="https://st47s.com/Math150/Notes/07-MC.html#qvals" target = "_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/07-MC.html#interim" target = "_blank"><i class="fas fa-book-open"></i> interim analyses</a>',
-  '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"><i class="fa-solid fa-list-check"></i> Project: EDA</a></b></font> due 4.23.25',
+  '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"><i class="fa-solid fa-list-check"></i> Project: EDA</a></b></font> due 4.24.26',
   ' ',
   ' ',  
 
@@ -147,14 +147,14 @@ schedule <- tribble(
   '• Poisson regression',
 '<a href="https://st47s.com/Math150/Notes/08-PoisReg.html" target = "_blank"><i class="fas fa-book-open"></i> Poisson regression </a>',
 
-'<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"> <i class="fa-solid fa-list-check"></i> Project: Graphic</a></b></font> in class 5.7.25',
+'<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"> <i class="fa-solid fa-list-check"></i> Project: Graphic</a></b></font> in class 5.6.26',
   ' ',
   ' ',
 
 "Week 16 <br> 5.16.25", 
   ' ',
   ' ',
-'<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"> <i class="fa-solid fa-list-check"></i> Project: Final</a></b></font> due 5.16.25',
+'<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"> <i class="fa-solid fa-list-check"></i> Project: Final</a></b></font> due 5.13.26',
   ' ',
   ' '
   )
