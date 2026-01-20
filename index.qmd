@@ -151,6 +151,10 @@ schedule <- tribble(
   ' ',
   ' ',
 
+'<font color = "#d35836"><b>seniors</b></font> <br> 5.7.25',  ' ', ' ',
+  'everything due for seniors <br> by 5.7.26',
+  ' ', ' ',
+
 " ", 
   ' ',
   ' ',
@@ -288,10 +292,6 @@ schedule <- tribble(
 "Week 15 <br> 5.5.25", 
   '• Poisson regression',
 '<a href="https://st47s.com/Math150/Notes/poisson-regression.html" target = "_blank"><i class="fas fa-book-open"></i> Poisson regression </a>',
-
-'<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"> <i class="fa-solid fa-list-check"></i> Project: Graphic</a></b></font> in class 5.7.25',
-  '<a href = "https://academic.oup.com/jrssig/article/22/3/40/8099023" target = "_blank"><i class="fas fa-newspaper"></i> non-comparative trials</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/blackwell.html" target = "_blank">David Blackwell</a>',
-  ' ',
 
 "Week 16 <br> 5.16.25", 
   ' ',

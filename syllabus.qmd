@@ -8,7 +8,7 @@ format:
 # Methods in Biostatistics
 ## Math 150, Spring 2026
 
-Class: Monday + Wednesday + Friday, 10-11am
+Class: Monday + Wednesday + Friday, 10-10:50am
 
 Jo Hardin  
 2351 Estella  
