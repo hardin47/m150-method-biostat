@@ -40,14 +40,14 @@ schedule <- tribble(
   'Kuiper & Sklar: 2 <br> <a href="https://st47s.com/Math150/Notes/01-intro.html" target = "_blank"><i class="fas fa-book-open"></i> introduction</a> <br> <a href="https://st47s.com/Math150/Notes/02-ttest.html#ttest" target = "_blank"><i class="fas fa-book-open"></i> t-test</a> <br> <a href="https://st47s.com/Math150/Notes/02-ttest.html#tslr" target = "_blank"><i class="fas fa-book-open"></i> t-test as SLR</a>', 
   ' ',
   '<a href = "https://hardin47.github.io/CURV/scholars/benn.html" target = "_blank">Emma Benn</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/ws1_ma150_s25_notation.pdf" target = "_blank">{{< fa pencil >}} WS 1 - notation</a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/ws1_ma150_s26_notation.pdf" target = "_blank">{{< fa pencil >}} WS 1 - notation</a>',
 
 "Week 2 <br> 1.26.26", 
   '• SLR <br> • contingency analysis',
   'Kuiper & Sklar: 2 & 6 <br> <a href="https://st47s.com/Math150/Notes/03-SLR.html" target = "_blank"><i class="fas fa-book-open"></i> SLR</a> <br> <a href="https://st47s.com/Math150/Notes/04-cat.html#catest" target = "_blank"><i class="fas fa-book-open"></i> categorical analysis</a>', 
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2026/repositories" target = "_blank">{{< fa code >}} HW 1</a> - due 1.29.26',
   '<a href = "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962" target = "_blank"><i class="fas fa-newspaper"></i> A/B testing at Netflix</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/irizarry.html" target = "_blank">Rafael Irizarry</a>',
-  ' ',
+  '<a href="https://m150-method-biostat.netlify.app/handout/ws2_ma150_s26_cond.pdf" target = "_blank">{{< fa pencil >}} WS 2 - SLR conditions</a>',
 
 "Week 3 <br> 2.2.26",   
   '• contingency analysis',
