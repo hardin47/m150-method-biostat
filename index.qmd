@@ -53,7 +53,7 @@ schedule <- tribble(
   '• contingency analysis',
   'Kuiper & Sklar: 6 <br> <a href="https://st47s.com/Math150/Notes/04-cat.html#studies" target = "_blank"><i class="fas fa-book-open"></i> types of studies</a> <br> <a href="https://st47s.com/Math150/Notes/04-cat.html#rr" target = "_blank"><i class="fas fa-book-open"></i> RR and CI</a> <br> <a href="https://st47s.com/Math150/Notes/04-cat.html#or" target = "_blank"><i class="fas fa-book-open"></i> OR and CI</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2026/repositories" target = "_blank">{{< fa code >}} HW 2</a> - due 2.5.26 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 1 on 2.6.26',
-  ' ',
+  '<a href = "https://www.nytimes.com/2020/12/13/learning/what-does-95-effective-mean-teaching-the-math-of-vaccine-efficacy.html" target = "_blank"><i class="fas fa-newspaper"></i> what is efficacy?</a> <br> <a href = "https://www.nytimes.com/2020/11/18/health/pfizer-covid-vaccine.html" target = "_blank"><i class="fas fa-newspaper"></i> efficacy</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/small-rodriguez.html" target = "_blank">Desi Small-Rodriguez</a>',
   ' ',
   
 "Week 4 <br> 2.9.26", 
@@ -181,19 +181,7 @@ schedule <- tribble(
 
 schedule <- tribble(
   ~`date`, ~agenda, ~readings, ~homework, ~`article (Mon)`, ~`worksheets`,
-  "Week 1 <br> 1.19.26", 
-  '• t-tests + <br>• SLR',
-  'Kuiper & Sklar: 2 <br> <a href="http://st47s.com/Math150/Notes/intro.html#intro" target = "_blank"><i class="fas fa-book-open"></i> introduction</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#ttest" target = "_blank"><i class="fas fa-book-open"></i> t-test</a> <br> <a href="http://st47s.com/Math150/Notes/t-tests-vs-slr.html#tslr" target = "_blank"><i class="fas fa-book-open"></i> t-test as SLR</a>', 
-  ' ',
-  '<a href = "https://hardin47.github.io/CURV/scholars/benn.html" target = "_blank">Emma Benn</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/ws1_ma150_s25_notation.pdf" target = "_blank">{{< fa pencil >}} WS 1 - notation</a>',
 
-"Week 2 <br> 1.26.26", 
-  '• SLR <br> • contingency analysis',
-  'Kuiper & Sklar: 2 & 6 <br> <a href="http://st47s.com/Math150/Notes/SLR.html#SLR" target = "_blank"><i class="fas fa-book-open"></i> SLR</a> <br> <a href="https://st47s.com/Math150/Notes/analysis-of-categorical-data.html#catest" target = "_blank"><i class="fas fa-book-open"></i> categorical analysis</a>', 
-  '<a href="https://github.com/orgs/ST47S-MethBio-Spring2025/repositories" target = "_blank">{{< fa code >}} HW 1</a> - due 1.28.25',
-  '<a href = "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962" target = "_blank"><i class="fas fa-newspaper"></i> A/B testing at Netflix</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/irizarry.html" target = "_blank">Rafael Irizarry</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/ws2_ma150_s25_CI.pdf" target = "_blank">{{< fa pencil >}} WS 2 - CIs</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws3_ma150_s25_cond.pdf" target = "_blank">{{< fa pencil >}} WS 3 - tech conds</a>',
 
 "Week 3 <br> 2.3.25",   
   '• contingency analysis',
