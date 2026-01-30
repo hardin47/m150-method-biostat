@@ -330,6 +330,33 @@ p-value = probability of the observed data or more extreme given the null hypoth
 
 ---
 
+(@) If the null hypothesis is true, the observed counts will equal the expected counts.[^24b]
+     (a) True
+     (b) False
+
+[^24b]: b. False
+
+---
+
+(@) To reject the null hypothesis we want to see[^24c]
+     (a) a small $X^2$ value
+     (b) a big $X^2$ value
+
+[^24c]: b. a big $X^2$ value
+
+
+---
+
+(@) A chi-square test has a[^24d]
+     (a) one-sided alt hypothesis, and we only consider the upper end of the sampling distribution
+     (b) one-sided alt hypothesis, and we consider both ends of the sampling distribution
+     (c) two-sided alt hypothesis, and we only consider the upper end of the sampling distribution
+     (d) two-sided alt hypothesis, and we consider both ends of the sampling distribution 
+
+[^24d]: c. two-sided alt hypothesis, and we only consider the upper end of the sampling distribution
+
+---
+
 (@) Material check-in
     (a) So far, so good
     (b) Concepts are good, R is confusing
