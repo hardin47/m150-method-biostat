@@ -370,10 +370,66 @@ p-value = probability of the observed data or more extreme given the null hypoth
     (b) I can go to office hours / mentor sessions, but I didn't happen to this week.
     (c) I can't make the scheduled office hours / mentor sessions
     (d) I'm looking for someone to study with
-    
+  
+
+---
+
+(@) I know where to find: the solutions to the worksheets, the clicker questions (with solutions), and the HW solutions[^37]
+     (a) TRUE
+     (b) FALSE
+     
+[^37]: The worksheet solutions and clicker questions are on the main course website.  The HW solutions are on Canvas under Files. 
+
 ---
 
 See Canvas front page for **anonymous** survey / feedback for the class.  Also, if you are looking for people to work with, please contact me directly (non-anonymously!) so that I can connect you to people.
+
+---
+
+(@) Relative Risk is[^33]
+    (a) the difference of two proportions
+    (b) the ratio of two proportions
+    (c) the log of the ratio of two proportions
+    (d) the log of the difference of two proportions
+
+[^33]: b. the ratio of two proportions
+
+---
+
+(@) Odds Ratio is[^33b]
+    (a) the difference of two proportions
+    (b) the ratio of two proportions
+    (c) the difference of two odds
+    (d) the ratio of two odds
+
+[^33b]: d. the ratio of two odds (what are odds? go back to the class notes to make sure you know what odds are!)
+
+
+
+---
+
+(@) In finding a CI for RR = p1/p2, why is it okay to exponentiate the end points of the interval for ln(p1/p2)?[^35]
+    (a) Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
+    (b) Because taking the natural log of the RR makes the  distribution approximately normal.
+    (c) Because the natural log compresses values that are  bigger than 1 and spreads values that are smaller than 1.
+    (d) Because we can get exact p-values using Fisher's Exact Test.
+
+[^35]: a. Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
+
+---
+
+(@) In order to find a CI for the true OR, our steps are:[^36]
+ i. find $\widehat{\ln(\mbox{OR})}$
+ ii. add $\pm \ z^* \sqrt{\frac{1}{n_1 \hat{p}_1 (1-\hat{p}_1)} + \frac{1}{n_2 \hat{p}_2 (1-\hat{p}_2)}}$
+ iii. take exp of the endpoints 
+ 
+   (a) because the sampling distribution of $\widehat{\mbox{OR}}$ is normal
+   (b) because OR is typically greater than 1
+   (c) because the $\ln$ transformation makes the sampling distribution almost normal
+   (d) because OR is invariant to the choice of explanatory or response variable
+
+[^36]: c. because the $\ln$ transformation makes the sampling distribution almost normal
+
 
 ---
     
@@ -444,16 +500,6 @@ https://davidepstein.com/david-epstein-the-sports-gene/
 
 ---
 
-(@) Relative Risk is[^33]
-    (a) the difference of two proportions
-    (b) the ratio of two proportions
-    (c) the log of the ratio of two proportions
-    (d) the log of the difference of two proportions
-
-[^33]: b. the ratio of two proportions
-
----
-
 (@) The odds ratio is "invariant to which variable is explanatory and which is response" means:[^34]
     (a) we always put the bigger odds in the numerator
     (b) we must collect data so that we can estimate the response in the population
@@ -461,39 +507,6 @@ https://davidepstein.com/david-epstein-the-sports-gene/
     (d) which variable is called the explanatory does not change the value of the OR
 
 [^34]: d. which variable is called the explanatory does not change the value of the OR
-
----
-
-(@) In finding a CI for RR = p1/p2, why is it okay to exponentiate the end points of the interval for ln(p1/p2)?[^35]
-    (a) Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
-    (b) Because taking the natural log of the RR makes the  distribution approximately normal.
-    (c) Because the natural log compresses values that are  bigger than 1 and spreads values that are smaller than 1.
-    (d) Because we can get exact p-values using Fisher's Exact Test.
-
-[^35]: a. Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
-
----
-
-(@) In order to find a CI for the true OR, our steps are:[^36]
- i. find $\widehat{\ln(\mbox{OR})}$
- ii. add $\pm \ z^* \sqrt{\frac{1}{n_1 \hat{p}_1 (1-\hat{p}_1)} + \frac{1}{n_2 \hat{p}_2 (1-\hat{p}_2)}}$
- iii. take exp of the endpoints 
- 
-   (a) because the sampling distribution of $\widehat{\mbox{OR}}$ is normal
-   (b) because OR is typically greater than 1
-   (c) because the $\ln$ transformation makes the sampling distribution almost normal
-   (d) because OR is invariant to the choice of explanatory or response variable
-
-[^36]: c. because the $\ln$ transformation makes the sampling distribution almost normal
-
----
-
-(@) I know where to find: the solutions to the worksheets, the clicker questions (with solutions), and the HW solutions[^37]
-     (a) TRUE
-     (b) FALSE
-     
-[^37]: The worksheet solutions and clicker questions are on the main course website.  The HW solutions are on Canvas under Files.
-
 
 ---
 
@@ -956,7 +969,7 @@ D: {5, 6, 7, 9, 11}
 
 ---
 
-(@) Which variable should I remove first for the backward model process?[^73a]
+(@) Which variable should I remove first for the backward model process?[^73c]
     (a)	`Location` 
     (b)	`No.eggs`
     (c) `Color`
@@ -964,19 +977,19 @@ D: {5, 6, 7, 9, 11}
     (e) `Nestling` 
 
 
-[^73a]: d. or e. Hard to say, could have removed `Incubate`, `Nestling`, or `Totcare`.  (I removed `Nestling`.)
+[^73c]: d. or e. Hard to say, could have removed `Incubate`, `Nestling`, or `Totcare`.  (I removed `Nestling`.)
 
 
 ---
 
-(@) Which variable should I remove second for the backward model process?[^73b]
+(@) Which variable should I remove second for the backward model process?[^73d]
     (a)	`Location` 
     (b)	`No.eggs`
     (c) `Color`
     (d) `Incubate` 
     (e) `Nestling` 
 
-[^73b]: c. `Color` has the smalles test statistic and correspondingly largest p-value.
+[^73d]: c. `Color` has the smalles test statistic and correspondingly largest p-value.
 
 
 
