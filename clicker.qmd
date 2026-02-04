@@ -408,10 +408,10 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 ---
 
-(@) In finding a CI for RR = p1/p2, why is it okay to exponentiate the end points of the interval for ln(p1/p2)?[^35]
+(@) In finding a CI for RR = p1/p2, why is it okay to exponentiate the ends of the interval for ln(p1/p2)?[^35]
     (a) Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
     (b) Because taking the natural log of the RR makes the  distribution approximately normal.
-    (c) Because the natural log compresses values that are  bigger than 1 and spreads values that are smaller than 1.
+    (c) Because the natural log compresses values that are bigger than 1 and spreads values that are less than 1.
     (d) Because we can get exact p-values using Fisher's Exact Test.
 
 [^35]: a. Because if ln(p1/p2) is in the original interval, p1/p2 will be in the exponentiated interval.
@@ -420,7 +420,7 @@ See Canvas front page for **anonymous** survey / feedback for the class.  Also, 
 
 (@) In order to find a CI for the true OR, our steps are:[^36]
  i. find $\widehat{\ln(\mbox{OR})}$
- ii. add $\pm \ z^* \sqrt{\frac{1}{n_1 \hat{p}_1 (1-\hat{p}_1)} + \frac{1}{n_2 \hat{p}_2 (1-\hat{p}_2)}}$
+ ii. add $\pm \ z_{1-\alpha/2} \sqrt{\frac{1}{n_1 \hat{p}_1 (1-\hat{p}_1)} + \frac{1}{n_2 \hat{p}_2 (1-\hat{p}_2)}}$
  iii. take exp of the endpoints 
  
    (a) because the sampling distribution of $\widehat{\mbox{OR}}$ is normal
