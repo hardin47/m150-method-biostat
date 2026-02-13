@@ -61,7 +61,7 @@ schedule <- tribble(
   'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/05-log.html#the-logistic-model" target = "_blank"><i class="fas fa-book-open"></i> logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/05-log.html#logMLE" target = "_blank"><i class="fas fa-book-open"></i> MLE</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2026/repositories" target = "_blank">{{< fa code >}} HW 3</a> - due 2.12.26 ',
   '<a href = "https://www.nytimes.com/2014/02/26/health/obesity-rate-for-young-children-plummets-43-in-a-decade.html" target = "_blank"><i class="fas fa-newspaper"></i> Obesity in Children Plummets</a> <br> <a href = "https://jamanetwork.com/journals/jama/fullarticle/1832542" target = "_blank"><i class="fas fa-newspaper"></i> JAMA article here (see Table 6)</a> <br> <a href = "https://www.nytimes.com/2020/04/17/parenting/growth-chart-accuracy.html" target = "_blank"><i class="fas fa-newspaper"></i> growth curves</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/santos.html" target = "_blank">Robert Santos</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/ws6_ma150_s26_mle.pdf" target = "_blank">{{< fa pencil >}} WS 6 - MLE</a>',
+  '<a href="https://m150-method-biostat.netlify.app/handout/ws6_ma150_s26_mle.pdf" target = "_blank">{{< fa pencil >}} WS 6 - MLE</a> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws7_ma150_s26_logOR.pdf" target = "_blank">{{< fa pencil >}} WS 7 - OR coef</a>',
   
   
 "Week 5 <br> 2.16.26",
