@@ -630,6 +630,16 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
+(@) Consider the situation where we want to if the probability of success is 0.47  (i.e., $H_0: p = 0.47$):[^49a]
+    (a) $L(\hat{p})< L(0.47)$ always
+    (b) $L(\hat{p})> L(0.47)$ always
+    (c) $L(\hat{p}) \leq L(0.47)$ always
+    (d) $L(\hat{p}) \geq L(0.47)$ always
+
+[^49a]: d. $L(\hat{p}) \geq L(0.47)$ always
+
+---
+
 (@) We know that for a given data set (with MLEs of $b_0$,$b_1$):[^49]
     (a) $L(b_0,b_1)< L(b_0,\beta_1=0)$ always
     (b) $L(b_0,b_1)> L(b_0,\beta_1=0)$ always
