@@ -69,7 +69,7 @@ schedule <- tribble(
   'Kuiper & Sklar: 7 <br> <a href="https://st47s.com/Math150/Notes/05-log.html#loginf" target = "_blank"><i class="fas fa-book-open"></i> inference, logistic regression</a> <br> <a href="https://st47s.com/Math150/Notes/05-log.html#multlog" target = "_blank"><i class="fas fa-book-open"></i> multiple logistic regression</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2026/repositories" target = "_blank">{{< fa code >}} HW 4</a> - due 2.19.26 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 2 on 2.20.26',
   '<a href = "https://www.pbs.org/newshour/politics/census-bureau-plans-to-use-survey-with-a-citizenship-question-in-its-test-for-2030-alarming-experts" target = "_blank"><i class="fas fa-newspaper"></i> 2030 Census</a> <br> <a href = "https://www.nytimes.com/interactive/2023/10/16/us/census-race-ethnicity.html?smid=nytcore-ios-share&referringSource=articleShare" target = "_blank"><i class="fas fa-newspaper"></i> Race on the census</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/rosenbluth.html" target = "_blank">Arianna Wright Rosenbluth</a>',
-    ' ',
+    '<a href="https://m150-method-biostat.netlify.app/handout/ws8_ma150_s26_interaction.pdf" target = "_blank">{{< fa pencil >}} WS 8 - interaction</a>',
   
 "Week 6 <br> 2.23.26", 
   '• logistic regression',
