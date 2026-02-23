@@ -630,13 +630,13 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-(@) Consider the situation where we want to if the probability of success is 0.47  (i.e., $H_0: p = 0.47$):[^49a]
+(@) Consider the situation where we want to if the probability of success is 0.47  (i.e., $H_0: p = 0.47$):[^48b]
     (a) $L(\hat{p})< L(0.47)$ always
     (b) $L(\hat{p})> L(0.47)$ always
     (c) $L(\hat{p}) \leq L(0.47)$ always
     (d) $L(\hat{p}) \geq L(0.47)$ always
 
-[^49a]: d. $L(\hat{p}) \geq L(0.47)$ always
+[^48b]: d. $L(\hat{p}) \geq L(0.47)$ always
 
 ---
 
@@ -704,8 +704,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 [^52]: b. 3 (7 - 4 = 3)
 
----
-
+<!--
 (@) (Bird nest example) How many parameters do we estimate when considering Length as a categorical variable?  (the only variable)[^53]
     (a) 0
     (b) 1
@@ -715,7 +714,6 @@ Take the derivative with respect to which variable(s):[^46]
 
 [^53]: e. 34
 
----
 
 (@) (Bird nest example) How many df for the LRT addressing whether Length (as a categorical variable) belongs in the model?[^54]
     (a) 0
@@ -726,7 +724,6 @@ Take the derivative with respect to which variable(s):[^46]
 
 [^54]: d. 33 (34 - 1 = 33)
 
----
 
 (@) (Bird nest example) How many df for the LRT addressing whether Incubate and Color belong in the model (given Length is determined to be in the model)?[^55]
     (a) 0
@@ -736,6 +733,7 @@ Take the derivative with respect to which variable(s):[^46]
     (e) 4 
 
 [^55]: c. 2 (4 - 2 = 2)
+-->
 
 ---
 
