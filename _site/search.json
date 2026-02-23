@@ -1425,7 +1425,7 @@
     "href": "handout/2026-02-25-tidymodels.html#feature-engineering",
     "title": "Tidymodels",
     "section": "Feature engineering",
-    "text": "Feature engineering\n\nWe prefer simple models when possible, but parsimony does not mean sacrificing accuracy (or predictive performance) in the interest of simplicity\nVariables that go into the model and how they are represented are just as critical to success of the model\nFeature engineering allows us to get creative with our predictors in an effort to make them more useful for our model (to increase its predictive performance)\nFeature engineering is the act of creating new variables from the ones that already exist."
+    "text": "Feature engineering\n\nUse domain knowledge to create relevant variables from raw data.\n\n\nWe prefer simple models when possible, but parsimony does not mean sacrificing accuracy (or predictive performance) in the interest of simplicity\nFeature engineering allows us to get creative with our predictors in an effort to make them more useful for our model (to increase its predictive performance)"
   },
   {
     "objectID": "handout/2026-02-25-tidymodels.html#feature-engineering---examples",

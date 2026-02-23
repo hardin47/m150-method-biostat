@@ -204,13 +204,11 @@ feeder_train
 
 ## Feature engineering
 
+> Use domain knowledge to create relevant variables from raw data.
+
 -   We prefer simple models when possible, but **parsimony** does not mean sacrificing accuracy (or predictive performance) in the interest of simplicity
 
--   Variables that go into the model and how they are represented are just as critical to success of the model
-
 -   **Feature engineering** allows us to get creative with our predictors in an effort to make them more useful for our model (to increase its predictive performance)
-
--   Feature engineering is the act of creating new variables from the ones that already exist.
 
 ## Feature engineering - examples
 
@@ -247,6 +245,7 @@ feeder_rec <- recipe(
 feeder_rec
 ```
 
+<!--
 ## Working with recipes {.smaller}
 
 -   When building recipes you in a pipeline, you don't get to see the effect of the recipe on your data, which can be unsettling
@@ -258,6 +257,7 @@ feeder_rec
 ::: callout-note
 Using `prep()` and `bake()` are shown here for demonstrative purposes. They do not need to be a part of your pipeline. I do find them assuring, however, so that I can see the effects of the recipe steps as the recipe is built.
 :::
+-->
 
 ## Impute missing values & Remove zero variance predictors {.smaller}
 
@@ -275,6 +275,7 @@ feeder_rec <- feeder_rec |>
 feeder_rec
 ```
 
+<!--
 ## Prep and bake {.smaller}
 
 ```{r}
@@ -285,6 +286,8 @@ feeder_rec_trained <- prep(feeder_rec)
 bake(feeder_rec_trained, feeder_train) |> 
   select(starts_with("hab"), everything()) # re-ordering the columns
 ```
+-->
+
 
 # Building workflows
 
