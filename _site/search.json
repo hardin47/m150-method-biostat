@@ -1523,7 +1523,7 @@
     "href": "handout/2026-02-25-tidymodels.html#accuracy",
     "title": "Tidymodels",
     "section": "Accuracy",
-    "text": "Accuracy\n\nrbind(accuracy(data = feeder_train_pred, truth = squirrels, \n               estimate = .pred_class),\n      sensitivity(data = feeder_train_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      specificity(data = feeder_train_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"))\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary         0.815\n2 sensitivity binary         0.985\n3 specificity binary         0.101"
+    "text": "Accuracy\n\nrbind(accuracy(data = feeder_train_pred, truth = squirrels, \n               estimate = .pred_class),\n      sensitivity(data = feeder_train_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      specificity(data = feeder_train_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"))\n\n# A tibble: 3 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary         0.815\n2 sensitivity binary         0.985\n3 specificity binary         0.101\n\n\n\n“second” means that a success happens with the second level of the variable (here: “squirrels” is alphabetically after “no squirrels”)"
   },
   {
     "objectID": "handout/2026-02-25-tidymodels.html#visualizing-accuracy",

@@ -440,6 +440,10 @@ rbind(accuracy(data = feeder_train_pred, truth = squirrels,
                   estimate = .pred_class, event_level = "second"))
 ```
 
+
+> "second" means that a **success** happens with the second level of the variable (here: "squirrels" is alphabetically after "no squirrels")
+
+
 ## Visualizing accuracy
 
 ```{r}
