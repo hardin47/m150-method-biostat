@@ -796,7 +796,16 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-(@) To get a sense of the true accuracy of the model, the test data should be assessed (for accuracy)[^62]
+(@) Which is more important to be high:[^61a]
+     a. sensitivity (true positive rate)
+     b. specificity (true negative rate)
+     c. accuracy
+
+[^61a]: It totally depends on the goals of the model. None of the three metrics can be considered to be more important than the others without knowing the context of the model.
+
+---
+
+(@) You use the training data to create many different models. To get a sense of the true accuracy, the test data should be assessed (for accuracy)[^62]
      a. on the first model only.
      b. on the last model only.
      c. on every model in the process.
