@@ -786,7 +786,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-(@) When selecting variables, it is important that[^61]
+(@) In algorithmic / computational model building, when selecting variables, it is important that[^61]
     (a) The model predicts training data well
     (b) The model predicts test data well
     (c) The coefficients on the variables are all significant

@@ -425,9 +425,9 @@ feeder_train_pred
 
 # Evaluate model
 
-> sensitivty = number of squirrels that are accurately predicted to be squirrels (true positive rate)
+> sensitivty = proportion of squirrels that are accurately predicted to be squirrels (true positive rate)
 
-> specificity = number of non-squirrels that are accurately predicted to be non-squirrels (true negative rate)
+> specificity = proportion of non-squirrels that are accurately predicted to be non-squirrels (true negative rate)
 
 ## Make predictions for training data
 
