@@ -82,7 +82,7 @@ schedule <- tribble(
   '• modeling',
   '<a href=  "https://st47s.com/Math150/Notes/05-log.html#logstep" target = "_blank"><i class="fas fa-book-open"></i> model building</a> ',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2026/repositories" target = "_blank">{{< fa code >}} HW 6</a> - due 3.5.26 <br> <i class="fa-solid fa-clipboard-question"></i> Quiz 3 on 3.6.26',
-  ' ',
+  '<a href = "https://www.kff.org/policy-watch/a-look-at-federal-health-data-taken-offline/" target = "_blank"><i class="fas fa-newspaper"></i> health data taken offline</a> <br> <a href="https://www.notus.org/trump-white-house/federal-data-is-disappearing" target = "_blank"><i class="fas fa-newspaper"></i> disappearing data</a>  <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/hughes-oliver.html" target = "_blank">Jacqueline Hughes-Oliver</a>',
   ' ',
 
 
