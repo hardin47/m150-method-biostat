@@ -26,6 +26,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE,
   fig.width = 10, fig.asp = 0.618, out.width = "90%",
   fig.retina = 3, dpi = 300, fig.align = "center"
 )
+options(pillar.width = 70)
 ```
 
 ## Agenda
