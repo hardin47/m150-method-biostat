@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each week, follow the general process outlined below:\n\nEnjoy the  notes / text\nAttend class, review the  warm-up and solution. Read the weekly  article before class every Monday.\nComplete the HW assignment ( pdf & qmd linked below),  submit the assignment via  Gradescope from  GitHub accessed on the course Canvas site. HW is due weekly on Thursday at 11:59pm.\nHomework assignments are found at the   GitHub course organization. Due dates are provided on each assignment. See the course GitHub page for more information on how to find, complete, and submit assignments.\nThere will be six in class quizzes.\nThe textbook is Practicing Statistics, by Kuiper and Sklar. See Canvas for more information on the text.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\nagenda\nreadings\nhomework\narticle (Mon)\nworksheets\n\n\n\n\nWeek 1  1.19.26\n• t-tests + • SLR\nKuiper & Sklar: 2   introduction   t-test   t-test as SLR\n\nEmma Benn\n WS 1 - notation\n\n\nWeek 2  1.26.26\n• SLR  • contingency analysis\nKuiper & Sklar: 2 & 6   SLR   categorical analysis\n HW 1 - due 1.29.26\n A/B testing at Netflix   Rafael Irizarry\n WS 2 - SLR conditions   WS 3 - 2x2 permutation\n\n\nWeek 3  2.2.26\n• contingency analysis\nKuiper & Sklar: 6   types of studies   RR and CI   OR and CI\n HW 2 - due 2.5.26   Quiz 1 on 2.6.26\n what is efficacy?   efficacy   Desi Small-Rodriguez\n WS 4 - efficacy   WS 5 - invariance OR\n\n\nWeek 4  2.9.26\n• logistic regression\nKuiper & Sklar: 7   logistic regression   MLE\n HW 3 - due 2.12.26\n Obesity in Children Plummets   JAMA article here (see Table 6)   growth curves   Robert Santos\n WS 6 - MLE   WS 7 - OR coef\n\n\nWeek 5  2.16.26\n• logistic regression\nKuiper & Sklar: 7   inference, logistic regression   multiple logistic regression\n HW 4 - due 2.19.26   Quiz 2 on 2.20.26\n 2030 Census   Race on the census   Arianna Wright Rosenbluth\n WS 8 - interaction\n\n\nWeek 6  2.23.26\n• logistic regression\nKuiper & Sklar: 7   model process   cross validation   ROC\n HW 5 - due 2.26.26\n many models  (Tables 3 & 4, Fig 2)   DuBois Boman\n WS 9 - drop-in-deviance test     WS 10 - cross validation       tidymodels   Simpson's Paradox\n\n\nWeek 7  3.2.26\n• modeling\n model building\n HW 6 - due 3.5.26   Quiz 3 on 3.6.26\n health data taken offline   disappearing data   Jacqueline Hughes-Oliver\n\n\n\nWeek 8  3.9.26\n• survival analysis\nKuiper & Sklar: 9   time to event    KM curves\n\n\n\n\n\n3.16.26\n• Spring Break\n\n\n\n\n\n\nWeek 9  3.23.26\n• survival analysis\nKuiper & Sklar: 9   KM curves   KM CI\n HW 7 - due 3.26.26\n\n\n\n\nWeek 10  3.30.26\n• survival analysis\nKuiper & Sklar: 9   log rank tests    hazard functions\n HW 8 - due 4.2.26   Quiz 4 on 4.3.26\n\n\n\n\nWeek 11  4.6.26\n• survival analysis\nKuiper & Sklar: 9   Cox PH model    multiple Cox PH\n HW 9 - due 4.9.26\n\n\n\n\nWeek 12  4.13.26\n• survival analysis\nKuiper & Sklar: 9   assessing PH    most published research\n HW 10 - due 4.16.26   Quiz 5 on 4.17.26\n\n\n\n\nWeek 13  4.20.26\n• multiple comparisons\n multiple comparisons    false discovery rate   interim analyses\n Project: EDA due 4.24.26\n\n\n\n\nWeek 14  4.27.26\n• multiple comparisons\n multiple comparisons    false discovery rate   interim analyses\n HW 11 - due 4.30.26   Quiz 6 on 5.1.26\n\n\n\n\nWeek 15  5.4.26\n• Poisson regression\n Poisson regression \n  Project: Graphic in class 5.6.26\n\n\n\n\nseniors  5.7.25\n\n\neverything due for seniors  by 5.7.26\n\n\n\n\n\n\n\n  Project: Final due 5.13.26\n\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each week, follow the general process outlined below:\n\nEnjoy the  notes / text\nAttend class, review the  warm-up and solution. Read the weekly  article before class every Monday.\nComplete the HW assignment ( pdf & qmd linked below),  submit the assignment via  Gradescope from  GitHub accessed on the course Canvas site. HW is due weekly on Thursday at 11:59pm.\nHomework assignments are found at the   GitHub course organization. Due dates are provided on each assignment. See the course GitHub page for more information on how to find, complete, and submit assignments.\nThere will be six in class quizzes.\nThe textbook is Practicing Statistics, by Kuiper and Sklar. See Canvas for more information on the text.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\nagenda\nreadings\nhomework\narticle (Mon)\nworksheets\n\n\n\n\nWeek 1  1.19.26\n• t-tests + • SLR\nKuiper & Sklar: 2   introduction   t-test   t-test as SLR\n\nEmma Benn\n WS 1 - notation\n\n\nWeek 2  1.26.26\n• SLR  • contingency analysis\nKuiper & Sklar: 2 & 6   SLR   categorical analysis\n HW 1 - due 1.29.26\n A/B testing at Netflix   Rafael Irizarry\n WS 2 - SLR conditions   WS 3 - 2x2 permutation\n\n\nWeek 3  2.2.26\n• contingency analysis\nKuiper & Sklar: 6   types of studies   RR and CI   OR and CI\n HW 2 - due 2.5.26   Quiz 1 on 2.6.26\n what is efficacy?   efficacy   Desi Small-Rodriguez\n WS 4 - efficacy   WS 5 - invariance OR\n\n\nWeek 4  2.9.26\n• logistic regression\nKuiper & Sklar: 7   logistic regression   MLE\n HW 3 - due 2.12.26\n Obesity in Children Plummets   JAMA article here (see Table 6)   growth curves   Robert Santos\n WS 6 - MLE   WS 7 - OR coef\n\n\nWeek 5  2.16.26\n• logistic regression\nKuiper & Sklar: 7   inference, logistic regression   multiple logistic regression\n HW 4 - due 2.19.26   Quiz 2 on 2.20.26\n 2030 Census   Race on the census   Arianna Wright Rosenbluth\n WS 8 - interaction\n\n\nWeek 6  2.23.26\n• logistic regression\nKuiper & Sklar: 7   model process   cross validation   ROC\n HW 5 - due 2.26.26\n many models  (Tables 3 & 4, Fig 2)   DuBois Boman\n WS 9 - drop-in-deviance test     WS 10 - cross validation       tidymodels   Simpson's Paradox\n\n\nWeek 7  3.2.26\n• modeling\n model building\n HW 6 - due 3.5.26   Quiz 3 on 3.6.26\n health data taken offline   disappearing data   Jacqueline Hughes-Oliver\n WS 11 - ROC curves     ROC + step\n\n\nWeek 8  3.9.26\n• survival analysis\nKuiper & Sklar: 9   time to event    KM curves\n\n\n\n\n\n3.16.26\n• Spring Break\n\n\n\n\n\n\nWeek 9  3.23.26\n• survival analysis\nKuiper & Sklar: 9   KM curves   KM CI\n HW 7 - due 3.26.26\n\n\n\n\nWeek 10  3.30.26\n• survival analysis\nKuiper & Sklar: 9   log rank tests    hazard functions\n HW 8 - due 4.2.26   Quiz 4 on 4.3.26\n\n\n\n\nWeek 11  4.6.26\n• survival analysis\nKuiper & Sklar: 9   Cox PH model    multiple Cox PH\n HW 9 - due 4.9.26\n\n\n\n\nWeek 12  4.13.26\n• survival analysis\nKuiper & Sklar: 9   assessing PH    most published research\n HW 10 - due 4.16.26   Quiz 5 on 4.17.26\n\n\n\n\nWeek 13  4.20.26\n• multiple comparisons\n multiple comparisons    false discovery rate   interim analyses\n Project: EDA due 4.24.26\n\n\n\n\nWeek 14  4.27.26\n• multiple comparisons\n multiple comparisons    false discovery rate   interim analyses\n HW 11 - due 4.30.26   Quiz 6 on 5.1.26\n\n\n\n\nWeek 15  5.4.26\n• Poisson regression\n Poisson regression \n  Project: Graphic in class 5.6.26\n\n\n\n\nseniors  5.7.25\n\n\neverything due for seniors  by 5.7.26\n\n\n\n\n\n\n\n  Project: Final due 5.13.26\n\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -1699,5 +1699,166 @@
     "title": "Tidymodels",
     "section": "Comparing Models",
     "text": "Comparing Models\n\n\n\n\n\nData / statistical modeling: The analysis in this culture starts with assuming a stochastic data model for the inside of the black box…The values of the parameters are estimated from the data and the model then used for information and/or prediction. The goal is to understand the model.\n\nAlgorithmic / computational modeling: The analysis in this culture considers the inside of the box complex and unknown. The approach is to find a function f(x) — an algorithm that operates on x to predict the responses y. The goal is to produce excellent predictions.\n\nReference: Leo Breiman (2001)"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#agenda",
+    "href": "handout/2026-03-02-ROC-onestep.html#agenda",
+    "title": "ROC + Adding Variables",
+    "section": "Agenda",
+    "text": "Agenda\n\n\nMetric: Receiver Operating Characteristic (ROC) Curves\nMetrics: AIC & BIC\nModel building one variables at a time"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#make-predictions-for-test-data",
+    "href": "handout/2026-03-02-ROC-onestep.html#make-predictions-for-test-data",
+    "title": "ROC + Adding Variables",
+    "section": "Make predictions for test data",
+    "text": "Make predictions for test data\n\nfeeder_test_pred &lt;- predict(feeder_fit, feeder_test, type = \"prob\") |&gt;\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.5,\n                                        \"squirrels\", \"no squirrels\"))) |&gt;\n  bind_cols(feeder_test |&gt; select(squirrels))\n\nfeeder_test_pred\n\n# A tibble: 58,922 × 4\n   `.pred_no squirrels` .pred_squirrels .pred_class squirrels   \n                  &lt;dbl&gt;           &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt;       \n 1               0.201            0.799 squirrels   no squirrels\n 2               0.156            0.844 squirrels   no squirrels\n 3               0.352            0.648 squirrels   no squirrels\n 4               0.197            0.803 squirrels   squirrels   \n 5               0.121            0.879 squirrels   squirrels   \n 6               0.272            0.728 squirrels   squirrels   \n 7               0.0459           0.954 squirrels   squirrels   \n 8               0.0341           0.966 squirrels   squirrels   \n 9               0.0631           0.937 squirrels   squirrels   \n10               0.0312           0.969 squirrels   squirrels   \n# ℹ 58,912 more rows"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#accuracy",
+    "href": "handout/2026-03-02-ROC-onestep.html#accuracy",
+    "title": "ROC + Adding Variables",
+    "section": "Accuracy",
+    "text": "Accuracy\n\nrbind(accuracy(feeder_test_pred, truth = squirrels, \n               estimate = .pred_class),\n      sensitivity(feeder_test_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      specificity(feeder_test_pred, truth = squirrels, \n                  estimate = .pred_class, event_level = \"second\"),\n      roc_auc(feeder_test_pred, truth = squirrels, \n                  .pred_squirrels, event_level = \"second\")\n      )\n\n# A tibble: 4 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary        0.814 \n2 sensitivity binary        0.985 \n3 specificity binary        0.0988\n4 roc_auc     binary        0.721"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#roc-curves",
+    "href": "handout/2026-03-02-ROC-onestep.html#roc-curves",
+    "title": "ROC + Adding Variables",
+    "section": "ROC Curves",
+    "text": "ROC Curves\nReceiver Operating Characteristic Curves\n\nTPR = sensitivity = # of true predicted true / # true\nFPR = 1 - specificity = # false predicted true / # false\n\nHow can the plot use many TPRs and FPRs ???"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#roc-curve",
+    "href": "handout/2026-03-02-ROC-onestep.html#roc-curve",
+    "title": "ROC + Adding Variables",
+    "section": "ROC Curve",
+    "text": "ROC Curve"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#visualizing-accuracy",
+    "href": "handout/2026-03-02-ROC-onestep.html#visualizing-accuracy",
+    "title": "ROC + Adding Variables",
+    "section": "Visualizing accuracy",
+    "text": "Visualizing accuracy\n\n\n# A tibble: 4 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary        0.814 \n2 sensitivity binary        0.985 \n3 specificity binary        0.0988\n4 roc_auc     binary        0.721"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#different-cut-off-0.8",
+    "href": "handout/2026-03-02-ROC-onestep.html#different-cut-off-0.8",
+    "title": "ROC + Adding Variables",
+    "section": "Different cut-off = 0.8?",
+    "text": "Different cut-off = 0.8?\n\nfeeder_test_pred &lt;- predict(feeder_fit, feeder_test, type = \"prob\") |&gt;\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.8,\n                                        \"squirrels\", \"no squirrels\"))) |&gt;\n  bind_cols(feeder_test |&gt; select(squirrels))\n\n\n\n# A tibble: 4 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary         0.675\n2 sensitivity binary         0.683\n3 specificity binary         0.641\n4 roc_auc     binary         0.721"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#different-cut-off-0.15",
+    "href": "handout/2026-03-02-ROC-onestep.html#different-cut-off-0.15",
+    "title": "ROC + Adding Variables",
+    "section": "Different cut-off = 0.15?",
+    "text": "Different cut-off = 0.15?\n\nfeeder_test_pred &lt;- predict(feeder_fit, feeder_test, type = \"prob\") |&gt;\n  mutate(.pred_class = as.factor(ifelse(.pred_squirrels &gt;=0.15,\n                                        \"squirrels\", \"no squirrels\"))) |&gt;\n  bind_cols(feeder_test |&gt; select(squirrels))\n\n\n\n# A tibble: 4 × 3\n  .metric     .estimator .estimate\n  &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy    binary       0.807  \n2 sensitivity binary       0.999  \n3 specificity binary       0.00141\n4 roc_auc     binary       0.721"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#roc-curve-1",
+    "href": "handout/2026-03-02-ROC-onestep.html#roc-curve-1",
+    "title": "ROC + Adding Variables",
+    "section": "ROC Curve",
+    "text": "ROC Curve\n\nroc_auc(data = feeder_test_pred, truth = squirrels, \n                  .pred_squirrels, event_level = \"second\")\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.721\n\n\n\nTo get a single value (for model comparison), we use the area under the ROC curve."
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#aoc",
+    "href": "handout/2026-03-02-ROC-onestep.html#aoc",
+    "title": "ROC + Adding Variables",
+    "section": "AOC",
+    "text": "AOC\n\nAlexandria Ocasio-Cortez as Area Over the Curve. I didn’t make the image, and I don’t know who did!"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#more-metrics",
+    "href": "handout/2026-03-02-ROC-onestep.html#more-metrics",
+    "title": "ROC + Adding Variables",
+    "section": "More metrics",
+    "text": "More metrics\n\nAIC: Akaike’s Information Criteria = \\(-2\\ln L + 2p\\)\nBIC: Bayesian Information Criteria = \\(-2 \\ln L + p \\ln(n)\\)\n\n\nchoose a model with the smallest AIC or BIC"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#tools",
+    "href": "handout/2026-03-02-ROC-onestep.html#tools",
+    "title": "ROC + Adding Variables",
+    "section": "Tools 😖",
+    "text": "Tools 😖\n\ntidymodels does not make it easy to add or drop 1 variable at a time.\nadd1() and drop1() functions do not make it easy to work with dozens of predictors and missing data.\n\nTherefore, we’ll go back to the bird data from HW 5.\n\n\nLocation\n  bank  conif  decid ground  shrub   snag   wall \n     3     14     25     19     17      4      4"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#forward-1",
+    "href": "handout/2026-03-02-ROC-onestep.html#forward-1",
+    "title": "ROC + Adding Variables",
+    "section": "Forward +1",
+    "text": "Forward +1\n\nglm(`Closed?` ~ 1, data = nests, family=\"binomial\") |&gt;\n  add1(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling, test = \"Chisq\")\n\nSingle term additions\n\nModel:\n`Closed?` ~ 1\n         Df Deviance     AIC     LRT  Pr(&gt;Chi)    \n&lt;none&gt;       108.533 110.533                      \nLength    1  105.296 109.296  3.2373 0.0719792 .  \nLocation  6   77.065  91.065 31.4684 2.063e-05 ***\nNo.eggs   1   90.951  94.951 17.5816 2.752e-05 ***\nColor     1  108.087 112.087  0.4463 0.5041175    \nIncubate  1  108.267 112.267  0.2658 0.6061875    \nNestling  1   93.825  97.825 14.7078 0.0001255 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#forward-2",
+    "href": "handout/2026-03-02-ROC-onestep.html#forward-2",
+    "title": "ROC + Adding Variables",
+    "section": "Forward +2",
+    "text": "Forward +2\n\nglm(`Closed?` ~ Location, data = nests, family=\"binomial\") |&gt;\n  add1(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling, test = \"Chisq\")\n\nSingle term additions\n\nModel:\n`Closed?` ~ Location\n         Df Deviance    AIC     LRT  Pr(&gt;Chi)    \n&lt;none&gt;        77.065 91.065                      \nLength    1   71.704 87.704  5.3605    0.0206 *  \nNo.eggs   1   61.211 77.211 15.8530 6.846e-05 ***\nColor     1   74.758 90.758  2.3070    0.1288    \nIncubate  1   74.829 90.829  2.2355    0.1349    \nNestling  1   74.722 90.722  2.3425    0.1259    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#forward-3",
+    "href": "handout/2026-03-02-ROC-onestep.html#forward-3",
+    "title": "ROC + Adding Variables",
+    "section": "Forward +3",
+    "text": "Forward +3\n\nglm(`Closed?` ~ No.eggs + Location, data = nests, family=\"binomial\") |&gt;\n  add1(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling, test = \"Chisq\")\n\nSingle term additions\n\nModel:\n`Closed?` ~ No.eggs + Location\n         Df Deviance    AIC    LRT Pr(&gt;Chi)  \n&lt;none&gt;        61.211 77.211                  \nLength    1   58.229 76.229 2.9823  0.08418 .\nColor     1   59.925 77.925 1.2865  0.25669  \nIncubate  1   59.891 77.891 1.3202  0.25056  \nNestling  1   59.247 77.247 1.9646  0.16102  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#backward--1",
+    "href": "handout/2026-03-02-ROC-onestep.html#backward--1",
+    "title": "ROC + Adding Variables",
+    "section": "Backward -1",
+    "text": "Backward -1\n\nglm(`Closed?` ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling, data = nests, family=\"binomial\") |&gt;\n  drop1(test = \"Chisq\")\n\nSingle term deletions\n\nModel:\n`Closed?` ~ Length + Location + No.eggs + Color + Incubate + \n    Nestling\n         Df Deviance    AIC     LRT Pr(&gt;Chi)   \n&lt;none&gt;        46.252 70.252                    \nLength    1   52.812 74.812  6.5600 0.010430 * \nLocation  6   66.017 78.017 19.7648 0.003049 **\nNo.eggs   1   56.049 78.049  9.7973 0.001748 **\nColor     1   46.997 68.997  0.7457 0.387857   \nIncubate  1   46.580 68.580  0.3279 0.566919   \nNestling  1   56.989 78.989 10.7368 0.001050 **\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#backward--2",
+    "href": "handout/2026-03-02-ROC-onestep.html#backward--2",
+    "title": "ROC + Adding Variables",
+    "section": "Backward -2",
+    "text": "Backward -2\n\nglm(`Closed?` ~ Length + Location + No.eggs + Color +\n         Nestling, data = nests, family=\"binomial\") |&gt;\n  drop1(test = \"Chisq\")\n\nSingle term deletions\n\nModel:\n`Closed?` ~ Length + Location + No.eggs + Color + Nestling\n         Df Deviance    AIC     LRT  Pr(&gt;Chi)    \n&lt;none&gt;        46.580 68.580                      \nLength    1   58.124 78.124 11.5445 0.0006795 ***\nLocation  6   66.175 76.175 19.5956 0.0032675 ** \nNo.eggs   1   56.939 76.939 10.3597 0.0012879 ** \nColor     1   47.292 67.292  0.7127 0.3985498    \nNestling  1   56.989 76.989 10.4091 0.0012540 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#backward--3",
+    "href": "handout/2026-03-02-ROC-onestep.html#backward--3",
+    "title": "ROC + Adding Variables",
+    "section": "Backward -3",
+    "text": "Backward -3\n\nglm(`Closed?` ~ Length + Location + No.eggs + Nestling, \n    data = nests, family=\"binomial\") |&gt;\n  drop1(test = \"Chisq\")\n\nSingle term deletions\n\nModel:\n`Closed?` ~ Length + Location + No.eggs + Nestling\n         Df Deviance    AIC    LRT  Pr(&gt;Chi)    \n&lt;none&gt;        47.292 67.292                     \nLength    1   59.247 77.247 11.954 0.0005451 ***\nLocation  6   66.762 74.762 19.470 0.0034401 ** \nNo.eggs   1   58.337 76.337 11.045 0.0008894 ***\nNestling  1   58.229 76.229 10.937 0.0009427 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#automatic-forward-w-aic",
+    "href": "handout/2026-03-02-ROC-onestep.html#automatic-forward-w-aic",
+    "title": "ROC + Adding Variables",
+    "section": "Automatic: Forward w AIC",
+    "text": "Automatic: Forward w AIC\n\nglm(`Closed?` ~ 1, data = nests, family=\"binomial\") |&gt;\n  stats::step(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling, \n         direction = \"forward\", k = 2)\n\nStart:  AIC=110.53\n`Closed?` ~ 1\n\n           Df Deviance     AIC\n+ Location  6   77.065  91.065\n+ No.eggs   1   90.951  94.951\n+ Nestling  1   93.825  97.825\n+ Length    1  105.296 109.296\n&lt;none&gt;         108.533 110.533\n+ Color     1  108.087 112.087\n+ Incubate  1  108.267 112.267\n\nStep:  AIC=91.06\n`Closed?` ~ Location\n\n           Df Deviance    AIC\n+ No.eggs   1   61.211 77.211\n+ Length    1   71.704 87.704\n+ Nestling  1   74.722 90.722\n+ Color     1   74.758 90.758\n+ Incubate  1   74.829 90.829\n&lt;none&gt;          77.065 91.065\n\nStep:  AIC=77.21\n`Closed?` ~ Location + No.eggs\n\n           Df Deviance    AIC\n+ Length    1   58.229 76.229\n&lt;none&gt;          61.211 77.211\n+ Nestling  1   59.247 77.247\n+ Incubate  1   59.891 77.891\n+ Color     1   59.925 77.925\n\nStep:  AIC=76.23\n`Closed?` ~ Location + No.eggs + Length\n\n           Df Deviance    AIC\n+ Nestling  1   47.292 67.292\n&lt;none&gt;          58.229 76.229\n+ Color     1   56.989 76.989\n+ Incubate  1   58.227 78.227\n\nStep:  AIC=67.29\n`Closed?` ~ Location + No.eggs + Length + Nestling\n\n           Df Deviance    AIC\n&lt;none&gt;          47.292 67.292\n+ Color     1   46.580 68.580\n+ Incubate  1   46.997 68.997\n\n\n\nCall:  glm(formula = `Closed?` ~ Location + No.eggs + Length + Nestling, \n    family = \"binomial\", data = nests)\n\nCoefficients:\n   (Intercept)   Locationconif   Locationdecid  Locationground   Locationshrub  \n       11.1085        -19.2865        -16.8603        -20.5222        -18.6448  \n  Locationsnag    Locationwall         No.eggs          Length        Nestling  \n        0.6949        -18.3127          0.7950         -0.2194          0.3983  \n\nDegrees of Freedom: 85 Total (i.e. Null);  76 Residual\nNull Deviance:      108.5 \nResidual Deviance: 47.29    AIC: 67.29"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#final-forward-aic",
+    "href": "handout/2026-03-02-ROC-onestep.html#final-forward-aic",
+    "title": "ROC + Adding Variables",
+    "section": "Final Forward AIC",
+    "text": "Final Forward AIC\n\nglm(`Closed?` ~ Length + Location + No.eggs + Nestling,\n    data = nests, family=\"binomial\") |&gt; tidy()\n\n# A tibble: 10 × 5\n   term           estimate std.error statistic p.value\n   &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)      11.1   3328.      0.00334  0.997  \n 2 Length           -0.219    0.0754 -2.91     0.00364\n 3 Locationconif   -19.3   3328.     -0.00580  0.995  \n 4 Locationdecid   -16.9   3328.     -0.00507  0.996  \n 5 Locationground  -20.5   3328.     -0.00617  0.995  \n 6 Locationshrub   -18.6   3328.     -0.00560  0.996  \n 7 Locationsnag      0.695 4313.      0.000161 1.000  \n 8 Locationwall    -18.3   3328.     -0.00550  0.996  \n 9 No.eggs           0.795    0.262   3.04     0.00238\n10 Nestling          0.398    0.144   2.76     0.00577"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#automatic-backward-w-bic",
+    "href": "handout/2026-03-02-ROC-onestep.html#automatic-backward-w-bic",
+    "title": "ROC + Adding Variables",
+    "section": "Automatic: Backward w BIC",
+    "text": "Automatic: Backward w BIC\n\nglm(`Closed?` ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling,\n    data = nests, family=\"binomial\") |&gt;\n  stats::step(scope = ~ Length + Location + No.eggs + Color +\n         Incubate + Nestling, \n         direction = \"backward\", k = log(86))\n\nStart:  AIC=99.7\n`Closed?` ~ Length + Location + No.eggs + Color + Incubate + \n    Nestling\n\n           Df Deviance     AIC\n- Location  6   66.017  92.743\n- Incubate  1   46.580  95.577\n- Color     1   46.997  95.995\n&lt;none&gt;          46.252  99.704\n- Length    1   52.812 101.810\n- No.eggs   1   56.049 105.047\n- Nestling  1   56.989 105.986\n\nStep:  AIC=92.74\n`Closed?` ~ Length + No.eggs + Color + Incubate + Nestling\n\n           Df Deviance     AIC\n- Incubate  1   66.175  88.447\n- Color     1   66.664  88.935\n&lt;none&gt;          66.017  92.743\n- No.eggs   1   74.635  96.907\n- Length    1   75.000  97.272\n- Nestling  1   85.891 108.163\n\nStep:  AIC=88.45\n`Closed?` ~ Length + No.eggs + Color + Nestling\n\n           Df Deviance     AIC\n- Color     1   66.762  84.579\n&lt;none&gt;          66.175  88.447\n- No.eggs   1   75.577  93.395\n- Length    1   79.115  96.932\n- Nestling  1   89.064 106.881\n\nStep:  AIC=84.58\n`Closed?` ~ Length + No.eggs + Nestling\n\n           Df Deviance     AIC\n&lt;none&gt;          66.762  84.579\n- No.eggs   1   76.704  90.067\n- Length    1   79.162  92.525\n- Nestling  1   90.053 103.416\n\n\n\nCall:  glm(formula = `Closed?` ~ Length + No.eggs + Nestling, family = \"binomial\", \n    data = nests)\n\nCoefficients:\n(Intercept)       Length      No.eggs     Nestling  \n    -6.7711      -0.1871       0.6476       0.4062  \n\nDegrees of Freedom: 85 Total (i.e. Null);  82 Residual\nNull Deviance:      108.5 \nResidual Deviance: 66.76    AIC: 74.76"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#final-backward-bic",
+    "href": "handout/2026-03-02-ROC-onestep.html#final-backward-bic",
+    "title": "ROC + Adding Variables",
+    "section": "Final Backward BIC",
+    "text": "Final Backward BIC\n\nglm(`Closed?` ~ Length + No.eggs + Nestling,\n    data = nests, family=\"binomial\") |&gt; tidy()\n\n# A tibble: 4 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   -6.77     1.73       -3.90 0.0000946\n2 Length        -0.187    0.0598     -3.13 0.00177  \n3 No.eggs        0.648    0.245       2.65 0.00815  \n4 Nestling       0.406    0.107       3.78 0.000156"
+  },
+  {
+    "objectID": "handout/2026-03-02-ROC-onestep.html#final-model-comparison",
+    "href": "handout/2026-03-02-ROC-onestep.html#final-model-comparison",
+    "title": "ROC + Adding Variables",
+    "section": "Final model comparison",
+    "text": "Final model comparison\nForward (AIC)\n\nglm(`Closed?` ~ Length + Location + No.eggs + Nestling,\n    data = nests, family=\"binomial\") |&gt; tidy()\n\n# A tibble: 10 × 5\n   term           estimate std.error statistic p.value\n   &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)      11.1   3328.      0.00334  0.997  \n 2 Length           -0.219    0.0754 -2.91     0.00364\n 3 Locationconif   -19.3   3328.     -0.00580  0.995  \n 4 Locationdecid   -16.9   3328.     -0.00507  0.996  \n 5 Locationground  -20.5   3328.     -0.00617  0.995  \n 6 Locationshrub   -18.6   3328.     -0.00560  0.996  \n 7 Locationsnag      0.695 4313.      0.000161 1.000  \n 8 Locationwall    -18.3   3328.     -0.00550  0.996  \n 9 No.eggs           0.795    0.262   3.04     0.00238\n10 Nestling          0.398    0.144   2.76     0.00577\n\n\nBackward (BIC)\n\nglm(`Closed?` ~ Length + No.eggs + Nestling,\n    data = nests, family=\"binomial\") |&gt; tidy()\n\n# A tibble: 4 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   -6.77     1.73       -3.90 0.0000946\n2 Length        -0.187    0.0598     -3.13 0.00177  \n3 No.eggs        0.648    0.245       2.65 0.00815  \n4 Nestling       0.406    0.107       3.78 0.000156"
   }
 ]

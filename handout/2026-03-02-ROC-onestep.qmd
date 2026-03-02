@@ -1,13 +1,12 @@
 ---
 title: "ROC + Adding Variables"
-subtitle: "Math 150 - Spring 2025"
+subtitle: "Math 150 - Spring 2026"
 author: "Jo Hardin"
 footer: "[https://m150-method-biostat.netlify.app/](https://m150-method-biostat.netlify.app/)"
 logo: "../images/st47s.png"
 format: 
   revealjs:
     theme: slides.scss
-    multiplex: true
     transition: fade
     slide-number: true
     incremental: false 
