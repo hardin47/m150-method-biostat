@@ -994,7 +994,7 @@ D: {5, 6, 7, 9, 11}
     (e) `Nestling` 
 
 
-[^73c]: d. or e. Hard to say, could have removed `Incubate`, `Nestling`, or `Totcare`.  (I removed `Nestling`.)
+[^73c]: d. `Incubate` has the lowest AIC and biggest p-value.
 
 
 ---
@@ -1006,7 +1006,7 @@ D: {5, 6, 7, 9, 11}
     (d) `Incubate` 
     (e) `Nestling` 
 
-[^73d]: c. `Color` has the smalles test statistic and correspondingly largest p-value.
+[^73d]: c. `Color` has the smallest test statistic and correspondingly largest p-value.
 
 
 
