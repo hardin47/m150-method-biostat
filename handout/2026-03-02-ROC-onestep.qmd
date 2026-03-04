@@ -321,7 +321,7 @@ knitr::include_graphics("figs/aoc.jpg")
 
 # Variable Selection
 
-> Forward: start with the "best" variable and add variables one at a time
+> Forward: start with no variables and add variables one at a time
 
 > Backward: start with the full model and remove variables one at a time
 
