@@ -99,11 +99,13 @@ schedule <- tribble(
 "3.16.26", '• Spring Break', ' ', ' ', ' ', ' ',
   
 
+#talk about phases, open label extension, treating plaques vs
+#treating cognitive decline PLUS major problematic side effects
 "Week 9 <br> 3.23.26", 
   '• survival analysis',
   'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/06-surv.html#logrank" target = "_blank"><i class="fas fa-book-open"></i> log rank tests </a> <br> <a href="https://st47s.com/Math150/Notes/06-surv.html#hazfunc" target = "_blank"><i class="fas fa-book-open"></i> hazard functions</a>',
   '<a href="https://github.com/orgs/ST47S-MethBio-Spring2026/repositories" target = "_blank">{{< fa code >}} HW 8</a> - due 3.26.26 ',
-  ' ',
+  '<a href = "https://www.scientificamerican.com/article/controversial-new-alzheimers-treatments-gain-ground-despite-serious-side/" target = "_blank"><i class="fas fa-newspaper"></i> Alzheimer&#39;s</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/coles.html" target = "_blank">Adrian Coles</a>',
   '  ', 
 
 
@@ -182,20 +184,6 @@ schedule <- tribble(
 schedule <- tribble(
   ~`date`, ~agenda, ~readings, ~homework, ~`article (Mon)`, ~`worksheets`,
 
-
-
-
-#read the placebo effect paper more carefully so that i know what to present before class!
-"Week 8 <br> 3.10.25", 
-  '• survival analysis',
-  'Kuiper & Sklar: 9 <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#timedata" target = "_blank"><i class="fas fa-book-open"></i> time to event </a> <br> <a href="https://st47s.com/Math150/Notes/survival-analysis.html#KM" target = "_blank"><i class="fas fa-book-open"></i> KM curves</a> ',
-  ' ',
-  '<a href = "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2799017" target = "_blank"><i class="fas fa-newspaper"></i> placebo effect (read abstract and Fig 3)</a> <br> <br>  <a href = "https://hardin47.github.io/CURV/scholars/nuzzo.html" target = "_blank">Regina Nuzzo</a>',
-  '<a href="https://m150-method-biostat.netlify.app/handout/ws11_ma150_s25_forward.pdf" target = "_blank">{{< fa pencil >}} WS 11 - forward selection </a> <br> <br> <a href="https://m150-method-biostat.netlify.app/handout/ws12_ma150_s25_censored.pdf" target = "_blank">{{< fa pencil >}} WS 12 - censored observations </a> <br> <br>', 
-
-
-"3.17.25", '• Spring Break', ' ', ' ', ' ', ' ',
-  
 
 "Week 9 <br> 3.24.25", 
   '• survival analysis',
