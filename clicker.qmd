@@ -1347,6 +1347,15 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
 
 ---
 
+(@) AIC, BIC, model validation, and stepwise regression are methods for[^104]
+      a. parameter estimation 
+      b. variable selection
+
+[^104]: b. variable selection
+
+
+---
+
 (@) The effect of weight could violate PH if:[^102]
      (a) people of different weights are in control vs treatment group
      (b) people tend to weigh less over time
@@ -1364,14 +1373,6 @@ knitr::include_graphics("handout/figs/hazard_NA.jpg")
      (d) there is more than one treatment group
 
 [^103]: b. the treatment produces short term benefits only
-
----
-
-(@) AIC, BIC, model validation, and stepwise regression are methods for[^104]
-      a. parameter estimation 
-      b. variable selection
-
-[^104]: b. variable selection
 
 ---
 
