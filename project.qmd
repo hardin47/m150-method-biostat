@@ -20,13 +20,13 @@ Information about the data can be found in this <a href = "https://m150-method-b
 
 ### Data
 
-
-The data can be loaded in directly from Box at: <a href = "https://pomona.box.com/shared/static/uicqv6s6o5icfc14r9acu1kaafxisp3l.csv" target = "_blank">https://pomona.box.com/shared/static/uicqv6s6o5icfc14r9acu1kaafxisp3l.csv</a>
+The data can be loaded in directly from Box at: <a href = "https://pomona.box.com/s/knuhli7y7oy3dwhxluanaos5koukc9cy" target = "_blank">https://pomona.box.com/s/knuhli7y7oy3dwhxluanaos5koukc9cy</a>
 
 ```{r}
 #| warning: false
 #| message: false
 #| echo: false
+#| eval: false
 
 HELPdata <- readr::read_csv("https://pomona.box.com/shared/static/uicqv6s6o5icfc14r9acu1kaafxisp3l.csv",
                      na=c("NA", ""))
@@ -41,16 +41,20 @@ Please use the above dataset in your analysis.  However, feel free to look at th
 * The goal of the semester project is to create a Cox Proportional Hazard model which uses explanatory variables to model hazard of "event".
 
 ### Due Dates
-* **Wednesday, April 23**. Post (to the GitHub repo that I created) both the Quarto file and the corresponding pdf document:  
+* **Friday, April 17**. Report whether you will be working in a pair or not.
+
+* **Wednesday, April 22**. Post (to the GitHub repo that I created) both the Quarto file and the corresponding pdf document:  
    * Include the names of the individuals in the group.
    * Some sort of EDA (exploratory data analysis).  Do not print the data, but do something that indicates you've uploaded the data and know what some of the variables are.  You might have some summary statistics or a graph.  The idea here is to explore the variables, not to run survival curves.  What can you learn about the many many variables?  How do they relate to one another?  What about all the missingness? This is *not* an extensive assignment.  [Again, the question here is not about the response variable, it's about all the predictor variables.  Learn about the dataset!]
    * Outline the "something new" part of the assignment.  You should indicate who is doing what, what resources each of you will use to learn about your new topic, and a few sentences on what the topic is or how it relates to survival analysis / the analysis at hand.  Additionally, for each "new" thing, provide 1-2 sentences describing what will be **challenging** about learning something new.
 
-* (Optional) **Monday, May 5**. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 5th (or May 2nd). (If you are a graduating senior who would like feedback, please provide me a draft by **Friday, May 2nd**.)
+* (Optional) **Monday, May 4**. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 5th (or May 2nd). (If you are a graduating senior who would like feedback, please provide me a draft by **Friday, May 1st**.)
 
-* **Wednesday, May 7**. Last day of class, each person / group will present their visualization, and there will be secret ballot voting for the best visualization of the data / model.
+* **Last week of class or finals week**. Each person will individually talk through their new thing in a 15 minute in-person discussion. Notes are welcome!
 
-* **Friday, May 16**.  Complete assignment is due (turn in **both** the qmd and knitted pdf to your GitHub repository). I will be grading from GitHub directly, so no need to turn in to Gradescope. (If you are a graduating senior, the final assignment is due by **noon on Thursday, May 8**.)
+* **Wednesday, May 6**. Last day of class, each person / group will present their visualization, and there will be secret ballot voting for the best visualization of the data / model.
+
+* **Friday, May 13**.  Complete assignment is due (turn in **both** the qmd and rendered pdf to your GitHub repository). I will be grading from GitHub directly, so no need to turn in to Gradescope. (If you are a graduating senior, the final assignment is due by **noon on Thursday, May 7**.)
 
 * If you are on a team with a graduating senior, then your due dates are all the same as the graduating seniors.
 
@@ -63,7 +67,7 @@ The analysis should be done in a complete Quarto file and pushed to the GitHub r
 In the final write-up, make sure the final model is very clearly specified.  
 The Cox PH analysis should include: an interpretation of your final survival model including a discussion of the sign of the coefficients (note:  feel free to use interactions)  Which variable(s) are in?  Which are out?  What do you conclude about linking to primary care?  Is there anything worth mentioning about how you got to your final model? What can you say about causation?  What can you say about generalizing to a larger population?
 
-3. Something new.  Each individual in the class will learn a new idea related to survival analysis (see below).   The new part will be assessed on your ability to explain the new idea.  That is, you must indicate a complete understanding of the topic as well as an adequate use of the method applied to the dataset.
+3. Something new.  Each individual in the class will learn a new idea related to survival analysis (see below).   The new part will be assessed (in person!!) on your ability to explain the new idea.  That is, you must indicate a complete understanding of the topic as well as an adequate use of the method applied to the dataset. Sometime during the last week or classes or during finals week, you will have an appointment to describe your new idea in person. You are welcome to bring in any notes you might have on the topic.
 
 4. A visualization to enter into the competition.  The visualization could be of the EDA variety, or it could be based on the model / results.  The different visualizations will be presented to the class on the last day of the semester (May 7).  The team whose visualization is best (secret ballot by the class) will earn an additional 3 points on the project. The visualization should be included in your GitHub repo (either within the final report or as a separate png / jpg / etc.). The visualization should be done in R, but interactive is fine (via Shiny or plotly etc.).
 
@@ -102,7 +106,7 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 * Use Quarto to create a reproducible analysis.  Anyone should be able to run your analysis using only the .qmd file and the dataset.
 * Turn in both .qmd and .pdf files for your final analysis.
 * You do not need to include code in your analysis. You should, however, include relevant output (e.g., the `tidy()` output from the Cox PH model or any graphs). The .qmd file will contain all of your code.
-* If you are working in pairs, the project is extended in two ways.  1.  You must *both* be working on the files in GitHub. That is, each person must make commits to the repository.  2. You must do *two* new items (one each).
+* If you are working in pairs, the project is extended in three ways.  1.  You must *both* be working on the files in GitHub. That is, each person must make commits to the repository.  2. You must do *two* new items (one each). 3. Each individual must create their own graphic.
 * Note that the event of interest is "visit to primary care physician."
 * Be as creative as possible trying to think about how you might like to graphically display the data.  If you come up with a cool idea for a graph but don't know how to implement it, **please let me know, and I will write the code for you!!**
 * Please do not re-code the variables or change the variable names outside of R. You may, however, transform (`mutate()`) the variables within your R code (that is, for example, if you wanted to divide months by 12 to have years, or square a variable, etc.).  
