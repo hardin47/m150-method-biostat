@@ -20,7 +20,7 @@ Information about the data can be found in this <a href = "https://m150-method-b
 
 ### Data
 
-The data can be loaded in directly from Box at: <a href = "https://pomona.box.com/s/knuhli7y7oy3dwhxluanaos5koukc9cy" target = "_blank">https://pomona.box.com/s/knuhli7y7oy3dwhxluanaos5koukc9cy</a>
+The data can be loaded in directly from Box at: <a href = "https://pomona.box.com/shared/static/knuhli7y7oy3dwhxluanaos5koukc9cy.csv" target = "_blank">https://pomona.box.com/shared/static/knuhli7y7oy3dwhxluanaos5koukc9cy.csv</a>
 
 ```{r}
 #| warning: false
