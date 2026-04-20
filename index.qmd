@@ -136,7 +136,7 @@ schedule <- tribble(
   ' <a href="https://st47s.com/Math150/Notes/07-MC.html#qvals" target = "_blank"><i class="fas fa-book-open"></i> false discovery rate</a> <br> <a href="https://st47s.com/Math150/Notes/07-MC.html#interim" target = "_blank"><i class="fas fa-book-open"></i> interim analyses</a>',
   '<font color = "#114B5F"><b><a href = "https://m150-method-biostat.netlify.app/project.html" target = "_blank"><i class="fa-solid fa-list-check"></i> Project: EDA</a></b></font> due 4.24.26',
   '<a href = "https://www.nytimes.com/2020/10/14/health/covid-clinical-trials.html" target = "_blank"><i class="fas fa-newspaper"></i> pausing trials</a> <br> <br> <a href = "https://hardin47.github.io/CURV/scholars/price.html" target = "_blank">Dionne Price</a>',
-  ' ',  
+  '<a href="https://m150-method-biostat.netlify.app/handout/ws23_ma150_s26_FWER.pdf" target = "_blank">{{< fa pencil >}} WS 23 - FWER & FDR</a>',  
 
 "Week 14 <br> 4.27.26", 
   '• Poisson regression',
@@ -185,7 +185,9 @@ schedule <- tribble(
   ~`date`, ~agenda, ~readings, ~homework, ~`article (Mon)`, ~`worksheets`,
 
 
+for week 14?  a survival analysis overview
 
+https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2845052?utm_campaign=articlePDF&utm_medium=articlePDFlink&utm_source=articlePDF&utm_content=jamanetworkopen.2025.59367
 
 
 "Week 13 <br> 4.21.25", 
