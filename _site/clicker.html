@@ -181,7 +181,7 @@ window.Quarto = {
 <li>Confident about it</li>
 </ol>
 <hr>
-<p>In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not need to know the following topics</p>
+<p>In terms of the prerequisite for Math 150, Methods in Biostatistics, you do not need to know the following topics</p>
 <ol start="2" class="example" type="1">
 <li>Interaction, simple linear regression, multiple linear regression, logistic regression, survival analysis, R.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 </ol>
@@ -766,7 +766,7 @@ window.Quarto = {
 </ol>
 <hr>
 <ol start="59" class="example" type="1">
-<li>In a logistic regresion if <span class="math inline">\(H_0\)</span> is true, what is the probability of success?<a href="#fn57" class="footnote-ref" id="fnref57" role="doc-noteref"><sup>57</sup></a></li>
+<li>In a logistic regression if <span class="math inline">\(H_0\)</span> is true, what is the probability of success?<a href="#fn57" class="footnote-ref" id="fnref57" role="doc-noteref"><sup>57</sup></a></li>
 </ol>
 <ol type="a">
 <li><span class="math inline">\(p_0\)</span></li>
@@ -1599,6 +1599,35 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 </ol></li>
 </ol>
 <hr>
+<ol start="131" class="example" type="1">
+<li>What type of response / outcome variable is Poisson regression designed to model?<a href="#fn129" class="footnote-ref" id="fnref129" role="doc-noteref"><sup>129</sup></a>
+<ol type="a">
+<li>continuous, normally distributed measurements</li>
+<li>binary yes/no</li>
+<li>non-negative counts</li>
+<li>ordinal ranked categories</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="132" class="example" type="1">
+<li>What is the canonical link function used in Poisson regression?<a href="#fn130" class="footnote-ref" id="fnref130" role="doc-noteref"><sup>130</sup></a>
+<ol type="a">
+<li>logit</li>
+<li>identity</li>
+<li>square root</li>
+<li>natural log</li>
+</ol></li>
+</ol>
+<hr>
+<ol start="133" class="example" type="1">
+<li>Which of the following would violate one of the Poisson technical conditions?<a href="#fn131" class="footnote-ref" id="fnref131" role="doc-noteref"><sup>131</sup></a>
+<ol type="a">
+<li>explanatory variables measured on a continuous scale</li>
+<li>response values of 0 for many observations</li>
+<li>the conditional variance being substantially smaller than the conditional mean</li>
+</ol></li>
+</ol>
+<hr>
 
 
 </section>
@@ -1871,7 +1900,7 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 </ol>
 <a href="#fnref71" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn72"><ol start="2" type="a">
-<li>FALSE. CV reduces the effect of overfitting, but at the end of the day, you are still building a model on the dataset at hand, and it is possible that you will overfit that dataet.</li>
+<li>FALSE. CV reduces the effect of overfitting, but at the end of the day, you are still building a model on the dataset at hand, and it is possible that you will overfit that dataset.</li>
 </ol>
 <a href="#fnref72" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn73"><ol start="2" type="a">
@@ -2095,9 +2124,21 @@ power = P(rejecting when <span class="math inline">\(H_0\)</span> false)</p>
 </ol>
 <a href="#fnref127" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn128"><ol start="4" type="a">
-<li>all of the above. We restrict our analysis to a situation of controling the type I error. However, that isn’t why we <strong>want</strong> to stop early. We <strong>want</strong> to stop early for the other reasons listed.</li>
+<li>all of the above. We restrict our analysis to a situation of controlling the type I error. However, that isn’t why we <strong>want</strong> to stop early. We <strong>want</strong> to stop early for the other reasons listed.</li>
 </ol>
 <a href="#fnref128" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn129"><ol start="3" type="a">
+<li>non-negative counts</li>
+</ol>
+<a href="#fnref129" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn130"><ol start="4" type="a">
+<li>natural log. Remember, the link is the function <span class="math inline">\(g(\cdot)\)</span> such that <span class="math inline">\(g(E[Y|x]) = \beta_0 + \beta_1 \cdot x.\)</span></li>
+</ol>
+<a href="#fnref130" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn131"><ol start="3" type="a">
+<li>the conditional variance being substantially smaller than the conditional mean</li>
+</ol>
+<a href="#fnref131" class="footnote-back" role="doc-backlink">↩︎</a></li>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

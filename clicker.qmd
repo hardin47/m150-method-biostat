@@ -42,7 +42,7 @@ In terms of the prerequisite for Math 150, Methods in Biostatistics, you should 
 
 ---
 
-In terms of the prerequisite for Math 150, Methods in Biostatisitcs, you do not need to know the following topics
+In terms of the prerequisite for Math 150, Methods in Biostatistics, you do not need to know the following topics
 
 (@) Interaction, simple linear regression, multiple linear regression, logistic regression, survival analysis, R.[^2]
 
@@ -650,7 +650,7 @@ Take the derivative with respect to which variable(s):[^46]
 
 ---
 
-(@) In a logistic regresion if $H_0$ is true, what is the probability of success?[^49a]
+(@) In a logistic regression if $H_0$ is true, what is the probability of success?[^49a]
    (a) $p_0$
    (b) $\frac{e^{b_0}}{1 + e^{b_0}}$
    (c) $\frac{e^{b_1}}{1 + e^{b_1}}$
@@ -836,7 +836,7 @@ Take the derivative with respect to which variable(s):[^46]
     (a)	TRUE
     (b)	FALSE
 
-[^65]: b. FALSE.  CV reduces the effect of overfitting, but at the end of the day, you are still building a model on the dataset at hand, and it is possible that you will overfit that dataet.
+[^65]: b. FALSE.  CV reduces the effect of overfitting, but at the end of the day, you are still building a model on the dataset at hand, and it is possible that you will overfit that dataset.
 
 ---
 
@@ -1515,12 +1515,40 @@ RA Fisher (1929)
      (d) all of the above
      (e) control the type I error
      
-[^117]: d. all of the above. We restrict our analysis to a situation of controling the type I error. However, that isn't why we **want** to stop early. We **want** to stop early for the other reasons listed.
+[^117]: d. all of the above. We restrict our analysis to a situation of controlling the type I error. However, that isn't why we **want** to stop early. We **want** to stop early for the other reasons listed.
 
 
 
 ---
 
+(@) What type of response / outcome variable is Poisson regression designed to model?[^118]
+     (a) continuous, normally distributed measurements
+     (b) binary yes/no
+     (c) non-negative counts
+     (d) ordinal ranked categories
+     
+[^118]: c. non-negative counts
+
+---
+
+(@) What is the canonical link function used in Poisson regression?[^119]
+     (a) logit
+     (b) identity
+     (c) square root
+     (d) natural log
+
+[^119]: d. natural log. Remember, the link is the function $g(\cdot)$ such that $g(E[Y|x]) = \beta_0 + \beta_1 \cdot x.$
+
+---
+
+(@) Which of the following would violate one of the Poisson technical conditions?[^120]
+     (a) explanatory variables measured on a continuous scale
+     (b) response values of 0 for many observations
+     (c) the conditional variance being substantially smaller than the conditional mean
+
+[^120]: c. the conditional variance being substantially smaller than the conditional mean
+
+---
 
 
 
