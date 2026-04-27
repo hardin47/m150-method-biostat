@@ -48,9 +48,9 @@ Please use the above dataset in your analysis.  However, feel free to look at th
    * Some sort of EDA (exploratory data analysis).  Do not print the data, but do something that indicates you've uploaded the data and know what some of the variables are.  You might have some summary statistics or a graph.  The idea here is to explore the variables, not to run survival curves.  What can you learn about the many many variables?  How do they relate to one another?  What about all the missingness? This is *not* an extensive assignment.  [Again, the question here is not about the response variable, it's about all the predictor variables.  Learn about the dataset!]
    * Outline the "something new" part of the assignment.  You should indicate who is doing what, what resources each of you will use to learn about your new topic, and a few sentences on what the topic is or how it relates to survival analysis / the analysis at hand.  Additionally, for each "new" thing, provide 1-2 sentences describing what will be **challenging** about learning something new.
 
-* (Optional) **Monday, May 4**. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 5th (or May 2nd). (If you are a graduating senior who would like feedback, please provide me a draft by **Friday, May 1st**.)
+* (Optional) **Monday, May 4**. If you would like me to look at / provide feedback for a completed rough draft, you should turn in the completed draft before May 4th. (If you are a graduating senior who would like feedback, please provide me a draft by **Friday, May 1st**.)
 
-* **Last week of class or finals week**. Each person will individually talk through their new thing in a 15 minute in-person discussion. Notes are welcome!
+* **Last week of class or finals week**. Each person will individually talk through their new thing in a 15-20 minute in-person discussion. Notes are welcome!
 
 * **Wednesday, May 6**. Last day of class, each person / group will present their visualization, and there will be secret ballot voting for the best visualization of the data / model.
 
