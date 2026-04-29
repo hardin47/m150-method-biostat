@@ -1531,7 +1531,7 @@ RA Fisher (1929)
 
 ---
 
-(@) What is the canonical link function used in Poisson regression?[^119]
+(@) What is the link function used in Poisson regression?[^119]
      (a) logit
      (b) identity
      (c) square root
