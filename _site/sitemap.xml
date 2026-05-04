@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://m150-method-biostat.netlify.app/index.html</loc>
-    <lastmod>2026-04-29T05:28:48.316Z</lastmod>
+    <lastmod>2026-05-04T05:18:40.873Z</lastmod>
   </url>
   <url>
     <loc>https://m150-method-biostat.netlify.app/clicker_study.html</loc>
@@ -115,5 +115,13 @@
   <url>
     <loc>https://m150-method-biostat.netlify.app/handout/2026-03-02-ROC-onestep.html</loc>
     <lastmod>2026-03-04T18:57:27.105Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/2026-05-24-fin.html</loc>
+    <lastmod>2026-05-04T05:15:51.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://m150-method-biostat.netlify.app/handout/2026-05-04-fin.html</loc>
+    <lastmod>2026-05-04T05:15:51.562Z</lastmod>
   </url>
 </urlset>
