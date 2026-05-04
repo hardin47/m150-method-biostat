@@ -70,7 +70,7 @@ Poisson: $g(\cdot) = \ln(\cdot)$
 
 * Censored observations
 * Survival vs. hazard models
-* partial likelihood
+* Partial likelihood
 
 ## Model Building
 
