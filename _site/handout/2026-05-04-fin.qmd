@@ -64,7 +64,7 @@ Poisson: $g(\cdot) = \ln(\cdot)$
 * Categorical
 * Interaction
 * Linear
-* Multicolinearity
+* Multicollinearity
 
 ## Survival analysis
 
