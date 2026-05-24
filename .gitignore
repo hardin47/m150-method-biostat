@@ -41,3 +41,4 @@ vignettes/*.pdf
 
 /.quarto/
 .DS_Store
+.positai

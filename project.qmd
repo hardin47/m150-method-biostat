@@ -73,7 +73,7 @@ The Cox PH analysis should include: an interpretation of your final survival mod
 
 5. A reflection on the decision making (goes into the final report).  How did it feel to decide things?  What was easy to decide (e.g., method because you were told to use Cox PH)?  What was hard to decide (e.g., which variables to use)?  What about missingness, what did you do? Does it matter?  Reflect on the process and how you think your decisions may or may not have had an impact on the results you put forward. Also reflect on whether or not your decisions may have had any ethical consequences.
 
-6. The final report which ties it all together should have an introduction, methods, results, discussion.  The <a href = "https://m150-method-biostat.netlify.app/handout/project_rubric.docx" target = "_blank">grading rubric</a> should help you put together the final written project.
+6. The final report which ties it all together should have an introduction, methods, results, discussion.  The <a href = "https://m150-method-biostat.netlify.app/handout/project_rubric.docx" target = "_blank">grading rubric</a> should help you put together the final written project. (Don't forget the reflection, see #5.)
 
 
 ## Something New:
@@ -114,7 +114,7 @@ Each individual should have some analysis that goes beyond a Cox PH model.   For
 
 #### Assessment:
 * Your primary assessment will be based on the above items (modeling, understanding of new topic, additional analysis, interpretation).
-* Additionally there will be two competitions.  Winning either will add 3 points (out of 85) to your score.
+* Additionally there will be two competitions.  Winning either will add 3 points (out of 100) to your score.
    * Graphic:  the class will vote on who has the best graphic.
    * Model:  using a holdout sample (I only gave you part of the data), I will assess your final model.  The group whose model best describes the holdout sample (as measured by the <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4886856/" target = "_blank">c-index</a> with a slight adjustment to benefit models that predict on the highest number of observations) will win the model prize.
 
